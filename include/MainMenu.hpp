@@ -1,0 +1,8 @@
+//
+// Created by Mardel on 23/05/18.
+//
+
+#ifndef CPP_INDIE_STUDIO_MAINMENU_HPP
+#define CPP_INDIE_STUDIO_MAINMENU_HPP
+
+#endif //CPP_INDIE_STUDIO_MAINMENU_HPP
