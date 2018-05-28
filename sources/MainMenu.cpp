@@ -2,7 +2,7 @@
 // Created by Mardel on 23/05/18.
 //
 
-#include "../include/MainMenu.hpp"
+#include "MainMenu.hpp"
 #include <irrlicht.h>
 
 MainMenu::MainMenu()

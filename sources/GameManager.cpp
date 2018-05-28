@@ -2,4 +2,4 @@
 // Created by Mardel on 28/05/18.
 //
 
-#include "../include/GameManager.hpp"
+#include "GameManager.hpp"
