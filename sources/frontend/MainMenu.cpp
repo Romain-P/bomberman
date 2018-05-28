@@ -12,6 +12,7 @@ MainMenu::MainMenu()
 
 void MainMenu::Run()
 {
+
 }
 
 void MainMenu::Draw()

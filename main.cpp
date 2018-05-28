@@ -1,7 +1,8 @@
 #include <iostream>
 #include "include/BomberWave.hpp"
 
-extern irrlichtDevice = irr::createDevice(irr::video::EDT_so)
+auto irrlichtDevice = irr::createDevice(irr::video::EDT_SOFTWARE);
+
 int main()
 {
 
