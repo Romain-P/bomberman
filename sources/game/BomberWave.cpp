@@ -3,3 +3,16 @@
 //
 
 #include "BomberWave.hpp"
+#include <irrlicht.h>
+
+using namespace irr;
+
+using namespace core;
+using namespace video;
+using namespace io;
+using namespace gui;
+
+BomberWave::BomberWave()
+{
+
+}

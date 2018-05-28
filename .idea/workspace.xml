@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="cpp_indie_studio" targetName="bomberman" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="17c83c2b-c9d0-4ffd-8e11-adb1ea673a41" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/BomberWave.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/GameInputManager.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/GameManager.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/GameObject.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/GameRenderer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/MainMenu.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Scene.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/BomberWave.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/GameInputManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/GameManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/GameObject.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/GameRenderer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/MainMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/C3DSMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/C3DSMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAnimatedMeshHalfLife.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAnimatedMeshHalfLife.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAnimatedMeshMD2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAnimatedMeshMD2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAnimatedMeshMD3.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAnimatedMeshMD3.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAnimatedMeshSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAnimatedMeshSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAttributes.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CAttributes.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CB3DMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CB3DMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CBSPMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CBSPMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CBillboardSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CBillboardSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CBoneSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CBoneSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CBurningShader_Raster_Reference.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CBurningShader_Raster_Reference.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CCSMLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CCSMLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CCameraSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CCameraSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CColladaFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CColladaFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CColladaMeshWriter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CColladaMeshWriter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CColorConverter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CColorConverter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CCubeSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CCubeSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8Driver.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8Driver.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8NormalMapRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8NormalMapRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8ParallaxMapRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8ParallaxMapRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8ShaderMaterialRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8ShaderMaterialRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8Texture.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D8Texture.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9Driver.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9Driver.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9HLSLMaterialRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9HLSLMaterialRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9NormalMapRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9NormalMapRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9ParallaxMapRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9ParallaxMapRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9ShaderMaterialRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9ShaderMaterialRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9Texture.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CD3D9Texture.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDMFLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDMFLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDefaultGUIElementFactory.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDefaultGUIElementFactory.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDefaultSceneNodeAnimatorFactory.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDefaultSceneNodeAnimatorFactory.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDefaultSceneNodeFactory.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDefaultSceneNodeFactory.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDepthBuffer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDepthBuffer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDummyTransformationSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CDummyTransformationSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CEmptySceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CEmptySceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CFPSCounter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CFPSCounter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CFileList.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CFileList.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CFileSystem.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CFileSystem.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIButton.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIButton.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUICheckBox.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUICheckBox.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIColorSelectDialog.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIColorSelectDialog.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIComboBox.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIComboBox.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIContextMenu.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIContextMenu.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIEditBox.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIEditBox.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIEnvironment.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIEnvironment.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIFileOpenDialog.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIFileOpenDialog.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIFont.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIFont.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIImage.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIImage.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIImageList.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIImageList.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIInOutFader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIInOutFader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIListBox.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIListBox.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIMenu.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIMenu.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIMeshViewer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIMeshViewer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIMessageBox.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIMessageBox.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIModalScreen.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIModalScreen.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIScrollBar.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIScrollBar.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUISkin.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUISkin.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUISpinBox.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUISpinBox.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUISpriteBank.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUISpriteBank.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIStaticText.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIStaticText.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUITabControl.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUITabControl.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUITable.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUITable.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIToolBar.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIToolBar.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUITreeView.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUITreeView.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIWindow.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGUIWindow.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGeometryCreator.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CGeometryCreator.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImage.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImage.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderBMP.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderBMP.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderDDS.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderDDS.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderJPG.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderJPG.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderPCX.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderPCX.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderPNG.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderPNG.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderPPM.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderPPM.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderPSD.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderPSD.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderRGB.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderRGB.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderTGA.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderTGA.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderWAL.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageLoaderWAL.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterBMP.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterBMP.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterJPG.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterJPG.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterPCX.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterPCX.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterPNG.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterPNG.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterPPM.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterPPM.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterPSD.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterPSD.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterTGA.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CImageWriterTGA.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceConsole.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceConsole.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceFB.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceFB.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceLinux.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceLinux.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceSDL.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceSDL.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceStub.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceStub.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceWin32.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrDeviceWin32.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrMeshWriter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CIrrMeshWriter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLMTSMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLMTSMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLWOMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLWOMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLightSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLightSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLimitReadFile.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLimitReadFile.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLogger.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CLogger.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMD2MeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMD2MeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMD3MeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMD3MeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMS3DMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMS3DMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMY3DMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMY3DMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMemoryFile.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMemoryFile.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMeshCache.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMeshCache.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMeshManipulator.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMeshManipulator.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMeshSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMeshSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMetaTriangleSelector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMetaTriangleSelector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMountPointReader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CMountPointReader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CNPKReader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CNPKReader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CNullDriver.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CNullDriver.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COBJMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COBJMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COBJMeshWriter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COBJMeshWriter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COCTLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COCTLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COSOperator.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COSOperator.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COctreeSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COctreeSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COctreeTriangleSelector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COctreeTriangleSelector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COgreMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COgreMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLDriver.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLDriver.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLExtensionHandler.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLExtensionHandler.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLNormalMapRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLNormalMapRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLParallaxMapRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLParallaxMapRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLSLMaterialRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLSLMaterialRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLShaderMaterialRenderer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLShaderMaterialRenderer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLTexture.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/COpenGLTexture.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CPLYMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CPLYMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CPLYMeshWriter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CPLYMeshWriter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CPakReader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CPakReader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleAnimatedMeshSceneNodeEmitter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleAnimatedMeshSceneNodeEmitter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleAttractionAffector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleAttractionAffector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleBoxEmitter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleBoxEmitter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleCylinderEmitter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleCylinderEmitter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleFadeOutAffector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleFadeOutAffector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleGravityAffector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleGravityAffector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleMeshEmitter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleMeshEmitter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticlePointEmitter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticlePointEmitter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleRingEmitter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleRingEmitter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleRotationAffector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleRotationAffector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleScaleAffector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleScaleAffector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleSphereEmitter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleSphereEmitter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleSystemSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CParticleSystemSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CQ3LevelMesh.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CQ3LevelMesh.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CQuake3ShaderSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CQuake3ShaderSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CReadFile.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CReadFile.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSMFMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSMFMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSTLMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSTLMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSTLMeshWriter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSTLMeshWriter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneCollisionManager.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneCollisionManager.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneLoaderIrr.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneLoaderIrr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneManager.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneManager.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorCameraFPS.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorCameraFPS.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorCameraMaya.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorCameraMaya.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorCollisionResponse.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorCollisionResponse.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorDelete.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorDelete.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorFlyCircle.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorFlyCircle.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorFlyStraight.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorFlyStraight.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorFollowSpline.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorFollowSpline.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorRotation.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorRotation.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorTexture.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSceneNodeAnimatorTexture.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CShadowVolumeSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CShadowVolumeSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSkinnedMesh.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSkinnedMesh.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSkyBoxSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSkyBoxSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSkyDomeSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSkyDomeSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSoftwareDriver.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSoftwareDriver.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSoftwareDriver2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSoftwareDriver2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSoftwareTexture.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSoftwareTexture.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSoftwareTexture2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSoftwareTexture2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSphereSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CSphereSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRFlat.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRFlat.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRFlatWire.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRFlatWire.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraud.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraud.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraud2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraud2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraudAlpha2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraudAlpha2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraudAlphaNoZ2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraudAlphaNoZ2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraudWire.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRGouraudWire.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRNormalMap.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRNormalMap.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRStencilShadow.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRStencilShadow.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureBlend.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureBlend.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureDetailMap2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureDetailMap2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureFlat.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureFlat.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureFlatWire.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureFlatWire.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraud.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraud.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraud2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraud2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAdd.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAdd.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAdd2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAdd2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAddNoZ2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAddNoZ2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAlpha.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAlpha.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAlphaNoZ.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudAlphaNoZ.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudNoZ.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudNoZ.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudNoZ2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudNoZ2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudVertexAlpha2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudVertexAlpha2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudWire.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureGouraudWire.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMap2_Add.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMap2_Add.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMap2_M1.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMap2_M1.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMap2_M2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMap2_M2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMap2_M4.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMap2_M4.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMapGouraud2_M4.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureLightMapGouraud2_M4.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureWire2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTRTextureWire2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTarReader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTarReader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTerrainSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTerrainSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTerrainTriangleSelector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTerrainTriangleSelector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTextSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTextSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTriangleBBSelector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTriangleBBSelector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTriangleSelector.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CTriangleSelector.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CVideoModeList.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CVideoModeList.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CVolumeLightSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CVolumeLightSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CWADReader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CWADReader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CWaterSurfaceSceneNode.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CWaterSurfaceSceneNode.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CWriteFile.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CWriteFile.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CXMLReader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CXMLReader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CXMLWriter.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CXMLWriter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CXMeshFileLoader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CXMeshFileLoader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CZBuffer.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CZBuffer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CZipReader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/CZipReader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/IBurningShader.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/IBurningShader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/Irrlicht.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/Irrlicht.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/aescrypt.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/aescrypt.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/aeskey.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/aeskey.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/aestab.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/aestab.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/fileenc.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/fileenc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/hmac.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/hmac.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/prng.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/prng.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/pwd2key.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/pwd2key.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/sha1.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/sha1.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/sha2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/aesGladman/sha2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/blocksort.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/blocksort.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/bzcompress.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/bzcompress.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/bzlib.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/bzlib.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/decompress.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/decompress.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/huffman.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/bzip2/huffman.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/irrXML.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/irrXML.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcapimin.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcapimin.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcapistd.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcapistd.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcarith.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcarith.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jccoefct.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jccoefct.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jccolor.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jccolor.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcdctmgr.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcdctmgr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jchuff.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jchuff.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcinit.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcinit.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcmainct.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcmainct.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcmarker.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcmarker.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcmaster.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcmaster.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcparam.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcparam.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcprepct.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcprepct.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcsample.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jcsample.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jctrans.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jctrans.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdapimin.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdapimin.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdapistd.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdapistd.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdarith.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdarith.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdatadst.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdatadst.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdatasrc.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdatasrc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdcoefct.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdcoefct.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdcolor.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdcolor.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jddctmgr.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jddctmgr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdhuff.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdhuff.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdinput.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdinput.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdmainct.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdmainct.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdmarker.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdmarker.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdmaster.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdmaster.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdmerge.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdmerge.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdpostct.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdpostct.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdsample.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdsample.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdtrans.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jdtrans.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jerror.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jerror.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jfdctint.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jfdctint.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jidctflt.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jidctflt.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jidctfst.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jidctfst.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jidctint.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jidctint.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jmemmgr.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jmemmgr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jmemnobs.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jmemnobs.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jquant1.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jquant1.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jquant2.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jquant2.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jutils.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/jpeglib/jutils.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libIrrlicht.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/png.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/png.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngerror.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngerror.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngget.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngget.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngmem.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngmem.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngpread.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngpread.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngread.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngread.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngrio.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngrio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngrtran.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngrtran.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngrutil.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngrutil.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngset.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngset.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngtrans.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngtrans.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngwio.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngwio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngwrite.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngwrite.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngwtran.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngwtran.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngwutil.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/libpng/pngwutil.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/lzma/LzmaDec.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/lzma/LzmaDec.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/os.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/os.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/compress.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/compress.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/crc32.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/crc32.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/deflate.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/deflate.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/inffast.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/inffast.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/inflate.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/inflate.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/inftrees.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/inftrees.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/trees.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/trees.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/uncompr.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/uncompr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/zutil.o" beforeDir="false" afterPath="$PROJECT_DIR$/lib/irrlicht-1.8.4/source/Irrlicht/zlib/zutil.o" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameInputManager.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/GameInputManager.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="GameInputManager.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/GameInputManager.hpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="GameRenderer.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/GameRenderer.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="GameRenderer.hpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/include/GameRenderer.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/MainMenu.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+              <folding>
+                <element signature="e#41#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/MainMenu.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameManager.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/GameManager.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="GameManager.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/GameManager.hpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="GameObject.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/GameObject.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/Scene.hpp" />
+        <option value="$PROJECT_DIR$/sources/BomberWave.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/include/BomberWave.hpp" />
+        <option value="$PROJECT_DIR$/include/GameObject.hpp" />
+        <option value="$PROJECT_DIR$/sources/MainMenu.cpp" />
+        <option value="$PROJECT_DIR$/include/MainMenu.hpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="27" />
+    <option name="width" value="965" />
+    <option name="height" value="1049" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cpp_indie_studio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cpp_indie_studio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cpp_indie_studio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cpp_indie_studio" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cpp_indie_studio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cpp_indie_studio" type="462c0819:PsiDirectoryNode" />
+              <item name="sources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.bomberman">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cpp_indie_studio" RUN_TARGET_NAME="bomberman" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="bomberman" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cpp_indie_studio" TARGET_NAME="bomberman" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cpp_indie_studio" RUN_TARGET_NAME="bomberman" />
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.bomberman" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17c83c2b-c9d0-4ffd-8e11-adb1ea673a41" name="Default" comment="" />
+      <created>1527089794696</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527089794696</updated>
+      <workItem from="1527089796310" duration="12568000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12568000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="965" height="1049" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2571732" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" visible="true" weight="0.16482301" />
+      <window_info anchor="bottom" id="CMake" weight="0.32819384" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Scene.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/BomberWave.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/MainMenu.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/BomberWave.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#41#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/BomberWave.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          <folding>
+            <element signature="e#122#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/GameObject.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/MainMenu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding>
+            <element signature="e#41#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/MainMenu.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/GameManager.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/GameManager.hpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/GameObject.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/GameManager.hpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/GameInputManager.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/GameInputManager.hpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/GameRenderer.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/GameRenderer.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
