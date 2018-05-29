@@ -11,7 +11,7 @@
 class NetworkAsyncListener {
 public:
 
-    explicit NetworkAsyncListener(socket_fd_t server_fd) : _server_fd(server_fd), _locker() {};
+    explicit NetworkAsyncListener() = default;
     virtual ~NetworkAsyncListener();
 
     /**
@@ -41,9 +41,16 @@ protected:
     virtual void onSocketNotified(socket_fd_t socket_id) = 0;
 
     /**
-     * Method called when SIGINT catched
+     * Method called when listener is stopped.
+     *
+     * @param interrupted    true if the listener closed due of catching a sigint signal
      */
-    virtual void onNetworkClosed() = 0;
+    virtual void onListenerClosed(bool interrupted) = 0;
+
+    /**
+     * Define the server socket accepting clients
+     */
+    virtual socket_fd_t defineServerFd() = 0;
 
     /**
      * Add a new socket to be listened by the epoll instance
@@ -62,7 +69,7 @@ protected:
     bool delListened(socket_fd_t socket);
 
 private:
-    socket_fd_t _server_fd;
+    socket_fd_t _server_fd = -1;
     socket_fd_t _signal_fd = -1;
     socket_fd_t _epoll_fd = -1;
 

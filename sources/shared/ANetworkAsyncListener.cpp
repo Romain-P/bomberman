@@ -2,14 +2,18 @@
 // Created by romain on 29/05/18.
 //
 
-#include "NetworkAsyncListener.h"
+#include "shared/ANetworkAsyncListener.h"
 #include <sys/epoll.h>
 #include <signal.h>
 #include <sys/signalfd.h>
 #include <iostream>
 
 void NetworkAsyncListener::start() {
-    if ((_epoll_fd = epoll_create(1)) == ERROR)
+    _server_fd = defineServerFd();
+
+    if (_server_fd <= ERROR)
+        eprintf("NetworkAsyncListener::defineServerFd(): invalid server socket file descriptor\n");
+    else if ((_epoll_fd = epoll_create(1)) == ERROR)
         perror("epoll_create");
     else if (!addListened(_server_fd))
         eprintf("error adding server socket fd (%d) to the epoll instance %d\n", _server_fd, _epoll_fd);
@@ -27,6 +31,8 @@ void NetworkAsyncListener::waitNotifications() {
     epoll_event_t ev;
     signalinfo_t info;
 
+    bool interrupted = false;
+
     while (!isClosed()) {
         if (!epoll_wait(_epoll_fd, &ev, 1, 10))
             continue;
@@ -34,12 +40,14 @@ void NetworkAsyncListener::waitNotifications() {
 
         if (notified == _signal_fd) {
             if (read(_signal_fd, &info, sizeof(info)) == sizeof(info) && info.ssi_signo == SIGINT) {
-                onNetworkClosed();
+                interrupted = true;
                 break;
             }
         } else
             onSocketNotified(notified);
     }
+
+    onListenerClosed(interrupted);
 }
 
 
