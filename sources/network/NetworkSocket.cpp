@@ -65,6 +65,23 @@ void NetworkSocket::accept() {
     _ip = std::string(retrieved);
 }
 
+void NetworkSocket::send(void *buffer, size_t length) {
+    if (::send(_id, buffer, length, 0) != ERROR) return;
+
+    perror("send");
+    throw std::runtime_error("NetworkSocket::send: impossible to send data");
+}
+
+size_t NetworkSocket::read(void *buffer, size_t length) {
+    ssize_t bytes = ::read(_id, buffer, length);
+
+    if (!bytes != ERROR)
+        return (size_t) bytes;
+
+    perror("read");
+    throw std::runtime_error("Network::read: impossible to read data");
+}
+
 std::string const &NetworkSocket::getIpAddress() const {
     return _ip;
 }

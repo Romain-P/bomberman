@@ -7,6 +7,7 @@
 
 
 #include <netinet/in.h>
+#include <unistd.h>
 #include "Network.h"
 
 class NetworkSocket {
@@ -32,10 +33,13 @@ public:
      */
     explicit NetworkSocket(socket_fd_t server) : _server_fd(server), _mode(CHILD) {};
 
-    /**
-     * Initialise the socket
-     */
     void init();
+    void send(void *buffer, size_t length);
+    size_t read(void *buffer, size_t length);
+
+    /**
+     * Getters
+     */
 
     std::string const &getIpAddress() const;
     uint16_t getPort() const;
