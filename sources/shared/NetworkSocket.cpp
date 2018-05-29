@@ -4,7 +4,7 @@
 
 #include <stdexcept>
 #include <arpa/inet.h>
-#include "NetworkSocket.h"
+#include "shared/NetworkSocket.h"
 
 void NetworkSocket::init() {
     switch (_mode) {
@@ -73,7 +73,7 @@ void NetworkSocket::send(void *buffer, size_t length) {
 }
 
 size_t NetworkSocket::read(void *buffer, size_t length) {
-    ssize_t bytes = ::read(_id, buffer, length);
+    ssize_t bytes = ::recv(_id, buffer, length, 0);
 
     if (!bytes != ERROR)
         return (size_t) bytes;
@@ -96,4 +96,15 @@ NetworkSocket::Mode NetworkSocket::getMode() const {
 
 bool NetworkSocket::isClosed() const {
     return _closed;
+}
+
+socket_fd_t NetworkSocket::getId() const {
+    return _id;
+}
+
+void NetworkSocket::close() {
+    if (_closed) return;
+
+    ::close(_id);
+    _closed = true;
 }

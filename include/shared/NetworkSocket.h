@@ -23,8 +23,7 @@ public:
      * @param ip        ip to connect/listen
      * @param port      port to connect
      */
-    NetworkSocket(std::string &ip, uint16_t port, Mode mode) : _ip(ip), _port(port), _mode(mode) {};
-
+    NetworkSocket(std::string const &ip, uint16_t port, Mode mode) : _ip(ip), _port(port), _mode(mode) {};
     /**
      * Create a socket from a given server file descriptor
      * Accept() will be used to get current socket id.
@@ -33,14 +32,18 @@ public:
      */
     explicit NetworkSocket(socket_fd_t server) : _server_fd(server), _mode(CHILD) {};
 
-    void init();
-    void send(void *buffer, size_t length);
-    size_t read(void *buffer, size_t length);
+    virtual ~NetworkSocket() = default;
+    virtual void init();
+    virtual void close();
+    virtual void send(void *buffer, size_t length);
+    virtual size_t read(void *buffer, size_t length);
 
-    /**
-     * Getters
-     */
 
+    /***********
+     * Getters *
+     ***********/
+
+    socket_fd_t getId() const;
     std::string const &getIpAddress() const;
     uint16_t getPort() const;
     Mode getMode() const;
@@ -52,7 +55,7 @@ private:
     socket_fd_t _server_fd = -1;
     Mode _mode;
 
-    socket_fd_t _id;
+    socket_fd_t _id = -1;
     bool _closed = false;
 
     void create(bool listen);
