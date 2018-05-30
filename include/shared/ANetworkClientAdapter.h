@@ -11,7 +11,6 @@
 #include "ANetworkBuffer.h"
 #include "INetworkClientHandler.h"
 
-using client_config_t = struct client_config_s;
 class NetworkClient;
 
 class ANetworkClientAdapter {

@@ -15,6 +15,8 @@
 using clients_t = std::unordered_map<socket_fd_t, std::unique_ptr<NetworkClient>>;
 
 class NetworkAsyncServer: public NetworkAsyncListener {
+friend class NetworkClient;
+
 public:
 
     NetworkAsyncServer(std::string const &ip, uint16_t port) : NetworkAsyncListener(),

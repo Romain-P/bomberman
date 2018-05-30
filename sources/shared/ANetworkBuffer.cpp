@@ -15,3 +15,7 @@ void ANetworkBuffer::setPosition(size_t position) {
 size_t ANetworkBuffer::getMaxSize() const {
     return _maxSize;
 }
+
+size_t ANetworkBuffer::getSize() const {
+    return (size_t) _position + 1;
+}

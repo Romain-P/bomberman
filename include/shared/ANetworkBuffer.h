@@ -13,12 +13,19 @@ public:
     ANetworkBuffer(size_t maxSize) : _position(-1), _maxSize(maxSize) {};
     virtual ~ANetworkBuffer() = default;
 
-    virtual void append(char *bytes, size_t length) = 0;
+    /**
+     * Should Append to the buffer the given bytes
+     *
+     * @param bytes     bytes to push at the end of the buffer
+     * @param length    n bytes to add
+     * @return          true if the buffer size lower than the buffer max size, false otherwise
+     */
+    virtual bool append(char *bytes, size_t length) = 0;
     virtual void clear() = 0;
-    virtual void *getBytes() = 0;
-    virtual void allocate(size_t nbytes) = 0;
+    virtual char *getBytes() = 0;
 
     ssize_t getPosition() const;
+    size_t getSize() const;
     void setPosition(size_t position);
     size_t getMaxSize() const;
 

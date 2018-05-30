@@ -10,6 +10,7 @@
 #include "ANetworkClientAdapter.h"
 
 class NetworkClient {
+
 public:
 
     NetworkClient(std::string const &ip, uint16_t port, ANetworkClientAdapter *adapter)
@@ -30,11 +31,12 @@ public:
     ANetworkClientAdapter *getAdapter();
     ANetworkBuffer *getBuffer();
     socket_fd_t getId() const;
+    bool isClosed() const;
 
     /**
      * Close the network client
      *
-     * @param force to close the socket manually, if no wrapper exists
+     * @param force     true to close the socket manually, if no wrapper exists (e.g server)
      */
     void close(bool force = false);
 

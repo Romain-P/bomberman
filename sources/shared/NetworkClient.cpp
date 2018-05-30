@@ -8,6 +8,7 @@
 void NetworkClient::init() {
     _buffer = std::move(_adapter->bufferFactory());
     _socket.init();
+    _adapter->getHandler()->onConnect(this);
 }
 
 void NetworkClient::read() {
@@ -29,13 +30,16 @@ void NetworkClient::read() {
 
 void NetworkClient::send(char *buffer, size_t length) {
     _socket.send(buffer, length);
+    _adapter->getHandler()->onSent(this, buffer, length);
 }
 
 void NetworkClient::close(bool force) {
     _closed = true;
 
-    if (force)
+    if (force && !_socket.isClosed()) {
         _socket.close();
+        _adapter->getHandler()->onDisconnect(this);
+    }
 }
 
 ANetworkClientAdapter *NetworkClient::getAdapter() {
@@ -48,4 +52,8 @@ ANetworkBuffer *NetworkClient::getBuffer() {
 
 socket_fd_t NetworkClient::getId() const {
     return _socket.getId();
+}
+
+bool NetworkClient::isClosed() const {
+    return _closed;
 }
