@@ -8,7 +8,7 @@
 
 #include <netinet/in.h>
 #include <unistd.h>
-#include "Network.h"
+#include "shared/Network.h"
 
 class NetworkSocket {
 public:

@@ -19,3 +19,7 @@ size_t ANetworkBuffer::getMaxSize() const {
 size_t ANetworkBuffer::getSize() const {
     return (size_t) _position + 1;
 }
+
+bool ANetworkBuffer::empty() {
+    return _position == -1;
+}

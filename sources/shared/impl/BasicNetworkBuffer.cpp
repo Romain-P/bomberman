@@ -6,12 +6,13 @@
 #include "shared/BasicNetworkBuffer.h"
 
 bool BasicNetworkBuffer::append(char *bytes, size_t length) {
-    size_t newLength = _bytes.size() + length;
+    size_t nextPosition = _position + length;
 
-    if (newLength > _maxSize)
+    if (nextPosition + 1 > _maxSize)
         return false;
+    else if (nextPosition + 1 > _bytes.size())
+        _bytes.resize(nextPosition + 1);
 
-    _bytes.resize(newLength);
     memcpy(&_bytes[_position + 1], bytes, length);
     _position += length;
     return true;
@@ -24,4 +25,22 @@ void BasicNetworkBuffer::clear() {
 
 char *BasicNetworkBuffer::getBytes() {
     return &_bytes[0];
+}
+
+void BasicNetworkBuffer::allocate(size_t nbytes) {
+    _bytes.resize(_bytes.size() + nbytes);
+}
+
+void BasicNetworkBuffer::resize(size_t nbytes) {
+    _bytes.resize(nbytes);
+}
+
+bool BasicNetworkBuffer::drop(size_t from, size_t to) {
+    size_t size = _bytes.size();
+
+    if (from > size || to > size)
+        return false;
+
+    auto start = _bytes.begin() + from;
+    _bytes.erase(start, start + to);
 }

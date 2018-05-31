@@ -6,8 +6,9 @@
 #define CPP_INDIE_STUDIO_NETWORKCLIENT_H
 
 
-#include <shared/NetworkSocket.h>
-#include "ANetworkClientAdapter.h"
+#include "shared/NetworkSocket.h"
+#include "shared/ANetworkBuffer.h"
+#include "shared/ANetworkClientAdapter.h"
 
 class NetworkClient {
 

@@ -12,11 +12,14 @@
 class BasicNetworkBuffer: public ANetworkBuffer {
 public:
 
-    BasicNetworkBuffer(size_t maxSize) : ANetworkBuffer(maxSize), _bytes() {};
+    explicit BasicNetworkBuffer(size_t maxSize) : ANetworkBuffer(maxSize), _bytes() {};
 
     bool append(char *bytes, size_t length) override;
+    bool drop(size_t from, size_t to) override;
     void clear() override;
     char *getBytes() override;
+    void allocate(size_t nbytes) override;
+    void resize(size_t nbytes) override;
 
 private:
 

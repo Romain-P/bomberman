@@ -15,8 +15,8 @@ public:
     virtual ~INetworkClientHandler() = default;
 
     virtual void onConnect(NetworkClient *client) = 0;
-    virtual void onReceive(NetworkClient *client, char *buffer, size_t length) = 0;
-    virtual void onSent(NetworkClient *client, char *buffer, size_t length) = 0;
+    virtual void onReceive(NetworkClient *client, char const *buffer, size_t length) = 0;
+    virtual void onSent(NetworkClient *client, char const *buffer, size_t length) = 0;
     virtual void onDisconnect(NetworkClient *client) = 0;
 
 };

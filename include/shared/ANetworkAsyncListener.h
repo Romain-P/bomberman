@@ -6,7 +6,7 @@
 #define CPP_INDIE_STUDIO_NETWORKASYNCLISTENER_H
 
 
-#include "NetworkSocket.h"
+#include "shared/NetworkSocket.h"
 
 class NetworkAsyncListener {
 public:

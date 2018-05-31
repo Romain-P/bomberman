@@ -9,8 +9,8 @@
 #include <shared/ANetworkAsyncListener.h>
 #include <unordered_map>
 #include <memory>
-#include "NetworkClient.h"
-#include "INetworkClientHandler.h"
+#include "shared/NetworkClient.h"
+#include "shared/INetworkClientHandler.h"
 
 using clients_t = std::unordered_map<socket_fd_t, std::unique_ptr<NetworkClient>>;
 

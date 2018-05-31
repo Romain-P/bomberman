@@ -79,7 +79,7 @@ size_t NetworkSocket::read(void *buffer, size_t length) {
         return (size_t) bytes;
 
     perror("read");
-    throw std::runtime_error("Network::read: impossible to read data");
+    throw std::runtime_error("NetworkSocket::read: impossible to read data");
 }
 
 std::string const &NetworkSocket::getIpAddress() const {

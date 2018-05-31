@@ -10,7 +10,7 @@
 class ANetworkBuffer {
 public:
 
-    ANetworkBuffer(size_t maxSize) : _position(-1), _maxSize(maxSize) {};
+    explicit ANetworkBuffer(size_t maxSize) : _position(-1), _maxSize(maxSize) {};
     virtual ~ANetworkBuffer() = default;
 
     /**
@@ -21,13 +21,29 @@ public:
      * @return          true if the buffer size lower than the buffer max size, false otherwise
      */
     virtual bool append(char *bytes, size_t length) = 0;
+    virtual bool drop(size_t from, size_t to) = 0;
     virtual void clear() = 0;
     virtual char *getBytes() = 0;
 
-    ssize_t getPosition() const;
-    size_t getSize() const;
-    void setPosition(size_t position);
-    size_t getMaxSize() const;
+    /**
+     * Allocate more memory for the buffer
+     *
+     * @param bytes     number of bytes to add
+     */
+    virtual void allocate(size_t bytes) = 0;
+
+    /**
+     * Resize the buffer size.
+     *
+     * @param bytes     new bytes number capacity of the buffer
+     */
+    virtual void resize(size_t bytes) = 0;
+
+    virtual ssize_t getPosition() const;
+    virtual size_t getSize() const;
+    virtual void setPosition(size_t position);
+    virtual size_t getMaxSize() const;
+    virtual bool empty();
 
 protected:
 
