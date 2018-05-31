@@ -19,15 +19,16 @@ public:
     static constexpr size_t PACKET_MAX_SIZE = 4096;
     static constexpr size_t HEADER_INT_BYTES = sizeof(int32_t);
 
-    template<typename T>
-    static std::unique_ptr<NetworkMessage> packet_factory();
-
     static int32_t packet_length(char const *buffer);
     static std::unique_ptr<NetworkMessage> deserialize(NetworkDataReader &reader);
     static void serialize(NetworkMessage const &msg, NetworkDataWriter &writer);
 
 private:
+
     static const std::unordered_map<int32_t, std::unique_ptr<NetworkMessage>(*)()> messages;
+
+    template<typename T>
+    static std::unique_ptr<NetworkMessage> packet_factory();
 };
 
 

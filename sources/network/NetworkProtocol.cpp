@@ -29,7 +29,7 @@ std::unique_ptr<NetworkMessage> NetworkProtocol::deserialize(NetworkDataReader &
         message->deserialize(reader);
         return message;
     } catch (std::exception &e) {
-        throw std::runtime_error("can't build packet: unknown protocol id");
+        throw std::runtime_error("NetworkProtocol::deserialize: can't build packet: unknown protocol id");
     }
 }
 
