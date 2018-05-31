@@ -7,6 +7,9 @@
 constexpr size_t NetworkProtocol::HEADER_INT_BYTES;
 constexpr size_t NetworkProtocol::PACKET_MAX_SIZE;
 
+const std::unordered_map<int32_t, std::unique_ptr<NetworkMessage>(*)()> NetworkProtocol::messages {
+    //TODO: add protocol messages
+};
 
 template<typename T>
 std::unique_ptr<NetworkMessage> NetworkProtocol::packet_factory() {
