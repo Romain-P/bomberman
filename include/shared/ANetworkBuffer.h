@@ -10,7 +10,7 @@
 class ANetworkBuffer {
 public:
 
-    explicit ANetworkBuffer(size_t maxSize) : _position(-1), _maxSize(maxSize) {};
+    explicit ANetworkBuffer(size_t maxSize) : _position(0), _maxSize(maxSize) {};
     virtual ~ANetworkBuffer() = default;
 
     /**
@@ -38,16 +38,16 @@ public:
      * @param bytes     new bytes number capacity of the buffer
      */
     virtual void resize(size_t bytes) = 0;
+    virtual size_t getSize() const = 0;
 
-    virtual ssize_t getPosition() const;
-    virtual size_t getSize() const;
+    virtual size_t getPosition() const;
     virtual void setPosition(size_t position);
     virtual size_t getMaxSize() const;
     virtual bool empty();
 
 protected:
 
-    ssize_t _position;
+    size_t _position;
     size_t _maxSize;
 };
 

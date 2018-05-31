@@ -8,10 +8,10 @@
 
 #include <shared/ANetworkClientAdapter.h>
 
-class ClientAdapter: public ANetworkClientAdapter {
+class NetworkClientAdapter: public ANetworkClientAdapter {
 public:
 
-    ClientAdapter(size_t readSize, INetworkClientHandler *clientHandler)
+    NetworkClientAdapter(size_t readSize, INetworkClientHandler *clientHandler)
             : ANetworkClientAdapter(readSize, clientHandler) {}
 
     void onDataReceived(NetworkClient *client, char const *buffer, size_t length) override;

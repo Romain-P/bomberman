@@ -4,7 +4,7 @@
 
 #include "shared/ANetworkBuffer.h"
 
-ssize_t ANetworkBuffer::getPosition() const {
+size_t ANetworkBuffer::getPosition() const {
     return _position;
 }
 
@@ -16,10 +16,6 @@ size_t ANetworkBuffer::getMaxSize() const {
     return _maxSize;
 }
 
-size_t ANetworkBuffer::getSize() const {
-    return (size_t) _position + 1;
-}
-
 bool ANetworkBuffer::empty() {
-    return _position == -1;
+    return _position == 0;
 }

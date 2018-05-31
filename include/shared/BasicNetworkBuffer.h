@@ -10,6 +10,7 @@
 #include <vector>
 
 class BasicNetworkBuffer: public ANetworkBuffer {
+
 public:
 
     explicit BasicNetworkBuffer(size_t maxSize) : ANetworkBuffer(maxSize), _bytes() {};
@@ -20,8 +21,9 @@ public:
     char *getBytes() override;
     void allocate(size_t nbytes) override;
     void resize(size_t nbytes) override;
+    size_t getSize() const override;
 
-private:
+protected:
 
     std::vector<char> _bytes;
 };

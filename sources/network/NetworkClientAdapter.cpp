@@ -3,15 +3,15 @@
 //
 
 #include "shared/BasicNetworkBuffer.h"
-#include "ClientAdapter.h"
+#include "NetworkClientAdapter.h"
 #include "shared/NetworkClient.h"
 
-void ClientAdapter::onDataReceived(NetworkClient *client, char const *buffer, size_t length) {
+void NetworkClientAdapter::onDataReceived(NetworkClient *client, char const *buffer, size_t length) {
     if (client->getBuffer()->empty()) {
 
     }
 }
 
-std::unique_ptr<ANetworkBuffer> ClientAdapter::bufferFactory() {
+std::unique_ptr<ANetworkBuffer> NetworkClientAdapter::bufferFactory() {
     return std::make_unique<BasicNetworkBuffer>(4096);
 }
