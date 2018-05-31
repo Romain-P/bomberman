@@ -7,21 +7,8 @@
 #include <cstring>
 #include <iostream>
 
-void ANetworkClientAdapter::packetCompleted(NetworkClient *client, size_t from, size_t to, bool drop) {
-    size_t packet_len = to - from + 1;
-    char packet[packet_len];
-
-    if (from > client->getBuffer()->getSize())
-        std::cerr << "ANetworkClientAdapter::packetCompleted: base address > buffer size" << std::endl;
-    else {
-        strncpy(packet, client->getBuffer()->getBytes() + from, packet_len);
-        client->getAdapter()->getHandler()->onReceive(client, packet, packet_len);
-
-        if (!drop) return;
-
-        char remaining[client->getBuffer()->getSize() - packet_len];
-
-    }
+void ANetworkClientAdapter::packetCompleted(NetworkClient *client, char const *bytes, size_t length) {
+    client->getAdapter()->getHandler()->onReceive(client, bytes, length);
 }
 
 INetworkClientHandler *ANetworkClientAdapter::getHandler() {

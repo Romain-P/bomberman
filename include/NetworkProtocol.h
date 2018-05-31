@@ -19,7 +19,7 @@ public:
     static constexpr size_t PACKET_MAX_SIZE = 4096;
     static constexpr size_t HEADER_INT_BYTES = sizeof(int32_t);
 
-    static int32_t packet_length(char const *buffer);
+    static size_t packet_length(char const *buffer, size_t length);
     static std::unique_ptr<NetworkMessage> deserialize(NetworkDataReader &reader);
     static void serialize(NetworkMessage const &msg, NetworkDataWriter &writer);
 

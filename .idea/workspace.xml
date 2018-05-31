@@ -11,7 +11,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cce28152-4bbe-4bad-820d-27ad61e4de2d" name="Default" comment="created" />
+    <list default="true" id="cce28152-4bbe-4bad-820d-27ad61e4de2d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/NetworkClientAdapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/NetworkClientAdapter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/NetworkProtocol.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/NetworkProtocol.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/shared/ANetworkBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/shared/ANetworkBuffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/shared/BasicNetworkBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/shared/BasicNetworkBuffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/network/NetworkClientAdapter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/network/NetworkClientAdapter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/network/NetworkProtocol.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/network/NetworkProtocol.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/shared/impl/BasicNetworkBuffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/shared/impl/BasicNetworkBuffer.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,13 +56,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="NetworkClientAdapter.cpp" pinned="false" current-in-tab="false">
+          <file leaf-file-name="NetworkClientAdapter.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sources/network/NetworkClientAdapter.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                <state relative-caret-position="434">
+                  <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
                   <folding>
-                    <element signature="e#41#79#0" expanded="true" />
+                    <element signature="e#41#69#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -71,11 +80,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="NetworkProtocol.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="NetworkProtocol.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sources/network/NetworkProtocol.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+                <state relative-caret-position="184">
+                  <caret line="18" column="37" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="37" />
                   <folding>
                     <element signature="e#79#91#0" expanded="true" />
                   </folding>
@@ -110,7 +119,7 @@
             <entry file="file://$PROJECT_DIR$/sources/shared/impl/BasicNetworkBuffer.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
-                  <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+                  <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
                   <folding>
                     <element signature="e#41#59#0" expanded="true" />
                   </folding>
@@ -134,8 +143,8 @@
           <file leaf-file-name="BasicNetworkBuffer.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/shared/BasicNetworkBuffer.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="26" selection-start-line="26" selection-end-line="26" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
                   <folding>
                     <element signature="e#135#169#0" expanded="true" />
                   </folding>
@@ -150,8 +159,11 @@
           <file leaf-file-name="NetworkClient.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/shared/NetworkClient.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+                <state relative-caret-position="405">
+                  <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+                  <folding>
+                    <element signature="e#125#158#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -159,8 +171,20 @@
           <file leaf-file-name="ANetworkBuffer.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/shared/ANetworkBuffer.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+                <state relative-caret-position="184">
+                  <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NetworkSocket.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/shared/NetworkSocket.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-270">
+                  <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#125#148#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -177,14 +201,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="NetworkProtocol.h" pinned="false" current-in-tab="true">
+          <file leaf-file-name="NetworkProtocol.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/NetworkProtocol.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+                <state relative-caret-position="274">
+                  <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
                   <folding>
                     <element signature="e#129#147#0" expanded="true" />
-                    <element signature="e#370#382#0" expanded="true" />
+                    <element signature="e#753#765#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -203,11 +227,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="NetworkClientAdapter.h" pinned="false" current-in-tab="false">
+          <file leaf-file-name="NetworkClientAdapter.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/include/NetworkClientAdapter.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+                <state relative-caret-position="300">
+                  <caret line="20" selection-start-line="20" selection-end-line="20" />
                 </state>
               </provider>
             </entry>
@@ -253,7 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sources/network/Test.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/sources/network/NetworkSocket.cpp" />
         <option value="$PROJECT_DIR$/sources/network/INetworkAdapter.h" />
@@ -295,15 +318,16 @@
         <option value="$PROJECT_DIR$/sources/network/NetworkDataWriter.cpp" />
         <option value="$PROJECT_DIR$/sources/network/ClientAdapter.cpp" />
         <option value="$PROJECT_DIR$/include/NetworkDataReader.h" />
-        <option value="$PROJECT_DIR$/include/NetworkClientAdapter.h" />
-        <option value="$PROJECT_DIR$/sources/network/NetworkClientAdapter.cpp" />
         <option value="$PROJECT_DIR$/include/NetworkMessage.h" />
         <option value="$PROJECT_DIR$/sources/network/NetworkProtocol.h" />
         <option value="$PROJECT_DIR$/sources/shared/ANetworkBuffer.cpp" />
-        <option value="$PROJECT_DIR$/include/shared/ANetworkBuffer.h" />
-        <option value="$PROJECT_DIR$/include/shared/BasicNetworkBuffer.h" />
+        <option value="$PROJECT_DIR$/include/NetworkProtocol.h" />
         <option value="$PROJECT_DIR$/sources/network/NetworkProtocol.cpp" />
+        <option value="$PROJECT_DIR$/include/shared/ANetworkBuffer.h" />
         <option value="$PROJECT_DIR$/sources/shared/impl/BasicNetworkBuffer.cpp" />
+        <option value="$PROJECT_DIR$/include/shared/BasicNetworkBuffer.h" />
+        <option value="$PROJECT_DIR$/include/NetworkClientAdapter.h" />
+        <option value="$PROJECT_DIR$/sources/network/NetworkClientAdapter.cpp" />
       </list>
     </option>
   </component>
@@ -344,12 +368,6 @@
             <path>
               <item name="cpp_indie_studio" type="b2602c69:ProjectViewProjectNode" />
               <item name="cpp_indie_studio" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cpp_indie_studio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cpp_indie_studio" type="462c0819:PsiDirectoryNode" />
               <item name="sources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -363,13 +381,6 @@
               <item name="cpp_indie_studio" type="462c0819:PsiDirectoryNode" />
               <item name="sources" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cpp_indie_studio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cpp_indie_studio" type="462c0819:PsiDirectoryNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -426,7 +437,7 @@
       <workItem from="1527513771057" duration="1272000" />
       <workItem from="1527517302181" duration="7000" />
       <workItem from="1527517359903" duration="52063000" />
-      <workItem from="1527751792458" duration="15343000" />
+      <workItem from="1527751792458" duration="22364000" />
     </task>
     <task id="LOCAL-00001" summary="began network socket class">
       <created>1527591463608</created>
@@ -526,24 +537,31 @@
       <option name="project" value="LOCAL" />
       <updated>1527679689972</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="changed some func visibility">
+      <created>1527773692679</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1527773692679</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68849000" />
+    <option name="totallyTimeSpent" value="75870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32929516" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32929516" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -595,7 +613,8 @@
     <MESSAGE value="created network async server" />
     <MESSAGE value="updated cmakelist" />
     <MESSAGE value="basic impl of network buffer done" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic impl of network buffer done" />
+    <MESSAGE value="changed some func visibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed some func visibility" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/include/NetworkClientAdapter.h">
@@ -724,13 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/shared/NetworkSocket.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/shared/Network.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -765,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/shared/NetworkClient.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/NetworkDataReader.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -799,33 +804,6 @@
           <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
           <folding>
             <element signature="e#41#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/NetworkClientAdapter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/network/NetworkClientAdapter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#41#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/NetworkMessage.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#127#145#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -870,33 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/shared/ANetworkBuffer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/shared/BasicNetworkBuffer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#135#169#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/shared/impl/BasicNetworkBuffer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-          <folding>
-            <element signature="e#41#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/shared/ANetworkBuffer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -916,23 +867,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/NetworkProtocol.h">
+    <entry file="file://$PROJECT_DIR$/sources/network/NetworkProtocol.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="184">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="37" />
           <folding>
-            <element signature="e#129#147#0" expanded="true" />
-            <element signature="e#370#382#0" expanded="true" />
+            <element signature="e#79#91#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/network/NetworkProtocol.cpp">
+    <entry file="file://$PROJECT_DIR$/include/NetworkMessage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="404">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
-            <element signature="e#79#91#0" expanded="true" />
+            <element signature="e#127#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/NetworkProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="e#129#147#0" expanded="true" />
+            <element signature="e#753#765#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/shared/NetworkSocket.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <element signature="e#125#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/shared/NetworkClient.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+          <folding>
+            <element signature="e#125#158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/shared/impl/BasicNetworkBuffer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="e#41#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/shared/ANetworkBuffer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/shared/BasicNetworkBuffer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="e#135#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/NetworkClientAdapter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/network/NetworkClientAdapter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding>
+            <element signature="e#41#69#0" expanded="true" />
           </folding>
         </state>
       </provider>

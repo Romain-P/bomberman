@@ -16,10 +16,13 @@ std::unique_ptr<NetworkMessage> NetworkProtocol::packet_factory() {
     return std::unique_ptr<NetworkMessage>();
 }
 
-int32_t NetworkProtocol::packet_length(char const *buffer) {
-    int32_t length;
-    memcpy(&length, buffer, HEADER_INT_BYTES);
-    return length;
+size_t NetworkProtocol::packet_length(char const *buffer, size_t length) {
+    if (length < HEADER_INT_BYTES)
+        return (0);
+
+    int32_t packet_size;
+    memcpy(&packet_size, buffer, HEADER_INT_BYTES);
+    return static_cast<size_t>(packet_size);
 }
 
 std::unique_ptr<NetworkMessage> NetworkProtocol::deserialize(NetworkDataReader &reader) {

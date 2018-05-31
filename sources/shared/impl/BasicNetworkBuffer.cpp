@@ -5,7 +5,7 @@
 #include <cstring>
 #include "shared/BasicNetworkBuffer.h"
 
-bool BasicNetworkBuffer::append(char *bytes, size_t length) {
+bool BasicNetworkBuffer::append(char const *bytes, size_t length) {
     size_t position = _position + length;
 
     if (position > _maxSize)

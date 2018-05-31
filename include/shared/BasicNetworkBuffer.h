@@ -15,7 +15,7 @@ public:
 
     explicit BasicNetworkBuffer(size_t maxSize) : ANetworkBuffer(maxSize), _bytes() {};
 
-    bool append(char *bytes, size_t length) override;
+    bool append(char const *bytes, size_t length) override;
     bool drop(size_t from, size_t to) override;
     void clear() override;
     char *getBytes() override;

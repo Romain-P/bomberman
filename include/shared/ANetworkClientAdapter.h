@@ -40,16 +40,11 @@ protected:
 
     /**
      * Call this method when a packet is completed.
-     * The bytes between @from and @to addresses will be erased from the client buffer if
-     * the arg @drop is set to true.
      * Then the bytes are sent to the onReceived handler method of the client.
      *
      * @param client    network client receiving the packet
-     * @param from      start address of the packet
-     * @param to        end address of the packet
-     * @param drop      remove the data from the buffer, also resizing it
      */
-    void packetCompleted(NetworkClient *client, size_t from, size_t to, bool drop);
+    void packetCompleted(NetworkClient *client, char const *bytes, size_t length);
 
 private:
 

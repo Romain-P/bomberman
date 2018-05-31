@@ -19,7 +19,8 @@ public:
 
 private:
 
+    bool parsePacket(NetworkClient *client, const char *&bytes, size_t &length);
+    bool readNextPacketSize(ANetworkBuffer *buffer, char const *&bytes, size_t &length);
 };
-
 
 #endif //CPP_INDIE_STUDIO_SIMPLECLIENTADAPTER_H

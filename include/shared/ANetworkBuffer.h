@@ -20,7 +20,7 @@ public:
      * @param length    n bytes to add
      * @return          true if the buffer size lower than the buffer max size, false otherwise
      */
-    virtual bool append(char *bytes, size_t length) = 0;
+    virtual bool append(char const *bytes, size_t length) = 0;
     virtual bool drop(size_t from, size_t to) = 0;
     virtual void clear() = 0;
     virtual char *getBytes() = 0;
