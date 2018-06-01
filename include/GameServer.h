@@ -1,27 +1,28 @@
 //
-// Created by romain on 01/06/18.
+// Created by romain on 02/06/18.
 //
 
 #ifndef CPP_INDIE_STUDIO_GAMESERVER_H
 #define CPP_INDIE_STUDIO_GAMESERVER_H
 
+#include "shared/ANetworkAsyncServer.h"
+#include "GameClient.h"
 
-#include <unordered_map>
-#include <GameClient.h>
+using game_clients_t = std::unordered_map<size_t, std::unique_ptr<GameClient>>;
 
-using clients_t = std::unordered_map<size_t, std::unique_ptr<GameClient>>;
-
-class GameServer {
+class GameServer: public ANetworkAsyncServer {
 public:
 
-    GameServer() : _clients() {}
+    GameServer(std::string const &ip, uint16_t port) : ANetworkAsyncServer(ip ,port), _clients() {}
 
-    clients_t &getClients();
+    std::unique_ptr<ANetworkClientAdapter> defineClientAdapter() override;
+
+    game_clients_t &getClients();
     void shutdown();
 
 private:
 
-    clients_t _clients;
+    game_clients_t _clients;
 };
 
 

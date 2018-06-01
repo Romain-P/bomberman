@@ -17,7 +17,7 @@ public:
 
 private:
 
-    //TODO: game player vars
+    //TODO: gameserver player vars
 };
 
 

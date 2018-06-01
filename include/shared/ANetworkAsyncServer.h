@@ -14,22 +14,20 @@
 
 using clients_t = std::unordered_map<socket_fd_t, std::unique_ptr<NetworkClient>>;
 
-class NetworkAsyncServer: public NetworkAsyncListener {
+class ANetworkAsyncServer: public NetworkAsyncListener {
 friend class NetworkClient;
 
 public:
 
-    NetworkAsyncServer(std::string const &ip, uint16_t port) : NetworkAsyncListener(),
+    ANetworkAsyncServer(std::string const &ip, uint16_t port) : NetworkAsyncListener(),
             _socket(ip, port, NetworkSocket::PASSIVE),
             _clients(),
             _adapter()
     {}
-    virtual ~NetworkAsyncServer() = default;
+    virtual ~ANetworkAsyncServer() = default;
 
     void start() override;
     void close() override;
-
-    clients_t &getClients();
 
 protected:
 
@@ -37,8 +35,6 @@ protected:
      * Adapter for buffer type, read size, client handler..
      */
     virtual std::unique_ptr<ANetworkClientAdapter> defineClientAdapter() = 0;
-
-    void onSocketNotified(socket_fd_t socket) override;
 
 private:
 
@@ -48,6 +44,7 @@ private:
 
     void onListenerClosed(bool interrupted) final;
     socket_fd_t defineServerFd() final;
+    void onSocketNotified(socket_fd_t socket) final;
 };
 
 

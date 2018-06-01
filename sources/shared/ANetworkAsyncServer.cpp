@@ -5,18 +5,18 @@
 #include <iostream>
 #include "shared/ANetworkAsyncServer.h"
 
-void NetworkAsyncServer::start() {
+void ANetworkAsyncServer::start() {
     _socket.init();
     _adapter = std::move(defineClientAdapter());
 
     NetworkAsyncListener::start();
 }
 
-void NetworkAsyncServer::close() {
+void ANetworkAsyncServer::close() {
     NetworkAsyncListener::close();
 }
 
-void NetworkAsyncServer::onSocketNotified(socket_fd_t socket) {
+void ANetworkAsyncServer::onSocketNotified(socket_fd_t socket) {
     NetworkClient *client;
 
     if (socket == _socket.getId()) {
@@ -36,7 +36,7 @@ void NetworkAsyncServer::onSocketNotified(socket_fd_t socket) {
     }
 }
 
-void NetworkAsyncServer::onListenerClosed(bool interrupted) {
+void ANetworkAsyncServer::onListenerClosed(bool interrupted) {
     for (auto &keyset: _clients) {
         auto client = keyset.second.get();
         delListened(client->getId());
@@ -45,10 +45,6 @@ void NetworkAsyncServer::onListenerClosed(bool interrupted) {
     _clients.clear();
 }
 
-socket_fd_t NetworkAsyncServer::defineServerFd() {
+socket_fd_t ANetworkAsyncServer::defineServerFd() {
     return _socket.getId();
-}
-
-clients_t &NetworkAsyncServer::getClients() {
-    return _clients;
 }

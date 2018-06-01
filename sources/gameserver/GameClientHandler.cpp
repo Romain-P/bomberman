@@ -13,6 +13,7 @@ void GameClientHandler::onConnect(NetworkClient *client) {
 
     _server->getClients()[client->getId()] = std::move(player);
     _controller.onConnect(player.get());
+    std::cerr << "[Server] connected\t<-->\t\t[Client " << client->getId() << "]" << std::endl;
 }
 
 void GameClientHandler::onReceive(NetworkClient *client, char const *buffer, size_t length) {
@@ -21,7 +22,7 @@ void GameClientHandler::onReceive(NetworkClient *client, char const *buffer, siz
     if (!player) return;
 
     auto msg = player->receive(buffer, length);
-    std::cerr << "[Server] received\t<--\t\t[Client " << client->getId() << "]:\t\t" << msg.get() << std::endl;
+    std::cerr << "[Server] recv\t<--\t\t[Client " << client->getId() << "]:\t\t" << msg.get() << std::endl;
 
     _controller.parseMessage(player, msg.get());
 }
@@ -41,6 +42,7 @@ void GameClientHandler::onDisconnect(NetworkClient *client) {
     if (!player) return;
 
     _controller.onDisconnect(player);
+    std::cerr << "[Server] disconnected\t<-!->\t\t[Client " << client->getId() << "]" << std::endl;
 }
 
 GameClient *GameClientHandler::find(NetworkClient *client) {

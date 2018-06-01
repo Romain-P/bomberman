@@ -18,7 +18,7 @@ public:
     virtual void send(NetworkMessage const &message);
     virtual std::unique_ptr<NetworkMessage> receive(char const *bytes, size_t length);
 
-    virtual void kick(bool force = false);
+    void kick(bool force = false);
     virtual size_t getId() const;
 
 private:

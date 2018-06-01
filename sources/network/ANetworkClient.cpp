@@ -13,6 +13,7 @@ void ANetworkClient::send(NetworkMessage const &message) {
 std::unique_ptr<NetworkMessage> ANetworkClient::receive(char const *bytes, size_t length) {
     _reader.clear();
     _reader.append(bytes, length);
+    _reader.setPosition(0);
     return NetworkProtocol::deserialize(_reader);
 }
 

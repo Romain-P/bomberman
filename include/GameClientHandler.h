@@ -7,13 +7,13 @@
 
 #include <string>
 #include "shared/INetworkClientHandler.h"
+#include "GameServerController.h"
 #include "GameServer.h"
-#include "GameController.h"
 
 class GameClientHandler: public INetworkClientHandler {
 public:
 
-    explicit GameClientHandler(GameServer *server) : _controller(server), INetworkClientHandler() {}
+    explicit GameClientHandler(GameServer *server) : _server(), _controller(server), INetworkClientHandler() {}
 
     void onConnect(NetworkClient *client) override;
     void onReceive(NetworkClient *client, char const *buffer, size_t length) override;
@@ -23,7 +23,7 @@ public:
 private:
 
     GameServer *_server;
-    GameController _controller;
+    GameServerController _controller;
 
     GameClient *find(NetworkClient *client);
 };

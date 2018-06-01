@@ -7,13 +7,13 @@
 
 
 #include "ANetworkController.h"
-#include "GameServer.h"
 #include "MapDataMessage.h"
+#include "GameServer.h"
 
-class GameController: public ANetworkController {
+class GameServerController: public ANetworkController {
 public:
 
-    explicit GameController(GameServer *server) : _server(server), ANetworkController() {}
+    explicit GameServerController(GameServer *server) : _server(server), ANetworkController() {}
 
     void defineMessageHandlers(handlers_t &handlers) override;
     void onConnect(GameClient *client);
