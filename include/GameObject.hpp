@@ -6,14 +6,15 @@
 #define CPP_INDIE_STUDIO_GAMEOBJECT_HPP
 
 #include <vector3d.h>
+#include "GameManager.hpp"
 
 using namespace irr;
-
 using namespace core;
 
 class GameObject
 {
 public:
+    GameObject(GameManager &manager, vector3df position = vector3df(0,0,0), vector3df rotation = vector3df(0,0,0));
     virtual void Start();
     virtual void Update();
     virtual void LateUpdate();
@@ -21,9 +22,11 @@ public:
     vector3df getRotation() { return _rotation; }
     void setPosition(vector3df position) { _position = position; }
     void setRotation(vector3df rotation) {_rotation = rotation; }
-private:
+protected:
+    GameManager &_manager;
     vector3df _position;
     vector3df _rotation;
+    int _id;
 };
 
 #endif //CPP_INDIE_STUDIO_GAMEOBJECT_HPP
