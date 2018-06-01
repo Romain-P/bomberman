@@ -2,13 +2,17 @@
 // Created by romain on 31/05/18.
 //
 
+#include <HelloConnectMessage.h>
+#include <MapDataMessage.h>
 #include "NetworkProtocol.h"
+#include "NetworkMessage.h"
 
 constexpr size_t NetworkProtocol::HEADER_INT_BYTES;
 constexpr size_t NetworkProtocol::PACKET_MAX_SIZE;
 
 const std::unordered_map<int32_t, std::unique_ptr<NetworkMessage>(*)()> NetworkProtocol::messages {
-    //TODO: add protocol messages
+        { HelloConnectMessage::PROTOCOL_ID, packet_factory<HelloConnectMessage> },
+        { MapDataMessage::PROTOCOL_ID, packet_factory<MapDataMessage>}
 };
 
 template<typename T>

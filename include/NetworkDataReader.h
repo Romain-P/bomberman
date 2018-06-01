@@ -9,11 +9,14 @@
 #include <cstdint>
 #include <string>
 #include "shared/BasicNetworkBuffer.h"
+#include "NetworkProtocol.h"
 
 class NetworkDataReader: public BasicNetworkBuffer {
 public:
 
-    NetworkDataReader(size_t maxSize): BasicNetworkBuffer(maxSize) {}
+    explicit NetworkDataReader(size_t maxSize): BasicNetworkBuffer(maxSize) {}
+
+    NetworkDataReader(): BasicNetworkBuffer(NetworkProtocol::PACKET_MAX_SIZE) {}
 
     template<typename T>
     void readBytes(T &to_fill);

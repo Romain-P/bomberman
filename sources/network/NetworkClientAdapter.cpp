@@ -50,5 +50,5 @@ bool NetworkClientAdapter::readNextPacketSize(ANetworkBuffer *buffer, char const
 }
 
 std::unique_ptr<ANetworkBuffer> NetworkClientAdapter::bufferFactory() {
-    return std::make_unique<BasicNetworkBuffer>(4096);
+    return std::make_unique<BasicNetworkBuffer>(NetworkProtocol::PACKET_MAX_SIZE);
 }

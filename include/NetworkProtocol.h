@@ -11,7 +11,10 @@
 #include <unordered_map>
 #include <stdexcept>
 #include <memory>
-#include "NetworkMessage.h"
+
+class NetworkMessage;
+class NetworkDataReader;
+class NetworkDataWriter;
 
 class NetworkProtocol {
 public:
