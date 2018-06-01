@@ -17,7 +17,7 @@ void GameClientHandler::onConnect(NetworkClient *client) {
 }
 
 void GameClientHandler::onReceive(NetworkClient *client, char const *buffer, size_t length) {
-    GameClient *player = find(client);
+    GameClient *player = _server->findClient(client->getId());
 
     if (!player) return;
 
@@ -28,7 +28,7 @@ void GameClientHandler::onReceive(NetworkClient *client, char const *buffer, siz
 }
 
 void GameClientHandler::onSent(NetworkClient *client, char const *buffer, size_t length) {
-    GameClient *player = find(client);
+    GameClient *player = _server->findClient(client->getId());
 
     if (!player) return;
 
@@ -37,21 +37,10 @@ void GameClientHandler::onSent(NetworkClient *client, char const *buffer, size_t
 }
 
 void GameClientHandler::onDisconnect(NetworkClient *client) {
-    GameClient *player = find(client);
+    GameClient *player = _server->findClient(client->getId());
 
     if (!player) return;
 
     _controller.onDisconnect(player);
     std::cerr << "[Server] disconnected\t<-!->\t\t[Client " << client->getId() << "]" << std::endl;
-}
-
-GameClient *GameClientHandler::find(NetworkClient *client) {
-    for (auto &keyset: _server->getClients()) {
-        auto &gameClient = keyset.second;
-
-        if (gameClient->getId() == client->getId())
-            return gameClient.get();
-    }
-    client->close();
-    return nullptr;
 }

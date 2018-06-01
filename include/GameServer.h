@@ -17,6 +17,7 @@ public:
 
     std::unique_ptr<ANetworkClientAdapter> defineClientAdapter() override;
 
+    GameClient *findClient(size_t clientId);
     game_clients_t &getClients();
     void shutdown();
 

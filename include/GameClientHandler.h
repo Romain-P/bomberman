@@ -24,8 +24,6 @@ private:
 
     GameServer *_server;
     GameServerController _controller;
-
-    GameClient *find(NetworkClient *client);
 };
 
 
