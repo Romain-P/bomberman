@@ -26,6 +26,10 @@ void networkExample()
 }
 
 int main() {
+    if (true) {
+        networkExample();
+        return 0;
+    }
     try {
         BomberWave game;
         game.Launch();
