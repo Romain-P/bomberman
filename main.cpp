@@ -1,11 +1,17 @@
 #include <iostream>
-#include "include/BomberWave.hpp"
-
-auto irrlichtDevice = irr::createDevice(irr::video::EDT_SOFTWARE);
+#include "BomberWave.hpp"
 
 int main()
 {
-
-    std::cout << "Hello, World!" << std::endl;
+    try
+    {
+        BomberWave game;
+        game.Launch();
+    }
+    catch (const std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+        return 84;
+    }
     return 0;
 }

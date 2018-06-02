@@ -6,26 +6,24 @@
 #define CPP_INDIE_STUDIO_BOMBERWAVE_HPP
 
 #include <memory>
-#include "../include/MainMenu.hpp"
+#include "MainMenu.hpp"
+#include "GameTime.hpp"
 #include <irrlicht.h>
-
-using namespace irr;
-
-extern std::unique_ptr<irr::IrrlichtDevice> irrlichtDevice;
 
 class BomberWave
 {
 public:
-    enum MENUCHOICE
-    {
-        NULL,
-        SOLO,
-        MULTIPLAYER
-    };
-
     BomberWave();
+    void Launch();
 private:
+    irr::IrrlichtDevice *InitDevice();
+    void LaunchMainMenu();
+    void LaunchSolo();
+    void LaunchMultiplayerHost();
+    void LaunchMultiplayerJoin();
+    irr::IrrlichtDevice * const _device;
     MainMenu _mainMenu;
+    bool _gameRunning;
 };
 
 #endif //CPP_INDIE_STUDIO_BOMBERWAVE_HPP

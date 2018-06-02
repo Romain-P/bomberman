@@ -5,24 +5,42 @@
 #ifndef CPP_INDIE_STUDIO_MAINMENU_HPP
 #define CPP_INDIE_STUDIO_MAINMENU_HPP
 
-#include "../include/BomberWave.hpp"
+#include <irrlicht.h>
+#include <memory>
 
-class MainMenuEventReceiver : public IEventReceiver
+using namespace irr;
+
+using namespace core;
+using namespace gui;
+
+enum class MAINMENUCHOICE
+{
+    NONE = 101,
+    SOLO,
+    JOINMULTIPLAYER,
+    HOSTMULTIPLAYER,
+    QUIT
+};
+
+class MainMenuEventReceiver : public irr::IEventReceiver
 {
 public:
-    MainMenuEventReceiver();
-    virtual bool OnEvent(const SEvent &event);
+    MainMenuEventReceiver(MAINMENUCHOICE &menuChoice);
+    virtual bool OnEvent(const irr::SEvent &event);
 private:
+    MAINMENUCHOICE &_menuChoice;
 };
 
 class MainMenu
 {
 public:
-    MainMenu();
-    irr::gui::IGUIEnvironment *guienv;
-    void Run();
-    void Draw();
+    MainMenu(irr::IrrlichtDevice * const device);
+    MAINMENUCHOICE Run();
 private:
+    void CreateMenu();
+    void Draw();
+    irr::IrrlichtDevice * const _device;
+    MAINMENUCHOICE _currentMenuChoice;
     MainMenuEventReceiver _eventReceiver;
 };
 
