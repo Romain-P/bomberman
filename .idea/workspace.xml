@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="17c83c2b-c9d0-4ffd-8e11-adb1ea673a41" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/include/Bomb.hpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/include/Exceptions.hpp" afterDir="false" />
@@ -97,7 +98,11 @@
       <change beforePath="$PROJECT_DIR$/sources/frontend/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/frontend/MainMenu.cpp" afterDir="false" />
 >>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
     </list>
+=======
+    <list default="true" id="cce28152-4bbe-4bad-820d-27ad61e4de2d" name="Default" comment="" />
+>>>>>>> network
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +112,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.39978904">
       <split-first>
@@ -119,10 +125,21 @@
                   <folding>
                     <element signature="e#41#66#0" expanded="true" />
                   </folding>
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.5014065">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="NetworkMessage.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/NetworkMessage.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="24" selection-start-line="24" selection-end-line="24" />
+>>>>>>> network
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="GameObject.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sources/GameObjects/GameObject.cpp">
               <provider selected="true" editor-type-id="text-editor">
@@ -131,10 +148,23 @@
                   <folding>
                     <element signature="e#41#66#0" expanded="true" />
                   </folding>
+=======
+          <file leaf-file-name="GameSession.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/gameclient/GameSession.cpp">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file leaf-file-name="GameClient.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/gameserver/GameClient.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+>>>>>>> network
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="BomberWave.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sources/BomberWave.cpp">
               <provider selected="true" editor-type-id="text-editor">
@@ -142,20 +172,38 @@
                   <caret line="58" selection-start-line="58" selection-end-line="58" />
                   <folding>
                     <element signature="e#41#66#0" expanded="true" />
+=======
+          <file leaf-file-name="GameClientHandler.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/gameserver/GameClientHandler.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="810">
+                  <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#41#60#0" expanded="true" />
+>>>>>>> network
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="GameManager.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sources/GameManager.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="480">
                   <caret line="32" selection-start-line="32" selection-end-line="32" />
+=======
+          <file leaf-file-name="iostream" pinned="false" current-in-tab="false">
+            <entry file="file:///usr/include/c++/6/iostream">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="326">
+                  <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+>>>>>>> network
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="Bomb.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sources/GameObjects/Bomb.cpp">
               <provider selected="true" editor-type-id="text-editor">
@@ -164,10 +212,18 @@
                   <folding>
                     <element signature="e#41#66#0" expanded="true" />
                   </folding>
+=======
+          <file leaf-file-name="GameSessionController.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/gameclient/GameSessionController.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="20" selection-start-line="20" selection-end-line="20" />
+>>>>>>> network
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="Monster.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sources/GameObjects/Monster.cpp">
               <provider selected="true" editor-type-id="text-editor" />
@@ -185,11 +241,39 @@
                   <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
                   <folding>
                     <element signature="e#41#64#0" expanded="true" />
+=======
+          <file leaf-file-name="MapDataMessage.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/protocol/MapDataMessage.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="HelloConnectMessage.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/protocol/HelloConnectMessage.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GameServerController.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sources/gameserver/GameServerController.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#41#60#0" expanded="true" />
+>>>>>>> network
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
         </leaf>
       </split-first>
       <split-second>
@@ -199,19 +283,45 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
                   <caret line="14" column="22" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="22" />
+=======
+          <file leaf-file-name="ANetworkClient.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/network/ANetworkClient.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                  <folding>
+                    <element signature="e#41#60#0" expanded="true" />
+                  </folding>
+>>>>>>> network
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="GameMap.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sources/GameMap.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
                   <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+=======
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="GameSessionHandler.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/gameclient/GameSessionHandler.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="495">
+                  <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#41#60#0" expanded="true" />
+                  </folding>
+>>>>>>> network
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="GameObject.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/GameObject.hpp">
               <provider selected="true" editor-type-id="text-editor">
@@ -219,38 +329,72 @@
                   <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
                   <folding>
                     <element signature="e#122#143#0" expanded="true" />
+=======
+          <file leaf-file-name="GameServer.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/GameServer.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="312">
+                  <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#118#157#0" expanded="true" />
+>>>>>>> network
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="Bomb.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/Bomb.hpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
                   <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+=======
+          <file leaf-file-name="GameSessionHandler.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/GameSessionHandler.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+>>>>>>> network
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="BomberWave.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/BomberWave.hpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
                   <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+=======
+          <file leaf-file-name="GameSessionConnector.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/gameclient/GameSessionConnector.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="540">
+                  <caret line="36" selection-start-line="36" selection-end-line="36" />
+>>>>>>> network
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="GameManager.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/GameManager.hpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="150">
                   <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+=======
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/main.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+>>>>>>> network
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="Player.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/include/Player.hpp">
               <provider selected="true" editor-type-id="text-editor">
@@ -258,11 +402,21 @@
                   <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
                   <folding>
                     <element signature="e#129#150#0" expanded="true" />
+=======
+          <file leaf-file-name="Network.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/shared/Network.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="495">
+                  <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#112#129#0" expanded="true" />
+>>>>>>> network
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
           <file leaf-file-name="MainMenu.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/MainMenu.hpp">
               <provider selected="true" editor-type-id="text-editor">
@@ -271,15 +425,48 @@
                   <folding>
                     <element signature="e#118#139#0" expanded="true" />
                   </folding>
+=======
+          <file leaf-file-name="ANetworkAsyncListener.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/shared/ANetworkAsyncListener.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="GameServer.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/gameserver/GameServer.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ANetworkAsyncServer.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sources/shared/ANetworkAsyncServer.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="236">
+                  <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+>>>>>>> network
+                </state>
+              </provider>
+            </entry>
+          </file>
+<<<<<<< HEAD
           <file leaf-file-name="GameTime.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/GameTime.hpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
                   <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+=======
+          <file leaf-file-name="ANetworkAsyncServer.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/shared/ANetworkAsyncServer.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="266">
+                  <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+>>>>>>> network
                 </state>
               </provider>
             </entry>
@@ -287,6 +474,7 @@
         </leaf>
       </split-second>
     </splitter>
+<<<<<<< HEAD
 =======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MainMenu.cpp" pinned="false" current-in-tab="true">
@@ -330,6 +518,14 @@
       </file>
     </leaf>
 >>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
+=======
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>reader</find>
+      <find>ANetworkController</find>
+    </findStrings>
+>>>>>>> network
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -337,6 +533,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/include/Scene.hpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
@@ -366,10 +563,64 @@
         <option value="$PROJECT_DIR$/sources/MainMenu.cpp" />
         <option value="$PROJECT_DIR$/include/Player.hpp" />
 =======
+=======
+        <option value="$PROJECT_DIR$/include/ANetworkController.h" />
+        <option value="$PROJECT_DIR$/sources/network/ANetworkController.cpp" />
+        <option value="$PROJECT_DIR$/include/ANetworkClient.h" />
+        <option value="$PROJECT_DIR$/sources/game/GameController.cpp" />
+        <option value="$PROJECT_DIR$/sources/game/GameServerModule.h" />
+        <option value="$PROJECT_DIR$/include/GameClient.h" />
+        <option value="$PROJECT_DIR$/sources/gameserver/GameServerModule.h" />
+        <option value="$PROJECT_DIR$/sources/protocol/HelloConnectMessage.cpp" />
+        <option value="$PROJECT_DIR$/sources/gameclient/GameSession.h" />
+        <option value="$PROJECT_DIR$/include/Player.h" />
+        <option value="$PROJECT_DIR$/sources/gameserver/GameController.cpp" />
+        <option value="$PROJECT_DIR$/sources/gameclient/GameSessionController.h" />
+        <option value="$PROJECT_DIR$/sources/gameclient/GameSessionHandler.h" />
+        <option value="$PROJECT_DIR$/sources/gameserver/GameManager.cpp" />
+        <option value="$PROJECT_DIR$/include/GameManager.h" />
+        <option value="$PROJECT_DIR$/sources/gameserver/GameServer.h" />
+        <option value="$PROJECT_DIR$/include/GameSession.h" />
+        <option value="$PROJECT_DIR$/sources/gameclient/GameSessionFactory.h" />
+        <option value="$PROJECT_DIR$/sources/gameclient/GameSessionConnector.h" />
+        <option value="$PROJECT_DIR$/include/shared/ANetworkClientAdapter.h" />
+        <option value="$PROJECT_DIR$/include/shared/ANetworkAsyncListener.h" />
+        <option value="$PROJECT_DIR$/include/GameServerController.h" />
+        <option value="$PROJECT_DIR$/sources/shared/impl/BasicNetworkBuffer.cpp" />
+        <option value="$PROJECT_DIR$/include/GameSessionController.h" />
+>>>>>>> network
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/GameSessionConnector.h" />
+        <option value="$PROJECT_DIR$/sources/shared/NetworkSocket.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/sources/frontend/MainMenu.cpp" />
 >>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
+=======
+        <option value="$PROJECT_DIR$/include/GameClientHandler.h" />
+        <option value="$PROJECT_DIR$/include/GameSessionHandler.h" />
+        <option value="$PROJECT_DIR$/sources/network/NetworkClientAdapter.cpp" />
+        <option value="$PROJECT_DIR$/sources/network/ANetworkClient.cpp" />
+        <option value="$PROJECT_DIR$/include/MapDataMessage.h" />
+        <option value="$PROJECT_DIR$/include/NetworkDataWriter.h" />
+        <option value="$PROJECT_DIR$/include/NetworkDataReader.h" />
+        <option value="$PROJECT_DIR$/sources/network/NetworkDataReader.cpp" />
+        <option value="$PROJECT_DIR$/sources/network/NetworkDataWriter.cpp" />
+        <option value="$PROJECT_DIR$/sources/network/NetworkProtocol.cpp" />
+        <option value="$PROJECT_DIR$/sources/gameserver/GameServerController.cpp" />
+        <option value="$PROJECT_DIR$/sources/shared/ANetworkAsyncListener.cpp" />
+        <option value="$PROJECT_DIR$/sources/gameclient/GameSessionController.cpp" />
+        <option value="$PROJECT_DIR$/sources/gameclient/GameSessionConnector.cpp" />
+        <option value="$PROJECT_DIR$/include/shared/Network.h" />
+        <option value="$PROJECT_DIR$/include/NetworkMessage.h" />
+        <option value="$PROJECT_DIR$/sources/gameclient/GameSessionHandler.cpp" />
+        <option value="$PROJECT_DIR$/sources/protocol/MapDataMessage.cpp" />
+        <option value="$PROJECT_DIR$/sources/gameserver/GameClientHandler.cpp" />
+        <option value="$PROJECT_DIR$/include/shared/ANetworkAsyncServer.h" />
+        <option value="$PROJECT_DIR$/sources/shared/ANetworkAsyncServer.cpp" />
+        <option value="$PROJECT_DIR$/sources/gameserver/GameServer.cpp" />
+        <option value="$PROJECT_DIR$/include/GameServer.h" />
+>>>>>>> network
       </list>
     </option>
   </component>
@@ -382,9 +633,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="960" />
     <option name="y" value="27" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <option name="width" value="930" />
 =======
@@ -394,6 +647,9 @@
 =======
     <option name="width" value="950" />
 >>>>>>> 729eeec73babbda2eb570c35939f4c6ab86a0266
+=======
+    <option name="width" value="930" />
+>>>>>>> network
     <option name="height" value="1053" />
 >>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
   </component>
@@ -402,6 +658,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -414,6 +671,7 @@
               <item name="cpp_indie_studio" type="462c0819:PsiDirectoryNode" />
               <item name="sources" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="cpp_indie_studio" type="b2602c69:ProjectViewProjectNode" />
               <item name="cpp_indie_studio" type="462c0819:PsiDirectoryNode" />
@@ -432,11 +690,12 @@
               <item name="sources" type="462c0819:PsiDirectoryNode" />
               <item name="GameObjects" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> network
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,9 +714,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sources/frontend" />
+      <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/sources/game" />
+<<<<<<< HEAD
 >>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
+=======
+      <recent name="$PROJECT_DIR$/sources/network" />
+      <recent name="$PROJECT_DIR$/include/shared" />
+      <recent name="$PROJECT_DIR$/sources/frontend" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+>>>>>>> network
     </key>
   </component>
   <component name="RunDashboard">
@@ -497,21 +765,137 @@
       <workItem from="1527513352555" duration="164000" />
       <workItem from="1527513771057" duration="1272000" />
       <workItem from="1527517302181" duration="7000" />
+<<<<<<< HEAD
       <workItem from="1527517359903" duration="808000" />
 >>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
+=======
+      <workItem from="1527517359903" duration="52063000" />
+      <workItem from="1527751792458" duration="30736000" />
+      <workItem from="1527865275158" duration="403000" />
+      <workItem from="1527865690990" duration="54675000" />
     </task>
+    <task id="LOCAL-00001" summary="began network socket class">
+      <created>1527591463608</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527591463609</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added socket base functionality">
+      <created>1527600140422</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527600140422</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added read and send methods to socket class">
+      <created>1527600908789</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527600908789</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed some on network socket">
+      <created>1527636913493</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1527636913493</updated>
+    </task>
+    <task id="LOCAL-00005" summary="created network client handler interface">
+      <created>1527636969694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1527636969694</updated>
+    </task>
+    <task id="LOCAL-00006" summary="created network client adapter">
+      <created>1527636986467</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1527636986467</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added abstract network buffer base">
+      <created>1527637018343</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1527637018343</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added network buffer missing">
+      <created>1527637043272</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1527637043272</updated>
+    </task>
+    <task id="LOCAL-00009" summary="created network shared labels">
+      <created>1527637076698</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1527637076698</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added network client base">
+      <created>1527637101873</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1527637101873</updated>
+    </task>
+    <task id="LOCAL-00011" summary="created network async listener">
+      <created>1527637124899</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1527637124899</updated>
+    </task>
+    <task id="LOCAL-00012" summary="created network async server">
+      <created>1527637142879</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1527637142879</updated>
+    </task>
+    <task id="LOCAL-00013" summary="updated cmakelist">
+      <created>1527637161043</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1527637161043</updated>
+    </task>
+    <task id="LOCAL-00014" summary="basic impl of network buffer done">
+      <created>1527679689972</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1527679689972</updated>
+>>>>>>> network
+    </task>
+    <task id="LOCAL-00015" summary="changed some func visibility">
+      <created>1527773692679</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1527773692679</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="57015000" />
 =======
     <option name="totallyTimeSpent" value="2251000" />
 >>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
+=======
+    <option name="totallyTimeSpent" value="139320000" />
+>>>>>>> network
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
     <layout>
 <<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" weight="0.12763713" />
@@ -523,6 +907,7 @@
 =======
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
 >>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
@@ -536,6 +921,17 @@
 =======
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32819384" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+=======
+      <window_info anchor="bottom" id="Messages" weight="0.32929516" />
+      <window_info anchor="bottom" id="CMake" order="10" weight="0.32929516" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32929516" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3314978" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
+>>>>>>> network
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -544,10 +940,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.12763713" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -565,6 +961,24 @@
       <window_info anchor="bottom" id="Find" order="6" weight="0.3289183" />
       <window_info anchor="bottom" id="CMake" order="4" weight="0.32819384" />
       <window_info id="Favorites" order="0" side_tool="true" />
+=======
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32819384" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="CMake" order="10" weight="0.32929516" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+>>>>>>> network
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,6 +988,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="4" />
@@ -582,39 +997,115 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/include/Scene.hpp">
 =======
+=======
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="began network socket class" />
+    <MESSAGE value="added socket base functionality" />
+    <MESSAGE value="added read and send methods to socket class" />
+    <MESSAGE value="fixed some on network socket" />
+    <MESSAGE value="created network client handler interface" />
+    <MESSAGE value="created network client adapter" />
+    <MESSAGE value="added abstract network buffer base" />
+    <MESSAGE value="added network buffer missing" />
+    <MESSAGE value="created network shared labels" />
+    <MESSAGE value="added network client base" />
+    <MESSAGE value="created network async listener" />
+    <MESSAGE value="created network async server" />
+    <MESSAGE value="updated cmakelist" />
+    <MESSAGE value="basic impl of network buffer done" />
+    <MESSAGE value="changed some func visibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed some func visibility" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="77" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>_writer.getSize()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>_bytes.size()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>messages</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>_server-&gt;getClients()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>_server</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>player</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>client-&gt;getId()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+>>>>>>> network
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sources/frontend/MainMenu.cpp">
+    <entry file="file:///usr/include/c++/6/ext/new_allocator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#41#64#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="402">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/sources/game/BomberWave.cpp">
 >>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
+=======
+    <entry file="file:///usr/include/c++/6/bits/stl_construct.h">
+>>>>>>> network
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="294">
+          <caret line="151" selection-start-line="151" selection-end-line="151" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/sources/shared/impl/BasicNetworkBuffer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/frontend/MainMenu.cpp">
+    <entry file="file:///usr/include/c++/6/bits/unordered_map.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="163">
+          <caret line="924" selection-start-line="924" selection-end-line="924" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/include/GameManager.hpp">
       <provider selected="true" editor-type-id="text-editor" />
@@ -831,48 +1322,373 @@
             <element signature="e#129#150#0" expanded="true" />
 =======
     <entry file="file://$PROJECT_DIR$/sources/game/BomberWave.cpp">
+=======
+    <entry file="file:///usr/include/c++/6/bits/functional_hash.h">
+>>>>>>> network
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="172">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file:///usr/include/c++/6/utility">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+        <state relative-caret-position="163">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/game/BomberWave.cpp">
+    <entry file="file:///usr/include/c++/6/bits/stl_function.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="355" selection-start-line="355" selection-end-line="355" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/bits/hashtable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="637" selection-start-line="637" selection-end-line="637" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/ext/aligned_buffer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/bits/hashtable_policy.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="664" selection-start-line="664" selection-end-line="664" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/MapDataMessage.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#127#145#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file:///usr/include/c++/6/bits/move.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/bits/unique_ptr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="302" selection-start-line="302" selection-end-line="302" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/HelloConnectMessage.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/tuple">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="133" column="6" selection-start-line="133" selection-start-column="6" selection-end-line="133" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/NetworkDataWriter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding>
+            <element signature="e#119#153#0" expanded="true" />
+            <element signature="e#478#490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/NetworkDataReader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="780" selection-start-line="780" selection-end-line="780" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/shared/ANetworkBuffer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="341" selection-start-line="8" selection-start-column="341" selection-end-line="8" selection-end-column="341" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/shared/ANetworkClientAdapter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/shared/INetworkClientHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/network/NetworkDataWriter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/network/NetworkClientAdapter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding>
+            <element signature="e#41#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/GameSessionController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/GameSession.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/shared/NetworkClient.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/network/NetworkProtocol.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#41#73#0" expanded="true" />
+            <element signature="e#551#563#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/network/NetworkDataReader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#100#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/shared/ANetworkAsyncListener.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/network/ANetworkClient.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#41#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/iostream">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/shared/NetworkClient.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <folding>
+            <element signature="e#41#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/GameSessionHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/shared/ANetworkAsyncListener.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/shared/Network.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding>
+            <element signature="e#112#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/NetworkMessage.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/protocol/HelloConnectMessage.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/protocol/MapDataMessage.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/bits/stl_pair.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="226" column="25" selection-start-line="226" selection-start-column="25" selection-end-line="226" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/shared/ANetworkAsyncServer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/shared/ANetworkAsyncServer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/GameServer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+<<<<<<< HEAD
+            <element signature="e#41#64#0" expanded="true" />
+>>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
+=======
+            <element signature="e#118#157#0" expanded="true" />
+>>>>>>> network
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/gameserver/GameClient.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/gameclient/GameSession.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/gameserver/GameServer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/gameserver/GameClientHandler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+          <folding>
+            <element signature="e#41#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/gameclient/GameSessionController.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/gameserver/GameServerController.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="e#41#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/gameclient/GameSessionHandler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding>
+            <element signature="e#41#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/gameclient/GameSessionConnector.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/frontend/MainMenu.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#41#64#0" expanded="true" />
->>>>>>> da895498446d3f3d4a90470dbb0204c9e8f28215
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
         </state>
       </provider>
     </entry>
