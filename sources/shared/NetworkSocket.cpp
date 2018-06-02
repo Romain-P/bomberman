@@ -75,7 +75,7 @@ void NetworkSocket::send(void *buffer, size_t length) {
 size_t NetworkSocket::read(void *buffer, size_t length) {
     ssize_t bytes = ::recv(_id, buffer, length, 0);
 
-    if (!bytes != ERROR)
+    if (bytes != ERROR)
         return (size_t) bytes;
 
     perror("read");

@@ -4,6 +4,7 @@
 
 #include "HelloConnectMessage.h"
 #include "GameServerController.h"
+#include "GameServer.h"
 
 void GameServerController::defineMessageHandlers(handlers_t &handlers) {
     handlers[MapDataMessage::PROTOCOL_ID] = handler(*this, &GameServerController::onMapDataMessage);

@@ -10,6 +10,8 @@ void GameSessionHandler::onConnect(NetworkClient *client) {
 }
 
 void GameSessionHandler::onReceive(NetworkClient *client, char const *buffer, size_t length) {
+    while (!_session);
+
     auto msg = _session->receive(buffer, length);
     std::cerr << "[Session] recv\t<--\t\t" << msg.get() << std::endl;
     _controller.parseMessage(_session, msg.get());
@@ -23,4 +25,8 @@ void GameSessionHandler::onSent(NetworkClient *client, char const *buffer, size_
 void GameSessionHandler::onDisconnect(NetworkClient *client) {
     _controller.onDisconnect(_session);
     std::cerr << "[Session] disconnected";
+}
+
+void GameSessionHandler::setSession(GameSession *session) {
+    _session = session;
 }

@@ -3,10 +3,11 @@
 //
 
 #include <GameClientHandler.h>
+#include <NetworkClientAdapter.h>
 #include "GameServer.h"
 
 std::unique_ptr<ANetworkClientAdapter> GameServer::defineClientAdapter() {
-    std::make_unique<GameClientHandler>(this);
+    return std::make_unique<NetworkClientAdapter>(1024, &_handler);
 }
 
 GameClient *GameServer::findClient(size_t clientId) {

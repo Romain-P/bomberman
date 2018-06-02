@@ -58,7 +58,7 @@ bool NetworkAsyncListener::addListened(socket_fd_t socket) {
 
     if (epoll_ctl(_epoll_fd, EPOLL_CTL_ADD, socket, &epoll) == ERROR) {
         perror("epoll_ctl");
-        eprintf("[EpollInstance %d]: error adding new socket (id=%d)\n", _epoll_fd, socket), false;
+        eprintf("[EpollInstance %d]: error adding new socket (id=%d)\n", _epoll_fd, socket);
         return false;
     }
     return true;
@@ -71,7 +71,7 @@ bool NetworkAsyncListener::delListened(socket_fd_t socket) {
 
     if (epoll_ctl(_epoll_fd, EPOLL_CTL_ADD, socket, &epoll) == ERROR) {
         perror("epoll_ctl");
-        eprintf("[EpollInstance %d]: error removing socket (id=%d)\n", _epoll_fd, socket), false;
+        eprintf("[EpollInstance %d]: error removing socket (id=%d)\n", _epoll_fd, socket);
         return false;
     }
     return true;

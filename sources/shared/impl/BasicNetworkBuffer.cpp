@@ -43,6 +43,7 @@ bool BasicNetworkBuffer::drop(size_t from, size_t to) {
 
     auto start = _bytes.begin() + from;
     _bytes.erase(start, start + to);
+    return true;
 }
 
 size_t BasicNetworkBuffer::getSize() const {

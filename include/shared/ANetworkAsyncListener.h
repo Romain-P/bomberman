@@ -10,8 +10,6 @@
 
 class NetworkAsyncListener {
 public:
-
-    explicit NetworkAsyncListener() = default;
     virtual ~NetworkAsyncListener();
 
     /**

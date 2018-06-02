@@ -24,7 +24,6 @@ public:
             _clients(),
             _adapter()
     {}
-    virtual ~ANetworkAsyncServer() = default;
 
     void start() override;
     void close() override;

@@ -7,6 +7,7 @@
 #include "NetworkProtocol.h"
 #include "GameClientHandler.h"
 #include "shared/NetworkClient.h"
+#include "GameServer.h"
 
 void GameClientHandler::onConnect(NetworkClient *client) {
     auto player = std::make_unique<GameClient>(client);
