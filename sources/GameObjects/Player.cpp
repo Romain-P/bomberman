@@ -2,11 +2,14 @@
 // Created by Mardel on 30/05/18.
 //
 
-#include <BomberWave.hpp>
-#include <Bomb.hpp>
+#include "BomberWave.hpp"
+#include "Bomb.hpp"
 #include "Player.hpp"
+#include "GameMap.hpp"
+#include "GameManager.hpp"
 
-Player::Player(GameManager &manager) : GameObject(manager), (PLAYERINPUT::NONE), _inputReceiver(_input)
+Player::Player(GameManager &manager, vector3df position, vector3df rotation) :
+        GameObject(manager, position, rotation), _input(PLAYERINPUT::NONE), _inputReceiver(_input)
 {
 
 }
@@ -23,8 +26,8 @@ void Player::Update()
 
     if (movement != vector3df(0,0,0))
     {
-        if (IsValidPosition(_position + (movement * BomberWave::Time.getDeltaTime())))
-            _position += movement * BomberWave::Time.getDeltaTime();
+        if (IsValidPosition(_position + (movement * _manager.getDeltaTime())))
+            _position += movement * _manager.getDeltaTime();
     }
     if (_input == PLAYERINPUT::PLACEBOMB)
         PlaceBomb();

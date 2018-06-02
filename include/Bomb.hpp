@@ -17,7 +17,7 @@ public:
 private:
     void Explode();
     float _countDown;
-    static const float _explosionTime = 3;
+    static constexpr float _explosionTime = 3;
 };
 
 #endif //CPP_INDIE_STUDIO_BOMB_HPP

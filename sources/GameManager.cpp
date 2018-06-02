@@ -4,7 +4,7 @@
 
 #include "GameManager.hpp"
 
-GameManager::GameManager(int level) :  _gameRunning(false), _map(level), _player(*this)
+GameManager::GameManager(int level, irr::IrrlichtDevice * const device) :  _gameRunning(false), _device(device), _map(level), _player(*this), _time(device)
 {
 
 }
@@ -33,6 +33,11 @@ void GameManager::SpawnObject(GameObject object)
 
 }
 
+float GameManager::getDeltaTime()
+{
+    return _time.getDeltaTime();
+}
+
 int GameManager::GenerateId()
 {
     _currentId++;
@@ -46,5 +51,9 @@ void GameManager::RenderMap()
 
 void GameManager::RenderObjects()
 {
+
+}
+
+void GameManager::RenderUI() {
 
 }

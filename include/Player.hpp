@@ -5,8 +5,6 @@
 #ifndef CPP_INDIE_STUDIO_PLAYER_HPP
 #define CPP_INDIE_STUDIO_PLAYER_HPP
 
-class Player;
-
 #include <irrlicht.h>
 #include "GameObject.hpp"
 

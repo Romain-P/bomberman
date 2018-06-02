@@ -2,6 +2,7 @@
 // Created by Mardel on 24/05/18.
 //
 
+#include "GameManager.hpp"
 #include "GameObject.hpp"
 #include <irrlicht.h>
 

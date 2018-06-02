@@ -15,7 +15,6 @@ class BomberWave
 public:
     BomberWave();
     void Launch();
-    static GameTime Time;
 private:
     irr::IrrlichtDevice *InitDevice();
     void LaunchMainMenu();
