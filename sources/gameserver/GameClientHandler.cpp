@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <sstream>
 #include "NetworkMessage.h"
 #include "NetworkProtocol.h"
 #include "GameClientHandler.h"
@@ -10,11 +11,9 @@
 #include "GameServer.h"
 
 void GameClientHandler::onConnect(NetworkClient *client) {
-    auto player = std::make_unique<GameClient>(client);
-
-    _server->getClients()[client->getId()] = std::move(player);
-    _controller.onConnect(player.get());
-    std::cerr << "[Server] connected\t<-->\t\t[Client " << client->getId() << "]" << std::endl;
+    log("[Server] new client %d\n", client->getId());
+    _server->getClients()[client->getId()] = std::make_unique<GameClient>(client);
+    _controller.onConnect(_server->getClients()[client->getId()].get());
 }
 
 void GameClientHandler::onReceive(NetworkClient *client, char const *buffer, size_t length) {
@@ -23,7 +22,10 @@ void GameClientHandler::onReceive(NetworkClient *client, char const *buffer, siz
     if (!player) return;
 
     auto msg = player->receive(buffer, length);
-    std::cerr << "[Server] recv\t<--\t\t[Client " << client->getId() << "]:\t\t" << msg.get() << std::endl;
+
+    std::ostringstream s;
+    s << *msg;
+    log("[Server] recv\t\t\t<--\t\t[Client %d]:\t\t%s\n", client->getId(), s.str().c_str());
 
     _controller.parseMessage(player, msg.get());
 }
@@ -33,8 +35,14 @@ void GameClientHandler::onSent(NetworkClient *client, char const *buffer, size_t
 
     if (!player) return;
 
+    buffer += NetworkProtocol::HEADER_INT_BYTES;
+    length -= NetworkProtocol::HEADER_INT_BYTES;
+
     auto msg = player->receive(buffer, length);
-    std::cerr << "[Server] sent\t-->\t\t[Client " << client->getId() << "]:\t\t" << msg.get() << std::endl;
+
+    std::ostringstream s;
+    s << *msg;
+    log("[Server] sent\t\t\t-->\t\t[Client %d]:\t\t%s\n", client->getId(), s.str().c_str());
 }
 
 void GameClientHandler::onDisconnect(NetworkClient *client) {
@@ -43,5 +51,5 @@ void GameClientHandler::onDisconnect(NetworkClient *client) {
     if (!player) return;
 
     _controller.onDisconnect(player);
-    std::cerr << "[Server] disconnected\t<-!->\t\t[Client " << client->getId() << "]" << std::endl;
+    log("[Server] del client %d\n", client->getId());
 }

@@ -21,11 +21,10 @@ public:
     template<typename T>
     void writeBytes(T &to_copy);
 
-    template<typename T>
-    void writeBytes(std::vector<T> &to_copy);
-
+    void writeByteList(std::vector<char> const &to_copy);
     void writeBool(bool value);
     void writeInt(int32_t value);
+    void writeUint(size_t value);
     void writeUtf(std::string str);
 
 };

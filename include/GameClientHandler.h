@@ -14,7 +14,9 @@ class GameServer;
 class GameClientHandler: public INetworkClientHandler {
 public:
 
-    explicit GameClientHandler(GameServer *server) : INetworkClientHandler(), _server(), _controller(server){}
+    explicit GameClientHandler(GameServer *server) : INetworkClientHandler(), _server(server), _controller(server){
+        _controller.init();
+    }
 
     void onConnect(NetworkClient *client) override;
     void onReceive(NetworkClient *client, char const *buffer, size_t length) override;

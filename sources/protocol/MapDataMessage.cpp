@@ -7,24 +7,17 @@
 constexpr int32_t MapDataMessage::PROTOCOL_ID;
 
 void MapDataMessage::serialize(NetworkDataWriter &writer) const {
-    std::string toString(_data);
-    writer.writeUtf(toString);
+    writer.writeByteList(_data);
 }
 
 void MapDataMessage::deserialize(NetworkDataReader &reader) {
-    std::string data = reader.readUtf();
-    _data = data.c_str();
-    _length = data.size();
+    _data = reader.readBytes();
 }
 
 std::ostream &MapDataMessage::toString(std::ostream &o) const {
-    return NetworkMessage::toString(o);
+    return o << "MapDataMessage(data.size()=" << _data.size() << ")";
 }
 
-char const *MapDataMessage::getData() const {
+std::vector<char> &MapDataMessage::getData() {
     return _data;
-}
-
-size_t MapDataMessage::getLength() const {
-    return _length;
 }

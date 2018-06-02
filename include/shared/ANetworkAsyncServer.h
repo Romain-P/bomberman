@@ -28,12 +28,16 @@ public:
     void start() override;
     void close() override;
 
+    uint16_t getPort();
+
 protected:
 
     /**
      * Adapter for buffer type, read size, client handler..
      */
     virtual std::unique_ptr<ANetworkClientAdapter> defineClientAdapter() = 0;
+
+    virtual void onServerClosed() = 0;
 
 private:
 

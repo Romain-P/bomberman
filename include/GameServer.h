@@ -16,11 +16,14 @@ public:
 
     GameServer(std::string const &ip, uint16_t port) : ANetworkAsyncServer(ip ,port), _handler(this), _clients() {}
 
-    std::unique_ptr<ANetworkClientAdapter> defineClientAdapter() override;
-
     GameClient *findClient(size_t clientId);
     game_clients_t &getClients();
-    void shutdown();
+
+protected:
+
+    std::unique_ptr<ANetworkClientAdapter> defineClientAdapter() override;
+
+    void onServerClosed() override;
 
 private:
 

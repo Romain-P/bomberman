@@ -15,7 +15,7 @@ void NetworkDataReader::readBytes(T &to_fill) {
 }
 
 std::vector<char> NetworkDataReader::readBytes() {
-    int32_t count = readInt();
+    size_t count = readUint();
     size_t pos = getPosition();
 
     std::vector<char> read;
@@ -41,4 +41,10 @@ int32_t NetworkDataReader::readInt() {
 std::string NetworkDataReader::readUtf() {
     std::vector<char> read = readBytes();
     return std::string(read.begin(), read.end());
+}
+
+size_t NetworkDataReader::readUint() {
+    size_t value;
+    readBytes(value);
+    return value;
 }

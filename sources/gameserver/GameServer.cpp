@@ -24,9 +24,6 @@ game_clients_t &GameServer::getClients() {
     return _clients;
 }
 
-void GameServer::shutdown() {
-    for (auto &keyset: _clients) {
-        auto &client = keyset.second;
-        client->kick(true);
-    }
+void GameServer::onServerClosed() {
+    //TODO: you can do anything before that all clients are closed.
 }

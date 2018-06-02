@@ -7,6 +7,8 @@
 
 #include <cstdio>
 #include <mutex>
+#include <iostream>
+#include <cstdarg>
 
 #define eprintf(format, ...)    (fprintf(stderr, (format), ##__VA_ARGS__))
 
@@ -20,5 +22,16 @@ using epoll_t = struct epoll_event;
 using epoll_event_t = struct epoll_event;
 using signalinfo_t = struct signalfd_siginfo;
 using lock_t = std::lock_guard<std::mutex>;
+
+inline static void log(std::string const &format, ...) {
+    static std::mutex locker;
+
+    lock_t lock(locker);
+
+    va_list list;
+    va_start(list, format);
+    vfprintf(stderr, format.c_str(), list);
+    va_end(list);
+}
 
 #endif //CPP_INDIE_STUDIO_NETWORK_H

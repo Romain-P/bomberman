@@ -24,6 +24,7 @@ public:
     std::vector<char> readBytes();
     bool readBool();
     int32_t readInt();
+    size_t readUint();
     std::string readUtf();
 };
 

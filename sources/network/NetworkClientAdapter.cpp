@@ -11,17 +11,19 @@
 void NetworkClientAdapter::onDataReceived(NetworkClient *client, char const *bytes, size_t length) {
     ANetworkBuffer *buffer = client->getBuffer();
 
-    while (buffer->getPosition() + length >= buffer->getSize())
+    while (buffer->getPosition() + length >= buffer->getSize()) {
         if (!parsePacket(client, bytes, length))
             return;
+    }
 
-    buffer->append(bytes, length);
+    if (length)
+        buffer->append(bytes, length);
 }
 
 bool NetworkClientAdapter::parsePacket(NetworkClient *client, const char *&bytes, size_t &length) {
     ANetworkBuffer *buffer = client->getBuffer();
 
-    if (buffer->empty())
+    if (buffer->getSize() == 0)
         return readNextPacketSize(buffer, bytes, length);
 
     size_t pos = buffer->getPosition();

@@ -9,11 +9,16 @@
 #include <GameSession.h>
 #include <GameSessionHandler.h>
 #include <NetworkClientAdapter.h>
+#include <shared/ANetworkAsyncListener.h>
 
-class GameSessionConnector{
+class GameSessionConnector: public NetworkAsyncListener {
 public:
 
-    GameSessionConnector() : _client(), _session(), _handler(), _adapter(1024, &_handler) {}
+    GameSessionConnector() : _client(),
+                             _session(),
+                             _handler(),
+                             _adapter(1024, &_handler)
+    {}
 
     /**
      * Try to create a new game session instance
@@ -21,9 +26,16 @@ public:
      * @Return  true if the host exists
      */
     bool tryConnect(std::string const &ip, uint16_t gamePort);
+    void closeConnection();
+
+    void onSocketNotified(socket_fd_t socket_id) override;
+    void onListenerClosed(bool interrupted) override;
+    socket_fd_t defineServerFd() override;
+
     GameSession *getSession();
 
 private:
+
     std::unique_ptr<NetworkClient> _client;
     std::unique_ptr<GameSession> _session;
     GameSessionHandler _handler;

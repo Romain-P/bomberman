@@ -2,7 +2,6 @@
 // Created by romain on 30/05/18.
 //
 
-#include <cstring>
 #include "NetworkDataWriter.h"
 
 template<typename T>
@@ -16,12 +15,11 @@ void NetworkDataWriter::writeBytes(T &to_copy) {
     setPosition(pos + size);
 }
 
-template<typename T>
-void NetworkDataWriter::writeBytes(std::vector<T> &to_copy) {
-    auto size = static_cast<int32_t>(to_copy.size());
-    size_t pos = getPosition();
+void NetworkDataWriter::writeByteList(std::vector<char> const &to_copy) {
+    size_t size = to_copy.size();
 
-    writeInt(size);
+    writeUint(size);
+    size_t pos = getPosition();
 
     if (pos + size > _bytes.size())
         resize(pos + size);
@@ -41,4 +39,8 @@ void NetworkDataWriter::writeInt(int32_t value) {
 void NetworkDataWriter::writeUtf(std::string str) {
     std::vector<char> asList(str.begin(), str.end());
     writeBytes(asList);
+}
+
+void NetworkDataWriter::writeUint(size_t value) {
+    writeBytes(value);
 }

@@ -14,22 +14,20 @@ public:
 
     static constexpr int32_t PROTOCOL_ID = 2;
 
-    MapDataMessage() : NetworkMessage(PROTOCOL_ID), _data(nullptr), _length() {}
+    MapDataMessage() : NetworkMessage(PROTOCOL_ID), _data() {}
 
-    MapDataMessage(char const *data, size_t length) : NetworkMessage(PROTOCOL_ID), _data(data), _length(length) {}
+    MapDataMessage(std::vector<char> const &data) : NetworkMessage(PROTOCOL_ID), _data(data) {}
 
     void serialize(NetworkDataWriter &writer) const override;
     void deserialize(NetworkDataReader &reader) override;
 
-    char const *getData() const;
-    size_t getLength() const;
+    std::vector<char> &getData();
 
     std::ostream &toString(std::ostream &o) const override;
 
 private:
 
-    char const *_data;
-    size_t _length;
+    std::vector<char> _data;
 };
 
 

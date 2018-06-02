@@ -31,7 +31,7 @@ void NetworkSocket::create(bool listen) {
     server.sin_family = AF_INET;
     server.sin_port = htons(_port);
 
-    if (!listen && ::connect(_server_fd, reinterpret_cast<socket_t *>(&server), sizeof(server)) == ERROR)
+    if (!listen && ::connect(_id, reinterpret_cast<socket_t *>(&server), sizeof(server)) == ERROR)
         perror("connect");
     else if (listen && (bind(_id, (socket_t *) &server, sizeof(server)) == ERROR || ::listen(_id, SOMAXCONN) == ERROR))
         perror("listen & bind");
@@ -53,7 +53,7 @@ void NetworkSocket::accept() {
     insocket_t socket;
     socklen_t size = sizeof(socket);
 
-    _id = ::accept(_id, reinterpret_cast<socket_t *>(&socket), &size);
+    _id = ::accept(_server_fd, reinterpret_cast<socket_t *>(&socket), &size);
 
     if (_id == ERROR) {
         perror("accept");

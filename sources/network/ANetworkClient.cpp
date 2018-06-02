@@ -2,6 +2,7 @@
 // Created by romain on 01/06/18.
 //
 
+#include <iostream>
 #include "ANetworkClient.h"
 
 void ANetworkClient::send(NetworkMessage const &message) {

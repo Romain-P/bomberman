@@ -66,10 +66,8 @@ bool NetworkAsyncListener::addListened(socket_fd_t socket) {
 
 bool NetworkAsyncListener::delListened(socket_fd_t socket) {
     epoll_t epoll = { 0 };
-    epoll.events = EPOLLIN;
-    epoll.data.fd = socket;
 
-    if (epoll_ctl(_epoll_fd, EPOLL_CTL_ADD, socket, &epoll) == ERROR) {
+    if (epoll_ctl(_epoll_fd, EPOLL_CTL_DEL, socket, &epoll) == ERROR) {
         perror("epoll_ctl");
         eprintf("[EpollInstance %d]: error removing socket (id=%d)\n", _epoll_fd, socket);
         return false;

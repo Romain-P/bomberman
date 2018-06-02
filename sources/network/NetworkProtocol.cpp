@@ -4,6 +4,7 @@
 
 #include <HelloConnectMessage.h>
 #include <MapDataMessage.h>
+#include <iostream>
 #include "NetworkProtocol.h"
 #include "NetworkMessage.h"
 
@@ -12,12 +13,12 @@ constexpr size_t NetworkProtocol::PACKET_MAX_SIZE;
 
 const std::unordered_map<int32_t, std::unique_ptr<NetworkMessage>(*)()> NetworkProtocol::messages {
         { HelloConnectMessage::PROTOCOL_ID, packet_factory<HelloConnectMessage> },
-        { MapDataMessage::PROTOCOL_ID, packet_factory<MapDataMessage>}
+        { MapDataMessage::PROTOCOL_ID, packet_factory<MapDataMessage> }
 };
 
 template<typename T>
 std::unique_ptr<NetworkMessage> NetworkProtocol::packet_factory() {
-    return std::unique_ptr<NetworkMessage>();
+    return std::make_unique<T>();
 }
 
 size_t NetworkProtocol::packet_length(char const *buffer, size_t length) {
