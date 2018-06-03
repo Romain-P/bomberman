@@ -30,7 +30,7 @@ size_t NetworkProtocol::packet_length(char const *buffer, size_t length) {
     return static_cast<size_t>(packet_size);
 }
 
-std::unique_ptr<NetworkMessage> NetworkProtocol::deserialize(NetworkDataReader &reader) {
+std::unique_ptr<NetworkMessage> NetworkProtocol::deserialize(BinaryDataReader &reader) {
     int32_t msg_id = reader.readInt();
     try {
         std::unique_ptr<NetworkMessage> message(messages.at(msg_id)());
@@ -41,8 +41,8 @@ std::unique_ptr<NetworkMessage> NetworkProtocol::deserialize(NetworkDataReader &
     }
 }
 
-void NetworkProtocol::serialize(NetworkMessage const &msg, NetworkDataWriter &writer) {
-    NetworkDataWriter packetWriter(PACKET_MAX_SIZE);
+void NetworkProtocol::serialize(NetworkMessage const &msg, BinaryDataWriter &writer) {
+    BinaryDataWriter packetWriter(PACKET_MAX_SIZE);
     packetWriter.writeInt(msg.getProtocolId());
     msg.serialize(packetWriter);
 

@@ -15,8 +15,8 @@ public:
 
     HelloConnectMessage() : NetworkMessage(PROTOCOL_ID) {}
 
-    void serialize(NetworkDataWriter &writer) const override;
-    void deserialize(NetworkDataReader &reader) override;
+    void serialize(BinaryDataWriter &writer) const override;
+    void deserialize(BinaryDataReader &reader) override;
 
     std::ostream &toString(std::ostream &o) const override;
 };

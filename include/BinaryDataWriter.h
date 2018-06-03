@@ -11,12 +11,12 @@
 #include <string>
 #include "NetworkProtocol.h"
 
-class NetworkDataWriter: public BasicNetworkBuffer {
+class BinaryDataWriter: public BasicNetworkBuffer {
 public:
 
-    explicit NetworkDataWriter(size_t maxSize): BasicNetworkBuffer(maxSize) {}
+    explicit BinaryDataWriter(size_t maxSize): BasicNetworkBuffer(maxSize) {}
 
-    NetworkDataWriter() : BasicNetworkBuffer(NetworkProtocol::PACKET_MAX_SIZE) {}
+    BinaryDataWriter() : BasicNetworkBuffer(NetworkProtocol::PACKET_MAX_SIZE) {}
 
     template<typename T>
     void writeBytes(T &to_copy);

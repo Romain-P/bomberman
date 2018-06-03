@@ -6,11 +6,11 @@
 
 constexpr int32_t HelloConnectMessage::PROTOCOL_ID;
 
-void HelloConnectMessage::serialize(NetworkDataWriter &writer) const {
+void HelloConnectMessage::serialize(BinaryDataWriter &writer) const {
 
 }
 
-void HelloConnectMessage::deserialize(NetworkDataReader &reader) {
+void HelloConnectMessage::deserialize(BinaryDataReader &reader) {
 
 }
 

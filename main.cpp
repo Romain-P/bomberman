@@ -4,7 +4,9 @@
 #include <memory>
 #include "GameServer.h"
 #include "GameSessionConnector.h"
+#include "sources/GameObjects/Test.h"
 #include <thread>
+#include <GameDataSerializer.h>
 
 void launchServer(GameServer *server) {
     server->start();
@@ -25,7 +27,27 @@ void networkExample()
     thread.join();
 }
 
+void binaryDataExample() {
+    GameDataSerializer serializer;
+
+    Test test; //serializable
+    serializer.save("test", test);
+
+    //load and creating PTR
+    auto loaded = serializer.load<Test>("test");
+    loaded->dump();
+
+    //Or Create object and fill it
+    Test filled;
+    serializer.load("test", filled);
+    loaded->dump();
+}
+
 int main() {
+    if (true) {
+        binaryDataExample();
+        return 0;
+    }
     try {
         BomberWave game;
         game.Launch();
