@@ -40,7 +40,7 @@ void binaryDataExample() {
     //Or Create object and fill it
     Test filled;
     serializer.load("test", filled);
-    loaded->dump();
+    filled.dump();
 }
 
 int main() {
