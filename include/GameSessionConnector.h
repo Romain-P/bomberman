@@ -28,6 +28,8 @@ public:
     bool tryConnect(std::string const &ip, uint16_t gamePort);
     void closeConnection();
 
+protected:
+
     void onSocketNotified(socket_fd_t socket_id) override;
     void onListenerClosed(bool interrupted) override;
     socket_fd_t defineServerFd() override;
