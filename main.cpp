@@ -55,10 +55,10 @@ void mapExample() {
 }
 
 int main() {
-    if (true) {
+    /*if (true) {
         mapExample();
         return 0;
-    }
+    }*/
     try {
         BomberWave game;
         game.Launch();

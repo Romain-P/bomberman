@@ -13,7 +13,6 @@
 
 class GameDataSerializer {
 public:
-
     void save(std::string const &name, Serializable const &serializable);
     void load(std::string const &name, Serializable &serializable);
 

@@ -11,8 +11,9 @@ GameTime::GameTime(irr::IrrlichtDevice *device) : _device(device)
 
 void GameTime::Update()
 {
-    _deltaTime = _device->getTimer()->getTime() - _previousTime;
-    _previousTime += _deltaTime;
+    float currTime = _device->getTimer()->getTime();
+    _deltaTime = (currTime - _previousTime) / 1000.0f;
+    _previousTime = currTime;
 }
 
 void GameTime::Reset()

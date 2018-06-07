@@ -6,6 +6,7 @@
 #define CPP_INDIE_STUDIO_GAMEMAP_HPP
 
 #include <string>
+#include <irrlicht.h>
 #include <vector>
 #include <tuple>
 #include <unordered_map>
@@ -18,7 +19,6 @@ using positions_t = std::vector<std::tuple<pos_x, pos_y>>;
 
 class GameMap: public Serializable {
 public:
-
     static constexpr size_t WIDTH = 12;
     static constexpr size_t HEIGHT = 12;
 
@@ -29,26 +29,26 @@ public:
         ENEMY_SPAWN,
         PLAYER_SPAWN
     };
-
-    explicit GameMap(int level) {} //TODO ?
-
+    GameMap();
     GameMap(int data[HEIGHT][WIDTH], size_t completionTime, ssize_t enemies = -1);
-
     void serialize(BinaryDataWriter &writer) const final;
     void deserialize(BinaryDataReader &reader) final;
-
-    int getMapPosition(int x, int y) const;
     void set(int x, int y, int value);
     bool isWalkable(pos_x x, pos_y y) const;
     positions_t const &getEnemySpawns() const;
     positions_t const &getPlayerSpawns() const;
-
+    int getMapPosition(int x, int y) const;
+    size_t getCompletionTime() { return _completionTime; }
+    int getEnemyCount() { return _enemies; }
+    //int **getData() const;
+    static irr::core::vector3df mapToEngine(irr::core::vector2df &pos);
+    static irr::core::vector2df engineToMap(irr::core::vector3df &pos);
+    static const int MapSize = 12;
+protected:
+    int _map[MapSize][MapSize];
 private:
-
     size_t _completionTime;
     ssize_t _enemies;
-    int _map[HEIGHT][WIDTH];
     std::unordered_map<spawn_type, positions_t> _spawns;
 };
-
 #endif //CPP_INDIE_STUDIO_GAMEMAP_HPP

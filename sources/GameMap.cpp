@@ -2,14 +2,42 @@
 // Created by Mardel on 30/05/18.
 //
 
+#include <sstream>
+#include <fstream>
+#include <iostream>
+#include <Walls.hpp>
 #include "GameMap.hpp"
+
+GameMap::GameMap()
+{
+}
+
+int GameMap::getMapPosition(int x, int y) const
+{
+    return _map[y][x];
+}
+
+irr::core::vector3df GameMap::mapToEngine(irr::core::vector2df &pos)
+{
+    irr::core::vector3df newpos;
+
+    newpos.X = (60 - (pos.Y * 10));
+    newpos.Y = 60;
+    newpos.Z = (60 - (pos.X * 10));
+    return newpos;
+}
+
+irr::core::vector2df GameMap::engineToMap(irr::core::vector3df &pos)
+{
+    irr::core::vector2df newpos;
+
+    newpos.X = ((pos.Z + 60) / 10);
+    newpos.Y = ((pos.X + 60) / 10);
+    return newpos;
+}
 
 constexpr size_t GameMap::WIDTH;
 constexpr size_t GameMap::HEIGHT;
-
-int GameMap::getMapPosition(int x, int y) const {
-    return _map[y][x];
-}
 
 void GameMap::set(int x, int y, int value) {
     _map[y][x] = value;
@@ -72,3 +100,7 @@ positions_t const &GameMap::getPlayerSpawns() const {
 positions_t const &GameMap::getEnemySpawns() const {
     return _spawns.at(ENEMY_SPAWN);
 }
+
+/*int **GameMap::getData() const {
+    return _map;
+}*/

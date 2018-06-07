@@ -1,0 +1,20 @@
+60 /// Temps pour finir la map
+4 /// Nb d'ennemis a spawn
+4002022020000
+0111212101110
+2100000000012
+2101110111012 /// Map
+0001020201220
+2121210101012
+2122020200000
+0121010121111
+0100020202020
+0111212121210
+0000000300000
+
+
+////// 0 = rien
+////// 1 = mur indesctrutible
+////// 2 = mur destructible (avec bombe)
+////// 3 = but et spawn ennemi
+//////  4 = spawn joueur
