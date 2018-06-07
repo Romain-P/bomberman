@@ -19,7 +19,7 @@ public:
     ~GameManager();
     virtual void LaunchGame() = 0;
     void SpawnObject(GameObject *object);
-    const GameMap &getMap() { return _map; }
+    const GameMap &getMap() { return *_map; }
     virtual float getDeltaTime() = 0;
     int GenerateId();
     std::vector<GameObject *> getObjectsAtPosition(vector2df position);
@@ -29,7 +29,7 @@ protected:
     virtual void RunUpdates() = 0;
     virtual void RenderGame() = 0;
     bool _gameRunning;
-    GameMap _map;
+    std::unique_ptr<GameMap> _map;
     std::vector<std::unique_ptr<GameObject>> _objects;
     int _currentId;
 };

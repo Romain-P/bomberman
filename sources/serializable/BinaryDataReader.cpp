@@ -3,10 +3,10 @@
 //
 
 #include <cstring>
-#include "NetworkDataReader.h"
+#include "BinaryDataReader.h"
 
 template<typename T>
-void NetworkDataReader::readBytes(T &to_fill) {
+void BinaryDataReader::readBytes(T &to_fill) {
     size_t size = sizeof(T);
     size_t pos = getPosition();
 
@@ -14,7 +14,7 @@ void NetworkDataReader::readBytes(T &to_fill) {
     setPosition(pos + size);
 }
 
-std::vector<char> NetworkDataReader::readBytes() {
+std::vector<char> BinaryDataReader::readBytes() {
     size_t count = readUint();
     size_t pos = getPosition();
 
@@ -26,24 +26,24 @@ std::vector<char> NetworkDataReader::readBytes() {
     return read;
 }
 
-bool NetworkDataReader::readBool() {
+bool BinaryDataReader::readBool() {
     uint8_t value;
     readBytes(value);
     return value;
 }
 
-int32_t NetworkDataReader::readInt() {
+int32_t BinaryDataReader::readInt() {
     int32_t value;
     readBytes(value);
     return value;
 }
 
-std::string NetworkDataReader::readUtf() {
+std::string BinaryDataReader::readUtf() {
     std::vector<char> read = readBytes();
     return std::string(read.begin(), read.end());
 }
 
-size_t NetworkDataReader::readUint() {
+size_t BinaryDataReader::readUint() {
     size_t value;
     readBytes(value);
     return value;

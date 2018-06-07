@@ -6,11 +6,11 @@
 
 constexpr int32_t MapDataMessage::PROTOCOL_ID;
 
-void MapDataMessage::serialize(NetworkDataWriter &writer) const {
+void MapDataMessage::serialize(BinaryDataWriter &writer) const {
     writer.writeByteList(_data);
 }
 
-void MapDataMessage::deserialize(NetworkDataReader &reader) {
+void MapDataMessage::deserialize(BinaryDataReader &reader) {
     _data = reader.readBytes();
 }
 

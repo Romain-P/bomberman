@@ -7,8 +7,8 @@
 
 
 #include <shared/NetworkClient.h>
-#include "NetworkDataReader.h"
-#include "NetworkDataWriter.h"
+#include "BinaryDataReader.h"
+#include "BinaryDataWriter.h"
 #include "NetworkMessage.h"
 
 class ANetworkClient {
@@ -24,8 +24,8 @@ public:
 private:
 
     NetworkClient *_client;
-    NetworkDataReader _reader;
-    NetworkDataWriter _writer;
+    BinaryDataReader _reader;
+    BinaryDataWriter _writer;
 };
 
 

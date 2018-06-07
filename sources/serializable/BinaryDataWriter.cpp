@@ -2,10 +2,10 @@
 // Created by romain on 30/05/18.
 //
 
-#include "NetworkDataWriter.h"
+#include "BinaryDataWriter.h"
 
 template<typename T>
-void NetworkDataWriter::writeBytes(T &to_copy) {
+void BinaryDataWriter::writeBytes(T &to_copy) {
     size_t size = sizeof(T);
     ssize_t pos = getPosition();
 
@@ -15,7 +15,7 @@ void NetworkDataWriter::writeBytes(T &to_copy) {
     setPosition(pos + size);
 }
 
-void NetworkDataWriter::writeByteList(std::vector<char> const &to_copy) {
+void BinaryDataWriter::writeByteList(std::vector<char> const &to_copy) {
     size_t size = to_copy.size();
 
     writeUint(size);
@@ -27,20 +27,20 @@ void NetworkDataWriter::writeByteList(std::vector<char> const &to_copy) {
     setPosition(size + pos);
 }
 
-void NetworkDataWriter::writeBool(bool value) {
+void BinaryDataWriter::writeBool(bool value) {
     auto rval = static_cast<uint8_t>(value);
     writeBytes(rval);
 }
 
-void NetworkDataWriter::writeInt(int32_t value) {
+void BinaryDataWriter::writeInt(int32_t value) {
     writeBytes(value);
 }
 
-void NetworkDataWriter::writeUtf(std::string str) {
+void BinaryDataWriter::writeUtf(std::string str) {
     std::vector<char> asList(str.begin(), str.end());
-    writeBytes(asList);
+    writeByteList(asList);
 }
 
-void NetworkDataWriter::writeUint(size_t value) {
+void BinaryDataWriter::writeUint(size_t value) {
     writeBytes(value);
 }

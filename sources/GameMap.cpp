@@ -8,7 +8,6 @@
 #include <Walls.hpp>
 #include "GameMap.hpp"
 
-
 GameMap::GameMap()
 {
 }
@@ -37,43 +36,71 @@ irr::core::vector2df GameMap::engineToMap(irr::core::vector3df &pos)
     return newpos;
 }
 
-SoloMap::SoloMap(std::string &fileName) : GameMap(), _fileName(fileName)
-{
-    ParseMap();
+constexpr size_t GameMap::WIDTH;
+constexpr size_t GameMap::HEIGHT;
+
+void GameMap::set(int x, int y, int value) {
+    _map[y][x] = value;
 }
 
-SoloMap::SoloMap(int level) : GameMap()
-{
-    int lvl = level;
+GameMap::GameMap(int (*data)[WIDTH], size_t completionTime, ssize_t enemies) {
+    _completionTime = completionTime;
+    _enemies = enemies;
 
-    _fileName = "resources/maps/" + std::to_string(lvl);
-    ParseMap();
-}
+    for (pos_y y = 0; y < HEIGHT; ++y) {
+        for (pos_x x = 0; x < WIDTH; ++x) {
+            int &cell_type = data[y][x];
+            _map[y][x] = cell_type;
 
-void SoloMap::ParseMap()
-{
-    std::ifstream file(_fileName);
-    int linecount = 0;
-
-    for (std::string line; getline(file, line);)
-    {
-        if (linecount == 0)
-            _completionTime = std::stoi(line);
-        else if (linecount == 1)
-            _enemyCount = std::stoi(line);
-        else
-        {
-            int y = linecount - 2;
-            if (line.size() == 12)
-            {
-                for (int x = 0; x < (int)line.size(); x++)
-                {
-                    _map[y][x] = std::stoi(std::to_string(line[x] - 48));
-                }
-            }
+            if (cell_type == ENEMY_SPAWN || cell_type == PLAYER_SPAWN)
+                _spawns[cell_type].push_back(std::make_tuple(x, y));
         }
-        linecount++;
     }
-
 }
 
+bool GameMap::isWalkable(pos_x x, pos_y y) const {
+    int celltype = _map[y][x];
+
+    return celltype == NONE || celltype == PLAYER_SPAWN;
+}
+
+void GameMap::serialize(BinaryDataWriter &writer) const {
+    writer.writeUint(_completionTime);
+    writer.writeInt(static_cast<int32_t>(_enemies));
+    writer.writeUint(HEIGHT * WIDTH);
+
+    for (const auto &y : _map)
+        for (int x : y)
+            writer.writeInt(x);
+}
+
+void GameMap::deserialize(BinaryDataReader &reader) {
+    _completionTime = reader.readUint();
+    _enemies = reader.readInt();
+    size_t map_size = reader.readUint();
+
+    if (map_size != HEIGHT * WIDTH)
+        throw std::runtime_error("invalid map size loaded");
+
+    for (pos_y y = 0; y < HEIGHT; ++y) {
+        for (pos_x x = 0; x < WIDTH; ++x) {
+            int &cell = _map[y][x];
+            cell = reader.readInt();
+
+            if (cell == PLAYER_SPAWN || cell == ENEMY_SPAWN)
+                _spawns[cell].push_back(std::make_tuple(x, y));
+        }
+    }
+}
+
+positions_t const &GameMap::getPlayerSpawns() const {
+    return _spawns.at(PLAYER_SPAWN);
+}
+
+positions_t const &GameMap::getEnemySpawns() const {
+    return _spawns.at(ENEMY_SPAWN);
+}
+
+/*int **GameMap::getData() const {
+    return _map;
+}*/

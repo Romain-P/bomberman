@@ -13,8 +13,8 @@
 #include <memory>
 
 class NetworkMessage;
-class NetworkDataReader;
-class NetworkDataWriter;
+class BinaryDataReader;
+class BinaryDataWriter;
 
 class NetworkProtocol {
 public:
@@ -23,8 +23,8 @@ public:
     static constexpr size_t HEADER_INT_BYTES = sizeof(int32_t);
 
     static size_t packet_length(char const *buffer, size_t length);
-    static std::unique_ptr<NetworkMessage> deserialize(NetworkDataReader &reader);
-    static void serialize(NetworkMessage const &msg, NetworkDataWriter &writer);
+    static std::unique_ptr<NetworkMessage> deserialize(BinaryDataReader &reader);
+    static void serialize(NetworkMessage const &msg, BinaryDataWriter &writer);
 
 private:
 

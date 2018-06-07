@@ -11,12 +11,12 @@
 #include "shared/BasicNetworkBuffer.h"
 #include "NetworkProtocol.h"
 
-class NetworkDataReader: public BasicNetworkBuffer {
+class BinaryDataReader: public BasicNetworkBuffer {
 public:
 
-    explicit NetworkDataReader(size_t maxSize): BasicNetworkBuffer(maxSize) {}
+    explicit BinaryDataReader(size_t maxSize): BasicNetworkBuffer(maxSize) {}
 
-    NetworkDataReader(): BasicNetworkBuffer(NetworkProtocol::PACKET_MAX_SIZE) {}
+    BinaryDataReader(): BasicNetworkBuffer(NetworkProtocol::PACKET_MAX_SIZE) {}
 
     template<typename T>
     void readBytes(T &to_fill);

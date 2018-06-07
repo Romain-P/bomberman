@@ -5,14 +5,13 @@
 #include "GameManager.hpp"
 #include <iostream>
 #include <Walls.hpp>
+#include <GameMapFactory.h>
 
-GameManager::GameManager() : _gameRunning(false), _map(), _currentId(0)
-{
+GameManager::GameManager() : _gameRunning(false), _map(), _currentId(0) {
 
 }
 
-GameManager::~GameManager()
-{
+GameManager::~GameManager() {
 
 }
 
@@ -22,7 +21,7 @@ void SoloGameManager::SpawnMapObjects()
     {
         for (int x = 0; x < GameMap::MapSize; x++)
         {
-            int spot = _map.getMapPosition(x, y);
+            int spot = _map->getMapPosition(x, y);
             if (spot == 1)
             {
                 SpawnObject(new SoloWall(*this, vector2df(x, y)));
@@ -38,7 +37,10 @@ void SoloGameManager::SpawnMapObjects()
 SoloGameManager::SoloGameManager(int level, irr::IrrlichtDevice * const device) :
         GameManager(), _time(device), _device(device), _player(*this),_renderer(device)
 {
-    _map = SoloMap(level);
+    GameDataSerializer serializer;
+    GameMapFactory factory(serializer);
+
+    _map = factory.loadByTemplate(std::to_string(level));
 }
 
 void SoloGameManager::LaunchGame()

@@ -18,8 +18,8 @@ public:
 
     MapDataMessage(std::vector<char> const &data) : NetworkMessage(PROTOCOL_ID), _data(data) {}
 
-    void serialize(NetworkDataWriter &writer) const override;
-    void deserialize(NetworkDataReader &reader) override;
+    void serialize(BinaryDataWriter &writer) const override;
+    void deserialize(BinaryDataReader &reader) override;
 
     std::vector<char> &getData();
 

@@ -4,7 +4,10 @@
 #include <memory>
 #include "GameServer.h"
 #include "GameSessionConnector.h"
+#include "sources/GameObjects/Test.h"
 #include <thread>
+#include <GameDataSerializer.h>
+#include <GameMapFactory.h>
 
 void launchServer(GameServer *server) {
     server->start();
@@ -25,7 +28,35 @@ void networkExample()
     thread.join();
 }
 
+void binaryDataExample() {
+    GameDataSerializer serializer;
+
+    Test test; //serializable
+    serializer.save("test", test);
+
+    //load and creating PTR
+    auto loaded = serializer.load<Test>("test");
+    loaded->dump();
+
+    //Or Create object and fill it
+    Test filled;
+    serializer.load("test", filled);
+    filled.dump();
+}
+
+void mapExample() {
+    GameDataSerializer serializer;
+    GameMapFactory factory(serializer);
+
+    auto map = factory.loadByTemplate("1");
+    std::cout << "enemy spawns" << map->getEnemySpawns().size();
+}
+
 int main() {
+    /*if (true) {
+        mapExample();
+        return 0;
+    }*/
     try {
         BomberWave game;
         game.Launch();
