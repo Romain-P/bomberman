@@ -52,7 +52,8 @@ void BomberWave::LaunchMainMenu()
 
 void BomberWave::LaunchSolo()
 {
-    GameManager gameManager(1, _device);
+    _device->getGUIEnvironment()->clear();
+    SoloGameManager gameManager(1, _device);
 
     gameManager.LaunchGame();
 }

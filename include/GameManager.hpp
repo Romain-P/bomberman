@@ -6,6 +6,7 @@
 #define CPP_INDIE_STUDIO_GAMEMANAGER_HPP
 
 #include <vector>
+#include <memory>
 #include "GameRenderer.hpp"
 #include "GameMap.hpp"
 #include "Player.hpp"
@@ -14,26 +15,41 @@
 class GameManager
 {
 public:
-    GameManager(int level, irr::IrrlichtDevice * const device);
-    void LaunchGame();
-    void SpawnObject(GameObject object);
+    GameManager();
+    ~GameManager();
+    virtual void LaunchGame() = 0;
+    void SpawnObject(GameObject *object);
     const GameMap &getMap() { return _map; }
-    Player &getPlayer() { return _player; }
-    virtual float getDeltaTime();
-    virtual void RenderUI();
-    virtual void RenderMap();
-    virtual void RenderObjects();
+    virtual float getDeltaTime() = 0;
     int GenerateId();
+    std::vector<GameObject *> getObjectsAtPosition(vector2df position);
 protected:
-    void RunUpdates();
+    virtual void Cleanup() = 0;
+    virtual void SpawnMapObjects() = 0;
+    virtual void RunUpdates() = 0;
+    virtual void RenderGame() = 0;
     bool _gameRunning;
     GameMap _map;
-    std::vector<GameObject> _objects;
+    std::vector<std::unique_ptr<GameObject>> _objects;
     int _currentId;
+};
+
+class SoloGameManager : public GameManager
+{
+public:
+    SoloGameManager(int level, irr::IrrlichtDevice * const device);
+    Player &getPlayer() { return _player; }
+    void LaunchGame();
+    float getDeltaTime();
+    irr::IrrlichtDevice *const &getDevice() { return _device; }
 private:
+    void Cleanup();
+    void SpawnMapObjects();
+    void RunUpdates();
+    void RenderGame();
     GameTime _time;
     irr::IrrlichtDevice * const _device;
-    Player _player;
+    SoloPlayer _player;
     GameRenderer _renderer;
 };
 
@@ -41,8 +57,6 @@ class NetWorkGameManager : public GameManager
 {
 public:
     NetWorkGameManager(int level);
-    void RenderMap();
-    void RenderObjects();
 private:
 };
 

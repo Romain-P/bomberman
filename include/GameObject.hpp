@@ -7,27 +7,49 @@
 
 class GameManager;
 
-#include <vector3d.h>
+#include <irrlicht.h>
+#include <vector>
 
 using namespace irr;
 using namespace core;
 
+enum class GOTAG
+{
+    SOLID,
+    DESTROYABLE,
+    DEATH
+};
+
+enum class GOTYPE
+{
+    PLAYER,
+    BOMB,
+    WALL,
+    DESTROYABLEWALL
+};
+
 class GameObject
 {
 public:
-    GameObject(GameManager &manager, vector3df position = vector3df(0,0,0), vector3df rotation = vector3df(0,0,0));
+    GameObject(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
     virtual void Start();
     virtual void Update();
     virtual void LateUpdate();
-    vector3df getPosition() { return _position; }
-    vector3df getRotation() { return _rotation; }
-    void setPosition(vector3df position) {  _position = position; }
-    void setRotation(vector3df rotation) { _rotation = rotation; }
+    GameObject &operator=(const GameObject &obj) { return *this; }
+    const std::vector<GOTAG> &getTags() { return _tags; }
+    vector2df getPosition() { return _position; }
+    vector2df getRotation() { return _rotation; }
+    bool shouldBeDestroyed() { return _toBeDestroyed; }
+    virtual void Destroy();
+    void setPosition(vector2df position) {  _position = position; }
+    void setRotation(vector2df rotation) { _rotation = rotation; }
     int getId() { return _id; }
 protected:
+    bool _toBeDestroyed;
+    std::vector<GOTAG> _tags;
     GameManager &_manager;
-    vector3df _position;
-    vector3df _rotation;
+    vector2df _position;
+    vector2df _rotation;
     int _id;
 };
 

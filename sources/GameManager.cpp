@@ -3,39 +3,88 @@
 //
 
 #include "GameManager.hpp"
+#include <iostream>
+#include <Walls.hpp>
 
-GameManager::GameManager(int level, irr::IrrlichtDevice * const device) :  _gameRunning(false), _device(device), _map(level), _player(*this), _time(device)
+GameManager::GameManager() : _gameRunning(false), _map(), _currentId(0)
 {
 
 }
 
-void GameManager::LaunchGame()
+GameManager::~GameManager()
 {
-    _gameRunning = true;
 
-    _player.Start();
-    while (_gameRunning)
+}
+
+void SoloGameManager::SpawnMapObjects()
+{
+    for (int y = 0; y < GameMap::MapSize; y++)
     {
-        RunUpdates();
+        for (int x = 0; x < GameMap::MapSize; x++)
+        {
+            int spot = _map.getMapPosition(x, y);
+            if (spot == 1)
+            {
+                SpawnObject(new SoloWall(*this, vector2df(x, y)));
+            }
+            else if (spot == 2)
+            {
+                SpawnObject(new SoloDestroyableWall(*this, vector2df(x, y)));
+            }
+        }
     }
 }
 
-void GameManager::RunUpdates()
+SoloGameManager::SoloGameManager(int level, irr::IrrlichtDevice * const device) :
+        GameManager(), _time(device), _device(device), _player(*this),_renderer(device)
 {
+    _map = SoloMap(level);
+}
+
+void SoloGameManager::LaunchGame()
+{
+    _gameRunning = true;
+
+    SpawnMapObjects();
+    _player.Start();
+    _time.Reset();
+    while (_gameRunning && _device->run() && !_player.shouldBeDestroyed())
+    {
+        Cleanup();
+        RunUpdates();
+        RenderGame();
+    }
+}
+
+void SoloGameManager::Cleanup()
+{
+    for (auto it = _objects.begin(); it != _objects.end();)
+    {
+        if ((*it)->shouldBeDestroyed())
+            it = _objects.erase(it);
+        else
+            ++it;
+    }
+}
+
+void SoloGameManager::RunUpdates()
+{
+    _time.Update();
     _player.Update();
     for (auto it = _objects.begin(); it != _objects.end(); it++)
-        it->Update();
+    {
+        (*it)->Update();
+    }
 }
 
-void GameManager::SpawnObject(GameObject object)
-{
-    _objects.push_back(std::move(object));
-
-}
-
-float GameManager::getDeltaTime()
+float SoloGameManager::getDeltaTime()
 {
     return _time.getDeltaTime();
+}
+
+void SoloGameManager::RenderGame()
+{
+    _renderer.Render();
 }
 
 int GameManager::GenerateId()
@@ -44,16 +93,21 @@ int GameManager::GenerateId()
     return _currentId;
 }
 
-void GameManager::RenderMap()
+void GameManager::SpawnObject(GameObject *object)
 {
-
+    _objects.emplace_back(std::unique_ptr<GameObject>(object));
 }
 
-void GameManager::RenderObjects()
+std::vector<GameObject *> GameManager::getObjectsAtPosition(vector2df position)
 {
+    std::vector<GameObject *> objects;
 
-}
-
-void GameManager::RenderUI() {
-
+    for (auto it = _objects.begin(); it != _objects.end(); it++)
+    {
+        if ((int)position.X == (int)(*it)->getPosition().X && (int)position.Y == (int)(*it)->getPosition().Y)
+        {
+            objects.push_back((*it).get());
+        }
+    }
+    return objects;
 }
