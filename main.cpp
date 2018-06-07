@@ -7,6 +7,7 @@
 #include "sources/GameObjects/Test.h"
 #include <thread>
 #include <GameDataSerializer.h>
+#include <GameMapFactory.h>
 
 void launchServer(GameServer *server) {
     server->start();
@@ -43,9 +44,17 @@ void binaryDataExample() {
     filled.dump();
 }
 
+void mapExample() {
+    GameDataSerializer serializer;
+    GameMapFactory factory(serializer);
+
+    auto map = factory.loadByTemplate("1");
+    std::cout << "enemy spawns" << map->getEnemySpawns().size();
+}
+
 int main() {
     if (true) {
-        binaryDataExample();
+        mapExample();
         return 0;
     }
     try {
