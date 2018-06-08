@@ -8,6 +8,8 @@
 #include "GameMap.hpp"
 #include "GameManager.hpp"
 #include <iostream>
+#include <Explosion.hpp>
+#include <GameUtils.hpp>
 
 Player::Player(GameManager &manager, vector2df position, vector2df rotation) :
         GameObject(manager, position, rotation), _anim(PLAYERANIM::IDLE), _bombCount(2), _canPlaceBomb(true)
@@ -18,23 +20,16 @@ Player::Player(GameManager &manager, vector2df position, vector2df rotation) :
     Start();
 }
 
+MainPlayer::MainPlayer(GameManager &manager, vector2df position, vector2df rotation) :
+        Player(manager, position, rotation), _inputReceiver(_inputs)
+{
+    _manager.getDevice()->setEventReceiver(&_inputReceiver);
+}
 
 void Player::Start()
 {
-
-}
-
-SoloPlayer::SoloPlayer(GameManager &manager, vector2df position, vector2df rotation) :
-        Player(manager, position, rotation), _inputReceiver(_inputs)
-{
-}
-
-void SoloPlayer::Start()
-{
     GameObject::Start();
-    irr::IrrlichtDevice *device = dynamic_cast<SoloGameManager &>(_manager).getDevice();
-    device->setEventReceiver(&_inputReceiver);
-
+    irr::IrrlichtDevice *device = _manager.getDevice();
     irr::scene::IAnimatedMesh *mesh = device->getSceneManager()->getMesh("resources/models/Character/Bomberman.MD3");
     _node = device->getSceneManager()->addAnimatedMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
@@ -51,13 +46,20 @@ void Player::Update()
 {
     GameObject::Update();
     vector2df movement = GetMovement();
+    std::vector<GOTAG> deathTag(1, GOTAG::DEATH);
 
+    if (!_manager.getCollisionsWithTags(*this, deathTag).empty())
+    {
+        Destroy();
+        return;
+    }
     if (movement != vector2df(0, 0))
     {
-        if (IsValidPosition(_position + (movement * _manager.getDeltaTime() * _speed)))
+        vector2df newPosition = _position + (movement * _manager.getDeltaTime() * _speed);
+        if (IsValidPosition(newPosition))
         {
-            UpdateRotation(_position, _position + movement * _manager.getDeltaTime() * _speed);
-            _position += movement * _manager.getDeltaTime() * _speed;
+            _node->setRotation(GetRotationFromTo(GameMap::mapToEngine(_position), GameMap::mapToEngine(newPosition)));
+            _position = newPosition;
             UpdatePosition();
             PlayAnimation(PLAYERANIM::WALK);
         }
@@ -71,7 +73,7 @@ void Player::Update()
         PlaceBomb();
         _canPlaceBomb = false;
     }
-    else
+    else if (!_inputs[(int)PLAYERINPUT::PLACEBOMB])
         _canPlaceBomb = true;
 }
 
@@ -105,11 +107,11 @@ void Player::LateUpdate()
     GameObject::LateUpdate();
 }
 
-void SoloPlayer::PlaceBomb()
+void Player::PlaceBomb()
 {
     if (_bombCount > 0)
     {
-        _manager.SpawnObject(new SoloBomb(*this, _manager, _position, _rotation));
+        _manager.SpawnObject(new Bomb(*this, _manager, _position, _rotation));
         _bombCount--;
     }
 }
@@ -119,79 +121,12 @@ void Player::GiveBomb()
     _bombCount++;
 }
 
-void SoloPlayer::UpdatePosition()
+void Player::UpdatePosition()
 {
     _node->setPosition(GameMap::mapToEngine(_position));
 }
 
-void SoloPlayer::UpdateRotation(vector2df oldpos, vector2df newpos)
-{
-    vector3df oldEnginePos = GameMap::mapToEngine(oldpos);
-    vector3df newEnginePos = GameMap::mapToEngine(newpos);
-    vector3df forward = (oldEnginePos - newEnginePos).normalize();
-    quaternion current(_node->getRotation());
-    quaternion look = LookRotation(forward);
-    _node->setRotation(look.getMatrix().getRotationDegrees());
-}
-
-quaternion Player::LookRotation(vector3df forward)
-{
-    vector3df up(0, 1, 0);
-    vector3df right = (up.crossProduct(forward)).normalize();
-    up = forward.crossProduct(right);
-    float m00 = right.X;
-    float m01 = right.Y;
-    float m02 = right.Z;
-    float m10 = up.X;
-    float m11 = up.Y;
-    float m12 = up.Z;
-    float m20 = forward.X;
-    float m21 = forward.Y;
-    float m22 = forward.Z;
-
-    float num8 = (m00 + m11) + m22;
-    quaternion q1;
-    if (num8 > 0.0f)
-    {
-        float num = (float)std::sqrt(num8 + 1.0f);
-        q1.W = num + 0.5f;
-        num = 0.5f / num;
-        q1.X = (m12 - m21) * num;
-        q1.Y = (m20 - m02) * num;
-        q1.Z = (m01 - m10) * num;
-
-        return q1;
-    }
-    if ((m00 >= m11) && (m00 >= m22))
-    {
-        float num7 = (float)std::sqrt(((1.0f + m00) - m11) - m22);
-        float num4 = 0.5f / num7;
-        q1.X = 0.5f * num7;
-        q1.Y = (m01 + m10) * num4;
-        q1.Z = (m02 + m20) * num4;
-        q1.W = (m12 - m21) * num4;
-        return q1;
-    }
-    if (m11 > m22)
-    {
-        float num6 = (float)std::sqrt(((1.0f + m11) - m00) - m22);
-        float num3 = 0.5F / num6;
-        q1.X = (m10 + m01) * num3;
-        q1.Y = 0.5f * num6;
-        q1.Z = (m21 + m12) * num3;
-        q1.W = (m20 - m02) * num3;
-        return q1;
-    }
-    float num5 = (float)std::sqrt(((1.0f + m22) - m00) - m11);
-    float num2 = 0.5f / num5;
-    q1.X = (m20 + m02) * num2;
-    q1.Y = (m21 + m12) * num2;
-    q1.Z = 0.5f * num5;
-    q1.W = (m01 - m10) * num2;
-    return q1;
-}
-
-void SoloPlayer::PlayAnimation(PLAYERANIM anim)
+void Player::PlayAnimation(PLAYERANIM anim)
 {
     if (anim != _anim)
     {

@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/Mardel/clion-2018.1.2/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -554,6 +554,33 @@ sources/GameTime.s: sources/GameTime.cpp.s
 sources/GameTime.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameTime.cpp.s
 .PHONY : sources/GameTime.cpp.s
+
+sources/GameUtils.o: sources/GameUtils.cpp.o
+
+.PHONY : sources/GameUtils.o
+
+# target to build an object file
+sources/GameUtils.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o
+.PHONY : sources/GameUtils.cpp.o
+
+sources/GameUtils.i: sources/GameUtils.cpp.i
+
+.PHONY : sources/GameUtils.i
+
+# target to preprocess a source file
+sources/GameUtils.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUtils.cpp.i
+.PHONY : sources/GameUtils.cpp.i
+
+sources/GameUtils.s: sources/GameUtils.cpp.s
+
+.PHONY : sources/GameUtils.s
+
+# target to generate assembly for a file
+sources/GameUtils.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUtils.cpp.s
+.PHONY : sources/GameUtils.cpp.s
 
 sources/MainMenu.o: sources/MainMenu.cpp.o
 
@@ -1287,6 +1314,9 @@ help:
 	@echo "... sources/GameTime.o"
 	@echo "... sources/GameTime.i"
 	@echo "... sources/GameTime.s"
+	@echo "... sources/GameUtils.o"
+	@echo "... sources/GameUtils.i"
+	@echo "... sources/GameUtils.s"
 	@echo "... sources/MainMenu.o"
 	@echo "... sources/MainMenu.i"
 	@echo "... sources/MainMenu.s"

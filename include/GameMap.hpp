@@ -40,6 +40,7 @@ public:
     int getMapPosition(int x, int y) const;
     size_t getCompletionTime() { return _completionTime; }
     int getEnemyCount() { return _enemies; }
+    irr::core::vector2df getGoal() { return _goal; }
     //int **getData() const;
     static irr::core::vector3df mapToEngine(irr::core::vector2df &pos);
     static irr::core::vector2df engineToMap(irr::core::vector3df &pos);
@@ -47,6 +48,8 @@ public:
 protected:
     int _map[MapSize][MapSize];
 private:
+    irr::core::vector2df _spawn;
+    irr::core::vector2df _goal;
     size_t _completionTime;
     ssize_t _enemies;
     std::unordered_map<spawn_type, positions_t> _spawns;

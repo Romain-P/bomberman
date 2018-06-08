@@ -1,0 +1,3 @@
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/rebuild_cache.dir
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/edit_cache.dir
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir

@@ -52,8 +52,12 @@ GameMap::GameMap(int (*data)[WIDTH], size_t completionTime, ssize_t enemies) {
             int &cell_type = data[y][x];
             _map[y][x] = cell_type;
 
-            if (cell_type == ENEMY_SPAWN || cell_type == PLAYER_SPAWN)
-                _spawns[cell_type].push_back(std::make_tuple(x, y));
+            if (cell_type == PLAYER_SPAWN)
+            {
+                _spawn = vector2df(x, y);
+            }
+            else if (cell_type == ENEMY_SPAWN)
+                _goal = vector2df(x, y);
         }
     }
 }
@@ -87,8 +91,12 @@ void GameMap::deserialize(BinaryDataReader &reader) {
             int &cell = _map[y][x];
             cell = reader.readInt();
 
-            if (cell == PLAYER_SPAWN || cell == ENEMY_SPAWN)
-                _spawns[cell].push_back(std::make_tuple(x, y));
+            if (cell == PLAYER_SPAWN)
+            {
+                _spawn = vector2df(x, y);
+            }
+            else if (cell == ENEMY_SPAWN)
+                _goal = vector2df(x, y);
         }
     }
 }

@@ -44,36 +44,30 @@ class Player : public GameObject
 public:
     Player(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
     const std::array<bool, 6> &getInput() { return _inputs; }
-    virtual void Start();
+    void setInputs(std::array<bool, 6> inputs) { _inputs = inputs; }
+    void Start();
     void Update();
     void LateUpdate();
     void GiveBomb();
 protected:
     bool _canPlaceBomb;
-    quaternion LookRotation(vector3df forward);
-    virtual void PlayAnimation(PLAYERANIM anim) = 0;
-    virtual void UpdatePosition() = 0;
-    virtual void UpdateRotation(vector2df oldpos, vector2df newpos) = 0;
-    virtual void PlaceBomb() = 0;
+    void PlayAnimation(PLAYERANIM anim);
+    void UpdatePosition();
+    void PlaceBomb();
     bool IsValidPosition(vector2df position);
     std::array<bool, 6> _inputs;
     const float _speed = 2.0f;
     vector2df GetMovement();
     int _bombCount;
     PLAYERANIM _anim;
+    irr::scene::IAnimatedMeshSceneNode *_node;
 };
 
-class SoloPlayer : public Player
+class MainPlayer : public Player
 {
 public:
-    SoloPlayer(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
-    void Start();
+    MainPlayer(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
 private:
-    void PlaceBomb();
-    void PlayAnimation(PLAYERANIM anim);
-    void UpdateRotation(vector2df oldpos, vector2df newpos);
-    void UpdatePosition();
     PlayerEventReceiver _inputReceiver;
-    irr::scene::IAnimatedMeshSceneNode *_node;
 };
 #endif //CPP_INDIE_STUDIO_PLAYER_HPP

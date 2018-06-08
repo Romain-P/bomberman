@@ -44,6 +44,7 @@ public:
     void setPosition(vector2df position) {  _position = position; }
     void setRotation(vector2df rotation) { _rotation = rotation; }
     int getId() { return _id; }
+    bool HasTag(GOTAG tag);
 protected:
     bool _toBeDestroyed;
     std::vector<GOTAG> _tags;

@@ -9,38 +9,18 @@
 Wall::Wall(GameManager &manager, vector2df position, vector2df rotation) : GameObject(manager, position, rotation)
 {
     _tags.push_back(GOTAG::SOLID);
-}
-
-void Wall::Start()
-{
-}
-
-DestroyableWall::DestroyableWall(GameManager &manager, vector2df position, vector2df rotation) : GameObject(manager, position, rotation)
-{
-    _tags.push_back(GOTAG::SOLID);
-    _tags.push_back(GOTAG::DESTROYABLE);
-}
-
-NetworkWall::NetworkWall(GameManager &manager, vector2df position, vector2df rotation) : Wall(manager, position, rotation)
-{
-
-}
-
-
-SoloWall::SoloWall(GameManager &manager, vector2df position, vector2df rotation) : Wall(manager, position, rotation)
-{
     Start();
 }
 
-void SoloWall::Destroy()
+void Wall::Destroy()
 {
     _node->remove();
     GameObject::Destroy();
 }
 
-void SoloWall::Start()
+void Wall::Start()
 {
-    irr::IrrlichtDevice *device = dynamic_cast<SoloGameManager &>(_manager).getDevice();
+    irr::IrrlichtDevice *device = _manager.getDevice();
     irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/Column/Column.obj");
 
     _node = device->getSceneManager()->addMeshSceneNode(mesh);
@@ -51,22 +31,24 @@ void SoloWall::Start()
     _node->setScale(vector3df(4.2f, 2.5f, 4.2f));
 }
 
-SoloDestroyableWall::SoloDestroyableWall(GameManager &manager, vector2df position, vector2df rotation)
-        : DestroyableWall(manager, position, rotation)
+DestroyableWall::DestroyableWall(GameManager &manager, vector2df position, vector2df rotation)
+        : GameObject(manager, position, rotation)
 {
+    _tags.push_back(GOTAG::SOLID);
+    _tags.push_back(GOTAG::DESTROYABLE);
    Start();
 }
 
-void SoloDestroyableWall::Destroy()
+void DestroyableWall::Destroy()
 {
     _node->remove();
     GameObject::Destroy();
 }
 
-void SoloDestroyableWall::Start()
+void DestroyableWall::Start()
 {
 
-    irr::IrrlichtDevice *device = dynamic_cast<SoloGameManager &>(_manager).getDevice();
+    irr::IrrlichtDevice *device = _manager.getDevice();
     irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/PalmTree/source/plamtree/plamtree.obj");
 
     _node = device->getSceneManager()->addMeshSceneNode(mesh);

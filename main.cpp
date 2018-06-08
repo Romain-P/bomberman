@@ -53,6 +53,7 @@ void mapExample() {
 }
 
 int main() {
+    srand(time(NULL));
     /*if (true) {
         mapExample();
         return 0;

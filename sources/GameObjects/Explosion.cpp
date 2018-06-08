@@ -5,34 +5,49 @@
 #include <GameManager.hpp>
 #include "Explosion.hpp"
 
-/*void SoloExplosion::Start()
+Explosion::Explosion(GameManager &manager, vector2df position, vector2df rotation) : GameObject(manager, position, rotation), _countDown(LifeTime)
 {
-    irr::IrrlichtDevice *device = dynamic_cast<SoloGameManager &>(_manager).getDevice();
-    scene::IParticleSystemSceneNode *ps =
-            _node->getSceneManager()->addParticleSystemSceneNode(false);
+    _tags.push_back(GOTAG::DEATH);
+    Start();
+}
 
-    scene::IParticleEmitter *em = ps->createBoxEmitter(
-            core::aabbox3d<f32>(-7, 0, -7, 7, 1, 7), // emitter size
-            core::vector3df(0.0f, 0.06f, 0.0f),   // initial direction
-            80, 100,                             // emit rate
+void Explosion::Update()
+{
+    _countDown -= _manager.getDeltaTime();
+    if (_countDown <= 0)
+        Destroy();
+}
+
+void Explosion::Destroy()
+{
+    _node->remove();
+    GameObject::Destroy();
+}
+
+void Explosion::Start()
+{
+    irr::IrrlichtDevice *device = _manager.getDevice();;
+    _node = device->getSceneManager()->addParticleSystemSceneNode(false);
+    _node->setPosition(GameMap::mapToEngine(_position));
+    scene::IParticleEmitter *em = _node->createBoxEmitter(
+            core::aabbox3d<f32>(-2.5, -0.5f, -2.5f, -0.5f, 2.5f, 2.5f), // emitter size
+            core::vector3df(0.0f, 0.0005f, 0.0f),   // initial direction
+            1000, 1000,                             // emit rate
             video::SColor(0, 255, 255, 255),       // darkest color
             video::SColor(0, 255, 255, 255),       // brightest color
             800, 2000, 0,                         // min and max age, angle
-            core::dimension2df(10.f, 10.f),         // min size
-            core::dimension2df(20.f, 20.f));        // max size
+            core::dimension2df(0.4f, 0.4f),         // min size
+            core::dimension2df(0.6f, 0.6f));        // max size
 
-    ps->setEmitter(em); // this grabs the emitter
-    em->drop(); // so we can drop it here without deleting it
-
-    scene::IParticleAffector *paf = ps->createFadeOutParticleAffector();
-
-    ps->addAffector(paf); // same goes for the affector
+    _node->setEmitter(em);
+    em->drop();
+    scene::IParticleAffector *paf = _node->createFadeOutParticleAffector();
+    _node->addAffector(paf);
     paf->drop();
-
-    ps->setPosition(GameMap::mapToEngine(_position);
-    ps->setScale(core::vector3df(2, 2, 2));
-    ps->setMaterialFlag(video::EMF_LIGHTING, false);
-    ps->setMaterialFlag(video::EMF_ZWRITE_ENABLE, false);
-    ps->setMaterialTexture(0, device->getVideoDriver()->getTexture("../../media/fire.bmp"));
-    ps->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
-}*/
+    _node->setScale(core::vector3df(2, 2, 2));
+    _node->setMaterialFlag(video::EMF_LIGHTING, false);
+    _node->setMaterialFlag(video::EMF_ZWRITE_ENABLE, false);
+    video::ITexture *fireTexture = device->getVideoDriver()->getTexture("resources/textures/Particles/fire.bmp");
+    _node->setMaterialTexture(0, fireTexture);
+    _node->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
+}
