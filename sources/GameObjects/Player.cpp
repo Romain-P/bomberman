@@ -85,6 +85,7 @@ void Player::CheckCollisions()
 {
     std::vector<GOTAG> deathTag(1, GOTAG::DEATH);
     std::vector<GOTAG> powerUpTag(1, GOTAG::POWERUP);
+    std::vector<GOTAG> goalTag(1, GOTAG::GOAL);
 
     if (!_manager.getCollisionsWithTags(*this, deathTag).empty())
     {
@@ -97,6 +98,13 @@ void Player::CheckCollisions()
     {
         _buffs.push_back(std::unique_ptr<PlayerBuff>((dynamic_cast<PowerUp *>(*it))->GiveBuff(*this)));
         (*it)->Destroy();
+    }
+
+
+    if (!_manager.getCollisionsWithTags(*this, goalTag).empty())
+    {
+        Destroy();
+        return;
     }
 }
 
@@ -161,9 +169,15 @@ void Player::ApplyBuffs()
 {
     _bombPower = BaseBombPower;
     _speed = BaseSpeed;
-    for (auto it = _buffs.begin(); it != _buffs.end(); it++)
+    for (auto it = _buffs.begin(); it != _buffs.end();)
     {
         (*it)->Apply(_manager.getDeltaTime());
+        if ((*it)->getCountDown() == 0)
+        {
+            it = _buffs.erase(it);
+        }
+        else
+            it++;
     }
 }
 

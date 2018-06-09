@@ -67,13 +67,17 @@ void GameManager::SpawnMapObjects()
         for (int x = 0; x < GameMap::MapSize; x++)
         {
             int spot = _map->getMapPosition(x, y);
-            if (spot == 1)
+            if (spot == GameMap::CellType::WALL)
             {
                 SpawnObject(new Wall(*this, vector2df(x, y)));
             }
-            else if (spot == 2)
+            else if (spot == GameMap::CellType::BREAKABLE_WALL)
             {
                 SpawnObject(new DestroyableWall(*this, vector2df(x, y)));
+            }
+            else if (spot == GameMap::CellType::ENEMY_SPAWN)
+            {
+                SpawnObject(new Goal(*this, vector2df(x, y)));
             }
         }
     }
@@ -90,9 +94,6 @@ void GameManager::LaunchGame()
 
     _bgLoader.LoadRandomBackground();
     _bgLoader.LoadRandomTerrain();
-    SpawnObject(new SpeedPowerUp(*this, vector2df(1, 11)));
-    SpawnObject(new BonusBombPowerUp(*this, vector2df(2, 11)));
-    SpawnObject(new BombPowerPowerUp(*this, vector2df(3, 11)));
     SpawnMapObjects();
     _time.Reset();
     while (_gameRunning && _device->run() && !_player.shouldBeDestroyed())

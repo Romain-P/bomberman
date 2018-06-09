@@ -18,7 +18,8 @@ enum class GOTAG
     SOLID,
     DESTROYABLE,
     DEATH,
-    POWERUP
+    POWERUP,
+    GOAL
 };
 
 enum class GOTYPE

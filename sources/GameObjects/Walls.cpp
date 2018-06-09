@@ -82,3 +82,25 @@ void DestroyableWall::Start()
     _node->setPosition(GameMap::mapToEngine(_position));
     _node->setScale(vector3df(2, 1, 2));
 }
+
+Goal::Goal(GameManager &manager, vector2df position, vector2df rotation) : GameObject(manager, position, rotation)
+{
+    _tags.push_back(GOTAG::GOAL);
+    Start();
+}
+
+void Goal::Start() {
+    GameObject::Start();
+
+    irr::IrrlichtDevice *device = _manager.getDevice();
+    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/Flag/Flag.obj");
+
+    irr::scene::IMeshSceneNode *_node = device->getSceneManager()->addMeshSceneNode(mesh);
+    _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
+    _node->setRotation(vector3df(0, 0, 0));
+    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/Flag/Flag.png"));
+    _node->setMaterialType(irr::video::EMT_TRANSPARENT_ALPHA_CHANNEL_REF);
+    _position = vector2df(_position.X + 0.5f, _position.Y + 0.5f);
+    _node->setPosition(GameMap::mapToEngine(_position));
+    _node->setScale(vector3df(1, 1, 1));
+}
