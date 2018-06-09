@@ -11,7 +11,7 @@
 class Bomb : public GameObject
 {
 public:
-    Bomb(Player &player, GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
+    Bomb(int power, Player &player, GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
     void Start();
     void Update() override;
     void Destroy();
@@ -20,6 +20,7 @@ private:
     irr::scene::IMeshSceneNode *_node;
     Player &_player;
     void Explode();
+    int _power;
     float _countDown;
     static constexpr float _explosionTime = 2;
 };

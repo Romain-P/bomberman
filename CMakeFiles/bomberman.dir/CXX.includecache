@@ -73,6 +73,10 @@ Explosion.hpp
 -
 Monster.hpp
 -
+PowerUps.hpp
+-
+GameUIManager.hpp
+-
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMap.cpp
 sstream
@@ -143,6 +147,16 @@ Explosion.hpp
 -
 GameUtils.hpp
 -
+PowerUps.hpp
+-
+
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp
+GameMap.hpp
+-
+PowerUps.hpp
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.hpp
+GameManager.hpp
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameManager.hpp
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Test.cpp
 iostream
@@ -158,6 +172,8 @@ Serializable.h
 GameManager.hpp
 -
 iostream
+-
+PowerUps.hpp
 -
 Walls.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Walls.hpp
@@ -187,6 +203,10 @@ irrlicht.h
 -
 iostream
 -
+
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp
+PlayerBuff.hpp
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.hpp
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSession.cpp
 GameSession.h
@@ -575,6 +595,8 @@ irrlicht.h
 -
 
 include/GameUIManager.hpp
+GameManager.hpp
+include/GameManager.hpp
 
 include/GameUtils.hpp
 cmath
@@ -635,8 +657,24 @@ irrlicht.h
 -
 array
 -
+memory
+-
 GameObject.hpp
 include/GameObject.hpp
+PlayerBuff.hpp
+include/PlayerBuff.hpp
+
+include/PlayerBuff.hpp
+string
+-
+Player.hpp
+include/Player.hpp
+
+include/PowerUps.hpp
+GameObject.hpp
+include/GameObject.hpp
+PlayerBuff.hpp
+include/PlayerBuff.hpp
 
 include/Serializable.h
 BinaryDataWriter.h

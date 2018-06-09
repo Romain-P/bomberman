@@ -1113,6 +1113,54 @@ CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o.provides: CMakeFiles/bomber
 CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o
 
 
+CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o: CMakeFiles/bomberman.dir/flags.make
+CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o: sources/PlayerBuff.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp
+
+CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp > CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.i
+
+CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp -o CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.s
+
+CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.requires:
+
+.PHONY : CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.requires
+
+CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.provides: CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.provides.build
+.PHONY : CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.provides
+
+CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o
+
+
+CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o: CMakeFiles/bomberman.dir/flags.make
+CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o: sources/GameObjects/PowerUps.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp
+
+CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.i
+
+CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.s
+
+CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.requires:
+
+.PHONY : CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.requires
+
+CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.provides: CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.provides.build
+.PHONY : CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.provides
+
+CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
+
+
 # Object files for target bomberman
 bomberman_OBJECTS = \
 "CMakeFiles/bomberman.dir/main.cpp.o" \
@@ -1158,7 +1206,9 @@ bomberman_OBJECTS = \
 "CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o" \
 "CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o" \
 "CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o" \
-"CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o"
+"CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o" \
+"CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o" \
+"CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o"
 
 # External object files for target bomberman
 bomberman_EXTERNAL_OBJECTS =
@@ -1207,9 +1257,11 @@ bomberman: CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o
+bomberman: CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o
+bomberman: CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
 bomberman: CMakeFiles/bomberman.dir/build.make
 bomberman: CMakeFiles/bomberman.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX executable bomberman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking CXX executable bomberman"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bomberman.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1261,6 +1313,8 @@ CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/GameObjects/
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o.requires
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o.requires
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o.requires
+CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.requires
+CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.requires
 
 .PHONY : CMakeFiles/bomberman.dir/requires
 

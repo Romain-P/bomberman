@@ -17,6 +17,7 @@ Monster::Monster(GameManager &manager, vector2df position, vector2df rotation) :
 
 void Monster::Destroy()
 {
+    _manager.IncreaseScore(100);
     _node->remove();
     GameObject::Destroy();
 }

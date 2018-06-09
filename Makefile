@@ -474,6 +474,33 @@ sources/GameObjects/Player.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.s
 .PHONY : sources/GameObjects/Player.cpp.s
 
+sources/GameObjects/PowerUps.o: sources/GameObjects/PowerUps.cpp.o
+
+.PHONY : sources/GameObjects/PowerUps.o
+
+# target to build an object file
+sources/GameObjects/PowerUps.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
+.PHONY : sources/GameObjects/PowerUps.cpp.o
+
+sources/GameObjects/PowerUps.i: sources/GameObjects/PowerUps.cpp.i
+
+.PHONY : sources/GameObjects/PowerUps.i
+
+# target to preprocess a source file
+sources/GameObjects/PowerUps.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.i
+.PHONY : sources/GameObjects/PowerUps.cpp.i
+
+sources/GameObjects/PowerUps.s: sources/GameObjects/PowerUps.cpp.s
+
+.PHONY : sources/GameObjects/PowerUps.s
+
+# target to generate assembly for a file
+sources/GameObjects/PowerUps.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.s
+.PHONY : sources/GameObjects/PowerUps.cpp.s
+
 sources/GameObjects/Test.o: sources/GameObjects/Test.cpp.o
 
 .PHONY : sources/GameObjects/Test.o
@@ -662,6 +689,33 @@ sources/MainMenu.s: sources/MainMenu.cpp.s
 sources/MainMenu.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/MainMenu.cpp.s
 .PHONY : sources/MainMenu.cpp.s
+
+sources/PlayerBuff.o: sources/PlayerBuff.cpp.o
+
+.PHONY : sources/PlayerBuff.o
+
+# target to build an object file
+sources/PlayerBuff.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o
+.PHONY : sources/PlayerBuff.cpp.o
+
+sources/PlayerBuff.i: sources/PlayerBuff.cpp.i
+
+.PHONY : sources/PlayerBuff.i
+
+# target to preprocess a source file
+sources/PlayerBuff.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.i
+.PHONY : sources/PlayerBuff.cpp.i
+
+sources/PlayerBuff.s: sources/PlayerBuff.cpp.s
+
+.PHONY : sources/PlayerBuff.s
+
+# target to generate assembly for a file
+sources/PlayerBuff.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.s
+.PHONY : sources/PlayerBuff.cpp.s
 
 sources/gameclient/GameSession.o: sources/gameclient/GameSession.cpp.o
 
@@ -1359,6 +1413,9 @@ help:
 	@echo "... sources/GameObjects/Player.o"
 	@echo "... sources/GameObjects/Player.i"
 	@echo "... sources/GameObjects/Player.s"
+	@echo "... sources/GameObjects/PowerUps.o"
+	@echo "... sources/GameObjects/PowerUps.i"
+	@echo "... sources/GameObjects/PowerUps.s"
 	@echo "... sources/GameObjects/Test.o"
 	@echo "... sources/GameObjects/Test.i"
 	@echo "... sources/GameObjects/Test.s"
@@ -1380,6 +1437,9 @@ help:
 	@echo "... sources/MainMenu.o"
 	@echo "... sources/MainMenu.i"
 	@echo "... sources/MainMenu.s"
+	@echo "... sources/PlayerBuff.o"
+	@echo "... sources/PlayerBuff.i"
+	@echo "... sources/PlayerBuff.s"
 	@echo "... sources/gameclient/GameSession.o"
 	@echo "... sources/gameclient/GameSession.i"
 	@echo "... sources/gameclient/GameSession.s"

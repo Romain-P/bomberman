@@ -8,8 +8,8 @@
 #include "BomberWave.hpp"
 #include "Bomb.hpp"
 
-Bomb::Bomb(Player &player, GameManager &manager, vector2df position, vector2df rotation) :
-        GameObject(manager, position, rotation), _player(player), _countDown(_explosionTime)
+Bomb::Bomb(int power, Player &player, GameManager &manager, vector2df position, vector2df rotation) :
+        GameObject(manager, position, rotation), _player(player), _countDown(_explosionTime), _power(power)
 {
     Start();
 }
@@ -35,6 +35,7 @@ void Bomb::Update()
 void Bomb::Explode()
 {
     _player.GiveBomb();
+    _manager.SpawnObject(new Explosion(_manager, vector2df(_position.X, _position.Y)));
     ExplodeLine(1, 0);
     ExplodeLine(0, 1);
     ExplodeLine(-1, 0);
@@ -45,7 +46,7 @@ void Bomb::Explode()
 void Bomb::ExplodeLine(int x, int y)
 {
     int i = 1;
-    while (i < 3)
+    while (i <= _power)
     {
         if (_position.X + x * i < 0 || _position.Y + y * i >= 12
             || _position.Y + y * i < 0 || _position.X + x * i >= 12)

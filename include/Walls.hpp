@@ -25,6 +25,7 @@ public:
     DestroyableWall(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
     void Start();
     void Destroy();
+    void SpawnPowerUp();
 private:
     irr::scene::IMeshSceneNode *_node;
 };

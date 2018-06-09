@@ -431,6 +431,7 @@ CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
+ include/PlayerBuff.hpp
  include/Serializable.h
  include/shared/ANetworkAsyncListener.h
  include/shared/ANetworkAsyncServer.h
@@ -652,6 +653,7 @@ CMakeFiles/bomberman.dir/sources/GameManager.cpp.o
  include/GameSessionController.h
  include/GameSessionHandler.h
  include/GameTime.hpp
+ include/GameUIManager.hpp
  include/HelloConnectMessage.h
  include/MapDataMessage.h
  include/Monster.hpp
@@ -659,6 +661,8 @@ CMakeFiles/bomberman.dir/sources/GameManager.cpp.o
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
+ include/PlayerBuff.hpp
+ include/PowerUps.hpp
  include/Serializable.h
  include/Walls.hpp
  include/shared/ANetworkAsyncListener.h
@@ -1265,6 +1269,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.o
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
+ include/PlayerBuff.hpp
  include/Serializable.h
  include/shared/ANetworkAsyncListener.h
  include/shared/ANetworkAsyncServer.h
@@ -1483,6 +1488,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
+ include/PlayerBuff.hpp
  include/Serializable.h
  include/shared/ANetworkAsyncListener.h
  include/shared/ANetworkAsyncServer.h
@@ -1700,6 +1706,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
+ include/PlayerBuff.hpp
  include/Serializable.h
  include/shared/ANetworkAsyncListener.h
  include/shared/ANetworkAsyncServer.h
@@ -1919,6 +1926,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
+ include/PlayerBuff.hpp
  include/Serializable.h
  include/shared/ANetworkAsyncListener.h
  include/shared/ANetworkAsyncServer.h
@@ -2141,6 +2149,227 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.o
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
+ include/PlayerBuff.hpp
+ include/PowerUps.hpp
+ include/Serializable.h
+ include/shared/ANetworkAsyncListener.h
+ include/shared/ANetworkAsyncServer.h
+ include/shared/ANetworkBuffer.h
+ include/shared/ANetworkClientAdapter.h
+ include/shared/BasicNetworkBuffer.h
+ include/shared/INetworkClientHandler.h
+ include/shared/Network.h
+ include/shared/NetworkClient.h
+ include/shared/NetworkSocket.h
+ lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
+ lib/irrlicht-1.8.4/include/CIndexBuffer.h
+ lib/irrlicht-1.8.4/include/CMeshBuffer.h
+ lib/irrlicht-1.8.4/include/CVertexBuffer.h
+ lib/irrlicht-1.8.4/include/EAttributes.h
+ lib/irrlicht-1.8.4/include/ECullingTypes.h
+ lib/irrlicht-1.8.4/include/EDebugSceneTypes.h
+ lib/irrlicht-1.8.4/include/EDeviceTypes.h
+ lib/irrlicht-1.8.4/include/EDriverFeatures.h
+ lib/irrlicht-1.8.4/include/EDriverTypes.h
+ lib/irrlicht-1.8.4/include/EGUIAlignment.h
+ lib/irrlicht-1.8.4/include/EGUIElementTypes.h
+ lib/irrlicht-1.8.4/include/EHardwareBufferFlags.h
+ lib/irrlicht-1.8.4/include/EMaterialFlags.h
+ lib/irrlicht-1.8.4/include/EMaterialTypes.h
+ lib/irrlicht-1.8.4/include/EMeshWriterEnums.h
+ lib/irrlicht-1.8.4/include/EMessageBoxFlags.h
+ lib/irrlicht-1.8.4/include/EPrimitiveTypes.h
+ lib/irrlicht-1.8.4/include/ESceneNodeAnimatorTypes.h
+ lib/irrlicht-1.8.4/include/ESceneNodeTypes.h
+ lib/irrlicht-1.8.4/include/EShaderTypes.h
+ lib/irrlicht-1.8.4/include/ETerrainElements.h
+ lib/irrlicht-1.8.4/include/IAnimatedMesh.h
+ lib/irrlicht-1.8.4/include/IAnimatedMeshMD2.h
+ lib/irrlicht-1.8.4/include/IAnimatedMeshMD3.h
+ lib/irrlicht-1.8.4/include/IAnimatedMeshSceneNode.h
+ lib/irrlicht-1.8.4/include/IAttributeExchangingObject.h
+ lib/irrlicht-1.8.4/include/IAttributes.h
+ lib/irrlicht-1.8.4/include/IBillboardSceneNode.h
+ lib/irrlicht-1.8.4/include/IBillboardTextSceneNode.h
+ lib/irrlicht-1.8.4/include/IBoneSceneNode.h
+ lib/irrlicht-1.8.4/include/ICameraSceneNode.h
+ lib/irrlicht-1.8.4/include/IColladaMeshWriter.h
+ lib/irrlicht-1.8.4/include/ICursorControl.h
+ lib/irrlicht-1.8.4/include/IDummyTransformationSceneNode.h
+ lib/irrlicht-1.8.4/include/IDynamicMeshBuffer.h
+ lib/irrlicht-1.8.4/include/IEventReceiver.h
+ lib/irrlicht-1.8.4/include/IFileArchive.h
+ lib/irrlicht-1.8.4/include/IFileList.h
+ lib/irrlicht-1.8.4/include/IFileSystem.h
+ lib/irrlicht-1.8.4/include/IGPUProgrammingServices.h
+ lib/irrlicht-1.8.4/include/IGUIButton.h
+ lib/irrlicht-1.8.4/include/IGUICheckBox.h
+ lib/irrlicht-1.8.4/include/IGUIColorSelectDialog.h
+ lib/irrlicht-1.8.4/include/IGUIComboBox.h
+ lib/irrlicht-1.8.4/include/IGUIContextMenu.h
+ lib/irrlicht-1.8.4/include/IGUIEditBox.h
+ lib/irrlicht-1.8.4/include/IGUIElement.h
+ lib/irrlicht-1.8.4/include/IGUIElementFactory.h
+ lib/irrlicht-1.8.4/include/IGUIEnvironment.h
+ lib/irrlicht-1.8.4/include/IGUIFileOpenDialog.h
+ lib/irrlicht-1.8.4/include/IGUIFont.h
+ lib/irrlicht-1.8.4/include/IGUIFontBitmap.h
+ lib/irrlicht-1.8.4/include/IGUIImage.h
+ lib/irrlicht-1.8.4/include/IGUIImageList.h
+ lib/irrlicht-1.8.4/include/IGUIInOutFader.h
+ lib/irrlicht-1.8.4/include/IGUIListBox.h
+ lib/irrlicht-1.8.4/include/IGUIMeshViewer.h
+ lib/irrlicht-1.8.4/include/IGUIScrollBar.h
+ lib/irrlicht-1.8.4/include/IGUISkin.h
+ lib/irrlicht-1.8.4/include/IGUISpinBox.h
+ lib/irrlicht-1.8.4/include/IGUISpriteBank.h
+ lib/irrlicht-1.8.4/include/IGUIStaticText.h
+ lib/irrlicht-1.8.4/include/IGUITabControl.h
+ lib/irrlicht-1.8.4/include/IGUITable.h
+ lib/irrlicht-1.8.4/include/IGUIToolbar.h
+ lib/irrlicht-1.8.4/include/IGUITreeView.h
+ lib/irrlicht-1.8.4/include/IGUIWindow.h
+ lib/irrlicht-1.8.4/include/IGeometryCreator.h
+ lib/irrlicht-1.8.4/include/IImage.h
+ lib/irrlicht-1.8.4/include/IImageLoader.h
+ lib/irrlicht-1.8.4/include/IImageWriter.h
+ lib/irrlicht-1.8.4/include/IIndexBuffer.h
+ lib/irrlicht-1.8.4/include/ILightManager.h
+ lib/irrlicht-1.8.4/include/ILightSceneNode.h
+ lib/irrlicht-1.8.4/include/ILogger.h
+ lib/irrlicht-1.8.4/include/IMaterialRenderer.h
+ lib/irrlicht-1.8.4/include/IMaterialRendererServices.h
+ lib/irrlicht-1.8.4/include/IMesh.h
+ lib/irrlicht-1.8.4/include/IMeshBuffer.h
+ lib/irrlicht-1.8.4/include/IMeshCache.h
+ lib/irrlicht-1.8.4/include/IMeshLoader.h
+ lib/irrlicht-1.8.4/include/IMeshManipulator.h
+ lib/irrlicht-1.8.4/include/IMeshSceneNode.h
+ lib/irrlicht-1.8.4/include/IMeshWriter.h
+ lib/irrlicht-1.8.4/include/IMetaTriangleSelector.h
+ lib/irrlicht-1.8.4/include/IOSOperator.h
+ lib/irrlicht-1.8.4/include/IParticleAffector.h
+ lib/irrlicht-1.8.4/include/IParticleAnimatedMeshSceneNodeEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleAttractionAffector.h
+ lib/irrlicht-1.8.4/include/IParticleBoxEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleCylinderEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleFadeOutAffector.h
+ lib/irrlicht-1.8.4/include/IParticleGravityAffector.h
+ lib/irrlicht-1.8.4/include/IParticleMeshEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleRingEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleRotationAffector.h
+ lib/irrlicht-1.8.4/include/IParticleSphereEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleSystemSceneNode.h
+ lib/irrlicht-1.8.4/include/IQ3LevelMesh.h
+ lib/irrlicht-1.8.4/include/IQ3Shader.h
+ lib/irrlicht-1.8.4/include/IRandomizer.h
+ lib/irrlicht-1.8.4/include/IReadFile.h
+ lib/irrlicht-1.8.4/include/IReferenceCounted.h
+ lib/irrlicht-1.8.4/include/ISceneCollisionManager.h
+ lib/irrlicht-1.8.4/include/ISceneLoader.h
+ lib/irrlicht-1.8.4/include/ISceneManager.h
+ lib/irrlicht-1.8.4/include/ISceneNode.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimator.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraFPS.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraMaya.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorCollisionResponse.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorFactory.h
+ lib/irrlicht-1.8.4/include/ISceneNodeFactory.h
+ lib/irrlicht-1.8.4/include/ISceneUserDataSerializer.h
+ lib/irrlicht-1.8.4/include/IShaderConstantSetCallBack.h
+ lib/irrlicht-1.8.4/include/IShadowVolumeSceneNode.h
+ lib/irrlicht-1.8.4/include/ISkinnedMesh.h
+ lib/irrlicht-1.8.4/include/ITerrainSceneNode.h
+ lib/irrlicht-1.8.4/include/ITextSceneNode.h
+ lib/irrlicht-1.8.4/include/ITexture.h
+ lib/irrlicht-1.8.4/include/ITimer.h
+ lib/irrlicht-1.8.4/include/ITriangleSelector.h
+ lib/irrlicht-1.8.4/include/IVertexBuffer.h
+ lib/irrlicht-1.8.4/include/IVideoDriver.h
+ lib/irrlicht-1.8.4/include/IVideoModeList.h
+ lib/irrlicht-1.8.4/include/IVolumeLightSceneNode.h
+ lib/irrlicht-1.8.4/include/IWriteFile.h
+ lib/irrlicht-1.8.4/include/IXMLReader.h
+ lib/irrlicht-1.8.4/include/IXMLWriter.h
+ lib/irrlicht-1.8.4/include/IrrCompileConfig.h
+ lib/irrlicht-1.8.4/include/IrrlichtDevice.h
+ lib/irrlicht-1.8.4/include/Keycodes.h
+ lib/irrlicht-1.8.4/include/S3DVertex.h
+ lib/irrlicht-1.8.4/include/SAnimatedMesh.h
+ lib/irrlicht-1.8.4/include/SColor.h
+ lib/irrlicht-1.8.4/include/SExposedVideoData.h
+ lib/irrlicht-1.8.4/include/SIrrCreationParameters.h
+ lib/irrlicht-1.8.4/include/SKeyMap.h
+ lib/irrlicht-1.8.4/include/SLight.h
+ lib/irrlicht-1.8.4/include/SMaterial.h
+ lib/irrlicht-1.8.4/include/SMaterialLayer.h
+ lib/irrlicht-1.8.4/include/SMesh.h
+ lib/irrlicht-1.8.4/include/SMeshBuffer.h
+ lib/irrlicht-1.8.4/include/SMeshBufferLightMap.h
+ lib/irrlicht-1.8.4/include/SMeshBufferTangents.h
+ lib/irrlicht-1.8.4/include/SParticle.h
+ lib/irrlicht-1.8.4/include/SSharedMeshBuffer.h
+ lib/irrlicht-1.8.4/include/SSkinMeshBuffer.h
+ lib/irrlicht-1.8.4/include/SVertexIndex.h
+ lib/irrlicht-1.8.4/include/SVertexManipulator.h
+ lib/irrlicht-1.8.4/include/SViewFrustum.h
+ lib/irrlicht-1.8.4/include/SceneParameters.h
+ lib/irrlicht-1.8.4/include/aabbox3d.h
+ lib/irrlicht-1.8.4/include/coreutil.h
+ lib/irrlicht-1.8.4/include/dimension2d.h
+ lib/irrlicht-1.8.4/include/fast_atof.h
+ lib/irrlicht-1.8.4/include/heapsort.h
+ lib/irrlicht-1.8.4/include/irrAllocator.h
+ lib/irrlicht-1.8.4/include/irrArray.h
+ lib/irrlicht-1.8.4/include/irrList.h
+ lib/irrlicht-1.8.4/include/irrMap.h
+ lib/irrlicht-1.8.4/include/irrMath.h
+ lib/irrlicht-1.8.4/include/irrString.h
+ lib/irrlicht-1.8.4/include/irrTypes.h
+ lib/irrlicht-1.8.4/include/irrXML.h
+ lib/irrlicht-1.8.4/include/irrlicht.h
+ lib/irrlicht-1.8.4/include/irrpack.h
+ lib/irrlicht-1.8.4/include/irrunpack.h
+ lib/irrlicht-1.8.4/include/line2d.h
+ lib/irrlicht-1.8.4/include/line3d.h
+ lib/irrlicht-1.8.4/include/matrix4.h
+ lib/irrlicht-1.8.4/include/path.h
+ lib/irrlicht-1.8.4/include/plane3d.h
+ lib/irrlicht-1.8.4/include/position2d.h
+ lib/irrlicht-1.8.4/include/quaternion.h
+ lib/irrlicht-1.8.4/include/rect.h
+ lib/irrlicht-1.8.4/include/triangle3d.h
+ lib/irrlicht-1.8.4/include/vector2d.h
+ lib/irrlicht-1.8.4/include/vector3d.h
+CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
+ /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp
+ include/ANetworkClient.h
+ include/ANetworkController.h
+ include/BackgroundLoader.hpp
+ include/BinaryDataReader.h
+ include/BinaryDataWriter.h
+ include/GameClient.h
+ include/GameClientHandler.h
+ include/GameManager.hpp
+ include/GameMap.hpp
+ include/GameObject.hpp
+ include/GameRenderer.hpp
+ include/GameServer.h
+ include/GameServerController.h
+ include/GameSession.h
+ include/GameSessionConnector.h
+ include/GameSessionController.h
+ include/GameSessionHandler.h
+ include/GameTime.hpp
+ include/HelloConnectMessage.h
+ include/MapDataMessage.h
+ include/NetworkClientAdapter.h
+ include/NetworkMessage.h
+ include/NetworkProtocol.h
+ include/Player.hpp
+ include/PlayerBuff.hpp
+ include/PowerUps.hpp
  include/Serializable.h
  include/shared/ANetworkAsyncListener.h
  include/shared/ANetworkAsyncServer.h
@@ -2367,6 +2596,8 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
+ include/PlayerBuff.hpp
+ include/PowerUps.hpp
  include/Serializable.h
  include/Walls.hpp
  include/shared/ANetworkAsyncListener.h
@@ -2568,6 +2799,7 @@ CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o
  include/GameRenderer.hpp
  include/NetworkProtocol.h
  include/Player.hpp
+ include/PlayerBuff.hpp
  include/Serializable.h
  include/shared/ANetworkBuffer.h
  include/shared/BasicNetworkBuffer.h
@@ -2938,7 +3170,223 @@ CMakeFiles/bomberman.dir/sources/GameTime.cpp.o
  lib/irrlicht-1.8.4/include/vector3d.h
 CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o
  /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.cpp
+ include/ANetworkClient.h
+ include/ANetworkController.h
+ include/BackgroundLoader.hpp
+ include/BinaryDataReader.h
+ include/BinaryDataWriter.h
+ include/GameClient.h
+ include/GameClientHandler.h
+ include/GameManager.hpp
+ include/GameMap.hpp
+ include/GameObject.hpp
+ include/GameRenderer.hpp
+ include/GameServer.h
+ include/GameServerController.h
+ include/GameSession.h
+ include/GameSessionConnector.h
+ include/GameSessionController.h
+ include/GameSessionHandler.h
+ include/GameTime.hpp
  include/GameUIManager.hpp
+ include/HelloConnectMessage.h
+ include/MapDataMessage.h
+ include/NetworkClientAdapter.h
+ include/NetworkMessage.h
+ include/NetworkProtocol.h
+ include/Player.hpp
+ include/PlayerBuff.hpp
+ include/Serializable.h
+ include/shared/ANetworkAsyncListener.h
+ include/shared/ANetworkAsyncServer.h
+ include/shared/ANetworkBuffer.h
+ include/shared/ANetworkClientAdapter.h
+ include/shared/BasicNetworkBuffer.h
+ include/shared/INetworkClientHandler.h
+ include/shared/Network.h
+ include/shared/NetworkClient.h
+ include/shared/NetworkSocket.h
+ lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
+ lib/irrlicht-1.8.4/include/CIndexBuffer.h
+ lib/irrlicht-1.8.4/include/CMeshBuffer.h
+ lib/irrlicht-1.8.4/include/CVertexBuffer.h
+ lib/irrlicht-1.8.4/include/EAttributes.h
+ lib/irrlicht-1.8.4/include/ECullingTypes.h
+ lib/irrlicht-1.8.4/include/EDebugSceneTypes.h
+ lib/irrlicht-1.8.4/include/EDeviceTypes.h
+ lib/irrlicht-1.8.4/include/EDriverFeatures.h
+ lib/irrlicht-1.8.4/include/EDriverTypes.h
+ lib/irrlicht-1.8.4/include/EGUIAlignment.h
+ lib/irrlicht-1.8.4/include/EGUIElementTypes.h
+ lib/irrlicht-1.8.4/include/EHardwareBufferFlags.h
+ lib/irrlicht-1.8.4/include/EMaterialFlags.h
+ lib/irrlicht-1.8.4/include/EMaterialTypes.h
+ lib/irrlicht-1.8.4/include/EMeshWriterEnums.h
+ lib/irrlicht-1.8.4/include/EMessageBoxFlags.h
+ lib/irrlicht-1.8.4/include/EPrimitiveTypes.h
+ lib/irrlicht-1.8.4/include/ESceneNodeAnimatorTypes.h
+ lib/irrlicht-1.8.4/include/ESceneNodeTypes.h
+ lib/irrlicht-1.8.4/include/EShaderTypes.h
+ lib/irrlicht-1.8.4/include/ETerrainElements.h
+ lib/irrlicht-1.8.4/include/IAnimatedMesh.h
+ lib/irrlicht-1.8.4/include/IAnimatedMeshMD2.h
+ lib/irrlicht-1.8.4/include/IAnimatedMeshMD3.h
+ lib/irrlicht-1.8.4/include/IAnimatedMeshSceneNode.h
+ lib/irrlicht-1.8.4/include/IAttributeExchangingObject.h
+ lib/irrlicht-1.8.4/include/IAttributes.h
+ lib/irrlicht-1.8.4/include/IBillboardSceneNode.h
+ lib/irrlicht-1.8.4/include/IBillboardTextSceneNode.h
+ lib/irrlicht-1.8.4/include/IBoneSceneNode.h
+ lib/irrlicht-1.8.4/include/ICameraSceneNode.h
+ lib/irrlicht-1.8.4/include/IColladaMeshWriter.h
+ lib/irrlicht-1.8.4/include/ICursorControl.h
+ lib/irrlicht-1.8.4/include/IDummyTransformationSceneNode.h
+ lib/irrlicht-1.8.4/include/IDynamicMeshBuffer.h
+ lib/irrlicht-1.8.4/include/IEventReceiver.h
+ lib/irrlicht-1.8.4/include/IFileArchive.h
+ lib/irrlicht-1.8.4/include/IFileList.h
+ lib/irrlicht-1.8.4/include/IFileSystem.h
+ lib/irrlicht-1.8.4/include/IGPUProgrammingServices.h
+ lib/irrlicht-1.8.4/include/IGUIButton.h
+ lib/irrlicht-1.8.4/include/IGUICheckBox.h
+ lib/irrlicht-1.8.4/include/IGUIColorSelectDialog.h
+ lib/irrlicht-1.8.4/include/IGUIComboBox.h
+ lib/irrlicht-1.8.4/include/IGUIContextMenu.h
+ lib/irrlicht-1.8.4/include/IGUIEditBox.h
+ lib/irrlicht-1.8.4/include/IGUIElement.h
+ lib/irrlicht-1.8.4/include/IGUIElementFactory.h
+ lib/irrlicht-1.8.4/include/IGUIEnvironment.h
+ lib/irrlicht-1.8.4/include/IGUIFileOpenDialog.h
+ lib/irrlicht-1.8.4/include/IGUIFont.h
+ lib/irrlicht-1.8.4/include/IGUIFontBitmap.h
+ lib/irrlicht-1.8.4/include/IGUIImage.h
+ lib/irrlicht-1.8.4/include/IGUIImageList.h
+ lib/irrlicht-1.8.4/include/IGUIInOutFader.h
+ lib/irrlicht-1.8.4/include/IGUIListBox.h
+ lib/irrlicht-1.8.4/include/IGUIMeshViewer.h
+ lib/irrlicht-1.8.4/include/IGUIScrollBar.h
+ lib/irrlicht-1.8.4/include/IGUISkin.h
+ lib/irrlicht-1.8.4/include/IGUISpinBox.h
+ lib/irrlicht-1.8.4/include/IGUISpriteBank.h
+ lib/irrlicht-1.8.4/include/IGUIStaticText.h
+ lib/irrlicht-1.8.4/include/IGUITabControl.h
+ lib/irrlicht-1.8.4/include/IGUITable.h
+ lib/irrlicht-1.8.4/include/IGUIToolbar.h
+ lib/irrlicht-1.8.4/include/IGUITreeView.h
+ lib/irrlicht-1.8.4/include/IGUIWindow.h
+ lib/irrlicht-1.8.4/include/IGeometryCreator.h
+ lib/irrlicht-1.8.4/include/IImage.h
+ lib/irrlicht-1.8.4/include/IImageLoader.h
+ lib/irrlicht-1.8.4/include/IImageWriter.h
+ lib/irrlicht-1.8.4/include/IIndexBuffer.h
+ lib/irrlicht-1.8.4/include/ILightManager.h
+ lib/irrlicht-1.8.4/include/ILightSceneNode.h
+ lib/irrlicht-1.8.4/include/ILogger.h
+ lib/irrlicht-1.8.4/include/IMaterialRenderer.h
+ lib/irrlicht-1.8.4/include/IMaterialRendererServices.h
+ lib/irrlicht-1.8.4/include/IMesh.h
+ lib/irrlicht-1.8.4/include/IMeshBuffer.h
+ lib/irrlicht-1.8.4/include/IMeshCache.h
+ lib/irrlicht-1.8.4/include/IMeshLoader.h
+ lib/irrlicht-1.8.4/include/IMeshManipulator.h
+ lib/irrlicht-1.8.4/include/IMeshSceneNode.h
+ lib/irrlicht-1.8.4/include/IMeshWriter.h
+ lib/irrlicht-1.8.4/include/IMetaTriangleSelector.h
+ lib/irrlicht-1.8.4/include/IOSOperator.h
+ lib/irrlicht-1.8.4/include/IParticleAffector.h
+ lib/irrlicht-1.8.4/include/IParticleAnimatedMeshSceneNodeEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleAttractionAffector.h
+ lib/irrlicht-1.8.4/include/IParticleBoxEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleCylinderEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleFadeOutAffector.h
+ lib/irrlicht-1.8.4/include/IParticleGravityAffector.h
+ lib/irrlicht-1.8.4/include/IParticleMeshEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleRingEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleRotationAffector.h
+ lib/irrlicht-1.8.4/include/IParticleSphereEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleSystemSceneNode.h
+ lib/irrlicht-1.8.4/include/IQ3LevelMesh.h
+ lib/irrlicht-1.8.4/include/IQ3Shader.h
+ lib/irrlicht-1.8.4/include/IRandomizer.h
+ lib/irrlicht-1.8.4/include/IReadFile.h
+ lib/irrlicht-1.8.4/include/IReferenceCounted.h
+ lib/irrlicht-1.8.4/include/ISceneCollisionManager.h
+ lib/irrlicht-1.8.4/include/ISceneLoader.h
+ lib/irrlicht-1.8.4/include/ISceneManager.h
+ lib/irrlicht-1.8.4/include/ISceneNode.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimator.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraFPS.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraMaya.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorCollisionResponse.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorFactory.h
+ lib/irrlicht-1.8.4/include/ISceneNodeFactory.h
+ lib/irrlicht-1.8.4/include/ISceneUserDataSerializer.h
+ lib/irrlicht-1.8.4/include/IShaderConstantSetCallBack.h
+ lib/irrlicht-1.8.4/include/IShadowVolumeSceneNode.h
+ lib/irrlicht-1.8.4/include/ISkinnedMesh.h
+ lib/irrlicht-1.8.4/include/ITerrainSceneNode.h
+ lib/irrlicht-1.8.4/include/ITextSceneNode.h
+ lib/irrlicht-1.8.4/include/ITexture.h
+ lib/irrlicht-1.8.4/include/ITimer.h
+ lib/irrlicht-1.8.4/include/ITriangleSelector.h
+ lib/irrlicht-1.8.4/include/IVertexBuffer.h
+ lib/irrlicht-1.8.4/include/IVideoDriver.h
+ lib/irrlicht-1.8.4/include/IVideoModeList.h
+ lib/irrlicht-1.8.4/include/IVolumeLightSceneNode.h
+ lib/irrlicht-1.8.4/include/IWriteFile.h
+ lib/irrlicht-1.8.4/include/IXMLReader.h
+ lib/irrlicht-1.8.4/include/IXMLWriter.h
+ lib/irrlicht-1.8.4/include/IrrCompileConfig.h
+ lib/irrlicht-1.8.4/include/IrrlichtDevice.h
+ lib/irrlicht-1.8.4/include/Keycodes.h
+ lib/irrlicht-1.8.4/include/S3DVertex.h
+ lib/irrlicht-1.8.4/include/SAnimatedMesh.h
+ lib/irrlicht-1.8.4/include/SColor.h
+ lib/irrlicht-1.8.4/include/SExposedVideoData.h
+ lib/irrlicht-1.8.4/include/SIrrCreationParameters.h
+ lib/irrlicht-1.8.4/include/SKeyMap.h
+ lib/irrlicht-1.8.4/include/SLight.h
+ lib/irrlicht-1.8.4/include/SMaterial.h
+ lib/irrlicht-1.8.4/include/SMaterialLayer.h
+ lib/irrlicht-1.8.4/include/SMesh.h
+ lib/irrlicht-1.8.4/include/SMeshBuffer.h
+ lib/irrlicht-1.8.4/include/SMeshBufferLightMap.h
+ lib/irrlicht-1.8.4/include/SMeshBufferTangents.h
+ lib/irrlicht-1.8.4/include/SParticle.h
+ lib/irrlicht-1.8.4/include/SSharedMeshBuffer.h
+ lib/irrlicht-1.8.4/include/SSkinMeshBuffer.h
+ lib/irrlicht-1.8.4/include/SVertexIndex.h
+ lib/irrlicht-1.8.4/include/SVertexManipulator.h
+ lib/irrlicht-1.8.4/include/SViewFrustum.h
+ lib/irrlicht-1.8.4/include/SceneParameters.h
+ lib/irrlicht-1.8.4/include/aabbox3d.h
+ lib/irrlicht-1.8.4/include/coreutil.h
+ lib/irrlicht-1.8.4/include/dimension2d.h
+ lib/irrlicht-1.8.4/include/fast_atof.h
+ lib/irrlicht-1.8.4/include/heapsort.h
+ lib/irrlicht-1.8.4/include/irrAllocator.h
+ lib/irrlicht-1.8.4/include/irrArray.h
+ lib/irrlicht-1.8.4/include/irrList.h
+ lib/irrlicht-1.8.4/include/irrMap.h
+ lib/irrlicht-1.8.4/include/irrMath.h
+ lib/irrlicht-1.8.4/include/irrString.h
+ lib/irrlicht-1.8.4/include/irrTypes.h
+ lib/irrlicht-1.8.4/include/irrXML.h
+ lib/irrlicht-1.8.4/include/irrlicht.h
+ lib/irrlicht-1.8.4/include/irrpack.h
+ lib/irrlicht-1.8.4/include/irrunpack.h
+ lib/irrlicht-1.8.4/include/line2d.h
+ lib/irrlicht-1.8.4/include/line3d.h
+ lib/irrlicht-1.8.4/include/matrix4.h
+ lib/irrlicht-1.8.4/include/path.h
+ lib/irrlicht-1.8.4/include/plane3d.h
+ lib/irrlicht-1.8.4/include/position2d.h
+ lib/irrlicht-1.8.4/include/quaternion.h
+ lib/irrlicht-1.8.4/include/rect.h
+ lib/irrlicht-1.8.4/include/triangle3d.h
+ lib/irrlicht-1.8.4/include/vector2d.h
+ lib/irrlicht-1.8.4/include/vector3d.h
 CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o
  /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.cpp
  include/GameUtils.hpp
@@ -3126,6 +3574,192 @@ CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o
 CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o
  /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/MainMenu.cpp
  include/MainMenu.hpp
+ lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
+ lib/irrlicht-1.8.4/include/CIndexBuffer.h
+ lib/irrlicht-1.8.4/include/CMeshBuffer.h
+ lib/irrlicht-1.8.4/include/CVertexBuffer.h
+ lib/irrlicht-1.8.4/include/EAttributes.h
+ lib/irrlicht-1.8.4/include/ECullingTypes.h
+ lib/irrlicht-1.8.4/include/EDebugSceneTypes.h
+ lib/irrlicht-1.8.4/include/EDeviceTypes.h
+ lib/irrlicht-1.8.4/include/EDriverFeatures.h
+ lib/irrlicht-1.8.4/include/EDriverTypes.h
+ lib/irrlicht-1.8.4/include/EGUIAlignment.h
+ lib/irrlicht-1.8.4/include/EGUIElementTypes.h
+ lib/irrlicht-1.8.4/include/EHardwareBufferFlags.h
+ lib/irrlicht-1.8.4/include/EMaterialFlags.h
+ lib/irrlicht-1.8.4/include/EMaterialTypes.h
+ lib/irrlicht-1.8.4/include/EMeshWriterEnums.h
+ lib/irrlicht-1.8.4/include/EMessageBoxFlags.h
+ lib/irrlicht-1.8.4/include/EPrimitiveTypes.h
+ lib/irrlicht-1.8.4/include/ESceneNodeAnimatorTypes.h
+ lib/irrlicht-1.8.4/include/ESceneNodeTypes.h
+ lib/irrlicht-1.8.4/include/EShaderTypes.h
+ lib/irrlicht-1.8.4/include/ETerrainElements.h
+ lib/irrlicht-1.8.4/include/IAnimatedMesh.h
+ lib/irrlicht-1.8.4/include/IAnimatedMeshMD2.h
+ lib/irrlicht-1.8.4/include/IAnimatedMeshMD3.h
+ lib/irrlicht-1.8.4/include/IAnimatedMeshSceneNode.h
+ lib/irrlicht-1.8.4/include/IAttributeExchangingObject.h
+ lib/irrlicht-1.8.4/include/IAttributes.h
+ lib/irrlicht-1.8.4/include/IBillboardSceneNode.h
+ lib/irrlicht-1.8.4/include/IBillboardTextSceneNode.h
+ lib/irrlicht-1.8.4/include/IBoneSceneNode.h
+ lib/irrlicht-1.8.4/include/ICameraSceneNode.h
+ lib/irrlicht-1.8.4/include/IColladaMeshWriter.h
+ lib/irrlicht-1.8.4/include/ICursorControl.h
+ lib/irrlicht-1.8.4/include/IDummyTransformationSceneNode.h
+ lib/irrlicht-1.8.4/include/IDynamicMeshBuffer.h
+ lib/irrlicht-1.8.4/include/IEventReceiver.h
+ lib/irrlicht-1.8.4/include/IFileArchive.h
+ lib/irrlicht-1.8.4/include/IFileList.h
+ lib/irrlicht-1.8.4/include/IFileSystem.h
+ lib/irrlicht-1.8.4/include/IGPUProgrammingServices.h
+ lib/irrlicht-1.8.4/include/IGUIButton.h
+ lib/irrlicht-1.8.4/include/IGUICheckBox.h
+ lib/irrlicht-1.8.4/include/IGUIColorSelectDialog.h
+ lib/irrlicht-1.8.4/include/IGUIComboBox.h
+ lib/irrlicht-1.8.4/include/IGUIContextMenu.h
+ lib/irrlicht-1.8.4/include/IGUIEditBox.h
+ lib/irrlicht-1.8.4/include/IGUIElement.h
+ lib/irrlicht-1.8.4/include/IGUIElementFactory.h
+ lib/irrlicht-1.8.4/include/IGUIEnvironment.h
+ lib/irrlicht-1.8.4/include/IGUIFileOpenDialog.h
+ lib/irrlicht-1.8.4/include/IGUIFont.h
+ lib/irrlicht-1.8.4/include/IGUIFontBitmap.h
+ lib/irrlicht-1.8.4/include/IGUIImage.h
+ lib/irrlicht-1.8.4/include/IGUIImageList.h
+ lib/irrlicht-1.8.4/include/IGUIInOutFader.h
+ lib/irrlicht-1.8.4/include/IGUIListBox.h
+ lib/irrlicht-1.8.4/include/IGUIMeshViewer.h
+ lib/irrlicht-1.8.4/include/IGUIScrollBar.h
+ lib/irrlicht-1.8.4/include/IGUISkin.h
+ lib/irrlicht-1.8.4/include/IGUISpinBox.h
+ lib/irrlicht-1.8.4/include/IGUISpriteBank.h
+ lib/irrlicht-1.8.4/include/IGUIStaticText.h
+ lib/irrlicht-1.8.4/include/IGUITabControl.h
+ lib/irrlicht-1.8.4/include/IGUITable.h
+ lib/irrlicht-1.8.4/include/IGUIToolbar.h
+ lib/irrlicht-1.8.4/include/IGUITreeView.h
+ lib/irrlicht-1.8.4/include/IGUIWindow.h
+ lib/irrlicht-1.8.4/include/IGeometryCreator.h
+ lib/irrlicht-1.8.4/include/IImage.h
+ lib/irrlicht-1.8.4/include/IImageLoader.h
+ lib/irrlicht-1.8.4/include/IImageWriter.h
+ lib/irrlicht-1.8.4/include/IIndexBuffer.h
+ lib/irrlicht-1.8.4/include/ILightManager.h
+ lib/irrlicht-1.8.4/include/ILightSceneNode.h
+ lib/irrlicht-1.8.4/include/ILogger.h
+ lib/irrlicht-1.8.4/include/IMaterialRenderer.h
+ lib/irrlicht-1.8.4/include/IMaterialRendererServices.h
+ lib/irrlicht-1.8.4/include/IMesh.h
+ lib/irrlicht-1.8.4/include/IMeshBuffer.h
+ lib/irrlicht-1.8.4/include/IMeshCache.h
+ lib/irrlicht-1.8.4/include/IMeshLoader.h
+ lib/irrlicht-1.8.4/include/IMeshManipulator.h
+ lib/irrlicht-1.8.4/include/IMeshSceneNode.h
+ lib/irrlicht-1.8.4/include/IMeshWriter.h
+ lib/irrlicht-1.8.4/include/IMetaTriangleSelector.h
+ lib/irrlicht-1.8.4/include/IOSOperator.h
+ lib/irrlicht-1.8.4/include/IParticleAffector.h
+ lib/irrlicht-1.8.4/include/IParticleAnimatedMeshSceneNodeEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleAttractionAffector.h
+ lib/irrlicht-1.8.4/include/IParticleBoxEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleCylinderEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleFadeOutAffector.h
+ lib/irrlicht-1.8.4/include/IParticleGravityAffector.h
+ lib/irrlicht-1.8.4/include/IParticleMeshEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleRingEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleRotationAffector.h
+ lib/irrlicht-1.8.4/include/IParticleSphereEmitter.h
+ lib/irrlicht-1.8.4/include/IParticleSystemSceneNode.h
+ lib/irrlicht-1.8.4/include/IQ3LevelMesh.h
+ lib/irrlicht-1.8.4/include/IQ3Shader.h
+ lib/irrlicht-1.8.4/include/IRandomizer.h
+ lib/irrlicht-1.8.4/include/IReadFile.h
+ lib/irrlicht-1.8.4/include/IReferenceCounted.h
+ lib/irrlicht-1.8.4/include/ISceneCollisionManager.h
+ lib/irrlicht-1.8.4/include/ISceneLoader.h
+ lib/irrlicht-1.8.4/include/ISceneManager.h
+ lib/irrlicht-1.8.4/include/ISceneNode.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimator.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraFPS.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorCameraMaya.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorCollisionResponse.h
+ lib/irrlicht-1.8.4/include/ISceneNodeAnimatorFactory.h
+ lib/irrlicht-1.8.4/include/ISceneNodeFactory.h
+ lib/irrlicht-1.8.4/include/ISceneUserDataSerializer.h
+ lib/irrlicht-1.8.4/include/IShaderConstantSetCallBack.h
+ lib/irrlicht-1.8.4/include/IShadowVolumeSceneNode.h
+ lib/irrlicht-1.8.4/include/ISkinnedMesh.h
+ lib/irrlicht-1.8.4/include/ITerrainSceneNode.h
+ lib/irrlicht-1.8.4/include/ITextSceneNode.h
+ lib/irrlicht-1.8.4/include/ITexture.h
+ lib/irrlicht-1.8.4/include/ITimer.h
+ lib/irrlicht-1.8.4/include/ITriangleSelector.h
+ lib/irrlicht-1.8.4/include/IVertexBuffer.h
+ lib/irrlicht-1.8.4/include/IVideoDriver.h
+ lib/irrlicht-1.8.4/include/IVideoModeList.h
+ lib/irrlicht-1.8.4/include/IVolumeLightSceneNode.h
+ lib/irrlicht-1.8.4/include/IWriteFile.h
+ lib/irrlicht-1.8.4/include/IXMLReader.h
+ lib/irrlicht-1.8.4/include/IXMLWriter.h
+ lib/irrlicht-1.8.4/include/IrrCompileConfig.h
+ lib/irrlicht-1.8.4/include/IrrlichtDevice.h
+ lib/irrlicht-1.8.4/include/Keycodes.h
+ lib/irrlicht-1.8.4/include/S3DVertex.h
+ lib/irrlicht-1.8.4/include/SAnimatedMesh.h
+ lib/irrlicht-1.8.4/include/SColor.h
+ lib/irrlicht-1.8.4/include/SExposedVideoData.h
+ lib/irrlicht-1.8.4/include/SIrrCreationParameters.h
+ lib/irrlicht-1.8.4/include/SKeyMap.h
+ lib/irrlicht-1.8.4/include/SLight.h
+ lib/irrlicht-1.8.4/include/SMaterial.h
+ lib/irrlicht-1.8.4/include/SMaterialLayer.h
+ lib/irrlicht-1.8.4/include/SMesh.h
+ lib/irrlicht-1.8.4/include/SMeshBuffer.h
+ lib/irrlicht-1.8.4/include/SMeshBufferLightMap.h
+ lib/irrlicht-1.8.4/include/SMeshBufferTangents.h
+ lib/irrlicht-1.8.4/include/SParticle.h
+ lib/irrlicht-1.8.4/include/SSharedMeshBuffer.h
+ lib/irrlicht-1.8.4/include/SSkinMeshBuffer.h
+ lib/irrlicht-1.8.4/include/SVertexIndex.h
+ lib/irrlicht-1.8.4/include/SVertexManipulator.h
+ lib/irrlicht-1.8.4/include/SViewFrustum.h
+ lib/irrlicht-1.8.4/include/SceneParameters.h
+ lib/irrlicht-1.8.4/include/aabbox3d.h
+ lib/irrlicht-1.8.4/include/coreutil.h
+ lib/irrlicht-1.8.4/include/dimension2d.h
+ lib/irrlicht-1.8.4/include/fast_atof.h
+ lib/irrlicht-1.8.4/include/heapsort.h
+ lib/irrlicht-1.8.4/include/irrAllocator.h
+ lib/irrlicht-1.8.4/include/irrArray.h
+ lib/irrlicht-1.8.4/include/irrList.h
+ lib/irrlicht-1.8.4/include/irrMap.h
+ lib/irrlicht-1.8.4/include/irrMath.h
+ lib/irrlicht-1.8.4/include/irrString.h
+ lib/irrlicht-1.8.4/include/irrTypes.h
+ lib/irrlicht-1.8.4/include/irrXML.h
+ lib/irrlicht-1.8.4/include/irrlicht.h
+ lib/irrlicht-1.8.4/include/irrpack.h
+ lib/irrlicht-1.8.4/include/irrunpack.h
+ lib/irrlicht-1.8.4/include/line2d.h
+ lib/irrlicht-1.8.4/include/line3d.h
+ lib/irrlicht-1.8.4/include/matrix4.h
+ lib/irrlicht-1.8.4/include/path.h
+ lib/irrlicht-1.8.4/include/plane3d.h
+ lib/irrlicht-1.8.4/include/position2d.h
+ lib/irrlicht-1.8.4/include/quaternion.h
+ lib/irrlicht-1.8.4/include/rect.h
+ lib/irrlicht-1.8.4/include/triangle3d.h
+ lib/irrlicht-1.8.4/include/vector2d.h
+ lib/irrlicht-1.8.4/include/vector3d.h
+CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o
+ /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp
+ include/GameObject.hpp
+ include/Player.hpp
+ include/PlayerBuff.hpp
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h

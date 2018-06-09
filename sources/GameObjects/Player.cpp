@@ -10,6 +10,7 @@
 #include <iostream>
 #include <Explosion.hpp>
 #include <GameUtils.hpp>
+#include <PowerUps.hpp>
 
 const std::array<std::string, 4> Player::Characters = {
         "White",
@@ -19,7 +20,7 @@ const std::array<std::string, 4> Player::Characters = {
 };
 
 Player::Player(GameManager &manager, int playerNbr, vector2df position, vector2df rotation) :
-        GameObject(manager, position, rotation), _bombCount(2), _canPlaceBomb(true), _anim(PLAYERANIM::IDLE)
+        GameObject(manager, position, rotation), _bombCount(1), _canPlaceBomb(true), _anim(PLAYERANIM::IDLE), _playerNbr(playerNbr), _score(0)
 {
     _tags.push_back(GOTAG::DESTROYABLE);
     for (auto it = _inputs.begin(); it != _inputs.end(); it++)
@@ -27,8 +28,8 @@ Player::Player(GameManager &manager, int playerNbr, vector2df position, vector2d
     Start();
 }
 
-MainPlayer::MainPlayer(GameManager &manager, vector2df position, vector2df rotation) :
-        Player(manager, 0, position, rotation), _inputReceiver(_inputs)
+MainPlayer::MainPlayer(GameManager &manager, int playerNbr, vector2df position, vector2df rotation) :
+        Player(manager, playerNbr, position, rotation), _inputReceiver(_inputs)
 {
     _manager.getDevice()->setEventReceiver(&_inputReceiver);
 }
@@ -44,7 +45,6 @@ void Player::Start()
     _node->setRotation(vector3df(0, 0, 0));
     _node->setAnimationSpeed(30);
     _node->setLoopMode(true);
-    std::cout << "resources/models/Character/" + Characters[_playerNbr] + "BombermanTextures.png" << std::endl;
     _node->setMaterialTexture(0, device->getVideoDriver()->getTexture(("resources/models/Character/" + Characters[_playerNbr] + "BombermanTextures.png").c_str()));
     _node->setFrameLoop(27, 76);
     UpdatePosition();
@@ -54,13 +54,9 @@ void Player::Update()
 {
     GameObject::Update();
     vector2df movement = GetMovement();
-    std::vector<GOTAG> deathTag(1, GOTAG::DEATH);
 
-    if (!_manager.getCollisionsWithTags(*this, deathTag).empty())
-    {
-        Destroy();
-        return;
-    }
+    ApplyBuffs();
+    CheckCollisions();
     if (movement != vector2df(0, 0))
     {
         vector2df newPosition = _position + (movement * _manager.getDeltaTime() * _speed);
@@ -83,6 +79,25 @@ void Player::Update()
     }
     else if (!_inputs[(int)PLAYERINPUT::PLACEBOMB])
         _canPlaceBomb = true;
+}
+
+void Player::CheckCollisions()
+{
+    std::vector<GOTAG> deathTag(1, GOTAG::DEATH);
+    std::vector<GOTAG> powerUpTag(1, GOTAG::POWERUP);
+
+    if (!_manager.getCollisionsWithTags(*this, deathTag).empty())
+    {
+        Destroy();
+        return;
+    }
+
+    auto powerUpCollisions = _manager.getCollisionsWithTags(*this, powerUpTag);
+    for (auto it = powerUpCollisions.begin(); it != powerUpCollisions.end(); it++)
+    {
+        _buffs.push_back(std::unique_ptr<PlayerBuff>((dynamic_cast<PowerUp *>(*it))->GiveBuff(*this)));
+        (*it)->Destroy();
+    }
 }
 
 vector2df Player::GetMovement()
@@ -115,11 +130,24 @@ void Player::LateUpdate()
     GameObject::LateUpdate();
 }
 
+bool Player::UseBombBuff()
+{
+    for (auto it = _buffs.begin(); it != _buffs.end(); it++)
+    {
+        if ((*it)->getType() == BUFFTYPE::BOMB)
+        {
+            _buffs.erase(it);
+            return true;
+        }
+    }
+    return false;
+}
+
 void Player::PlaceBomb()
 {
-    if (_bombCount > 0)
+    if (_bombCount > 0 || UseBombBuff())
     {
-        _manager.SpawnObject(new Bomb(*this, _manager, _position, _rotation));
+        _manager.SpawnObject(new Bomb(_bombPower, *this, _manager, _position, _rotation));
         _bombCount--;
     }
 }
@@ -127,6 +155,16 @@ void Player::PlaceBomb()
 void Player::GiveBomb()
 {
     _bombCount++;
+}
+
+void Player::ApplyBuffs()
+{
+    _bombPower = BaseBombPower;
+    _speed = BaseSpeed;
+    for (auto it = _buffs.begin(); it != _buffs.end(); it++)
+    {
+        (*it)->Apply(_manager.getDeltaTime());
+    }
 }
 
 void Player::UpdatePosition()

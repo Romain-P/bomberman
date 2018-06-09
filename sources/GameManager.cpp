@@ -9,6 +9,8 @@
 #include <thread>
 #include <Explosion.hpp>
 #include <Monster.hpp>
+#include <PowerUps.hpp>
+#include <GameUIManager.hpp>
 
 GameManager::GameManager(irr::IrrlichtDevice * const device) :
         _time(device), _renderer(device), _device(device), _player(*this), _gameRunning(false), _currentId(0), _bgLoader(device)
@@ -83,15 +85,20 @@ void GameManager::SpawnMapObjects()
 
 void GameManager::LaunchGame()
 {
+    SoloGameUIManager uiManager(*this);
     _gameRunning = true;
 
     _bgLoader.LoadRandomBackground();
     _bgLoader.LoadRandomTerrain();
+    SpawnObject(new SpeedPowerUp(*this, vector2df(1, 11)));
+    SpawnObject(new BonusBombPowerUp(*this, vector2df(2, 11)));
+    SpawnObject(new BombPowerPowerUp(*this, vector2df(3, 11)));
     SpawnMapObjects();
     _time.Reset();
     while (_gameRunning && _device->run() && !_player.shouldBeDestroyed())
     {
         RemoveDestroyed();
+        uiManager.UpdateUI();
         RunUpdates();
         RenderGame();
     }
@@ -112,6 +119,7 @@ void GameManager::RemoveDestroyed()
 void GameManager::Cleanup()
 {
     _device->getSceneManager()->clear();
+    _device->getGUIEnvironment()->clear();
 }
 
 void GameManager::RunUpdates()

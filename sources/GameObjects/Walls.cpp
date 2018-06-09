@@ -4,6 +4,7 @@
 
 #include <GameManager.hpp>
 #include <iostream>
+#include <PowerUps.hpp>
 #include "Walls.hpp"
 
 Wall::Wall(GameManager &manager, vector2df position, vector2df rotation) : GameObject(manager, position, rotation)
@@ -41,8 +42,28 @@ DestroyableWall::DestroyableWall(GameManager &manager, vector2df position, vecto
 
 void DestroyableWall::Destroy()
 {
+    SpawnPowerUp();
     _node->remove();
     GameObject::Destroy();
+}
+
+void DestroyableWall::SpawnPowerUp()
+{
+    if (rand() % 5 != 0)
+        return;
+    int powerUp = rand() % 3;
+    switch (powerUp)
+    {
+        case 0:
+            _manager.SpawnObject(new SpeedPowerUp(_manager, _position));
+            break;
+        case 1:
+            _manager.SpawnObject(new BonusBombPowerUp(_manager, _position));
+            break;
+        case 2:
+            _manager.SpawnObject(new BombPowerPowerUp(_manager, _position));
+            break;
+    }
 }
 
 void DestroyableWall::Start()

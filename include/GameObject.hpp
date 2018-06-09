@@ -17,7 +17,8 @@ enum class GOTAG
 {
     SOLID,
     DESTROYABLE,
-    DEATH
+    DEATH,
+    POWERUP
 };
 
 enum class GOTYPE

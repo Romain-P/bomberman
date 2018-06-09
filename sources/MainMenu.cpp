@@ -40,15 +40,20 @@ void MainMenu::CreateMenu()
     IGUIButton *curr;
     irr::gui::IGUIEnvironment *guienv = _device->getGUIEnvironment();
 
-    curr = guienv->addButton(rect<s32>(860, 240, 860 + 200, 240 + 100), nullptr, (int)MAINMENUCHOICE::SOLO,
-			L"Adventure", L"Play solo");
-    curr->setUseAlphaChannel(true);
-	guienv->addButton(rect<s32>(860, 360, 860 + 200, 360 + 100), nullptr, (int)MAINMENUCHOICE::JOINMULTIPLAYER,
-                        L"Join Game", L"Join a local multiplayer game");
-	guienv->addButton(rect<s32>(860, 480, 860 + 200, 480 + 100), nullptr, (int)MAINMENUCHOICE::HOSTMULTIPLAYER,
-			L"Host Game", L"Host a local multiplayer game");
-	guienv->addButton(rect<s32>(860, 600, 860 + 200, 600 + 100), nullptr, (int)MAINMENUCHOICE::QUIT,
-            L"Quit", L"Quits the game");
+    guienv->addImage(_device->getVideoDriver()->getTexture("resources/ui/MainMenuBackground.jpg"), position2d<int>(0, 0));
+    guienv->addImage(_device->getVideoDriver()->getTexture("resources/ui/MainMenuText.png"), position2d<int>(750, 430));
+    curr = guienv->addButton(rect<s32>(750, 430, 750 + 400, 430 + 80), nullptr, (int)MAINMENUCHOICE::SOLO,
+			L"", L"Play solo");
+    curr->setDrawBorder(false);
+	curr = guienv->addButton(rect<s32>(830, 520, 830 + 200, 520 + 80), nullptr, (int)MAINMENUCHOICE::HOSTMULTIPLAYER,
+                        L"", L"Host a local multiplayer game");
+    curr->setDrawBorder(false);
+    curr = guienv->addButton(rect<s32>(830, 620, 830 + 200, 620 + 80), nullptr, (int)MAINMENUCHOICE::JOINMULTIPLAYER,
+			L"", L"Join a local multiplayer game");
+    curr->setDrawBorder(false);
+    curr = guienv->addButton(rect<s32>(830, 720, 830 + 200, 720 + 80), nullptr, (int)MAINMENUCHOICE::QUIT,
+            L"", L"Quits the game");
+    curr->setDrawBorder(false);
 }
 
 void MainMenu::Draw()

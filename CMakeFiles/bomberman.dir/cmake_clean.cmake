@@ -43,6 +43,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o"
   "CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o"
   "CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o"
+  "CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o"
+  "CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o"
   "bomberman.pdb"
   "bomberman"
 )

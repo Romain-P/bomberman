@@ -32,10 +32,13 @@ public:
     void LaunchGame();
     void SpawnObject(GameObject *object);
     const GameMap &getMap() { return *_map; }
-    irr::IrrlichtDevice *const &getDevice() { return _device; }
+    irr::IrrlichtDevice *const &getDevice() const { return _device; }
+    MainPlayer &getPlayer() { return _player; }
     float getDeltaTime();
     int GenerateId();
     void RemoveDestroyed();
+    void IncreaseScore(int increment) { _player.IncreaseScore(increment); }
+    int getScore() { return _player.getScore(); }
     std::vector<GameObject *> getObjectsAtPosition(vector2df position);
     std::vector<GameObject *> getCollisionsWithTags(GameObject &object, std::vector<GOTAG> &tags);
 protected:
@@ -51,6 +54,7 @@ protected:
     std::unique_ptr<GameMap> _map;
     std::vector<std::unique_ptr<GameObject>> _objects;
     int _currentId;
+    int _score;
     BackgroundLoader _bgLoader;
 };
 
