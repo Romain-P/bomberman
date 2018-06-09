@@ -78,6 +78,9 @@
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include/ANetworkController.h">
 			<Option target="bomberman"/>
 		</Unit>
+		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include/BackgroundLoader.hpp">
+			<Option target="bomberman"/>
+		</Unit>
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include/BinaryDataReader.h">
 			<Option target="bomberman"/>
 		</Unit>
@@ -144,6 +147,9 @@
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include/GameTime.hpp">
 			<Option target="bomberman"/>
 		</Unit>
+		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include/GameUtils.hpp">
+			<Option target="bomberman"/>
+		</Unit>
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include/HelloConnectMessage.h">
 			<Option target="bomberman"/>
 		</Unit>
@@ -204,6 +210,9 @@
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/main.cpp">
 			<Option target="bomberman"/>
 		</Unit>
+		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.cpp">
+			<Option target="bomberman"/>
+		</Unit>
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.cpp">
 			<Option target="bomberman"/>
 		</Unit>
@@ -252,10 +261,13 @@
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.cpp">
 			<Option target="bomberman"/>
 		</Unit>
-		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.cpp">
+		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.cpp">
 			<Option target="bomberman"/>
 		</Unit>
-		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.hpp">
+		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.hpp">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.cpp">
 			<Option target="bomberman"/>
 		</Unit>
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/MainMenu.cpp">

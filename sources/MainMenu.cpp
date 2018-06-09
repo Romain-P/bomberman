@@ -32,6 +32,7 @@ MAINMENUCHOICE MainMenu::Run()
             _device->getVideoDriver()->endScene();
         }
     }
+    return  MAINMENUCHOICE::NONE;
 }
 
 void MainMenu::CreateMenu()

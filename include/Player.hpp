@@ -42,15 +42,16 @@ private:
 class Player : public GameObject
 {
 public:
-    Player(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
+    Player(GameManager &manager, int playerNbr, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
     const std::array<bool, 6> &getInput() { return _inputs; }
     void setInputs(std::array<bool, 6> inputs) { _inputs = inputs; }
     void Start();
     void Update();
     void LateUpdate();
     void GiveBomb();
+    int getPlayerNBr() { return _playerNbr; }
 protected:
-    bool _canPlaceBomb;
+    static const std::array<std::string, 4> Characters;
     void PlayAnimation(PLAYERANIM anim);
     void UpdatePosition();
     void PlaceBomb();
@@ -59,8 +60,10 @@ protected:
     const float _speed = 2.0f;
     vector2df GetMovement();
     int _bombCount;
+    bool _canPlaceBomb;
     PLAYERANIM _anim;
     irr::scene::IAnimatedMeshSceneNode *_node;
+    int _playerNbr;
 };
 
 class MainPlayer : public Player

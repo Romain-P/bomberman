@@ -11,8 +11,15 @@
 #include <Explosion.hpp>
 #include <GameUtils.hpp>
 
-Player::Player(GameManager &manager, vector2df position, vector2df rotation) :
-        GameObject(manager, position, rotation), _anim(PLAYERANIM::IDLE), _bombCount(2), _canPlaceBomb(true)
+const std::array<std::string, 4> Player::Characters = {
+        "White",
+        "Black",
+        "Red",
+        "Pink"
+};
+
+Player::Player(GameManager &manager, int playerNbr, vector2df position, vector2df rotation) :
+        GameObject(manager, position, rotation), _bombCount(2), _canPlaceBomb(true), _anim(PLAYERANIM::IDLE)
 {
     _tags.push_back(GOTAG::DESTROYABLE);
     for (auto it = _inputs.begin(); it != _inputs.end(); it++)
@@ -21,7 +28,7 @@ Player::Player(GameManager &manager, vector2df position, vector2df rotation) :
 }
 
 MainPlayer::MainPlayer(GameManager &manager, vector2df position, vector2df rotation) :
-        Player(manager, position, rotation), _inputReceiver(_inputs)
+        Player(manager, 0, position, rotation), _inputReceiver(_inputs)
 {
     _manager.getDevice()->setEventReceiver(&_inputReceiver);
 }
@@ -37,7 +44,8 @@ void Player::Start()
     _node->setRotation(vector3df(0, 0, 0));
     _node->setAnimationSpeed(30);
     _node->setLoopMode(true);
-    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/Character/WhiteBombermanTextures.png"));
+    std::cout << "resources/models/Character/" + Characters[_playerNbr] + "BombermanTextures.png" << std::endl;
+    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture(("resources/models/Character/" + Characters[_playerNbr] + "BombermanTextures.png").c_str()));
     _node->setFrameLoop(27, 76);
     UpdatePosition();
 }

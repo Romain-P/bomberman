@@ -11,12 +11,12 @@
 #include <Monster.hpp>
 
 GameManager::GameManager(irr::IrrlichtDevice * const device) :
-        _time(device), _renderer(device), _device(device), _player(*this), _gameRunning(false), _currentId(0)
+        _time(device), _renderer(device), _device(device), _player(*this), _gameRunning(false), _currentId(0), _bgLoader(device)
 {
 }
 
 GameManager::GameManager(int level, irr::IrrlichtDevice * const device) :
-        _time(device), _renderer(device), _device(device), _player(*this), _gameRunning(false), _currentId(0)
+        _time(device), _renderer(device), _device(device), _player(*this), _gameRunning(false), _currentId(0), _bgLoader(device)
 {
     GameDataSerializer serializer;
     GameMapFactory factory(serializer);
@@ -85,6 +85,8 @@ void GameManager::LaunchGame()
 {
     _gameRunning = true;
 
+    _bgLoader.LoadRandomBackground();
+    _bgLoader.LoadRandomTerrain();
     SpawnMapObjects();
     _time.Reset();
     while (_gameRunning && _device->run() && !_player.shouldBeDestroyed())

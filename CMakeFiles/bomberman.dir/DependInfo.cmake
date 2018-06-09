@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/main.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/main.cpp.o"
+  "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o"
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o"
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/Exceptions.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/Exceptions.cpp.o"
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameInputManager.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.o"
@@ -20,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Walls.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o"
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameRenderer.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o"
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/GameTime.cpp.o"
+  "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o"
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o"
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/MainMenu.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o"
   "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSession.cpp" "/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o"

@@ -13,6 +13,7 @@
 #include "GameTime.hpp"
 #include "GameSessionConnector.h"
 #include "GameServer.h"
+#include "BackgroundLoader.hpp"
 
 enum class PLAYERCOLOR
 {
@@ -50,6 +51,7 @@ protected:
     std::unique_ptr<GameMap> _map;
     std::vector<std::unique_ptr<GameObject>> _objects;
     int _currentId;
+    BackgroundLoader _bgLoader;
 };
 
 class NetworkGameManager : public GameManager

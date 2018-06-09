@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+sources/BackgroundLoader.o: sources/BackgroundLoader.cpp.o
+
+.PHONY : sources/BackgroundLoader.o
+
+# target to build an object file
+sources/BackgroundLoader.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o
+.PHONY : sources/BackgroundLoader.cpp.o
+
+sources/BackgroundLoader.i: sources/BackgroundLoader.cpp.i
+
+.PHONY : sources/BackgroundLoader.i
+
+# target to preprocess a source file
+sources/BackgroundLoader.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.i
+.PHONY : sources/BackgroundLoader.cpp.i
+
+sources/BackgroundLoader.s: sources/BackgroundLoader.cpp.s
+
+.PHONY : sources/BackgroundLoader.s
+
+# target to generate assembly for a file
+sources/BackgroundLoader.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.s
+.PHONY : sources/BackgroundLoader.cpp.s
+
 sources/BomberWave.o: sources/BomberWave.cpp.o
 
 .PHONY : sources/BomberWave.o
@@ -554,6 +581,33 @@ sources/GameTime.s: sources/GameTime.cpp.s
 sources/GameTime.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameTime.cpp.s
 .PHONY : sources/GameTime.cpp.s
+
+sources/GameUIManager.o: sources/GameUIManager.cpp.o
+
+.PHONY : sources/GameUIManager.o
+
+# target to build an object file
+sources/GameUIManager.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o
+.PHONY : sources/GameUIManager.cpp.o
+
+sources/GameUIManager.i: sources/GameUIManager.cpp.i
+
+.PHONY : sources/GameUIManager.i
+
+# target to preprocess a source file
+sources/GameUIManager.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.i
+.PHONY : sources/GameUIManager.cpp.i
+
+sources/GameUIManager.s: sources/GameUIManager.cpp.s
+
+.PHONY : sources/GameUIManager.s
+
+# target to generate assembly for a file
+sources/GameUIManager.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.s
+.PHONY : sources/GameUIManager.cpp.s
 
 sources/GameUtils.o: sources/GameUtils.cpp.o
 
@@ -1269,6 +1323,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sources/BackgroundLoader.o"
+	@echo "... sources/BackgroundLoader.i"
+	@echo "... sources/BackgroundLoader.s"
 	@echo "... sources/BomberWave.o"
 	@echo "... sources/BomberWave.i"
 	@echo "... sources/BomberWave.s"
@@ -1314,6 +1371,9 @@ help:
 	@echo "... sources/GameTime.o"
 	@echo "... sources/GameTime.i"
 	@echo "... sources/GameTime.s"
+	@echo "... sources/GameUIManager.o"
+	@echo "... sources/GameUIManager.i"
+	@echo "... sources/GameUIManager.s"
 	@echo "... sources/GameUtils.o"
 	@echo "... sources/GameUtils.i"
 	@echo "... sources/GameUtils.s"

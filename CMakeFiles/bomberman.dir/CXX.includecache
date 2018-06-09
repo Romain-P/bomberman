@@ -26,6 +26,12 @@ GameDataSerializer.h
 GameMapFactory.h
 -
 
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.cpp
+iostream
+-
+BackgroundLoader.hpp
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.hpp
+
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.cpp
 BomberWave.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.hpp
@@ -165,6 +171,10 @@ GameObject.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.cpp
 GameTime.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.hpp
+
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.cpp
+GameUIManager.hpp
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.hpp
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.cpp
 GameUtils.hpp
@@ -372,6 +382,14 @@ include/NetworkMessage.h
 ANetworkClient.h
 include/ANetworkClient.h
 
+include/BackgroundLoader.hpp
+irrlicht.h
+-
+string
+-
+array
+-
+
 include/BinaryDataReader.h
 cstdint
 -
@@ -467,6 +485,8 @@ GameSessionConnector.h
 include/GameSessionConnector.h
 GameServer.h
 include/GameServer.h
+BackgroundLoader.hpp
+include/BackgroundLoader.hpp
 
 include/GameMap.hpp
 string
@@ -553,6 +573,8 @@ include/GameSessionController.h
 include/GameTime.hpp
 irrlicht.h
 -
+
+include/GameUIManager.hpp
 
 include/GameUtils.hpp
 cmath

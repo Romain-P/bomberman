@@ -31,7 +31,7 @@ void Monster::Start()
     _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/Jesus/Jesus.png"));
     _position = vector2df(_position.X + 0.5f, _position.Y + 0.5f);
     _node->setPosition(GameMap::mapToEngine(_position));
-    _node->setScale(vector3df(0.5f, 0.5f, 0.5f));
+    _node->setScale(vector3df(0.4f, 0.4f, 0.4f));
     ChangeDirection();
 }
 
@@ -40,7 +40,7 @@ void Monster::Update()
     vector2df newPosition = _position + (_direction * Speed * _manager.getDeltaTime());
     if (IsValidPosition(newPosition))
     {
-        _node->setRotation(-(GetRotationFromTo(GameMap::mapToEngine(_position), GameMap::mapToEngine(newPosition))));
+        _node->setRotation((GetRotationFromTo(GameMap::mapToEngine(_position), GameMap::mapToEngine(newPosition))));
         _position = newPosition;
         _node->setPosition(GameMap::mapToEngine(_position));
     }

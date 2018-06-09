@@ -1,0 +1,13 @@
+//
+// Created by Mardel on 09/06/18.
+//
+
+#ifndef CPP_INDIE_STUDIO_GAMEUIMANAGER_HPP
+#define CPP_INDIE_STUDIO_GAMEUIMANAGER_HPP
+
+class GameUIManager
+{
+
+};
+
+#endif //CPP_INDIE_STUDIO_GAMEUIMANAGER_HPP
