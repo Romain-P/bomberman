@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/Mardel/clion-2018.1.2/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -149,6 +149,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+sources/BackgroundLoader.o: sources/BackgroundLoader.cpp.o
+
+.PHONY : sources/BackgroundLoader.o
+
+# target to build an object file
+sources/BackgroundLoader.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o
+.PHONY : sources/BackgroundLoader.cpp.o
+
+sources/BackgroundLoader.i: sources/BackgroundLoader.cpp.i
+
+.PHONY : sources/BackgroundLoader.i
+
+# target to preprocess a source file
+sources/BackgroundLoader.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.i
+.PHONY : sources/BackgroundLoader.cpp.i
+
+sources/BackgroundLoader.s: sources/BackgroundLoader.cpp.s
+
+.PHONY : sources/BackgroundLoader.s
+
+# target to generate assembly for a file
+sources/BackgroundLoader.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.s
+.PHONY : sources/BackgroundLoader.cpp.s
 
 sources/BomberWave.o: sources/BomberWave.cpp.o
 
@@ -447,6 +474,33 @@ sources/GameObjects/Player.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.s
 .PHONY : sources/GameObjects/Player.cpp.s
 
+sources/GameObjects/PowerUps.o: sources/GameObjects/PowerUps.cpp.o
+
+.PHONY : sources/GameObjects/PowerUps.o
+
+# target to build an object file
+sources/GameObjects/PowerUps.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
+.PHONY : sources/GameObjects/PowerUps.cpp.o
+
+sources/GameObjects/PowerUps.i: sources/GameObjects/PowerUps.cpp.i
+
+.PHONY : sources/GameObjects/PowerUps.i
+
+# target to preprocess a source file
+sources/GameObjects/PowerUps.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.i
+.PHONY : sources/GameObjects/PowerUps.cpp.i
+
+sources/GameObjects/PowerUps.s: sources/GameObjects/PowerUps.cpp.s
+
+.PHONY : sources/GameObjects/PowerUps.s
+
+# target to generate assembly for a file
+sources/GameObjects/PowerUps.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.s
+.PHONY : sources/GameObjects/PowerUps.cpp.s
+
 sources/GameObjects/Test.o: sources/GameObjects/Test.cpp.o
 
 .PHONY : sources/GameObjects/Test.o
@@ -555,6 +609,60 @@ sources/GameTime.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameTime.cpp.s
 .PHONY : sources/GameTime.cpp.s
 
+sources/GameUIManager.o: sources/GameUIManager.cpp.o
+
+.PHONY : sources/GameUIManager.o
+
+# target to build an object file
+sources/GameUIManager.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o
+.PHONY : sources/GameUIManager.cpp.o
+
+sources/GameUIManager.i: sources/GameUIManager.cpp.i
+
+.PHONY : sources/GameUIManager.i
+
+# target to preprocess a source file
+sources/GameUIManager.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.i
+.PHONY : sources/GameUIManager.cpp.i
+
+sources/GameUIManager.s: sources/GameUIManager.cpp.s
+
+.PHONY : sources/GameUIManager.s
+
+# target to generate assembly for a file
+sources/GameUIManager.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.s
+.PHONY : sources/GameUIManager.cpp.s
+
+sources/GameUtils.o: sources/GameUtils.cpp.o
+
+.PHONY : sources/GameUtils.o
+
+# target to build an object file
+sources/GameUtils.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o
+.PHONY : sources/GameUtils.cpp.o
+
+sources/GameUtils.i: sources/GameUtils.cpp.i
+
+.PHONY : sources/GameUtils.i
+
+# target to preprocess a source file
+sources/GameUtils.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUtils.cpp.i
+.PHONY : sources/GameUtils.cpp.i
+
+sources/GameUtils.s: sources/GameUtils.cpp.s
+
+.PHONY : sources/GameUtils.s
+
+# target to generate assembly for a file
+sources/GameUtils.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameUtils.cpp.s
+.PHONY : sources/GameUtils.cpp.s
+
 sources/MainMenu.o: sources/MainMenu.cpp.o
 
 .PHONY : sources/MainMenu.o
@@ -581,6 +689,33 @@ sources/MainMenu.s: sources/MainMenu.cpp.s
 sources/MainMenu.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/MainMenu.cpp.s
 .PHONY : sources/MainMenu.cpp.s
+
+sources/PlayerBuff.o: sources/PlayerBuff.cpp.o
+
+.PHONY : sources/PlayerBuff.o
+
+# target to build an object file
+sources/PlayerBuff.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o
+.PHONY : sources/PlayerBuff.cpp.o
+
+sources/PlayerBuff.i: sources/PlayerBuff.cpp.i
+
+.PHONY : sources/PlayerBuff.i
+
+# target to preprocess a source file
+sources/PlayerBuff.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.i
+.PHONY : sources/PlayerBuff.cpp.i
+
+sources/PlayerBuff.s: sources/PlayerBuff.cpp.s
+
+.PHONY : sources/PlayerBuff.s
+
+# target to generate assembly for a file
+sources/PlayerBuff.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.s
+.PHONY : sources/PlayerBuff.cpp.s
 
 sources/gameclient/GameSession.o: sources/gameclient/GameSession.cpp.o
 
@@ -1242,6 +1377,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sources/BackgroundLoader.o"
+	@echo "... sources/BackgroundLoader.i"
+	@echo "... sources/BackgroundLoader.s"
 	@echo "... sources/BomberWave.o"
 	@echo "... sources/BomberWave.i"
 	@echo "... sources/BomberWave.s"
@@ -1275,6 +1413,9 @@ help:
 	@echo "... sources/GameObjects/Player.o"
 	@echo "... sources/GameObjects/Player.i"
 	@echo "... sources/GameObjects/Player.s"
+	@echo "... sources/GameObjects/PowerUps.o"
+	@echo "... sources/GameObjects/PowerUps.i"
+	@echo "... sources/GameObjects/PowerUps.s"
 	@echo "... sources/GameObjects/Test.o"
 	@echo "... sources/GameObjects/Test.i"
 	@echo "... sources/GameObjects/Test.s"
@@ -1287,9 +1428,18 @@ help:
 	@echo "... sources/GameTime.o"
 	@echo "... sources/GameTime.i"
 	@echo "... sources/GameTime.s"
+	@echo "... sources/GameUIManager.o"
+	@echo "... sources/GameUIManager.i"
+	@echo "... sources/GameUIManager.s"
+	@echo "... sources/GameUtils.o"
+	@echo "... sources/GameUtils.i"
+	@echo "... sources/GameUtils.s"
 	@echo "... sources/MainMenu.o"
 	@echo "... sources/MainMenu.i"
 	@echo "... sources/MainMenu.s"
+	@echo "... sources/PlayerBuff.o"
+	@echo "... sources/PlayerBuff.i"
+	@echo "... sources/PlayerBuff.s"
 	@echo "... sources/gameclient/GameSession.o"
 	@echo "... sources/gameclient/GameSession.i"
 	@echo "... sources/gameclient/GameSession.s"

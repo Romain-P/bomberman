@@ -15,19 +15,11 @@ class GameRenderer
 public:
     GameRenderer(irr::IrrlichtDevice * const device);
     void Render();
-    void RenderMap(GameMap &map);
-    void RenderObjects(std::vector<GameObject> &objects);
-    void RenderUI();
-    void CreateTerrain();
-    void RenderPlayer(Player &player);
 private:
     void PlaceLights();
     void PlaceCamera();
     irr::IrrlichtDevice * const _device;
     irr::scene::ICameraSceneNode *_camera;
-    irr::scene::IMeshSceneNode *_terrain;
-    irr::video::ITexture *_terrainTexture;
-    irr::scene::IMeshSceneNode *_background;
 };
 
 #endif //CPP_INDIE_STUDIO_GAMERENDERER_HPP

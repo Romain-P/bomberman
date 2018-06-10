@@ -9,6 +9,11 @@
 #include <GameDataSerializer.h>
 #include <GameMapFactory.h>
 
+#ifdef _IRR_WINDOWS_
+#pragma comment(lib, "Irrlicht.lib")
+#pragma comment(linker, "/subsystem:windows" /ENTRY:mainCRTStartup)
+#endif
+
 void launchServer(GameServer *server) {
     server->start();
 }
@@ -55,6 +60,7 @@ void mapExample() {
 }
 
 int main() {
+    srand(time(NULL));
     /*if (true) {
         mapExample();
         return 0;

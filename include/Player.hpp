@@ -9,7 +9,9 @@ class Player;
 
 #include <irrlicht.h>
 #include <array>
+#include <memory>
 #include "GameObject.hpp"
+#include "PlayerBuff.hpp"
 
 using namespace irr;
 using namespace core;
@@ -42,38 +44,50 @@ private:
 class Player : public GameObject
 {
 public:
-    Player(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
-    const std::array<bool, 6> &getInput() { return _inputs; }
-    virtual void Start();
+    Player(GameManager &manager, int playerNbr, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
+    void setInputs(std::array<bool, 6> inputs) { _inputs = inputs; }
+    void Start();
     void Update();
     void LateUpdate();
     void GiveBomb();
+    void IncreaseBombPower() { _bombPower++; }
+    void CheckCollisions();
+    bool UseBombBuff();
+    void ApplyBuffs();
+    void IncreaseScore(int increment) { _score += increment; }
+    int getScore() { return _score; }
+    const std::array<bool, 6> &getInputs() { return _inputs; }
+    std::vector<std::unique_ptr<PlayerBuff>> &getBuffs() { return _buffs; }
+    int getPlayerNBr() { return _playerNbr; }
+    const std::string &getCharacterColor() { return Characters[_playerNbr]; }
+    void setSpeed(float speed) { _speed = speed; }
+    float getSpeed() { return _speed; }
 protected:
-    bool _canPlaceBomb;
-    quaternion LookRotation(vector3df forward);
-    virtual void PlayAnimation(PLAYERANIM anim) = 0;
-    virtual void UpdatePosition() = 0;
-    virtual void UpdateRotation(vector2df oldpos, vector2df newpos) = 0;
-    virtual void PlaceBomb() = 0;
+    int _score;
+    static const std::array<std::string, 4> Characters;
+    void PlayAnimation(PLAYERANIM anim);
+    void UpdatePosition();
+    void PlaceBomb();
     bool IsValidPosition(vector2df position);
     std::array<bool, 6> _inputs;
-    const float _speed = 2.0f;
+    float _speed;
+    const float BaseSpeed = 2.0f;
     vector2df GetMovement();
     int _bombCount;
+    bool _canPlaceBomb;
     PLAYERANIM _anim;
+    irr::scene::IAnimatedMeshSceneNode *_node;
+    int _playerNbr;
+    int _bombPower;
+    static constexpr int BaseBombPower = 3;
+    std::vector<std::unique_ptr<PlayerBuff>> _buffs;
 };
 
-class SoloPlayer : public Player
+class MainPlayer : public Player
 {
 public:
-    SoloPlayer(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
-    void Start();
+    MainPlayer(GameManager &manager, int playerNbr = 0, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
 private:
-    void PlaceBomb();
-    void PlayAnimation(PLAYERANIM anim);
-    void UpdateRotation(vector2df oldpos, vector2df newpos);
-    void UpdatePosition();
     PlayerEventReceiver _inputReceiver;
-    irr::scene::IAnimatedMeshSceneNode *_node;
 };
 #endif //CPP_INDIE_STUDIO_PLAYER_HPP

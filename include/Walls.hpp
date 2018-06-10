@@ -13,42 +13,27 @@ class Wall : public GameObject
 {
 public:
     Wall(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
-    virtual void Start() = 0;
-    virtual void Destroy() = 0;
-};
-
-class SoloWall : public Wall
-{
-public:
-    SoloWall(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
     void Start();
     void Destroy();
 private:
     irr::scene::IMeshSceneNode *_node;
-};
-
-class NetworkWall : public Wall
-{
-public:
-    NetworkWall(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
-private:
 };
 
 class DestroyableWall : public GameObject
 {
 public:
     DestroyableWall(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
-    virtual void Start() = 0;
-    virtual void Destroy() = 0;
-};
-
-class SoloDestroyableWall : public DestroyableWall
-{
-public:
-    SoloDestroyableWall(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
     void Start();
     void Destroy();
+    void SpawnPowerUp();
 private:
     irr::scene::IMeshSceneNode *_node;
+};
+
+class Goal : public GameObject
+{
+public:
+    Goal(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
+    void Start();
 };
 #endif //CPP_INDIE_STUDIO_WALLS_HPP

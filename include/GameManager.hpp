@@ -11,53 +11,76 @@
 #include "GameMap.hpp"
 #include "Player.hpp"
 #include "GameTime.hpp"
+#include "GameSessionConnector.h"
+#include "GameServer.h"
+#include "BackgroundLoader.hpp"
+
+enum class PLAYERCOLOR
+{
+    WHITE,
+    RED,
+    BLACK,
+    BLUE
+};
 
 class GameManager
 {
 public:
-    GameManager();
+    GameManager(irr::IrrlichtDevice * const device);
+    GameManager(int level,  irr::IrrlichtDevice * const device);
     ~GameManager();
-    virtual void LaunchGame() = 0;
+    void LaunchGame();
     void SpawnObject(GameObject *object);
     const GameMap &getMap() { return *_map; }
-    virtual float getDeltaTime() = 0;
+    irr::IrrlichtDevice *const &getDevice() const { return _device; }
+    MainPlayer &getPlayer() { return _player; }
+    float getDeltaTime();
     int GenerateId();
+    void RemoveDestroyed();
+    void IncreaseScore(int increment) { _player.IncreaseScore(increment); }
+    int getScore() { return _player.getScore(); }
     std::vector<GameObject *> getObjectsAtPosition(vector2df position);
+    std::vector<GameObject *> getCollisionsWithTags(GameObject &object, std::vector<GOTAG> &tags);
 protected:
-    virtual void Cleanup() = 0;
-    virtual void SpawnMapObjects() = 0;
-    virtual void RunUpdates() = 0;
-    virtual void RenderGame() = 0;
+    virtual void Cleanup();
+    virtual void SpawnMapObjects();
+    virtual void RunUpdates();
+    virtual void RenderGame();
+    GameTime _time;
+    GameRenderer _renderer;
+    irr::IrrlichtDevice * const _device;
+    MainPlayer _player;
     bool _gameRunning;
     std::unique_ptr<GameMap> _map;
     std::vector<std::unique_ptr<GameObject>> _objects;
     int _currentId;
+    int _score;
+    BackgroundLoader _bgLoader;
 };
 
-class SoloGameManager : public GameManager
+class NetworkGameManager : public GameManager
 {
 public:
-    SoloGameManager(int level, irr::IrrlichtDevice * const device);
+    NetworkGameManager(irr::IrrlichtDevice * const device);
     Player &getPlayer() { return _player; }
-    void LaunchGame();
-    float getDeltaTime();
-    irr::IrrlichtDevice *const &getDevice() { return _device; }
-private:
-    void Cleanup();
-    void SpawnMapObjects();
-    void RunUpdates();
-    void RenderGame();
-    GameTime _time;
-    irr::IrrlichtDevice * const _device;
-    SoloPlayer _player;
-    GameRenderer _renderer;
+    void LaunchGame() {};
+    void JoinServer(uint16_t port);
+protected:
+    void Cleanup() {};
+    void RunUpdates() {};
+    void RenderGame() {};
+    std::vector<std::pair<int, Player>> _enemyPlayers;
+    GameSessionConnector _connector;
 };
 
-class NetWorkGameManager : public GameManager
+class NetworkHostGameManager : public NetworkGameManager
 {
 public:
-    NetWorkGameManager(int level);
+    NetworkHostGameManager(irr::IrrlichtDevice * const device);
+    void LaunchServer();
+    void JoinServer();
 private:
+    GameServer _server;
 };
 
 #endif //CPP_INDIE_STUDIO_GAMEMANAGER_HPP

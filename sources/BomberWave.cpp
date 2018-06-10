@@ -6,10 +6,14 @@
 #include <irrlicht.h>
 #include <driverChoice.h>
 #include <Exceptions.hpp>
+#include <GameServer.h>
+#include <thread>
+#include <GameSessionConnector.h>
 #include "GameManager.hpp"
 
 BomberWave::BomberWave() : _device(InitDevice()), _mainMenu(_device)
 {
+
 }
 
 irr::IrrlichtDevice *BomberWave::InitDevice()
@@ -53,19 +57,25 @@ void BomberWave::LaunchMainMenu()
 void BomberWave::LaunchSolo()
 {
     _device->getGUIEnvironment()->clear();
-    SoloGameManager gameManager(1, _device);
+    GameManager gameManager(1, _device);
 
     gameManager.LaunchGame();
 }
 
 void BomberWave::LaunchMultiplayerHost()
 {
+    _device->getGUIEnvironment()->clear();
+    NetworkHostGameManager manager(_device);
 
+    manager.LaunchGame();
 }
 
 void BomberWave::LaunchMultiplayerJoin()
 {
+    _device->getGUIEnvironment()->clear();
+    NetworkGameManager manager(_device);
 
+    manager.LaunchGame();
 }
 
 void BomberWave::Launch()

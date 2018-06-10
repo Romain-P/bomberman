@@ -8,6 +8,8 @@
 #include <memory>
 #include "MainMenu.hpp"
 #include "GameTime.hpp"
+#include "GameServer.h"
+#include "GameSessionConnector.h"
 #include <irrlicht.h>
 
 class BomberWave
@@ -23,7 +25,7 @@ private:
     void LaunchMultiplayerJoin();
     irr::IrrlichtDevice * const _device;
     MainMenu _mainMenu;
-    bool _gameRunning;
+    bool _gameRunning = false;
 };
 
 #endif //CPP_INDIE_STUDIO_BOMBERWAVE_HPP

@@ -6,36 +6,19 @@
 #include <iostream>
 #include <Walls.hpp>
 #include <GameMapFactory.h>
+#include <thread>
+#include <Explosion.hpp>
+#include <Monster.hpp>
+#include <PowerUps.hpp>
+#include <GameUIManager.hpp>
 
-GameManager::GameManager() : _gameRunning(false), _map(), _currentId(0) {
-
-}
-
-GameManager::~GameManager() {
-
-}
-
-void SoloGameManager::SpawnMapObjects()
+GameManager::GameManager(irr::IrrlichtDevice * const device) :
+        _time(device), _renderer(device), _device(device), _player(*this), _gameRunning(false), _currentId(0), _bgLoader(device)
 {
-    for (int y = 0; y < GameMap::MapSize; y++)
-    {
-        for (int x = 0; x < GameMap::MapSize; x++)
-        {
-            int spot = _map->getMapPosition(x, y);
-            if (spot == 1)
-            {
-                SpawnObject(new SoloWall(*this, vector2df(x, y)));
-            }
-            else if (spot == 2)
-            {
-                SpawnObject(new SoloDestroyableWall(*this, vector2df(x, y)));
-            }
-        }
-    }
 }
 
-SoloGameManager::SoloGameManager(int level, irr::IrrlichtDevice * const device) :
-        GameManager(), _time(device), _device(device), _player(*this),_renderer(device)
+GameManager::GameManager(int level, irr::IrrlichtDevice * const device) :
+        _time(device), _renderer(device), _device(device), _player(*this), _gameRunning(false), _currentId(0), _bgLoader(device)
 {
     GameDataSerializer serializer;
     GameMapFactory factory(serializer);
@@ -43,22 +26,87 @@ SoloGameManager::SoloGameManager(int level, irr::IrrlichtDevice * const device) 
     _map = factory.loadByTemplate(std::to_string(level));
 }
 
-void SoloGameManager::LaunchGame()
+NetworkGameManager::NetworkGameManager(irr::IrrlichtDevice * const device) :
+        GameManager(device)
 {
-    _gameRunning = true;
+}
 
-    SpawnMapObjects();
-    _player.Start();
-    _time.Reset();
-    while (_gameRunning && _device->run() && !_player.shouldBeDestroyed())
+void NetworkGameManager::JoinServer(uint16_t port)
+{
+    /*GameSessionConnector connector;
+    std::thread con([&connector] { connector.tryConnect("127.0.0.1", port); });*/
+}
+
+NetworkHostGameManager::NetworkHostGameManager(irr::IrrlichtDevice * const device) :
+        NetworkGameManager(device), _server("127.0.0.1", RANDOM_PORT)
+{
+}
+
+void NetworkHostGameManager::JoinServer()
+{
+    /*GameSessionConnector connector;
+    std::thread con([&connector] { connector.tryConnect("127.0.0.1", _server.getPort()};*/
+}
+
+void NetworkHostGameManager::LaunchServer()
+{
+/*    std::thread thread([&_server] {_server.start()});
+
+    while (_server.getPort() == 0);*/
+}
+
+GameManager::~GameManager()
+{
+
+}
+
+void GameManager::SpawnMapObjects()
+{
+    for (int y = 0; y < GameMap::MapSize; y++)
     {
-        Cleanup();
-        RunUpdates();
-        RenderGame();
+        for (int x = 0; x < GameMap::MapSize; x++)
+        {
+            int spot = _map->getMapPosition(x, y);
+            if (spot == GameMap::CellType::WALL)
+            {
+                SpawnObject(new Wall(*this, vector2df(x, y)));
+            }
+            else if (spot == GameMap::CellType::BREAKABLE_WALL)
+            {
+                SpawnObject(new DestroyableWall(*this, vector2df(x, y)));
+            }
+            else if (spot == GameMap::CellType::ENEMY_SPAWN)
+            {
+                SpawnObject(new Goal(*this, vector2df(x, y)));
+            }
+        }
+    }
+    for (int i = 0; i < _map->getEnemyCount(); i++)
+    {
+        SpawnObject(new Monster(*this, _map->getGoal()));
     }
 }
 
-void SoloGameManager::Cleanup()
+void GameManager::LaunchGame()
+{
+    SoloGameUIManager uiManager(*this);
+    _gameRunning = true;
+
+    _bgLoader.LoadRandomBackground();
+    _bgLoader.LoadRandomTerrain();
+    SpawnMapObjects();
+    _time.Reset();
+    while (_gameRunning && _device->run() && !_player.shouldBeDestroyed())
+    {
+        RemoveDestroyed();
+        uiManager.UpdateUI();
+        RunUpdates();
+        RenderGame();
+    }
+    Cleanup();
+}
+
+void GameManager::RemoveDestroyed()
 {
     for (auto it = _objects.begin(); it != _objects.end();)
     {
@@ -69,7 +117,13 @@ void SoloGameManager::Cleanup()
     }
 }
 
-void SoloGameManager::RunUpdates()
+void GameManager::Cleanup()
+{
+    _device->getSceneManager()->clear();
+    _device->getGUIEnvironment()->clear();
+}
+
+void GameManager::RunUpdates()
 {
     _time.Update();
     _player.Update();
@@ -79,12 +133,12 @@ void SoloGameManager::RunUpdates()
     }
 }
 
-float SoloGameManager::getDeltaTime()
+float GameManager::getDeltaTime()
 {
     return _time.getDeltaTime();
 }
 
-void SoloGameManager::RenderGame()
+void GameManager::RenderGame()
 {
     _renderer.Render();
 }
@@ -109,6 +163,33 @@ std::vector<GameObject *> GameManager::getObjectsAtPosition(vector2df position)
         if ((int)position.X == (int)(*it)->getPosition().X && (int)position.Y == (int)(*it)->getPosition().Y)
         {
             objects.push_back((*it).get());
+        }
+    }
+    return objects;
+}
+
+
+std::vector<GameObject *> GameManager::getCollisionsWithTags(GameObject &object, std::vector<GOTAG> &tags)
+{
+    std::vector<GameObject *> objects;
+
+    for (auto it = _objects.begin(); it != _objects.end(); it++)
+    {
+        if ((int)object.getPosition().X == (int)(*it)->getPosition().X && (int)object.getPosition().Y == (int)(*it)->getPosition().Y)
+        {
+            if (tags.empty() && (*it)->getId() != object.getId())
+                objects.push_back((*it).get());
+            else
+            {
+                for (auto tagsIt = tags.begin(); tagsIt != tags.end(); tagsIt++)
+                {
+                    if (object.getId() != (*it)->getId() && (*it)->HasTag(*tagsIt))
+                    {
+                        objects.push_back((*it).get());
+                        break;
+                    }
+                }
+            }
         }
     }
     return objects;
