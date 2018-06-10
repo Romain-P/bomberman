@@ -56,7 +56,6 @@ public:
     float getSpeed() { return _speed; }
     static const std::array<std::string, 4> Characters;
 protected:
-    int _score;
     void PlayAnimation(PLAYERANIM anim);
     void UpdatePosition();
     void PlaceBomb();
@@ -70,6 +69,7 @@ protected:
     PLAYERANIM _anim;
     irr::scene::IAnimatedMeshSceneNode *_node;
     int _playerNbr;
+    int _score;
     int _bombPower;
     static constexpr int BaseBombPower = 3;
     std::vector<std::unique_ptr<PlayerBuff>> _buffs;

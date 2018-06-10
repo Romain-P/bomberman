@@ -9,7 +9,7 @@
 #include "Bomb.hpp"
 
 Bomb::Bomb(int power, Player &player, GameManager &manager, vector2df position, vector2df rotation) :
-        GameObject(manager, position, rotation), _player(player), _countDown(_explosionTime), _power(power)
+        GameObject(manager, position, rotation), _player(player), _power(power), _countDown(_explosionTime)
 {
     Start();
 }

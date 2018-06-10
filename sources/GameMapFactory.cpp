@@ -25,7 +25,7 @@ std::unique_ptr<GameMap> GameMapFactory::loadByTemplate(std::string const &file)
             time = atoi(line.c_str());
         else if (i == -1)
             enemies = atoi(line.c_str());
-        else if (line.size() != GameMap::WIDTH || i >= GameMap::HEIGHT) {
+        else if (line.size() != GameMap::WIDTH || i >= (int)GameMap::HEIGHT) {
             std::cerr << "invalid map size. file: " << path << " line: " << (i + 3) << " length: " << line.size()
                       <<  " expected: " << GameMap::HEIGHT << std::endl;
             error:

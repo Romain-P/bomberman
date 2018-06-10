@@ -17,9 +17,9 @@ public:
     void Destroy();
     void ExplodeLine(int x, int y);
 private:
+    void Explode();
     irr::scene::IMeshSceneNode *_node;
     Player &_player;
-    void Explode();
     int _power;
     float _countDown;
     static constexpr float _explosionTime = 2;
