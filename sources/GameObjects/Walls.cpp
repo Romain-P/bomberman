@@ -70,17 +70,15 @@ void DestroyableWall::Start()
 {
 
     irr::IrrlichtDevice *device = _manager.getDevice();
-    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/PalmTree/source/plamtree/plamtree.obj");
+    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/PalmTree/plamtree.obj");
 
     _node = device->getSceneManager()->addMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
-    _node->setRotation(vector3df(0, 45, 0));
-    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/PalmTree/textures/bark.jpg"));
-    _node->setMaterialTexture(1, device->getVideoDriver()->getTexture("resources/models/PalmTree/textures/long_leaf_tex.png"));
-    _node->setMaterialType(irr::video::EMT_TRANSPARENT_ALPHA_CHANNEL_REF);
+    _node->setRotation(vector3df(0, rand() % 360, 0));
+     _node->setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL_REF);
     _position = vector2df(_position.X + 0.5f, _position.Y + 0.5f);
     _node->setPosition(GameMap::mapToEngine(_position));
-    _node->setScale(vector3df(2, 1, 2));
+    _node->setScale(vector3df(2.5f + (float)(rand() % 10) / 10, 1.5f + (float)(rand() % 10) / 10, 2.5f + (float)(rand() % 10) / 10));
 }
 
 Goal::Goal(GameManager &manager, vector2df position, vector2df rotation) : GameObject(manager, position, rotation)
@@ -89,18 +87,23 @@ Goal::Goal(GameManager &manager, vector2df position, vector2df rotation) : GameO
     Start();
 }
 
+void Goal::Destroy()
+{
+    _node->remove();
+    GameObject::Destroy();
+}
+
 void Goal::Start() {
     GameObject::Start();
 
     irr::IrrlichtDevice *device = _manager.getDevice();
-    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/Flag/Flag.obj");
+    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/Door/InteriorDoor.obj");
 
-    irr::scene::IMeshSceneNode *_node = device->getSceneManager()->addMeshSceneNode(mesh);
+    _node = device->getSceneManager()->addMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
-    _node->setRotation(vector3df(0, 0, 0));
-    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/Flag/Flag.png"));
-    _node->setMaterialType(irr::video::EMT_TRANSPARENT_ALPHA_CHANNEL_REF);
+    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/Door/InteriorDoor_DiffuceBlue.jpg"));
+    _node->setRotation(vector3df(0, 90, 0));
     _position = vector2df(_position.X + 0.5f, _position.Y + 0.5f);
     _node->setPosition(GameMap::mapToEngine(_position));
-    _node->setScale(vector3df(1, 1, 1));
+    _node->setScale(vector3df(0.2f, 0.2f, 0.2f));
 }

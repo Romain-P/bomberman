@@ -54,7 +54,7 @@ void mapExample() {
     GameMapFactory factory(serializer);
 
     auto map = factory.loadByTemplate("1");
-    std::cout << "enemy spawns" << map->getEnemySpawns().size();
+    //std::cout << "enemy spawns" << map->getEnemySpawns().size();
 }
 
 int main() {

@@ -32,15 +32,6 @@ enum class PLAYERANIM
     WALK
 };
 
-class PlayerEventReceiver : public irr::IEventReceiver
-{
-public:
-    PlayerEventReceiver(std::array<bool, 6> &inputs);
-    virtual bool OnEvent(const irr::SEvent &event);
-private:
-    std::array<bool, 6> &_inputs;
-};
-
 class Player : public GameObject
 {
 public:
@@ -49,6 +40,7 @@ public:
     void Start();
     void Update();
     void LateUpdate();
+    void Destroy();
     void GiveBomb();
     void IncreaseBombPower() { _bombPower++; }
     void CheckCollisions();
@@ -56,15 +48,15 @@ public:
     void ApplyBuffs();
     void IncreaseScore(int increment) { _score += increment; }
     int getScore() { return _score; }
-    const std::array<bool, 6> &getInputs() { return _inputs; }
+    std::array<bool, 6> &getInputs() { return _inputs; }
     std::vector<std::unique_ptr<PlayerBuff>> &getBuffs() { return _buffs; }
     int getPlayerNBr() { return _playerNbr; }
     const std::string &getCharacterColor() { return Characters[_playerNbr]; }
     void setSpeed(float speed) { _speed = speed; }
     float getSpeed() { return _speed; }
+    static const std::array<std::string, 4> Characters;
 protected:
     int _score;
-    static const std::array<std::string, 4> Characters;
     void PlayAnimation(PLAYERANIM anim);
     void UpdatePosition();
     void PlaceBomb();
@@ -87,7 +79,5 @@ class MainPlayer : public Player
 {
 public:
     MainPlayer(GameManager &manager, int playerNbr = 0, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
-private:
-    PlayerEventReceiver _inputReceiver;
 };
 #endif //CPP_INDIE_STUDIO_PLAYER_HPP

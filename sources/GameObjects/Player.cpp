@@ -29,9 +29,8 @@ Player::Player(GameManager &manager, int playerNbr, vector2df position, vector2d
 }
 
 MainPlayer::MainPlayer(GameManager &manager, int playerNbr, vector2df position, vector2df rotation) :
-        Player(manager, playerNbr, position, rotation), _inputReceiver(_inputs)
+        Player(manager, playerNbr, position, rotation)
 {
-    _manager.getDevice()->setEventReceiver(&_inputReceiver);
 }
 
 void Player::Start()
@@ -52,38 +51,43 @@ void Player::Start()
 
 void Player::Update()
 {
-    GameObject::Update();
-    vector2df movement = GetMovement();
+    if (!_toBeDestroyed)
+    {
+        GameObject::Update();
+        vector2df movement = GetMovement();
 
-    ApplyBuffs();
-    CheckCollisions();
-    if (movement != vector2df(0, 0))
-    {
-        vector2df newPosition = _position + (movement * _manager.getDeltaTime() * _speed);
-        if (IsValidPosition(newPosition))
+        ApplyBuffs();
+        CheckCollisions();
+        if (movement != vector2df(0, 0))
         {
-            _node->setRotation(GetRotationFromTo(GameMap::mapToEngine(_position), GameMap::mapToEngine(newPosition)));
-            _position = newPosition;
-            UpdatePosition();
-            PlayAnimation(PLAYERANIM::WALK);
+            vector2df newPosition = _position + (movement * _manager.getDeltaTime() * _speed);
+            if (IsValidPosition(newPosition))
+            {
+                _node->setRotation(GetRotationFromTo(GameMap::mapToEngine(_position), GameMap::mapToEngine(newPosition)));
+                _position = newPosition;
+                UpdatePosition();
+                PlayAnimation(PLAYERANIM::WALK);
+            }
         }
+        else
+        {
+            PlayAnimation(PLAYERANIM::IDLE);
+        }
+        if (_inputs[(int)PLAYERINPUT::PLACEBOMB] && _canPlaceBomb)
+        {
+            PlaceBomb();
+            _canPlaceBomb = false;
+        }
+        else if (!_inputs[(int)PLAYERINPUT::PLACEBOMB])
+            _canPlaceBomb = true;
     }
-    else
-    {
-        PlayAnimation(PLAYERANIM::IDLE);
-    }
-    if (_inputs[(int)PLAYERINPUT::PLACEBOMB] && _canPlaceBomb)
-    {
-        PlaceBomb();
-        _canPlaceBomb = false;
-    }
-    else if (!_inputs[(int)PLAYERINPUT::PLACEBOMB])
-        _canPlaceBomb = true;
 }
 
 void Player::CheckCollisions()
 {
-    std::vector<GOTAG> deathTag(1, GOTAG::DEATH);
+    std::vector<GOTAG> deathTag;
+    deathTag.push_back(GOTAG::DEATH);
+    deathTag.push_back(GOTAG::DESTROY);
     std::vector<GOTAG> powerUpTag(1, GOTAG::POWERUP);
     std::vector<GOTAG> goalTag(1, GOTAG::GOAL);
 
@@ -103,7 +107,7 @@ void Player::CheckCollisions()
 
     if (!_manager.getCollisionsWithTags(*this, goalTag).empty())
     {
-        Destroy();
+        _manager.Win();
         return;
     }
 }
@@ -181,6 +185,11 @@ void Player::ApplyBuffs()
     }
 }
 
+void Player::Destroy()
+{
+    _node->remove();
+    GameObject::Destroy();
+}
 void Player::UpdatePosition()
 {
     _node->setPosition(GameMap::mapToEngine(_position));
@@ -201,45 +210,4 @@ void Player::PlayAnimation(PLAYERANIM anim)
         }
         _anim = anim;
     }
-}
-
-
-PlayerEventReceiver::PlayerEventReceiver(std::array<bool, 6> &inputs) : _inputs(inputs)
-{
-
-}
-
-bool PlayerEventReceiver::OnEvent(const irr::SEvent &event)
-{
-    if (event.EventType == irr::EET_KEY_INPUT_EVENT)
-    {
-        switch(event.KeyInput.Key)
-        {
-            case KEY_ESCAPE:
-                _inputs[(int)PLAYERINPUT::PAUSE] = event.KeyInput.PressedDown;
-                break;
-            case KEY_SPACE:
-                _inputs[(int)PLAYERINPUT::PLACEBOMB] = event.KeyInput.PressedDown;
-                break;
-            case KEY_UP:
-            case KEY_KEY_Z:
-                _inputs[(int)PLAYERINPUT::UP] = event.KeyInput.PressedDown;
-                break;
-            case KEY_DOWN:
-            case KEY_KEY_S:
-                _inputs[(int)PLAYERINPUT::DOWN] = event.KeyInput.PressedDown;
-                break;
-            case KEY_LEFT:
-            case KEY_KEY_Q:
-                _inputs[(int)PLAYERINPUT::LEFT] = event.KeyInput.PressedDown;
-                break;
-            case KEY_RIGHT:
-            case KEY_KEY_D:
-                _inputs[(int)PLAYERINPUT::RIGHT] = event.KeyInput.PressedDown;
-                break;
-            default:
-                break;
-        }
-    }
-    return false;
 }

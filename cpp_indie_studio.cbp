@@ -180,6 +180,9 @@
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include/PlayerBuff.hpp">
 			<Option target="bomberman"/>
 		</Unit>
+		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include/PowerUps.hpp">
+			<Option target="bomberman"/>
+		</Unit>
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include/Serializable.h">
 			<Option target="bomberman"/>
 		</Unit>
@@ -228,6 +231,12 @@
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameInputManager.cpp">
 			<Option target="bomberman"/>
 		</Unit>
+		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameLobby.cpp">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameLobby.hpp">
+			<Option target="bomberman"/>
+		</Unit>
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameManager.cpp">
 			<Option target="bomberman"/>
 		</Unit>
@@ -253,9 +262,6 @@
 			<Option target="bomberman"/>
 		</Unit>
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp">
-			<Option target="bomberman"/>
-		</Unit>
-		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.hpp">
 			<Option target="bomberman"/>
 		</Unit>
 		<Unit filename="/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Test.cpp">

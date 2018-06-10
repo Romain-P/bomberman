@@ -10,8 +10,8 @@ const std::array<vector2df, 4> Monster::Directions = {vector2df(1, 0), vector2df
 Monster::Monster(GameManager &manager, vector2df position, vector2df rotation) :
         GameObject(manager, position, rotation)
 {
-    _tags.push_back(GOTAG::DESTROYABLE);
     _tags.push_back(GOTAG::DEATH);
+    _tags.push_back(GOTAG::DESTROYABLE);
     Start();
 }
 
@@ -47,6 +47,18 @@ void Monster::Update()
     }
     else
         ChangeDirection();
+    CheckCollisions();
+}
+
+void Monster::CheckCollisions()
+{
+    std::vector<GOTAG> deathTag(1, GOTAG::DESTROY);
+
+    if (!_manager.getCollisionsWithTags(*this, deathTag).empty())
+    {
+        Destroy();
+        return;
+    }
 }
 
 bool Monster::IsValidPosition(vector2df position)

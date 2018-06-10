@@ -58,6 +58,12 @@ Exceptions.hpp
 GameInputManager.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameInputManager.hpp
 
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameLobby.cpp
+Player.hpp
+-
+GameLobby.hpp
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameLobby.hpp
+
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameManager.cpp
 GameManager.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameManager.hpp
@@ -487,6 +493,12 @@ fstream
 -
 
 include/GameInputManager.hpp
+
+include/GameLobby.hpp
+irrlicht.h
+-
+map
+-
 
 include/GameManager.hpp
 vector

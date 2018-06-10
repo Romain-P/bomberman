@@ -26,22 +26,24 @@ enum class PLAYERCOLOR
 class GameManager
 {
 public:
-    GameManager(irr::IrrlichtDevice * const device);
-    GameManager(int level,  irr::IrrlichtDevice * const device);
+    GameManager(irr::IrrlichtDevice * const device, bool duo = false);
     ~GameManager();
     void LaunchGame();
     void SpawnObject(GameObject *object);
     const GameMap &getMap() { return *_map; }
     irr::IrrlichtDevice *const &getDevice() const { return _device; }
-    MainPlayer &getPlayer() { return _player; }
+    std::vector<std::unique_ptr<Player>> &getPlayers() { return _players; }
     float getDeltaTime();
     int GenerateId();
     void RemoveDestroyed();
-    void IncreaseScore(int increment) { _player.IncreaseScore(increment); }
-    int getScore() { return _player.getScore(); }
+    void IncreaseScore(int increment) { _players[0]->IncreaseScore(increment); }
+    int getScore() { return _players[0]->getScore(); }
+    void Win();
     std::vector<GameObject *> getObjectsAtPosition(vector2df position);
     std::vector<GameObject *> getCollisionsWithTags(GameObject &object, std::vector<GOTAG> &tags);
 protected:
+    virtual void LaunchLevel();
+    virtual void LoadMap();
     virtual void Cleanup();
     virtual void SpawnMapObjects();
     virtual void RunUpdates();
@@ -49,20 +51,41 @@ protected:
     GameTime _time;
     GameRenderer _renderer;
     irr::IrrlichtDevice * const _device;
-    MainPlayer _player;
+    std::unique_ptr<IEventReceiver> _eventReceiver;
+    std::vector<std::unique_ptr<Player>> _players;
     bool _gameRunning;
     std::unique_ptr<GameMap> _map;
     std::vector<std::unique_ptr<GameObject>> _objects;
     int _currentId;
     int _score;
     BackgroundLoader _bgLoader;
+    int _level;
+    bool _gameWon;
+};
+
+class GameEventReceiver : public irr::IEventReceiver
+{
+public:
+    GameEventReceiver(std::array<bool, 6> &inputs);
+    virtual bool OnEvent(const irr::SEvent &event);
+private:
+    std::array<bool, 6> &_inputs;
+};
+
+class DuoGameEventReceiver : public irr::IEventReceiver
+{
+public:
+    DuoGameEventReceiver(std::array<bool, 6> &inputs, std::array<bool, 6> &inputstwo);
+    virtual bool OnEvent(const irr::SEvent &event);
+private:
+    std::array<bool, 6> &_inputs;
+    std::array<bool, 6> &_inputstwo;
 };
 
 class NetworkGameManager : public GameManager
 {
 public:
     NetworkGameManager(irr::IrrlichtDevice * const device);
-    Player &getPlayer() { return _player; }
     void LaunchGame() {};
     void JoinServer(uint16_t port);
 protected:

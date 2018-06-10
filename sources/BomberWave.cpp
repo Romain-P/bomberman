@@ -57,9 +57,29 @@ void BomberWave::LaunchMainMenu()
 void BomberWave::LaunchSolo()
 {
     _device->getGUIEnvironment()->clear();
-    GameManager gameManager(1, _device);
-
-    gameManager.LaunchGame();
+    switch(_mainMenu.RunAdventure())
+    {
+        case MAINMENUCHOICE::SOLO :
+            {
+            _device->getGUIEnvironment()->clear();
+            GameManager gameManager(_device);
+            gameManager.LaunchGame();
+            }
+            break;
+        case MAINMENUCHOICE::DUO :
+            {
+                _device->getGUIEnvironment()->clear();
+                GameManager gameManagerDuo(_device, true);
+                gameManagerDuo.LaunchGame();
+            }
+            break;
+        case MAINMENUCHOICE::BACK :
+            std::cout << "go back" << std::endl;
+            _device->getGUIEnvironment()->clear();
+            return;
+        default:
+            break;
+    }
 }
 
 void BomberWave::LaunchMultiplayerHost()

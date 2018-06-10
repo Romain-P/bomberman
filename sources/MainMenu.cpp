@@ -35,6 +35,27 @@ MAINMENUCHOICE MainMenu::Run()
     return  MAINMENUCHOICE::NONE;
 }
 
+MAINMENUCHOICE MainMenu::RunAdventure()
+{
+    CreateAdventureMenu();
+    _currentMenuChoice = MAINMENUCHOICE::NONE;
+    _device->setEventReceiver(&_eventReceiver);
+    while (_device->run())
+    {
+        if (_device->isWindowActive())
+        {
+            _device->getVideoDriver()->beginScene(true, true, SColor(0, 200, 200, 200));
+            Draw();
+            if (_currentMenuChoice != MAINMENUCHOICE::NONE)
+            {
+                return _currentMenuChoice;
+            }
+            _device->getVideoDriver()->endScene();
+        }
+    }
+    return  MAINMENUCHOICE::NONE;
+}
+
 void MainMenu::CreateMenu()
 {
     IGUIButton *curr;
@@ -53,6 +74,25 @@ void MainMenu::CreateMenu()
     curr->setDrawBorder(false);
     curr = guienv->addButton(rect<s32>(830, 720, 830 + 200, 720 + 80), nullptr, (int)MAINMENUCHOICE::QUIT,
             L"", L"Quits the game");
+    curr->setDrawBorder(false);
+}
+
+
+void MainMenu::CreateAdventureMenu()
+{
+    IGUIButton *curr;
+    irr::gui::IGUIEnvironment *guienv = _device->getGUIEnvironment();
+
+    guienv->addImage(_device->getVideoDriver()->getTexture("resources/ui/MainMenuBackground.jpg"), position2d<int>(0, 0));
+    guienv->addImage(_device->getVideoDriver()->getTexture("resources/ui/AdventureMenuText.png"), position2d<int>(850, 430));
+    curr = guienv->addButton(rect<s32>(830, 430, 750 + 400, 430 + 80), nullptr, (int)MAINMENUCHOICE::SOLO,
+                             L"", L"Play solo");
+    curr->setDrawBorder(false);
+    curr = guienv->addButton(rect<s32>(830, 520, 830 + 200, 520 + 60), nullptr, (int)MAINMENUCHOICE::DUO,
+                             L"", L"Play duo");
+    curr->setDrawBorder(false);
+    curr = guienv->addButton(rect<s32>(830, 600, 830 + 200, 620 + 80), nullptr, (int)MAINMENUCHOICE::BACK,
+                             L"", L"Return to main menu");
     curr->setDrawBorder(false);
 }
 
@@ -87,6 +127,12 @@ bool MainMenuEventReceiver::OnEvent(const irr::SEvent &event)
                         break;
                     case MAINMENUCHOICE::QUIT :
                         _menuChoice = MAINMENUCHOICE::QUIT;
+                        break;
+                    case MAINMENUCHOICE::DUO:
+                        _menuChoice = MAINMENUCHOICE ::DUO;
+                        break;
+                    case MAINMENUCHOICE::BACK:
+                        _menuChoice = MAINMENUCHOICE ::BACK;
                         break;
                     default :
                         _menuChoice = MAINMENUCHOICE::NONE;

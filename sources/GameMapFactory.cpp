@@ -18,7 +18,6 @@ std::unique_ptr<GameMap> GameMapFactory::loadByTemplate(std::string const &file)
         std::cerr << "cant find file: " << path << std::endl;
         throw std::runtime_error("GameMapFactory::loadByTemplate: file not found");
     }
-
     std::ifstream infile(path);
     std::string line;
     for (ssize_t i = -2; getline(infile, line); ++i) {
