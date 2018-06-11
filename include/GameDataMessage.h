@@ -17,8 +17,8 @@ public:
 
     struct PlayerInformation {
         size_t clientId;
-        size_t x;
-        size_t y;
+        float x;
+        float y;
     };
 
     GameDataMessage() : NetworkMessage(PROTOCOL_ID), _map() {}

@@ -34,7 +34,6 @@ public:
     void deserialize(BinaryDataReader &reader) final;
     void set(int x, int y, int value);
     bool isWalkable(pos_x x, pos_y y) const;
-    irr::core::vector2df const &getEnemySpawns() const;
     std::vector<irr::core::vector2df> const &getPlayerSpawns() const;
     int getMapPosition(int x, int y) const;
     size_t getCompletionTime() const { return _completionTime; }

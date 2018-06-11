@@ -38,11 +38,9 @@ void GameServerController::onStartRequested(GameClient *client, RequestStartGame
     std::vector<GameDataMessage::PlayerInformation> infos;
 
     for (size_t i = 0; i < players; ++i) {
-        auto &tuple = map->getPlayerSpawns().at(i);
-        size_t spanwX = std::get<0>(tuple);
-        size_t spawnY = std::get<1>(tuple);
+        auto &spawn = map->getPlayerSpawns().at(i);
 
-        infos.push_back({_server->getClients().at(i)->getId(), spanwX, spawnY});
+        infos.push_back({_server->getClients().at(i)->getId(), spawn.X, spawn.Y});
     }
 
     for (auto &keyset: _server->getClients()) {
