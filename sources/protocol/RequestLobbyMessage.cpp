@@ -13,5 +13,5 @@ void RequestLobbyMessage::deserialize(BinaryDataReader &reader) {
 }
 
 std::ostream &RequestLobbyMessage::toString(std::ostream &o) const {
-    return o;
+    return o << "RequestLobbyMessage()";
 }
