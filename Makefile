@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/Mardel/clion-2018.1.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /opt/clion-2018.1.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/Mardel/clion-2018.1.2/bin/cmake/bin/cmake -E remove -f
+RM = /opt/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/Mardel/ModulesTek2/C++/cpp_indie_studio
+CMAKE_SOURCE_DIR = /home/romain/projects/cpp_indie_studio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/Mardel/ModulesTek2/C++/cpp_indie_studio
+CMAKE_BINARY_DIR = /home/romain/projects/cpp_indie_studio
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/Mardel/ModulesTek2/C++/cpp_indie_studio
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/Mardel/clion-2018.1.2/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2018.1.1/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/opt/clion-2018.1.1/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles /home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/romain/projects/cpp_indie_studio/CMakeFiles /home/romain/projects/cpp_indie_studio/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/romain/projects/cpp_indie_studio/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1041,6 +1041,33 @@ sources/network/NetworkProtocol.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.s
 .PHONY : sources/network/NetworkProtocol.cpp.s
 
+sources/protocol/GameDataMessage.o: sources/protocol/GameDataMessage.cpp.o
+
+.PHONY : sources/protocol/GameDataMessage.o
+
+# target to build an object file
+sources/protocol/GameDataMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o
+.PHONY : sources/protocol/GameDataMessage.cpp.o
+
+sources/protocol/GameDataMessage.i: sources/protocol/GameDataMessage.cpp.i
+
+.PHONY : sources/protocol/GameDataMessage.i
+
+# target to preprocess a source file
+sources/protocol/GameDataMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.i
+.PHONY : sources/protocol/GameDataMessage.cpp.i
+
+sources/protocol/GameDataMessage.s: sources/protocol/GameDataMessage.cpp.s
+
+.PHONY : sources/protocol/GameDataMessage.s
+
+# target to generate assembly for a file
+sources/protocol/GameDataMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.s
+.PHONY : sources/protocol/GameDataMessage.cpp.s
+
 sources/protocol/HelloConnectMessage.o: sources/protocol/HelloConnectMessage.cpp.o
 
 .PHONY : sources/protocol/HelloConnectMessage.o
@@ -1068,32 +1095,113 @@ sources/protocol/HelloConnectMessage.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.s
 .PHONY : sources/protocol/HelloConnectMessage.cpp.s
 
-sources/protocol/MapDataMessage.o: sources/protocol/MapDataMessage.cpp.o
+sources/protocol/InputMessage.o: sources/protocol/InputMessage.cpp.o
 
-.PHONY : sources/protocol/MapDataMessage.o
+.PHONY : sources/protocol/InputMessage.o
 
 # target to build an object file
-sources/protocol/MapDataMessage.cpp.o:
-	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o
-.PHONY : sources/protocol/MapDataMessage.cpp.o
+sources/protocol/InputMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o
+.PHONY : sources/protocol/InputMessage.cpp.o
 
-sources/protocol/MapDataMessage.i: sources/protocol/MapDataMessage.cpp.i
+sources/protocol/InputMessage.i: sources/protocol/InputMessage.cpp.i
 
-.PHONY : sources/protocol/MapDataMessage.i
+.PHONY : sources/protocol/InputMessage.i
 
 # target to preprocess a source file
-sources/protocol/MapDataMessage.cpp.i:
-	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.i
-.PHONY : sources/protocol/MapDataMessage.cpp.i
+sources/protocol/InputMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.i
+.PHONY : sources/protocol/InputMessage.cpp.i
 
-sources/protocol/MapDataMessage.s: sources/protocol/MapDataMessage.cpp.s
+sources/protocol/InputMessage.s: sources/protocol/InputMessage.cpp.s
 
-.PHONY : sources/protocol/MapDataMessage.s
+.PHONY : sources/protocol/InputMessage.s
 
 # target to generate assembly for a file
-sources/protocol/MapDataMessage.cpp.s:
-	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.s
-.PHONY : sources/protocol/MapDataMessage.cpp.s
+sources/protocol/InputMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.s
+.PHONY : sources/protocol/InputMessage.cpp.s
+
+sources/protocol/LobbyUpdateMessage.o: sources/protocol/LobbyUpdateMessage.cpp.o
+
+.PHONY : sources/protocol/LobbyUpdateMessage.o
+
+# target to build an object file
+sources/protocol/LobbyUpdateMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o
+.PHONY : sources/protocol/LobbyUpdateMessage.cpp.o
+
+sources/protocol/LobbyUpdateMessage.i: sources/protocol/LobbyUpdateMessage.cpp.i
+
+.PHONY : sources/protocol/LobbyUpdateMessage.i
+
+# target to preprocess a source file
+sources/protocol/LobbyUpdateMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.i
+.PHONY : sources/protocol/LobbyUpdateMessage.cpp.i
+
+sources/protocol/LobbyUpdateMessage.s: sources/protocol/LobbyUpdateMessage.cpp.s
+
+.PHONY : sources/protocol/LobbyUpdateMessage.s
+
+# target to generate assembly for a file
+sources/protocol/LobbyUpdateMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.s
+.PHONY : sources/protocol/LobbyUpdateMessage.cpp.s
+
+sources/protocol/RequestLobbyMessage.o: sources/protocol/RequestLobbyMessage.cpp.o
+
+.PHONY : sources/protocol/RequestLobbyMessage.o
+
+# target to build an object file
+sources/protocol/RequestLobbyMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o
+.PHONY : sources/protocol/RequestLobbyMessage.cpp.o
+
+sources/protocol/RequestLobbyMessage.i: sources/protocol/RequestLobbyMessage.cpp.i
+
+.PHONY : sources/protocol/RequestLobbyMessage.i
+
+# target to preprocess a source file
+sources/protocol/RequestLobbyMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.i
+.PHONY : sources/protocol/RequestLobbyMessage.cpp.i
+
+sources/protocol/RequestLobbyMessage.s: sources/protocol/RequestLobbyMessage.cpp.s
+
+.PHONY : sources/protocol/RequestLobbyMessage.s
+
+# target to generate assembly for a file
+sources/protocol/RequestLobbyMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.s
+.PHONY : sources/protocol/RequestLobbyMessage.cpp.s
+
+sources/protocol/RequestStartGameMessage.o: sources/protocol/RequestStartGameMessage.cpp.o
+
+.PHONY : sources/protocol/RequestStartGameMessage.o
+
+# target to build an object file
+sources/protocol/RequestStartGameMessage.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o
+.PHONY : sources/protocol/RequestStartGameMessage.cpp.o
+
+sources/protocol/RequestStartGameMessage.i: sources/protocol/RequestStartGameMessage.cpp.i
+
+.PHONY : sources/protocol/RequestStartGameMessage.i
+
+# target to preprocess a source file
+sources/protocol/RequestStartGameMessage.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.i
+.PHONY : sources/protocol/RequestStartGameMessage.cpp.i
+
+sources/protocol/RequestStartGameMessage.s: sources/protocol/RequestStartGameMessage.cpp.s
+
+.PHONY : sources/protocol/RequestStartGameMessage.s
+
+# target to generate assembly for a file
+sources/protocol/RequestStartGameMessage.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.s
+.PHONY : sources/protocol/RequestStartGameMessage.cpp.s
 
 sources/serializable/BinaryDataReader.o: sources/serializable/BinaryDataReader.cpp.o
 
@@ -1476,12 +1584,24 @@ help:
 	@echo "... sources/network/NetworkProtocol.o"
 	@echo "... sources/network/NetworkProtocol.i"
 	@echo "... sources/network/NetworkProtocol.s"
+	@echo "... sources/protocol/GameDataMessage.o"
+	@echo "... sources/protocol/GameDataMessage.i"
+	@echo "... sources/protocol/GameDataMessage.s"
 	@echo "... sources/protocol/HelloConnectMessage.o"
 	@echo "... sources/protocol/HelloConnectMessage.i"
 	@echo "... sources/protocol/HelloConnectMessage.s"
-	@echo "... sources/protocol/MapDataMessage.o"
-	@echo "... sources/protocol/MapDataMessage.i"
-	@echo "... sources/protocol/MapDataMessage.s"
+	@echo "... sources/protocol/InputMessage.o"
+	@echo "... sources/protocol/InputMessage.i"
+	@echo "... sources/protocol/InputMessage.s"
+	@echo "... sources/protocol/LobbyUpdateMessage.o"
+	@echo "... sources/protocol/LobbyUpdateMessage.i"
+	@echo "... sources/protocol/LobbyUpdateMessage.s"
+	@echo "... sources/protocol/RequestLobbyMessage.o"
+	@echo "... sources/protocol/RequestLobbyMessage.i"
+	@echo "... sources/protocol/RequestLobbyMessage.s"
+	@echo "... sources/protocol/RequestStartGameMessage.o"
+	@echo "... sources/protocol/RequestStartGameMessage.i"
+	@echo "... sources/protocol/RequestStartGameMessage.s"
 	@echo "... sources/serializable/BinaryDataReader.o"
 	@echo "... sources/serializable/BinaryDataReader.i"
 	@echo "... sources/serializable/BinaryDataReader.s"

@@ -38,15 +38,17 @@ public:
     positions_t const &getEnemySpawns() const;
     positions_t const &getPlayerSpawns() const;
     int getMapPosition(int x, int y) const;
-    size_t getCompletionTime() { return _completionTime; }
-    int getEnemyCount() { return _enemies; }
+    size_t getCompletionTime() const { return _completionTime; }
+    int getEnemyCount() const { return _enemies; }
     irr::core::vector2df getGoal() { return _goal; }
-    //int **getData() const;
+
+    int (&getData())[HEIGHT][WIDTH];
+
     static irr::core::vector3df mapToEngine(irr::core::vector2df &pos);
     static irr::core::vector2df engineToMap(irr::core::vector3df &pos);
     static const int MapSize = 12;
 protected:
-    int _map[MapSize][MapSize];
+    int _map[HEIGHT][WIDTH];
 private:
     irr::core::vector2df _spawn;
     irr::core::vector2df _goal;

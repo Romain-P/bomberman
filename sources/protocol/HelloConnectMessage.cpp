@@ -4,8 +4,6 @@
 
 #include "HelloConnectMessage.h"
 
-constexpr int32_t HelloConnectMessage::PROTOCOL_ID;
-
 void HelloConnectMessage::serialize(BinaryDataWriter &writer) const {
 
 }

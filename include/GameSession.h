@@ -11,9 +11,6 @@
 class GameSession: public ANetworkClient {
 public:
     GameSession(NetworkClient *client): ANetworkClient(client) {}
-
-private:
-
 };
 
 

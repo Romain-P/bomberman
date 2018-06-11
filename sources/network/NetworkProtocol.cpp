@@ -3,17 +3,23 @@
 //
 
 #include <HelloConnectMessage.h>
-#include <MapDataMessage.h>
+#include <GameDataMessage.h>
+#include <LobbyUpdateMessage.h>
 #include <iostream>
 #include "NetworkProtocol.h"
 #include "NetworkMessage.h"
+#include "RequestStartGameMessage.h"
+#include "InputMessage.h"
 
 constexpr size_t NetworkProtocol::HEADER_INT_BYTES;
 constexpr size_t NetworkProtocol::PACKET_MAX_SIZE;
 
 const std::unordered_map<int32_t, std::unique_ptr<NetworkMessage>(*)()> NetworkProtocol::messages {
         { HelloConnectMessage::PROTOCOL_ID, packet_factory<HelloConnectMessage> },
-        { MapDataMessage::PROTOCOL_ID, packet_factory<MapDataMessage> }
+        { GameDataMessage::PROTOCOL_ID, packet_factory<GameDataMessage> },
+        { LobbyUpdateMessage::PROTOCOL_ID, packet_factory<LobbyUpdateMessage> },
+        { RequestStartGameMessage::PROTOCOL_ID, packet_factory<RequestStartGameMessage> },
+        { InputMessage::PROTOCOL_ID, packet_factory<InputMessage> }
 };
 
 template<typename T>

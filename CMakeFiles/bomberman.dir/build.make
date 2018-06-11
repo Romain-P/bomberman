@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/Mardel/clion-2018.1.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /opt/clion-2018.1.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/Mardel/clion-2018.1.2/bin/cmake/bin/cmake -E remove -f
+RM = /opt/clion-2018.1.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/Mardel/ModulesTek2/C++/cpp_indie_studio
+CMAKE_SOURCE_DIR = /home/romain/projects/cpp_indie_studio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/Mardel/ModulesTek2/C++/cpp_indie_studio
+CMAKE_BINARY_DIR = /home/romain/projects/cpp_indie_studio
 
 # Include any dependencies generated for this target.
 include CMakeFiles/bomberman.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/bomberman.dir/flags.make
 
 CMakeFiles/bomberman.dir/main.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bomberman.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/main.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bomberman.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/main.cpp.o -c /home/romain/projects/cpp_indie_studio/main.cpp
 
 CMakeFiles/bomberman.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/main.cpp > CMakeFiles/bomberman.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/main.cpp > CMakeFiles/bomberman.dir/main.cpp.i
 
 CMakeFiles/bomberman.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/main.cpp -o CMakeFiles/bomberman.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/main.cpp -o CMakeFiles/bomberman.dir/main.cpp.s
 
 CMakeFiles/bomberman.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/bomberman.dir/main.cpp.o.provides.build: CMakeFiles/bomberman.dir/mai
 
 CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o: sources/BomberWave.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/BomberWave.cpp
 
 CMakeFiles/bomberman.dir/sources/BomberWave.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/BomberWave.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.cpp > CMakeFiles/bomberman.dir/sources/BomberWave.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/BomberWave.cpp > CMakeFiles/bomberman.dir/sources/BomberWave.cpp.i
 
 CMakeFiles/bomberman.dir/sources/BomberWave.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/BomberWave.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.cpp -o CMakeFiles/bomberman.dir/sources/BomberWave.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/BomberWave.cpp -o CMakeFiles/bomberman.dir/sources/BomberWave.cpp.s
 
 CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o.provides.build: CMakeFiles/bom
 
 CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o: sources/MainMenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/MainMenu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/MainMenu.cpp
 
 CMakeFiles/bomberman.dir/sources/MainMenu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/MainMenu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/MainMenu.cpp > CMakeFiles/bomberman.dir/sources/MainMenu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/MainMenu.cpp > CMakeFiles/bomberman.dir/sources/MainMenu.cpp.i
 
 CMakeFiles/bomberman.dir/sources/MainMenu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/MainMenu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/MainMenu.cpp -o CMakeFiles/bomberman.dir/sources/MainMenu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/MainMenu.cpp -o CMakeFiles/bomberman.dir/sources/MainMenu.cpp.s
 
 CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o.provides.build: CMakeFiles/bombe
 
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: sources/GameObjects/GameObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameObjects/GameObject.cpp
 
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameObject.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameObjects/GameObject.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameObject.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameObjects/GameObject.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o.provides.build: CM
 
 CMakeFiles/bomberman.dir/sources/GameManager.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameManager.cpp.o: sources/GameManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/bomberman.dir/sources/GameManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameManager.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/bomberman.dir/sources/GameManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameManager.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameManager.cpp
 
 CMakeFiles/bomberman.dir/sources/GameManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameManager.cpp > CMakeFiles/bomberman.dir/sources/GameManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameManager.cpp > CMakeFiles/bomberman.dir/sources/GameManager.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameManager.cpp -o CMakeFiles/bomberman.dir/sources/GameManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameManager.cpp -o CMakeFiles/bomberman.dir/sources/GameManager.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameManager.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/bomberman.dir/sources/GameManager.cpp.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.o: sources/GameInputManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameInputManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameInputManager.cpp
 
 CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameInputManager.cpp > CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameInputManager.cpp > CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameInputManager.cpp -o CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameInputManager.cpp -o CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o: sources/GameRenderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameRenderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameRenderer.cpp
 
 CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameRenderer.cpp > CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameRenderer.cpp > CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameRenderer.cpp -o CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameRenderer.cpp -o CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o.provides.build: CMakeFiles/b
 
 CMakeFiles/bomberman.dir/sources/Exceptions.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/Exceptions.cpp.o: sources/Exceptions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/bomberman.dir/sources/Exceptions.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/Exceptions.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/Exceptions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/bomberman.dir/sources/Exceptions.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/Exceptions.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/Exceptions.cpp
 
 CMakeFiles/bomberman.dir/sources/Exceptions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/Exceptions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/Exceptions.cpp > CMakeFiles/bomberman.dir/sources/Exceptions.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/Exceptions.cpp > CMakeFiles/bomberman.dir/sources/Exceptions.cpp.i
 
 CMakeFiles/bomberman.dir/sources/Exceptions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/Exceptions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/Exceptions.cpp -o CMakeFiles/bomberman.dir/sources/Exceptions.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/Exceptions.cpp -o CMakeFiles/bomberman.dir/sources/Exceptions.cpp.s
 
 CMakeFiles/bomberman.dir/sources/Exceptions.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/bomberman.dir/sources/Exceptions.cpp.o.provides.build: CMakeFiles/bom
 
 CMakeFiles/bomberman.dir/sources/GameMap.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameMap.cpp.o: sources/GameMap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/bomberman.dir/sources/GameMap.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameMap.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/bomberman.dir/sources/GameMap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameMap.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameMap.cpp
 
 CMakeFiles/bomberman.dir/sources/GameMap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameMap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMap.cpp > CMakeFiles/bomberman.dir/sources/GameMap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameMap.cpp > CMakeFiles/bomberman.dir/sources/GameMap.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameMap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameMap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMap.cpp -o CMakeFiles/bomberman.dir/sources/GameMap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameMap.cpp -o CMakeFiles/bomberman.dir/sources/GameMap.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameMap.cpp.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/bomberman.dir/sources/GameMap.cpp.o.provides.build: CMakeFiles/bomber
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.o: sources/GameObjects/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameObjects/Player.cpp
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Player.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameObjects/Player.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Player.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameObjects/Player.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Player.cpp.o.provides.build: CMakeF
 
 CMakeFiles/bomberman.dir/sources/GameTime.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameTime.cpp.o: sources/GameTime.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/bomberman.dir/sources/GameTime.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameTime.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/bomberman.dir/sources/GameTime.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameTime.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameTime.cpp
 
 CMakeFiles/bomberman.dir/sources/GameTime.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameTime.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.cpp > CMakeFiles/bomberman.dir/sources/GameTime.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameTime.cpp > CMakeFiles/bomberman.dir/sources/GameTime.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameTime.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameTime.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.cpp -o CMakeFiles/bomberman.dir/sources/GameTime.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameTime.cpp -o CMakeFiles/bomberman.dir/sources/GameTime.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameTime.cpp.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/bomberman.dir/sources/GameTime.cpp.o.provides.build: CMakeFiles/bombe
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.o: sources/GameObjects/Bomb.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Bomb.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameObjects/Bomb.cpp
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Bomb.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameObjects/Bomb.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Bomb.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameObjects/Bomb.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Bomb.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o: sources/GameObjects/Monster.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Monster.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameObjects/Monster.cpp
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Monster.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameObjects/Monster.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Monster.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameObjects/Monster.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o.provides.build: CMake
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.o: sources/shared/ANetworkAsyncListener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkAsyncListener.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkAsyncListener.cpp
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkAsyncListener.cpp > CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkAsyncListener.cpp > CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.i
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkAsyncListener.cpp -o CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkAsyncListener.cpp -o CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.s
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncListener.cpp.o.provides.bui
 
 CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.o: sources/shared/NetworkSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/NetworkSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/shared/NetworkSocket.cpp
 
 CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/NetworkSocket.cpp > CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/shared/NetworkSocket.cpp > CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.i
 
 CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/NetworkSocket.cpp -o CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/shared/NetworkSocket.cpp -o CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.s
 
 CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/bomberman.dir/sources/shared/NetworkSocket.cpp.o.provides.build: CMak
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.o: sources/shared/ANetworkAsyncServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkAsyncServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkAsyncServer.cpp
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkAsyncServer.cpp > CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkAsyncServer.cpp > CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.i
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkAsyncServer.cpp -o CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkAsyncServer.cpp -o CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.s
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.o.requires:
 
@@ -443,16 +443,16 @@ CMakeFiles/bomberman.dir/sources/shared/ANetworkAsyncServer.cpp.o.provides.build
 
 CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.o: sources/shared/NetworkClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/NetworkClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/shared/NetworkClient.cpp
 
 CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/NetworkClient.cpp > CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/shared/NetworkClient.cpp > CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.i
 
 CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/NetworkClient.cpp -o CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/shared/NetworkClient.cpp -o CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.s
 
 CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.o.requires:
 
@@ -467,16 +467,16 @@ CMakeFiles/bomberman.dir/sources/shared/NetworkClient.cpp.o.provides.build: CMak
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.o: sources/shared/ANetworkBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkBuffer.cpp
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkBuffer.cpp > CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkBuffer.cpp > CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.i
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkBuffer.cpp -o CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkBuffer.cpp -o CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.s
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.o.requires:
 
@@ -491,16 +491,16 @@ CMakeFiles/bomberman.dir/sources/shared/ANetworkBuffer.cpp.o.provides.build: CMa
 
 CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.o: sources/shared/impl/BasicNetworkBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/impl/BasicNetworkBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/shared/impl/BasicNetworkBuffer.cpp
 
 CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/impl/BasicNetworkBuffer.cpp > CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/shared/impl/BasicNetworkBuffer.cpp > CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.i
 
 CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/impl/BasicNetworkBuffer.cpp -o CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/shared/impl/BasicNetworkBuffer.cpp -o CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.s
 
 CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.o.requires:
 
@@ -515,16 +515,16 @@ CMakeFiles/bomberman.dir/sources/shared/impl/BasicNetworkBuffer.cpp.o.provides.b
 
 CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.o: sources/network/NetworkClientAdapter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkClientAdapter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/network/NetworkClientAdapter.cpp
 
 CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkClientAdapter.cpp > CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/network/NetworkClientAdapter.cpp > CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.i
 
 CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkClientAdapter.cpp -o CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/network/NetworkClientAdapter.cpp -o CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.s
 
 CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.o.requires:
 
@@ -539,16 +539,16 @@ CMakeFiles/bomberman.dir/sources/network/NetworkClientAdapter.cpp.o.provides.bui
 
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.o: sources/serializable/BinaryDataWriter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataWriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataWriter.cpp
 
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataWriter.cpp > CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataWriter.cpp > CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.i
 
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataWriter.cpp -o CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataWriter.cpp -o CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.s
 
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.o.requires:
 
@@ -563,16 +563,16 @@ CMakeFiles/bomberman.dir/sources/serializable/BinaryDataWriter.cpp.o.provides.bu
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.o: sources/shared/ANetworkClientAdapter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkClientAdapter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkClientAdapter.cpp
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkClientAdapter.cpp > CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkClientAdapter.cpp > CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.i
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkClientAdapter.cpp -o CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/shared/ANetworkClientAdapter.cpp -o CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.s
 
 CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.o.requires:
 
@@ -587,16 +587,16 @@ CMakeFiles/bomberman.dir/sources/shared/ANetworkClientAdapter.cpp.o.provides.bui
 
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.o: sources/serializable/BinaryDataReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataReader.cpp
 
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataReader.cpp > CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataReader.cpp > CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.i
 
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataReader.cpp -o CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataReader.cpp -o CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.s
 
 CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.o.requires:
 
@@ -611,16 +611,16 @@ CMakeFiles/bomberman.dir/sources/serializable/BinaryDataReader.cpp.o.provides.bu
 
 CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.o: sources/network/NetworkProtocol.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkProtocol.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/network/NetworkProtocol.cpp
 
 CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkProtocol.cpp > CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/network/NetworkProtocol.cpp > CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.i
 
 CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkProtocol.cpp -o CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/network/NetworkProtocol.cpp -o CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.s
 
 CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.o.requires:
 
@@ -635,16 +635,16 @@ CMakeFiles/bomberman.dir/sources/network/NetworkProtocol.cpp.o.provides.build: C
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.o: sources/gameserver/GameClientHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClientHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/gameserver/GameClientHandler.cpp
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClientHandler.cpp > CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/gameserver/GameClientHandler.cpp > CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.i
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClientHandler.cpp -o CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/gameserver/GameClientHandler.cpp -o CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.s
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.o.requires:
 
@@ -659,16 +659,16 @@ CMakeFiles/bomberman.dir/sources/gameserver/GameClientHandler.cpp.o.provides.bui
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.o: sources/gameserver/GameClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/gameserver/GameClient.cpp
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClient.cpp > CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/gameserver/GameClient.cpp > CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.i
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClient.cpp -o CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/gameserver/GameClient.cpp -o CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.s
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.o.requires:
 
@@ -683,16 +683,16 @@ CMakeFiles/bomberman.dir/sources/gameserver/GameClient.cpp.o.provides.build: CMa
 
 CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.o: sources/network/ANetworkController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/network/ANetworkController.cpp
 
 CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkController.cpp > CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/network/ANetworkController.cpp > CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.i
 
 CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkController.cpp -o CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/network/ANetworkController.cpp -o CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.s
 
 CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.o.requires:
 
@@ -707,16 +707,16 @@ CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.o.provides.build
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o: sources/gameserver/GameServerController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServerController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/gameserver/GameServerController.cpp
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServerController.cpp > CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/gameserver/GameServerController.cpp > CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.i
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServerController.cpp -o CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/gameserver/GameServerController.cpp -o CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.s
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o.requires:
 
@@ -731,16 +731,16 @@ CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o.provides.
 
 CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o: sources/network/ANetworkClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/network/ANetworkClient.cpp
 
 CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkClient.cpp > CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/network/ANetworkClient.cpp > CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.i
 
 CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkClient.cpp -o CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/network/ANetworkClient.cpp -o CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.s
 
 CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o.requires:
 
@@ -755,16 +755,16 @@ CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o.provides.build: CM
 
 CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o: sources/protocol/HelloConnectMessage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/HelloConnectMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/protocol/HelloConnectMessage.cpp
 
 CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/HelloConnectMessage.cpp > CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/protocol/HelloConnectMessage.cpp > CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.i
 
 CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/HelloConnectMessage.cpp -o CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/protocol/HelloConnectMessage.cpp -o CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.s
 
 CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o.requires:
 
@@ -777,42 +777,42 @@ CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o.provides: CM
 CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o
 
 
-CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o: CMakeFiles/bomberman.dir/flags.make
-CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o: sources/protocol/MapDataMessage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/MapDataMessage.cpp
+CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o: CMakeFiles/bomberman.dir/flags.make
+CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o: sources/protocol/GameDataMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/protocol/GameDataMessage.cpp
 
-CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/MapDataMessage.cpp > CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.i
+CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/protocol/GameDataMessage.cpp > CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.i
 
-CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/MapDataMessage.cpp -o CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.s
+CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/protocol/GameDataMessage.cpp -o CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.s
 
-CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o.requires:
+CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o.requires:
 
-.PHONY : CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o.requires
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o.requires
 
-CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o.provides: CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o.requires
-	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o.provides.build
-.PHONY : CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o.provides
+CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o.provides: CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o.provides.build
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o.provides
 
-CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o
+CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o
 
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o: sources/gameclient/GameSession.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSession.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSession.cpp
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSession.cpp > CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSession.cpp > CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.i
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSession.cpp -o CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSession.cpp -o CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.s
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o.requires:
 
@@ -827,16 +827,16 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o.provides.build: CM
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: sources/gameclient/GameSessionHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionHandler.cpp
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionHandler.cpp > CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionHandler.cpp > CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.i
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionHandler.cpp -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionHandler.cpp -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.s
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o.requires:
 
@@ -851,16 +851,16 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o.provides.bu
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: sources/gameclient/GameSessionController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionController.cpp
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionController.cpp > CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionController.cpp > CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.i
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionController.cpp -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionController.cpp -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.s
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o.requires:
 
@@ -875,16 +875,16 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o.provides
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.o: sources/gameserver/GameServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/gameserver/GameServer.cpp
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServer.cpp > CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/gameserver/GameServer.cpp > CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.i
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServer.cpp -o CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/gameserver/GameServer.cpp -o CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.s
 
 CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.o.requires:
 
@@ -899,16 +899,16 @@ CMakeFiles/bomberman.dir/sources/gameserver/GameServer.cpp.o.provides.build: CMa
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: sources/gameclient/GameSessionConnector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionConnector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionConnector.cpp
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionConnector.cpp > CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionConnector.cpp > CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.i
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionConnector.cpp -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionConnector.cpp -o CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.s
 
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o.requires:
 
@@ -923,16 +923,16 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o.provides.
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.o: sources/GameObjects/Test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameObjects/Test.cpp
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Test.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameObjects/Test.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Test.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameObjects/Test.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.o.requires:
 
@@ -947,16 +947,16 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Test.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.o: sources/serializable/GameDataSerializer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/GameDataSerializer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/serializable/GameDataSerializer.cpp
 
 CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/GameDataSerializer.cpp > CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/serializable/GameDataSerializer.cpp > CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.i
 
 CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/GameDataSerializer.cpp -o CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/serializable/GameDataSerializer.cpp -o CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.s
 
 CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.o.requires:
 
@@ -971,16 +971,16 @@ CMakeFiles/bomberman.dir/sources/serializable/GameDataSerializer.cpp.o.provides.
 
 CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.o: sources/GameMapFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMapFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameMapFactory.cpp
 
 CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMapFactory.cpp > CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameMapFactory.cpp > CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMapFactory.cpp -o CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameMapFactory.cpp -o CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.o.requires:
 
@@ -995,16 +995,16 @@ CMakeFiles/bomberman.dir/sources/GameMapFactory.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o: sources/GameObjects/Walls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Walls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameObjects/Walls.cpp
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Walls.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameObjects/Walls.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Walls.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameObjects/Walls.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o.requires:
 
@@ -1019,16 +1019,16 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o: sources/GameObjects/Explosion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Explosion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameObjects/Explosion.cpp
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Explosion.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameObjects/Explosion.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Explosion.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameObjects/Explosion.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o.requires:
 
@@ -1043,16 +1043,16 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o.provides.build: CMa
 
 CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o: sources/GameUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameUtils.cpp
 
 CMakeFiles/bomberman.dir/sources/GameUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameUtils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.cpp > CMakeFiles/bomberman.dir/sources/GameUtils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameUtils.cpp > CMakeFiles/bomberman.dir/sources/GameUtils.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameUtils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.cpp -o CMakeFiles/bomberman.dir/sources/GameUtils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameUtils.cpp -o CMakeFiles/bomberman.dir/sources/GameUtils.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o.requires:
 
@@ -1067,16 +1067,16 @@ CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o.provides.build: CMakeFiles/bomb
 
 CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o: sources/BackgroundLoader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/BackgroundLoader.cpp
 
 CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.cpp > CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/BackgroundLoader.cpp > CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.i
 
 CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.cpp -o CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/BackgroundLoader.cpp -o CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.s
 
 CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o.requires:
 
@@ -1091,16 +1091,16 @@ CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o: sources/GameUIManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameUIManager.cpp
 
 CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.cpp > CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameUIManager.cpp > CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.cpp -o CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameUIManager.cpp -o CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o.requires:
 
@@ -1115,16 +1115,16 @@ CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o: sources/PlayerBuff.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/PlayerBuff.cpp
 
 CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp > CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/PlayerBuff.cpp > CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.i
 
 CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp -o CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/PlayerBuff.cpp -o CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.s
 
 CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.requires:
 
@@ -1139,16 +1139,16 @@ CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.provides.build: CMakeFiles/bom
 
 CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o: sources/GameObjects/PowerUps.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o -c /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/GameObjects/PowerUps.cpp
 
 CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/GameObjects/PowerUps.cpp > CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.i
 
 CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/GameObjects/PowerUps.cpp -o CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.s
 
 CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.requires:
 
@@ -1159,6 +1159,102 @@ CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.provides: CMakeFiles
 .PHONY : CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.provides
 
 CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
+
+
+CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o: CMakeFiles/bomberman.dir/flags.make
+CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o: sources/protocol/LobbyUpdateMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/protocol/LobbyUpdateMessage.cpp
+
+CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/protocol/LobbyUpdateMessage.cpp > CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.i
+
+CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/protocol/LobbyUpdateMessage.cpp -o CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.s
+
+CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o.requires:
+
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o.requires
+
+CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o.provides: CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o.provides.build
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o.provides
+
+CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o
+
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o: CMakeFiles/bomberman.dir/flags.make
+CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o: sources/protocol/RequestLobbyMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/protocol/RequestLobbyMessage.cpp
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/protocol/RequestLobbyMessage.cpp > CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.i
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/protocol/RequestLobbyMessage.cpp -o CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.s
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o.requires:
+
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o.requires
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o.provides: CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o.provides.build
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o.provides
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o
+
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o: CMakeFiles/bomberman.dir/flags.make
+CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o: sources/protocol/RequestStartGameMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/protocol/RequestStartGameMessage.cpp
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/protocol/RequestStartGameMessage.cpp > CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.i
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/protocol/RequestStartGameMessage.cpp -o CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.s
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o.requires:
+
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o.requires
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o.provides: CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o.provides.build
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o.provides
+
+CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o
+
+
+CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o: CMakeFiles/bomberman.dir/flags.make
+CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o: sources/protocol/InputMessage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o -c /home/romain/projects/cpp_indie_studio/sources/protocol/InputMessage.cpp
+
+CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romain/projects/cpp_indie_studio/sources/protocol/InputMessage.cpp > CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.i
+
+CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romain/projects/cpp_indie_studio/sources/protocol/InputMessage.cpp -o CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.s
+
+CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o.requires:
+
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o.requires
+
+CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o.provides: CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o.requires
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o.provides.build
+.PHONY : CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o.provides
+
+CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o.provides.build: CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o
 
 
 # Object files for target bomberman
@@ -1193,7 +1289,7 @@ bomberman_OBJECTS = \
 "CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o" \
 "CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o" \
 "CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o" \
-"CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o" \
+"CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o" \
 "CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o" \
 "CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o" \
 "CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o" \
@@ -1208,7 +1304,11 @@ bomberman_OBJECTS = \
 "CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o" \
 "CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o" \
 "CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o" \
-"CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o"
+"CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o" \
+"CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o" \
+"CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o" \
+"CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o" \
+"CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o"
 
 # External object files for target bomberman
 bomberman_EXTERNAL_OBJECTS =
@@ -1243,7 +1343,7 @@ bomberman: CMakeFiles/bomberman.dir/sources/network/ANetworkController.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o
-bomberman: CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o
+bomberman: CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o
@@ -1259,9 +1359,13 @@ bomberman: CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o
 bomberman: CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
+bomberman: CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o
+bomberman: CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o
+bomberman: CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o
+bomberman: CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o
 bomberman: CMakeFiles/bomberman.dir/build.make
 bomberman: CMakeFiles/bomberman.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking CXX executable bomberman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/romain/projects/cpp_indie_studio/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking CXX executable bomberman"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bomberman.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1299,7 +1403,7 @@ CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/network/ANet
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/gameserver/GameServerController.cpp.o.requires
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/network/ANetworkClient.cpp.o.requires
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/protocol/HelloConnectMessage.cpp.o.requires
-CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/protocol/MapDataMessage.cpp.o.requires
+CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/protocol/GameDataMessage.cpp.o.requires
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/gameclient/GameSession.cpp.o.requires
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o.requires
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o.requires
@@ -1315,6 +1419,10 @@ CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/BackgroundLo
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o.requires
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/PlayerBuff.cpp.o.requires
 CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o.requires
+CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/protocol/LobbyUpdateMessage.cpp.o.requires
+CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/protocol/RequestLobbyMessage.cpp.o.requires
+CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/protocol/RequestStartGameMessage.cpp.o.requires
+CMakeFiles/bomberman.dir/requires: CMakeFiles/bomberman.dir/sources/protocol/InputMessage.cpp.o.requires
 
 .PHONY : CMakeFiles/bomberman.dir/requires
 
@@ -1323,6 +1431,6 @@ CMakeFiles/bomberman.dir/clean:
 .PHONY : CMakeFiles/bomberman.dir/clean
 
 CMakeFiles/bomberman.dir/depend:
-	cd /home/Mardel/ModulesTek2/C++/cpp_indie_studio && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/Mardel/ModulesTek2/C++/cpp_indie_studio /home/Mardel/ModulesTek2/C++/cpp_indie_studio /home/Mardel/ModulesTek2/C++/cpp_indie_studio /home/Mardel/ModulesTek2/C++/cpp_indie_studio /home/Mardel/ModulesTek2/C++/cpp_indie_studio/CMakeFiles/bomberman.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/romain/projects/cpp_indie_studio && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/romain/projects/cpp_indie_studio /home/romain/projects/cpp_indie_studio /home/romain/projects/cpp_indie_studio /home/romain/projects/cpp_indie_studio /home/romain/projects/cpp_indie_studio/CMakeFiles/bomberman.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/bomberman.dir/depend
 

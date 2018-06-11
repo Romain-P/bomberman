@@ -3,23 +3,37 @@
 //
 
 #include <HelloConnectMessage.h>
-#include <MapDataMessage.h>
+#include <GameDataMessage.h>
+#include <RequestLobbyMessage.h>
 #include "GameSessionController.h"
 
-void GameSessionController::defineMessageHandlers(handlers_t &handlers)
-{
+void GameSessionController::defineMessageHandlers(handlers_t &handlers) {
     handlers[HelloConnectMessage::PROTOCOL_ID] = handler(*this, &GameSessionController::onConnect);
+    handlers[LobbyUpdateMessage::PROTOCOL_ID] = handler(*this, &GameSessionController::onLobbyUpdated);
+    handlers[GameDataMessage::PROTOCOL_ID] = handler(*this, &GameSessionController::loadGameData);
+    handlers[InputMessage::PROTOCOL_ID] = handler(*this, &GameSessionController::onInputReceived);
 }
 
-void GameSessionController::onConnect(GameSession *session, HelloConnectMessage *msg)
-{
-    std::vector<char> data;
-    for (size_t i = 0; i < 2000; ++i)
-        data.push_back('a');
-    session->send(MapDataMessage(data));
+void GameSessionController::onConnect(GameSession *session, HelloConnectMessage *msg) {
+    session->send(RequestLobbyMessage());
 }
 
-void GameSessionController::onDisconnect(GameSession *session)
-{
+void GameSessionController::onDisconnect(GameSession *session) {
 
+}
+
+void GameSessionController::onLobbyUpdated(GameSession *session, LobbyUpdateMessage *msg) {
+    msg->getMaxPlayers();
+    msg->getReadyPlayers();
+}
+
+//start the game here
+void GameSessionController::loadGameData(GameSession *session, GameDataMessage *msg) {
+    msg->getMap(); //game map
+    msg->getPlayerInformations(); //contains spawn position for each player
+}
+
+void GameSessionController::onInputReceived(GameSession *session, InputMessage *msg) {
+    msg->getPlayerId(); //player who pressed/released an input
+    msg->getType(); //input type @see message enum
 }

@@ -27,3 +27,11 @@ game_clients_t &GameServer::getClients() {
 void GameServer::onServerClosed() {
     //TODO: you can do anything before that all clients are closed.
 }
+
+size_t &GameServer::getMaxPlayers() {
+    return _maxPlayers;
+}
+
+bool &GameServer::started() {
+    return _started;
+}

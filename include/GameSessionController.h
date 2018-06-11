@@ -9,6 +9,9 @@
 #include "ANetworkController.h"
 #include "GameSession.h"
 #include "HelloConnectMessage.h"
+#include "LobbyUpdateMessage.h"
+#include "GameDataMessage.h"
+#include "InputMessage.h"
 
 class GameSessionController: public ANetworkController {
 public:
@@ -19,6 +22,10 @@ public:
 
     void onConnect(GameSession *session, HelloConnectMessage *msg);
     void onDisconnect(GameSession *session);
+
+    void onLobbyUpdated(GameSession *session, LobbyUpdateMessage *msg);
+    void loadGameData(GameSession *session, GameDataMessage *msg);
+    void onInputReceived(GameSession *session, InputMessage *msg);
 
 private:
 

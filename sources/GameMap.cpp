@@ -109,6 +109,10 @@ positions_t const &GameMap::getEnemySpawns() const {
     return _spawns.at(ENEMY_SPAWN);
 }
 
+int (&GameMap::getData())[HEIGHT][WIDTH] {
+    return _map;
+}
+
 /*int **GameMap::getData() const {
     return _map;
 }*/

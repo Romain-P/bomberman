@@ -5,7 +5,6 @@
 #ifndef CPP_INDIE_STUDIO_HELLOCONNECTMESSAGE_H
 #define CPP_INDIE_STUDIO_HELLOCONNECTMESSAGE_H
 
-
 #include <NetworkMessage.h>
 
 class HelloConnectMessage: public NetworkMessage {

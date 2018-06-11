@@ -7,7 +7,9 @@
 
 
 #include "ANetworkController.h"
-#include "MapDataMessage.h"
+#include "RequestLobbyMessage.h"
+#include "RequestStartGameMessage.h"
+#include "InputMessage.h"
 
 class GameServer;
 class GameClient;
@@ -21,7 +23,9 @@ public:
     void onConnect(GameClient *client);
     void onDisconnect(GameClient *client);
 
-    void onMapDataMessage(GameClient *client, MapDataMessage *msg);
+    void onStartRequested(GameClient *client, RequestStartGameMessage *msg);
+    void onJoinAsked(GameClient *client, RequestLobbyMessage *msg);
+    void onInputReceived(GameClient *client, InputMessage *msg);
 
 private:
 
