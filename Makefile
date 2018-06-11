@@ -258,6 +258,33 @@ sources/GameInputManager.cpp.s:
 	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameInputManager.cpp.s
 .PHONY : sources/GameInputManager.cpp.s
 
+sources/GameLobby.o: sources/GameLobby.cpp.o
+
+.PHONY : sources/GameLobby.o
+
+# target to build an object file
+sources/GameLobby.cpp.o:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameLobby.cpp.o
+.PHONY : sources/GameLobby.cpp.o
+
+sources/GameLobby.i: sources/GameLobby.cpp.i
+
+.PHONY : sources/GameLobby.i
+
+# target to preprocess a source file
+sources/GameLobby.cpp.i:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameLobby.cpp.i
+.PHONY : sources/GameLobby.cpp.i
+
+sources/GameLobby.s: sources/GameLobby.cpp.s
+
+.PHONY : sources/GameLobby.s
+
+# target to generate assembly for a file
+sources/GameLobby.cpp.s:
+	$(MAKE) -f CMakeFiles/bomberman.dir/build.make CMakeFiles/bomberman.dir/sources/GameLobby.cpp.s
+.PHONY : sources/GameLobby.cpp.s
+
 sources/GameManager.o: sources/GameManager.cpp.o
 
 .PHONY : sources/GameManager.o
@@ -1497,6 +1524,9 @@ help:
 	@echo "... sources/GameInputManager.o"
 	@echo "... sources/GameInputManager.i"
 	@echo "... sources/GameInputManager.s"
+	@echo "... sources/GameLobby.o"
+	@echo "... sources/GameLobby.i"
+	@echo "... sources/GameLobby.s"
 	@echo "... sources/GameManager.o"
 	@echo "... sources/GameManager.i"
 	@echo "... sources/GameManager.s"

@@ -19,7 +19,9 @@ enum class MAINMENUCHOICE
     SOLO,
     JOINMULTIPLAYER,
     HOSTMULTIPLAYER,
-    QUIT
+    QUIT,
+    DUO,
+    BACK
 };
 
 class MainMenuEventReceiver : public irr::IEventReceiver
@@ -36,8 +38,10 @@ class MainMenu
 public:
     MainMenu(irr::IrrlichtDevice * const device);
     MAINMENUCHOICE Run();
-private:
+    MAINMENUCHOICE RunAdventure();
+    void CreateAdventureMenu();
     void CreateMenu();
+private:
     void Draw();
     irr::IrrlichtDevice * const _device;
     MAINMENUCHOICE _currentMenuChoice;

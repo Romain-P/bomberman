@@ -4,7 +4,7 @@
 
 #include "PlayerBuff.hpp"
 
-PlayerBuff::PlayerBuff(Player &player, std::string iconPath, float duration, BUFFTYPE type) :  _player(player), _iconPath(iconPath), _countDown(duration), _type(type)
+PlayerBuff::PlayerBuff(Player &player, std::string iconPath, float duration, BUFFTYPE type) :  _type(type),  _countDown(duration), _player(player), _iconPath(iconPath)
 {
 }
 

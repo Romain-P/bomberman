@@ -16,6 +16,7 @@ public:
     void Update();
     void Destroy();
 private:
+    void CheckCollisions();
     bool IsValidPosition(vector2df pos);
     void ChangeDirection();
     vector2df _direction;

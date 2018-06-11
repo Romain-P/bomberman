@@ -35,5 +35,8 @@ class Goal : public GameObject
 public:
     Goal(GameManager &manager, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
     void Start();
+    void Destroy();
+private:
+    irr::scene::IMeshSceneNode *_node;
 };
 #endif //CPP_INDIE_STUDIO_WALLS_HPP

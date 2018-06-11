@@ -15,7 +15,6 @@
 using pos_x = size_t;
 using pos_y = size_t;
 using spawn_type = int;
-using positions_t = std::vector<std::tuple<pos_x, pos_y>>;
 
 class GameMap: public Serializable {
 public:
@@ -35,8 +34,8 @@ public:
     void deserialize(BinaryDataReader &reader) final;
     void set(int x, int y, int value);
     bool isWalkable(pos_x x, pos_y y) const;
-    positions_t const &getEnemySpawns() const;
-    positions_t const &getPlayerSpawns() const;
+    irr::core::vector2df const &getEnemySpawns() const;
+    std::vector<irr::core::vector2df> const &getPlayerSpawns() const;
     int getMapPosition(int x, int y) const;
     size_t getCompletionTime() const { return _completionTime; }
     int getEnemyCount() const { return _enemies; }
@@ -50,10 +49,9 @@ public:
 protected:
     int _map[HEIGHT][WIDTH];
 private:
-    irr::core::vector2df _spawn;
     irr::core::vector2df _goal;
     size_t _completionTime;
     ssize_t _enemies;
-    std::unordered_map<spawn_type, positions_t> _spawns;
+    std::vector<irr::core::vector2df>_spawns;
 };
 #endif //CPP_INDIE_STUDIO_GAMEMAP_HPP

@@ -18,7 +18,6 @@ std::unique_ptr<GameMap> GameMapFactory::loadByTemplate(std::string const &file)
         std::cerr << "cant find file: " << path << std::endl;
         throw std::runtime_error("GameMapFactory::loadByTemplate: file not found");
     }
-
     std::ifstream infile(path);
     std::string line;
     for (ssize_t i = -2; getline(infile, line); ++i) {
@@ -26,7 +25,7 @@ std::unique_ptr<GameMap> GameMapFactory::loadByTemplate(std::string const &file)
             time = atoi(line.c_str());
         else if (i == -1)
             enemies = atoi(line.c_str());
-        else if (line.size() != GameMap::WIDTH || i >= GameMap::HEIGHT) {
+        else if (line.size() != GameMap::WIDTH || i >= (int)GameMap::HEIGHT) {
             std::cerr << "invalid map size. file: " << path << " line: " << (i + 3) << " length: " << line.size()
                       <<  " expected: " << GameMap::HEIGHT << std::endl;
             error:

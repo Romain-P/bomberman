@@ -7,7 +7,7 @@
 
 Explosion::Explosion(GameManager &manager, vector2df position, vector2df rotation) : GameObject(manager, position, rotation), _countDown(LifeTime)
 {
-    _tags.push_back(GOTAG::DEATH);
+    _tags.push_back(GOTAG::DESTROY);
     Start();
 }
 
