@@ -9,6 +9,7 @@
 #include "NetworkProtocol.h"
 #include "NetworkMessage.h"
 #include "RequestStartGameMessage.h"
+#include "RequestLobbyMessage.h"
 #include "InputMessage.h"
 
 constexpr size_t NetworkProtocol::HEADER_INT_BYTES;
@@ -18,6 +19,7 @@ const std::unordered_map<int32_t, std::unique_ptr<NetworkMessage>(*)()> NetworkP
         { HelloConnectMessage::PROTOCOL_ID, packet_factory<HelloConnectMessage> },
         { GameDataMessage::PROTOCOL_ID, packet_factory<GameDataMessage> },
         { LobbyUpdateMessage::PROTOCOL_ID, packet_factory<LobbyUpdateMessage> },
+        { RequestLobbyMessage::PROTOCOL_ID, packet_factory<RequestLobbyMessage> },
         { RequestStartGameMessage::PROTOCOL_ID, packet_factory<RequestStartGameMessage> },
         { InputMessage::PROTOCOL_ID, packet_factory<InputMessage> }
 };
