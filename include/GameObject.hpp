@@ -20,7 +20,8 @@ enum class GOTAG
     DEATH,
     POWERUP,
     GOAL,
-    DESTROY
+    DESTROY,
+    PLAYER
 };
 
 enum class GOTYPE

@@ -129,16 +129,18 @@ void GameManager::LaunchLevel()
     _time.Reset();
     while (_gameRunning && Device->run() && !GameOver() & !_gameWon)
     {
-        RemoveDestroyed();
         uiManager.UpdateUI();
         RunUpdates();
         RenderGame();
+        RemoveDestroyed();
     }
     Cleanup();
+    RemoveDestroyed();
 }
 
 bool GameManager::GameOver()
 {
+    std::cout << "gameover" << std::endl;
     for (auto it = _players.begin(); it != _players.end(); it++)
     {
         if (!(*it)->shouldBeDestroyed())
@@ -173,7 +175,10 @@ void GameManager::RunUpdates()
     for (auto it = _players.begin(); it != _players.end(); it++)
     {
         if (!(*it)->shouldBeDestroyed())
+        {
+            std::cout << "update player" << std::endl;
             (*it)->Update();
+        }
     }
     for (auto it = _objects.begin(); it != _objects.end(); it++)
     {

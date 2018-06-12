@@ -106,24 +106,48 @@
 
 #elif defined(__IBMCPP__) && defined(__COMPILER_VER__)
 # define COMPILER_ID "zOS"
-  /* __IBMCPP__ = VRP */
-# define COMPILER_VERSION_MAJOR DEC(__IBMCPP__/100)
-# define COMPILER_VERSION_MINOR DEC(__IBMCPP__/10 % 10)
-# define COMPILER_VERSION_PATCH DEC(__IBMCPP__    % 10)
+# if defined(__ibmxl__)
+#  define COMPILER_VERSION_MAJOR DEC(__ibmxl_version__)
+#  define COMPILER_VERSION_MINOR DEC(__ibmxl_release__)
+#  define COMPILER_VERSION_PATCH DEC(__ibmxl_modification__)
+#  define COMPILER_VERSION_TWEAK DEC(__ibmxl_ptf_fix_level__)
+# else
+   /* __IBMCPP__ = VRP */
+#  define COMPILER_VERSION_MAJOR DEC(__IBMCPP__/100)
+#  define COMPILER_VERSION_MINOR DEC(__IBMCPP__/10 % 10)
+#  define COMPILER_VERSION_PATCH DEC(__IBMCPP__    % 10)
+# endif
 
-#elif defined(__IBMCPP__) && !defined(__COMPILER_VER__) && __IBMCPP__ >= 800
+
+#elif defined(__ibmxl__) || (defined(__IBMCPP__) && !defined(__COMPILER_VER__) && __IBMCPP__ >= 800)
 # define COMPILER_ID "XL"
-  /* __IBMCPP__ = VRP */
-# define COMPILER_VERSION_MAJOR DEC(__IBMCPP__/100)
-# define COMPILER_VERSION_MINOR DEC(__IBMCPP__/10 % 10)
-# define COMPILER_VERSION_PATCH DEC(__IBMCPP__    % 10)
+# if defined(__ibmxl__)
+#  define COMPILER_VERSION_MAJOR DEC(__ibmxl_version__)
+#  define COMPILER_VERSION_MINOR DEC(__ibmxl_release__)
+#  define COMPILER_VERSION_PATCH DEC(__ibmxl_modification__)
+#  define COMPILER_VERSION_TWEAK DEC(__ibmxl_ptf_fix_level__)
+# else
+   /* __IBMCPP__ = VRP */
+#  define COMPILER_VERSION_MAJOR DEC(__IBMCPP__/100)
+#  define COMPILER_VERSION_MINOR DEC(__IBMCPP__/10 % 10)
+#  define COMPILER_VERSION_PATCH DEC(__IBMCPP__    % 10)
+# endif
+
 
 #elif defined(__IBMCPP__) && !defined(__COMPILER_VER__) && __IBMCPP__ < 800
 # define COMPILER_ID "VisualAge"
-  /* __IBMCPP__ = VRP */
-# define COMPILER_VERSION_MAJOR DEC(__IBMCPP__/100)
-# define COMPILER_VERSION_MINOR DEC(__IBMCPP__/10 % 10)
-# define COMPILER_VERSION_PATCH DEC(__IBMCPP__    % 10)
+# if defined(__ibmxl__)
+#  define COMPILER_VERSION_MAJOR DEC(__ibmxl_version__)
+#  define COMPILER_VERSION_MINOR DEC(__ibmxl_release__)
+#  define COMPILER_VERSION_PATCH DEC(__ibmxl_modification__)
+#  define COMPILER_VERSION_TWEAK DEC(__ibmxl_ptf_fix_level__)
+# else
+   /* __IBMCPP__ = VRP */
+#  define COMPILER_VERSION_MAJOR DEC(__IBMCPP__/100)
+#  define COMPILER_VERSION_MINOR DEC(__IBMCPP__/10 % 10)
+#  define COMPILER_VERSION_PATCH DEC(__IBMCPP__    % 10)
+# endif
+
 
 #elif defined(__PGI)
 # define COMPILER_ID "PGI"

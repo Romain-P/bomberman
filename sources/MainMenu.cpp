@@ -65,7 +65,7 @@ void MainMenu::CreateMenu()
     guienv->addImage(Device->getVideoDriver()->getTexture("resources/ui/MainMenuBackground.jpg"), position2d<int>(0, 0));
     guienv->addImage(Device->getVideoDriver()->getTexture("resources/ui/MainMenuText.png"), position2d<int>(750, 430));
     curr = guienv->addButton(rect<s32>(750, 430, 750 + 400, 430 + 80), nullptr, (int)MAINMENUCHOICE::SOLO,
-			L"", L"Play solo");
+			L"", L"Play Adventure");
     curr->setDrawBorder(false);
 	curr = guienv->addButton(rect<s32>(830, 520, 830 + 200, 520 + 80), nullptr, (int)MAINMENUCHOICE::HOSTMULTIPLAYER,
                         L"", L"Host a local multiplayer game");

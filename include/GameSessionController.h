@@ -30,8 +30,8 @@ public:
     void onInputReceived(GameSession *session, InputMessage *msg);
 
 private:
-    GameLobby _lobby;
-    GameManager *_manager;
+    //GameLobby _lobby;
+    //GameManager *_manager;
 };
 
 

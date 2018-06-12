@@ -49,13 +49,13 @@ void Player::Start()
 
 void Player::Update()
 {
+    CheckCollisions();
     if (!_toBeDestroyed)
     {
         GameObject::Update();
         vector2df movement = GetMovement();
 
         ApplyBuffs();
-        CheckCollisions();
         if (movement != vector2df(0, 0))
         {
             vector2df newPosition = _position + (movement * _manager.getDeltaTime() * _speed);
