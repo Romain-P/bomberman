@@ -26,12 +26,11 @@ enum class PLAYERCOLOR
 class GameManager
 {
 public:
-    GameManager(irr::IrrlichtDevice * const device, bool duo = false);
+    explicit GameManager(bool duo = false);
     ~GameManager();
     void LaunchGame();
     void SpawnObject(GameObject *object);
     const GameMap &getMap() { return *_map; }
-    irr::IrrlichtDevice *const &getDevice() const { return _device; }
     std::vector<std::unique_ptr<Player>> &getPlayers() { return _players; }
     float getDeltaTime();
     int GenerateId();
@@ -51,7 +50,6 @@ protected:
     virtual void RenderGame();
     GameTime _time;
     GameRenderer _renderer;
-    irr::IrrlichtDevice * const _device;
     std::unique_ptr<IEventReceiver> _eventReceiver;
     std::vector<std::unique_ptr<Player>> _players;
     bool _gameRunning;
@@ -82,7 +80,7 @@ private:
     std::array<bool, 6> &_inputs;
     std::array<bool, 6> &_inputstwo;
 };
-
+/*
 class NetworkGameManager : public GameManager
 {
 public:
@@ -94,6 +92,6 @@ protected:
     void RunUpdates() {};
     void RenderGame() {};
     std::vector<std::pair<int, Player>> _enemyPlayers;
-};
+};*/
 
 #endif //CPP_INDIE_STUDIO_GAMEMANAGER_HPP

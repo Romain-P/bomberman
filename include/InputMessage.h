@@ -14,7 +14,7 @@ public:
     static constexpr int32_t PROTOCOL_ID = 6;
 
     InputMessage() : NetworkMessage(PROTOCOL_ID), _playerSessionId(), _type(), _status() {}
-    explicit InputMessage(PLAYERINPUT type, bool status, size_t playerId = 0) : NetworkMessage(PROTOCOL_ID), _playerSessionId(playerId), _status(status), _type(type) {}
+    explicit InputMessage(PLAYERINPUT type, bool status, size_t playerId = 0) : NetworkMessage(PROTOCOL_ID), _playerSessionId(playerId), _type(type),  _status(status) {}
 
     void serialize(BinaryDataWriter &writer) const override;
     void deserialize(BinaryDataReader &reader) override;
@@ -25,9 +25,9 @@ public:
     PLAYERINPUT getType() const;
     bool getStatus() const;
 private:
-    bool _status;
     size_t _playerSessionId;
     PLAYERINPUT _type;
+    bool _status;
 };
 
 

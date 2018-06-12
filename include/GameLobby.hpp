@@ -11,12 +11,11 @@
 class GameLobby
 {
 public:
-    GameLobby(irr::IrrlichtDevice * const device, bool host = false);
+    GameLobby(bool host = false);
     void AddPlayer();
 private:
     void Draw(int playercount);
     std::map<int, irr::scene::IAnimatedMeshSceneNode *> _playerNodes;
-    irr::IrrlichtDevice * const _device;
     bool _host;
     irr::scene::ICameraSceneNode *_camera;
 };

@@ -3,6 +3,7 @@
 //
 
 #include <GameManager.hpp>
+#include <BomberWave.hpp>
 #include "Explosion.hpp"
 
 Explosion::Explosion(GameManager &manager, vector2df position, vector2df rotation) : GameObject(manager, position, rotation), _countDown(LifeTime)
@@ -26,8 +27,7 @@ void Explosion::Destroy()
 
 void Explosion::Start()
 {
-    irr::IrrlichtDevice *device = _manager.getDevice();;
-    _node = device->getSceneManager()->addParticleSystemSceneNode(false);
+    _node = Device->getSceneManager()->addParticleSystemSceneNode(false);
     _node->setPosition(GameMap::mapToEngine(_position));
     scene::IParticleEmitter *em = _node->createBoxEmitter(
             core::aabbox3d<f32>(-2.5, -0.5f, -2.5f, -0.5f, 2.5f, 2.5f), // emitter size
@@ -47,7 +47,7 @@ void Explosion::Start()
     _node->setScale(core::vector3df(2, 2, 2));
     _node->setMaterialFlag(video::EMF_LIGHTING, false);
     _node->setMaterialFlag(video::EMF_ZWRITE_ENABLE, false);
-    video::ITexture *fireTexture = device->getVideoDriver()->getTexture("resources/textures/Particles/fire.bmp");
+    video::ITexture *fireTexture = Device->getVideoDriver()->getTexture("resources/textures/Particles/fire.bmp");
     _node->setMaterialTexture(0, fireTexture);
     _node->setMaterialType(video::EMT_TRANSPARENT_ADD_COLOR);
 }

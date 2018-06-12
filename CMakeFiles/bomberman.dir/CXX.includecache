@@ -25,19 +25,23 @@ GameDataSerializer.h
 -
 GameMapFactory.h
 -
+driverChoice.h
+-
+Exceptions.hpp
+-
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.cpp
 iostream
 -
 BackgroundLoader.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.hpp
+BomberWave.hpp
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.hpp
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.cpp
 BomberWave.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.hpp
 irrlicht.h
--
-driverChoice.h
 -
 Exceptions.hpp
 -
@@ -83,6 +87,8 @@ PowerUps.hpp
 -
 GameUIManager.hpp
 -
+BomberWave.hpp
+-
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMap.cpp
 sstream
@@ -119,6 +125,8 @@ Bomb.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Explosion.cpp
 GameManager.hpp
 -
+BomberWave.hpp
+-
 Explosion.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Explosion.hpp
 
@@ -132,6 +140,8 @@ irrlicht.h
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Monster.cpp
 GameUtils.hpp
+-
+BomberWave.hpp
 -
 Monster.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Monster.hpp
@@ -159,6 +169,8 @@ PowerUps.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp
 GameMap.hpp
 -
+BomberWave.hpp
+-
 PowerUps.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.hpp
 GameManager.hpp
@@ -181,6 +193,8 @@ iostream
 -
 PowerUps.hpp
 -
+BomberWave.hpp
+-
 Walls.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Walls.hpp
 
@@ -189,12 +203,18 @@ GameRenderer.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameRenderer.hpp
 GameObject.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObject.hpp
+BomberWave.hpp
+/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.hpp
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.cpp
+BomberWave.hpp
+-
 GameTime.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.hpp
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.cpp
+BomberWave.hpp
+-
 GameUIManager.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.hpp
 
@@ -208,6 +228,8 @@ MainMenu.hpp
 irrlicht.h
 -
 iostream
+-
+BomberWave.hpp
 -
 
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp

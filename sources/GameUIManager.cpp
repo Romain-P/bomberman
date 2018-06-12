@@ -2,6 +2,7 @@
 // Created by Mardel on 09/06/18.
 //
 
+#include <BomberWave.hpp>
 #include "GameUIManager.hpp"
 
 SoloGameUIManager::SoloGameUIManager(GameManager &manager) : _manager(manager)
@@ -11,7 +12,7 @@ SoloGameUIManager::SoloGameUIManager(GameManager &manager) : _manager(manager)
 
 void SoloGameUIManager::UpdateUI()
 {
-    irr::gui::IGUIEnvironment *guienv = _manager.getDevice()->getGUIEnvironment();
+    irr::gui::IGUIEnvironment *guienv = Device->getGUIEnvironment();
     guienv->clear();
     std::string sscore = std::to_string(_manager.getScore());
     std::wstring wscore = std::wstring(sscore.begin(), sscore.end());
@@ -23,14 +24,14 @@ void SoloGameUIManager::UpdateUI()
     {
         std::string iconPath = "resources/ui/" + (*it)->getCharacterColor() + "BombermanIcon.png";
         std::wstring wiconPath = std::wstring(iconPath.begin(), iconPath.end());
-        guienv->addImage(_manager.getDevice()->getVideoDriver()->getTexture(wiconPath.c_str()),
+        guienv->addImage(Device->getVideoDriver()->getTexture(wiconPath.c_str()),
                          position2d<int>(20, y + 20));
         std::vector<std::unique_ptr<PlayerBuff>> &buffs = (*it)->getBuffs();
         for (auto it = buffs.begin(); it != buffs.end(); it++)
         {
             iconPath = (*it)->getIcon();
             std::wstring wiconPath = std::wstring(iconPath.begin(), iconPath.end());
-            guienv->addImage(_manager.getDevice()->getVideoDriver()->getTexture(wiconPath.c_str()),
+            guienv->addImage(Device->getVideoDriver()->getTexture(wiconPath.c_str()),
                              position2d<int>(x, y + 50));
             x += 80;
         }
@@ -39,6 +40,7 @@ void SoloGameUIManager::UpdateUI()
     }
 }
 
+/*
 MultiPlayerUIManager::MultiPlayerUIManager(NetworkGameManager &manager) : _manager(manager)
 {
 
@@ -47,4 +49,4 @@ MultiPlayerUIManager::MultiPlayerUIManager(NetworkGameManager &manager) : _manag
 void MultiPlayerUIManager::UpdateUI()
 {
 
-}
+} */

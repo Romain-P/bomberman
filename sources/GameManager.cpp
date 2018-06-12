@@ -11,9 +11,10 @@
 #include <Monster.hpp>
 #include <PowerUps.hpp>
 #include <GameUIManager.hpp>
+#include <BomberWave.hpp>
 
-GameManager::GameManager(irr::IrrlichtDevice * const device, bool duo) :
-        _time(device), _renderer(device), _device(device), _gameRunning(false), _currentId(0), _bgLoader(device), _level(1), _gameWon(false)
+GameManager::GameManager(bool duo) :
+        _time(), _gameRunning(false), _currentId(0), _level(1), _gameWon(false)
 {
     _players.push_back(std::unique_ptr<Player>(new Player(*this, 0)));
     if (duo)
@@ -23,13 +24,14 @@ GameManager::GameManager(irr::IrrlichtDevice * const device, bool duo) :
     }
     else
         _eventReceiver = std::make_unique<GameEventReceiver>(_players[0]->getInputs());
-    _device->setEventReceiver(_eventReceiver.get());
+    Device->setEventReceiver(_eventReceiver.get());
 }
 
+/*
 NetworkGameManager::NetworkGameManager(irr::IrrlichtDevice * const device) :
         GameManager(device)
 {
-}
+}*/
 
 void GameManager::LoadMap()
 {
@@ -38,11 +40,11 @@ void GameManager::LoadMap()
 
     _map = factory.loadByTemplate(std::to_string(_level));
 }
-
+/*
 void NetworkGameManager::JoinServer(uint16_t port)
 {
-    /*GameSessionConnector connector;
-    std::thread con([&connector] { connector.tryConnect("127.0.0.1", port); });*/
+    GameSessionConnector connector;
+    std::thread con([&connector] { connector.tryConnect("127.0.0.1", port); });
 }
 
 NetworkHostGameManager::NetworkHostGameManager(irr::IrrlichtDevice * const device) :
@@ -62,7 +64,7 @@ void NetworkHostGameManager::LaunchServer()
 
     while (_server.getPort() == 0);
     JoinServer();
-}
+} */
 
 GameManager::~GameManager()
 {
@@ -106,7 +108,7 @@ void GameManager::LaunchGame()
             return;
         _gameWon = false;
     }
-    _device->getSceneManager()->clear();
+    Device->getSceneManager()->clear();
 }
 
 void GameManager::Win()
@@ -125,7 +127,7 @@ void GameManager::LaunchLevel()
         (*it)->setPosition(_map->getPlayerSpawns()[0]);
     SpawnMapObjects();
     _time.Reset();
-    while (_gameRunning && _device->run() && !GameOver() & !_gameWon)
+    while (_gameRunning && Device->run() && !GameOver() & !_gameWon)
     {
         RemoveDestroyed();
         uiManager.UpdateUI();
@@ -162,7 +164,7 @@ void GameManager::Cleanup()
     {
         (*it)->Destroy();
     }
-    _device->getGUIEnvironment()->clear();
+    Device->getGUIEnvironment()->clear();
 }
 
 void GameManager::RunUpdates()

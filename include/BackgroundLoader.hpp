@@ -15,13 +15,12 @@ using namespace core;
 class BackgroundLoader
 {
 public:
-    BackgroundLoader(irr::IrrlichtDevice *device);
+    BackgroundLoader();
     void LoadTerrain(std::string &path);
     void LoadBackground(std::string &path);
     void LoadRandomTerrain();
     void LoadRandomBackground();
 private:
-    irr::IrrlichtDevice *_device;
     static const std::array<std::string, 7> Skyboxes;
     static const std::array<std::string, 3> Terrains;
     irr::scene::IMeshSceneNode *_terrain;

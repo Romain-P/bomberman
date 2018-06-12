@@ -5,6 +5,7 @@
 #include <GameManager.hpp>
 #include <iostream>
 #include <PowerUps.hpp>
+#include <BomberWave.hpp>
 #include "Walls.hpp"
 
 Wall::Wall(GameManager &manager, vector2df position, vector2df rotation) : GameObject(manager, position, rotation)
@@ -21,12 +22,11 @@ void Wall::Destroy()
 
 void Wall::Start()
 {
-    irr::IrrlichtDevice *device = _manager.getDevice();
-    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/Column/Column.obj");
+    irr::scene::IMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Column/Column.obj");
 
-    _node = device->getSceneManager()->addMeshSceneNode(mesh);
+    _node = Device->getSceneManager()->addMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
-    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/Column/Column.png"));
+    _node->setMaterialTexture(0, Device->getVideoDriver()->getTexture("resources/models/Column/Column.png"));
     _position = vector2df(_position.X + 0.5f, _position.Y + 0.5f);
     _node->setPosition(GameMap::mapToEngine(_position));
     _node->setScale(vector3df(4.2f, 2.5f, 4.2f));
@@ -68,11 +68,9 @@ void DestroyableWall::SpawnPowerUp()
 
 void DestroyableWall::Start()
 {
+    irr::scene::IMesh *mesh = Device->getSceneManager()->getMesh("resources/models/PalmTree/plamtree.obj");
 
-    irr::IrrlichtDevice *device = _manager.getDevice();
-    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/PalmTree/plamtree.obj");
-
-    _node = device->getSceneManager()->addMeshSceneNode(mesh);
+    _node = Device->getSceneManager()->addMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
     _node->setRotation(vector3df(0, rand() % 360, 0));
      _node->setMaterialType(video::EMT_TRANSPARENT_ALPHA_CHANNEL_REF);
@@ -93,15 +91,14 @@ void Goal::Destroy()
     GameObject::Destroy();
 }
 
-void Goal::Start() {
+void Goal::Start()
+{
     GameObject::Start();
+    irr::scene::IMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Door/InteriorDoor.obj");
 
-    irr::IrrlichtDevice *device = _manager.getDevice();
-    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/Door/InteriorDoor.obj");
-
-    _node = device->getSceneManager()->addMeshSceneNode(mesh);
+    _node = Device->getSceneManager()->addMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
-    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/Door/InteriorDoor_DiffuceBlue.jpg"));
+    _node->setMaterialTexture(0, Device->getVideoDriver()->getTexture("resources/models/Door/InteriorDoor_DiffuceBlue.jpg"));
     _node->setRotation(vector3df(0, 90, 0));
     _position = vector2df(_position.X + 0.5f, _position.Y + 0.5f);
     _node->setPosition(GameMap::mapToEngine(_position));

@@ -36,15 +36,15 @@ MainPlayer::MainPlayer(GameManager &manager, int playerNbr, vector2df position, 
 void Player::Start()
 {
     GameObject::Start();
-    irr::IrrlichtDevice *device = _manager.getDevice();
-    irr::scene::IAnimatedMesh *mesh = device->getSceneManager()->getMesh("resources/models/Character/Bomberman.MD3");
-    _node = device->getSceneManager()->addAnimatedMeshSceneNode(mesh);
+    ;
+    irr::scene::IAnimatedMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Character/Bomberman.MD3");
+    _node = Device->getSceneManager()->addAnimatedMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
     _node->setScale(vector3df(6, 6, 6));
     _node->setRotation(vector3df(0, 0, 0));
     _node->setAnimationSpeed(30);
     _node->setLoopMode(true);
-    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture(("resources/models/Character/" + Characters[_playerNbr] + "BombermanTextures.png").c_str()));
+    _node->setMaterialTexture(0, Device->getVideoDriver()->getTexture(("resources/models/Character/" + Characters[_playerNbr] + "BombermanTextures.png").c_str()));
     _node->setFrameLoop(27, 76);
     UpdatePosition();
 }

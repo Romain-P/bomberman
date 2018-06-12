@@ -4,30 +4,14 @@
 
 #include "BomberWave.hpp"
 #include <irrlicht.h>
-#include <driverChoice.h>
 #include <Exceptions.hpp>
 #include <GameServer.h>
 #include <thread>
 #include <GameSessionConnector.h>
 #include "GameManager.hpp"
 
-BomberWave::BomberWave() : _device(InitDevice()), _mainMenu(_device)
+BomberWave::BomberWave() : _mainMenu()
 {
-
-}
-
-irr::IrrlichtDevice *BomberWave::InitDevice()
-{
-    irr::IrrlichtDevice *device;
-    irr::video::E_DRIVER_TYPE driverType = irr::driverChoiceConsole();
-    if (driverType == irr::video::EDT_COUNT)
-        throw(InitialisationException("Error : Driver could not be loaded"));
-    device = irr::createDevice(driverType,
-                                irr::core::dimension2d<irr::u32>(1920, 1080), 16, false, false, false, nullptr);
-    if (device == nullptr)
-        throw(InitialisationException("Error : Device creation failed"));
-    device->setWindowCaption(L"BomberWave");
-    return device;
 }
 
 void BomberWave::LaunchMainMenu()
@@ -56,26 +40,26 @@ void BomberWave::LaunchMainMenu()
 
 void BomberWave::LaunchSolo()
 {
-    _device->getGUIEnvironment()->clear();
+    Device->getGUIEnvironment()->clear();
     switch(_mainMenu.RunAdventure())
     {
         case MAINMENUCHOICE::SOLO :
             {
-            _device->getGUIEnvironment()->clear();
-            GameManager gameManager(_device);
+            Device->getGUIEnvironment()->clear();
+            GameManager gameManager;
             gameManager.LaunchGame();
             }
             break;
         case MAINMENUCHOICE::DUO :
             {
-                _device->getGUIEnvironment()->clear();
-                GameManager gameManagerDuo(_device, true);
+                Device->getGUIEnvironment()->clear();
+                GameManager gameManagerDuo(true);
                 gameManagerDuo.LaunchGame();
             }
             break;
         case MAINMENUCHOICE::BACK :
             std::cout << "go back" << std::endl;
-            _device->getGUIEnvironment()->clear();
+            Device->getGUIEnvironment()->clear();
             return;
         default:
             break;
@@ -84,18 +68,12 @@ void BomberWave::LaunchSolo()
 
 void BomberWave::LaunchMultiplayerHost()
 {
-    _device->getGUIEnvironment()->clear();
-    NetworkHostGameManager manager(_device);
-
-    manager.LaunchGame();
+    Device->getGUIEnvironment()->clear();
 }
 
 void BomberWave::LaunchMultiplayerJoin()
 {
-    _device->getGUIEnvironment()->clear();
-    NetworkGameManager manager(_device);
-
-    manager.LaunchGame();
+    Device->getGUIEnvironment()->clear();
 }
 
 void BomberWave::Launch()

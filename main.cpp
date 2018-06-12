@@ -8,6 +8,8 @@
 #include <thread>
 #include <GameDataSerializer.h>
 #include <GameMapFactory.h>
+#include <driverChoice.h>
+#include <Exceptions.hpp>
 
 #ifdef _IRR_WINDOWS_
 #pragma comment(lib, "Irrlicht.lib")
@@ -15,6 +17,22 @@
 #endif
 
 irrklang::ISoundEngine *SoundEngine = irrklang::createIrrKlangDevice();
+
+irr::IrrlichtDevice *InitDevice()
+{
+    irr::IrrlichtDevice *device;
+    irr::video::E_DRIVER_TYPE driverType = irr::driverChoiceConsole();
+    if (driverType == irr::video::EDT_COUNT)
+        throw(InitialisationException("Error : Driver could not be loaded"));
+    device = irr::createDevice(driverType,
+                               irr::core::dimension2d<irr::u32>(1920, 1080), 16, false, false, false, nullptr);
+    if (device == nullptr)
+        throw(InitialisationException("Error : Device creation failed"));
+    device->setWindowCaption(L"BomberWave");
+    return device;
+}
+
+irr::IrrlichtDevice *Device = InitDevice();
 
 void launchServer(GameServer *server) {
     server->start();
@@ -74,4 +92,5 @@ int main() {
         std::cout << e.what() << std::endl;
         return 84;
     }
+    Device->drop();
 }

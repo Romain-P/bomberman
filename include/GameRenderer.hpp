@@ -13,12 +13,11 @@
 class GameRenderer
 {
 public:
-    GameRenderer(irr::IrrlichtDevice * const device);
+    GameRenderer();
     void Render();
 private:
     void PlaceLights();
     void PlaceCamera();
-    irr::IrrlichtDevice * const _device;
     irr::scene::ICameraSceneNode *_camera;
 };
 

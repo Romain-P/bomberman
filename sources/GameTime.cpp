@@ -2,22 +2,23 @@
 // Created by Mardel on 30/05/18.
 //
 
+#include <BomberWave.hpp>
 #include "GameTime.hpp"
 
-GameTime::GameTime(irr::IrrlichtDevice *device) : _device(device)
+GameTime::GameTime()
 {
-    _previousTime = _device->getTimer()->getTime();
+    _previousTime = Device->getTimer()->getTime();
 }
 
 void GameTime::Update()
 {
-    float currTime = _device->getTimer()->getTime();
+    float currTime = Device->getTimer()->getTime();
     _deltaTime = (currTime - _previousTime) / 1000.0f;
     _previousTime = currTime;
 }
 
 void GameTime::Reset()
 {
-    _previousTime = _device->getTimer()->getTime();
+    _previousTime = Device->getTimer()->getTime();
     _deltaTime = 0;
 }

@@ -5,7 +5,6 @@
 #ifndef CPP_INDIE_STUDIO_GAMESESSIONCONNECTOR_H
 #define CPP_INDIE_STUDIO_GAMESESSIONCONNECTOR_H
 
-
 #include <GameSession.h>
 #include <GameSessionHandler.h>
 #include <NetworkClientAdapter.h>
@@ -33,7 +32,6 @@ protected:
     socket_fd_t defineServerFd() override;
     GameSession *getSession();
 private:
-
     std::unique_ptr<NetworkClient> _client;
     std::unique_ptr<GameSession> _session;
     GameSessionHandler _handler;

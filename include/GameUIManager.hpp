@@ -16,6 +16,7 @@ private:
     GameManager &_manager;
 };
 
+/*
 class MultiPlayerUIManager
 {
 public:
@@ -23,6 +24,6 @@ public:
     void UpdateUI();
 private:
     NetworkGameManager &_manager;
-};
+};*/
 
 #endif //CPP_INDIE_STUDIO_GAMEUIMANAGER_HPP

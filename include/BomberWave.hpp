@@ -14,6 +14,7 @@
 #include <irrKlang.h>
 
 extern irrklang::ISoundEngine *SoundEngine;
+extern irr::IrrlichtDevice *Device;
 
 class BomberWave
 {
@@ -21,12 +22,10 @@ public:
     BomberWave();
     void Launch();
 private:
-    irr::IrrlichtDevice *InitDevice();
     void LaunchMainMenu();
     void LaunchSolo();
     void LaunchMultiplayerHost();
     void LaunchMultiplayerJoin();
-    irr::IrrlichtDevice * const _device;
     MainMenu _mainMenu;
     bool _gameRunning = false;
 };

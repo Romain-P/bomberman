@@ -36,14 +36,13 @@ private:
 class MainMenu
 {
 public:
-    MainMenu(irr::IrrlichtDevice * const device);
+    MainMenu();
     MAINMENUCHOICE Run();
     MAINMENUCHOICE RunAdventure();
     void CreateAdventureMenu();
     void CreateMenu();
 private:
     void Draw();
-    irr::IrrlichtDevice * const _device;
     MAINMENUCHOICE _currentMenuChoice;
     MainMenuEventReceiver _eventReceiver;
 };

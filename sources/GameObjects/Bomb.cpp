@@ -16,12 +16,11 @@ Bomb::Bomb(int power, Player &player, GameManager &manager, vector2df position, 
 
 void Bomb::Start()
 {
-    irr::IrrlichtDevice *device = _manager.getDevice();
-    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/Bomb/Bomb.obj");
+    irr::scene::IMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Bomb/Bomb.obj");
 
-    _node = device->getSceneManager()->addMeshSceneNode(mesh);
+    _node = Device->getSceneManager()->addMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
-    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/Bomb/Bomb.png"));
+    _node->setMaterialTexture(0, Device->getVideoDriver()->getTexture("resources/models/Bomb/Bomb.png"));
     _node->setPosition(GameMap::mapToEngine(_position));
 }
 

@@ -5,6 +5,7 @@
 #include "MainMenu.hpp"
 #include <irrlicht.h>
 #include <iostream>
+#include <BomberWave.hpp>
 
 using namespace irr;
 
@@ -12,7 +13,7 @@ using namespace core;
 using namespace gui;
 using namespace video;
 
-MainMenu::MainMenu(irr::IrrlichtDevice * const device) : _device(device), _currentMenuChoice(MAINMENUCHOICE::NONE), _eventReceiver(_currentMenuChoice)
+MainMenu::MainMenu() : _currentMenuChoice(MAINMENUCHOICE::NONE), _eventReceiver(_currentMenuChoice)
 {
 }
 
@@ -20,16 +21,16 @@ MAINMENUCHOICE MainMenu::Run()
 {
     CreateMenu();
     _currentMenuChoice = MAINMENUCHOICE::NONE;
-    _device->setEventReceiver(&_eventReceiver);
-    while (_device->run())
+    Device->setEventReceiver(&_eventReceiver);
+    while (Device->run())
     {
-        if (_device->isWindowActive())
+        if (Device->isWindowActive())
         {
-            _device->getVideoDriver()->beginScene(true, true, SColor(0, 200, 200, 200));
+            Device->getVideoDriver()->beginScene(true, true, SColor(0, 200, 200, 200));
             Draw();
             if (_currentMenuChoice != MAINMENUCHOICE::NONE)
                 return _currentMenuChoice;
-            _device->getVideoDriver()->endScene();
+            Device->getVideoDriver()->endScene();
         }
     }
     return  MAINMENUCHOICE::NONE;
@@ -39,18 +40,18 @@ MAINMENUCHOICE MainMenu::RunAdventure()
 {
     CreateAdventureMenu();
     _currentMenuChoice = MAINMENUCHOICE::NONE;
-    _device->setEventReceiver(&_eventReceiver);
-    while (_device->run())
+    Device->setEventReceiver(&_eventReceiver);
+    while (Device->run())
     {
-        if (_device->isWindowActive())
+        if (Device->isWindowActive())
         {
-            _device->getVideoDriver()->beginScene(true, true, SColor(0, 200, 200, 200));
+            Device->getVideoDriver()->beginScene(true, true, SColor(0, 200, 200, 200));
             Draw();
             if (_currentMenuChoice != MAINMENUCHOICE::NONE)
             {
                 return _currentMenuChoice;
             }
-            _device->getVideoDriver()->endScene();
+            Device->getVideoDriver()->endScene();
         }
     }
     return  MAINMENUCHOICE::NONE;
@@ -59,10 +60,10 @@ MAINMENUCHOICE MainMenu::RunAdventure()
 void MainMenu::CreateMenu()
 {
     IGUIButton *curr;
-    irr::gui::IGUIEnvironment *guienv = _device->getGUIEnvironment();
+    irr::gui::IGUIEnvironment *guienv = Device->getGUIEnvironment();
 
-    guienv->addImage(_device->getVideoDriver()->getTexture("resources/ui/MainMenuBackground.jpg"), position2d<int>(0, 0));
-    guienv->addImage(_device->getVideoDriver()->getTexture("resources/ui/MainMenuText.png"), position2d<int>(750, 430));
+    guienv->addImage(Device->getVideoDriver()->getTexture("resources/ui/MainMenuBackground.jpg"), position2d<int>(0, 0));
+    guienv->addImage(Device->getVideoDriver()->getTexture("resources/ui/MainMenuText.png"), position2d<int>(750, 430));
     curr = guienv->addButton(rect<s32>(750, 430, 750 + 400, 430 + 80), nullptr, (int)MAINMENUCHOICE::SOLO,
 			L"", L"Play solo");
     curr->setDrawBorder(false);
@@ -81,10 +82,10 @@ void MainMenu::CreateMenu()
 void MainMenu::CreateAdventureMenu()
 {
     IGUIButton *curr;
-    irr::gui::IGUIEnvironment *guienv = _device->getGUIEnvironment();
+    irr::gui::IGUIEnvironment *guienv = Device->getGUIEnvironment();
 
-    guienv->addImage(_device->getVideoDriver()->getTexture("resources/ui/MainMenuBackground.jpg"), position2d<int>(0, 0));
-    guienv->addImage(_device->getVideoDriver()->getTexture("resources/ui/AdventureMenuText.png"), position2d<int>(850, 430));
+    guienv->addImage(Device->getVideoDriver()->getTexture("resources/ui/MainMenuBackground.jpg"), position2d<int>(0, 0));
+    guienv->addImage(Device->getVideoDriver()->getTexture("resources/ui/AdventureMenuText.png"), position2d<int>(850, 430));
     curr = guienv->addButton(rect<s32>(830, 430, 750 + 400, 430 + 80), nullptr, (int)MAINMENUCHOICE::SOLO,
                              L"", L"Play solo");
     curr->setDrawBorder(false);
@@ -98,7 +99,7 @@ void MainMenu::CreateAdventureMenu()
 
 void MainMenu::Draw()
 {
-    _device->getGUIEnvironment()->drawAll();
+    Device->getGUIEnvironment()->drawAll();
 }
 
 MainMenuEventReceiver::MainMenuEventReceiver(MAINMENUCHOICE &menuChoice) : _menuChoice(menuChoice)

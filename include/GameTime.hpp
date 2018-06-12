@@ -10,12 +10,11 @@
 class GameTime
 {
 public:
-    GameTime(irr::IrrlichtDevice *device);
+    GameTime();
     void Update();
     void Reset();
     float getDeltaTime() { return _deltaTime; }
 private:
-    irr::IrrlichtDevice *_device;
     float _deltaTime;
     float _previousTime;
 };

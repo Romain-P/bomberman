@@ -5,7 +5,6 @@
 #ifndef CPP_INDIE_STUDIO_GAMESESSIONCONTROLLER_H
 #define CPP_INDIE_STUDIO_GAMESESSIONCONTROLLER_H
 
-
 #include "ANetworkController.h"
 #include "GameSession.h"
 #include "HelloConnectMessage.h"
@@ -30,8 +29,8 @@ public:
     void onInputReceived(GameSession *session, InputMessage *msg);
 
 private:
-    GameLobby _lobby;
-    NetworkGameManager _manager;
+    //GameLobby _lobby;
+    //NetworkGameManager _manager;
 };
 
 

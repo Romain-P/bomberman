@@ -10,6 +10,7 @@ CMakeFiles/bomberman.dir/main.cpp.o
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
  include/BomberWave.hpp
+ include/Exceptions.hpp
  include/GameClient.h
  include/GameClientHandler.h
  include/GameDataMessage.h
@@ -226,6 +227,7 @@ CMakeFiles/bomberman.dir/main.cpp.o
  lib/irrlicht-1.8.4/include/aabbox3d.h
  lib/irrlicht-1.8.4/include/coreutil.h
  lib/irrlicht-1.8.4/include/dimension2d.h
+ lib/irrlicht-1.8.4/include/driverChoice.h
  lib/irrlicht-1.8.4/include/fast_atof.h
  lib/irrlicht-1.8.4/include/heapsort.h
  lib/irrlicht-1.8.4/include/irrAllocator.h
@@ -252,7 +254,69 @@ CMakeFiles/bomberman.dir/main.cpp.o
  lib/irrlicht-1.8.4/include/vector3d.h
 CMakeFiles/bomberman.dir/sources/BackgroundLoader.cpp.o
  /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.cpp
+ include/ANetworkClient.h
+ include/ANetworkController.h
  include/BackgroundLoader.hpp
+ include/BinaryDataReader.h
+ include/BinaryDataWriter.h
+ include/BomberWave.hpp
+ include/GameClient.h
+ include/GameClientHandler.h
+ include/GameDataMessage.h
+ include/GameLobby.hpp
+ include/GameManager.hpp
+ include/GameMap.hpp
+ include/GameObject.hpp
+ include/GameRenderer.hpp
+ include/GameServer.h
+ include/GameServerController.h
+ include/GameSession.h
+ include/GameSessionConnector.h
+ include/GameSessionController.h
+ include/GameSessionHandler.h
+ include/GameTime.hpp
+ include/HelloConnectMessage.h
+ include/InputMessage.h
+ include/LobbyUpdateMessage.h
+ include/MainMenu.hpp
+ include/NetworkClientAdapter.h
+ include/NetworkMessage.h
+ include/NetworkProtocol.h
+ include/Player.hpp
+ include/PlayerBuff.hpp
+ include/RequestLobbyMessage.h
+ include/RequestStartGameMessage.h
+ include/Serializable.h
+ include/shared/ANetworkAsyncListener.h
+ include/shared/ANetworkAsyncServer.h
+ include/shared/ANetworkBuffer.h
+ include/shared/ANetworkClientAdapter.h
+ include/shared/BasicNetworkBuffer.h
+ include/shared/INetworkClientHandler.h
+ include/shared/Network.h
+ include/shared/NetworkClient.h
+ include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h
@@ -657,7 +721,6 @@ CMakeFiles/bomberman.dir/sources/BomberWave.cpp.o
  lib/irrlicht-1.8.4/include/aabbox3d.h
  lib/irrlicht-1.8.4/include/coreutil.h
  lib/irrlicht-1.8.4/include/dimension2d.h
- lib/irrlicht-1.8.4/include/driverChoice.h
  lib/irrlicht-1.8.4/include/fast_atof.h
  lib/irrlicht-1.8.4/include/heapsort.h
  lib/irrlicht-1.8.4/include/irrAllocator.h
@@ -882,6 +945,7 @@ CMakeFiles/bomberman.dir/sources/GameManager.cpp.o
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/BomberWave.hpp
  include/Explosion.hpp
  include/GameClient.h
  include/GameClientHandler.h
@@ -904,6 +968,7 @@ CMakeFiles/bomberman.dir/sources/GameManager.cpp.o
  include/HelloConnectMessage.h
  include/InputMessage.h
  include/LobbyUpdateMessage.h
+ include/MainMenu.hpp
  include/Monster.hpp
  include/NetworkClientAdapter.h
  include/NetworkMessage.h
@@ -924,6 +989,27 @@ CMakeFiles/bomberman.dir/sources/GameManager.cpp.o
  include/shared/Network.h
  include/shared/NetworkClient.h
  include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h
@@ -1744,6 +1830,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/BomberWave.hpp
  include/Explosion.hpp
  include/GameClient.h
  include/GameClientHandler.h
@@ -1763,6 +1850,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o
  include/HelloConnectMessage.h
  include/InputMessage.h
  include/LobbyUpdateMessage.h
+ include/MainMenu.hpp
  include/NetworkClientAdapter.h
  include/NetworkMessage.h
  include/NetworkProtocol.h
@@ -1780,6 +1868,27 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o
  include/shared/Network.h
  include/shared/NetworkClient.h
  include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h
@@ -2191,6 +2300,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/BomberWave.hpp
  include/GameClient.h
  include/GameClientHandler.h
  include/GameDataMessage.h
@@ -2210,6 +2320,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o
  include/HelloConnectMessage.h
  include/InputMessage.h
  include/LobbyUpdateMessage.h
+ include/MainMenu.hpp
  include/Monster.hpp
  include/NetworkClientAdapter.h
  include/NetworkMessage.h
@@ -2228,6 +2339,27 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Monster.cpp.o
  include/shared/Network.h
  include/shared/NetworkClient.h
  include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h
@@ -2666,6 +2798,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/BomberWave.hpp
  include/GameClient.h
  include/GameClientHandler.h
  include/GameDataMessage.h
@@ -2684,6 +2817,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
  include/HelloConnectMessage.h
  include/InputMessage.h
  include/LobbyUpdateMessage.h
+ include/MainMenu.hpp
  include/NetworkClientAdapter.h
  include/NetworkMessage.h
  include/NetworkProtocol.h
@@ -2702,6 +2836,27 @@ CMakeFiles/bomberman.dir/sources/GameObjects/PowerUps.cpp.o
  include/shared/Network.h
  include/shared/NetworkClient.h
  include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h
@@ -2899,6 +3054,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/BomberWave.hpp
  include/GameClient.h
  include/GameClientHandler.h
  include/GameDataMessage.h
@@ -2917,6 +3073,7 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o
  include/HelloConnectMessage.h
  include/InputMessage.h
  include/LobbyUpdateMessage.h
+ include/MainMenu.hpp
  include/NetworkClientAdapter.h
  include/NetworkMessage.h
  include/NetworkProtocol.h
@@ -2936,6 +3093,27 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o
  include/shared/Network.h
  include/shared/NetworkClient.h
  include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h
@@ -3119,17 +3297,69 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Walls.cpp.o
  lib/irrlicht-1.8.4/include/vector3d.h
 CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o
  /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameRenderer.cpp
+ include/ANetworkClient.h
+ include/ANetworkController.h
+ include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/BomberWave.hpp
+ include/GameClient.h
+ include/GameClientHandler.h
+ include/GameDataMessage.h
+ include/GameLobby.hpp
+ include/GameManager.hpp
  include/GameMap.hpp
  include/GameObject.hpp
  include/GameRenderer.hpp
+ include/GameServer.h
+ include/GameServerController.h
+ include/GameSession.h
+ include/GameSessionConnector.h
+ include/GameSessionController.h
+ include/GameSessionHandler.h
+ include/GameTime.hpp
+ include/HelloConnectMessage.h
+ include/InputMessage.h
+ include/LobbyUpdateMessage.h
+ include/MainMenu.hpp
+ include/NetworkClientAdapter.h
+ include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
  include/PlayerBuff.hpp
+ include/RequestLobbyMessage.h
+ include/RequestStartGameMessage.h
  include/Serializable.h
+ include/shared/ANetworkAsyncListener.h
+ include/shared/ANetworkAsyncServer.h
  include/shared/ANetworkBuffer.h
+ include/shared/ANetworkClientAdapter.h
  include/shared/BasicNetworkBuffer.h
+ include/shared/INetworkClientHandler.h
+ include/shared/Network.h
+ include/shared/NetworkClient.h
+ include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h
@@ -3313,7 +3543,69 @@ CMakeFiles/bomberman.dir/sources/GameRenderer.cpp.o
  lib/irrlicht-1.8.4/include/vector3d.h
 CMakeFiles/bomberman.dir/sources/GameTime.cpp.o
  /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.cpp
+ include/ANetworkClient.h
+ include/ANetworkController.h
+ include/BackgroundLoader.hpp
+ include/BinaryDataReader.h
+ include/BinaryDataWriter.h
+ include/BomberWave.hpp
+ include/GameClient.h
+ include/GameClientHandler.h
+ include/GameDataMessage.h
+ include/GameLobby.hpp
+ include/GameManager.hpp
+ include/GameMap.hpp
+ include/GameObject.hpp
+ include/GameRenderer.hpp
+ include/GameServer.h
+ include/GameServerController.h
+ include/GameSession.h
+ include/GameSessionConnector.h
+ include/GameSessionController.h
+ include/GameSessionHandler.h
  include/GameTime.hpp
+ include/HelloConnectMessage.h
+ include/InputMessage.h
+ include/LobbyUpdateMessage.h
+ include/MainMenu.hpp
+ include/NetworkClientAdapter.h
+ include/NetworkMessage.h
+ include/NetworkProtocol.h
+ include/Player.hpp
+ include/PlayerBuff.hpp
+ include/RequestLobbyMessage.h
+ include/RequestStartGameMessage.h
+ include/Serializable.h
+ include/shared/ANetworkAsyncListener.h
+ include/shared/ANetworkAsyncServer.h
+ include/shared/ANetworkBuffer.h
+ include/shared/ANetworkClientAdapter.h
+ include/shared/BasicNetworkBuffer.h
+ include/shared/INetworkClientHandler.h
+ include/shared/Network.h
+ include/shared/NetworkClient.h
+ include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h
@@ -3502,6 +3794,7 @@ CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/BomberWave.hpp
  include/GameClient.h
  include/GameClientHandler.h
  include/GameDataMessage.h
@@ -3521,6 +3814,7 @@ CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o
  include/HelloConnectMessage.h
  include/InputMessage.h
  include/LobbyUpdateMessage.h
+ include/MainMenu.hpp
  include/NetworkClientAdapter.h
  include/NetworkMessage.h
  include/NetworkProtocol.h
@@ -3538,6 +3832,27 @@ CMakeFiles/bomberman.dir/sources/GameUIManager.cpp.o
  include/shared/Network.h
  include/shared/NetworkClient.h
  include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h
@@ -3905,7 +4220,69 @@ CMakeFiles/bomberman.dir/sources/GameUtils.cpp.o
  lib/irrlicht-1.8.4/include/vector3d.h
 CMakeFiles/bomberman.dir/sources/MainMenu.cpp.o
  /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/MainMenu.cpp
+ include/ANetworkClient.h
+ include/ANetworkController.h
+ include/BackgroundLoader.hpp
+ include/BinaryDataReader.h
+ include/BinaryDataWriter.h
+ include/BomberWave.hpp
+ include/GameClient.h
+ include/GameClientHandler.h
+ include/GameDataMessage.h
+ include/GameLobby.hpp
+ include/GameManager.hpp
+ include/GameMap.hpp
+ include/GameObject.hpp
+ include/GameRenderer.hpp
+ include/GameServer.h
+ include/GameServerController.h
+ include/GameSession.h
+ include/GameSessionConnector.h
+ include/GameSessionController.h
+ include/GameSessionHandler.h
+ include/GameTime.hpp
+ include/HelloConnectMessage.h
+ include/InputMessage.h
+ include/LobbyUpdateMessage.h
  include/MainMenu.hpp
+ include/NetworkClientAdapter.h
+ include/NetworkMessage.h
+ include/NetworkProtocol.h
+ include/Player.hpp
+ include/PlayerBuff.hpp
+ include/RequestLobbyMessage.h
+ include/RequestStartGameMessage.h
+ include/Serializable.h
+ include/shared/ANetworkAsyncListener.h
+ include/shared/ANetworkAsyncServer.h
+ include/shared/ANetworkBuffer.h
+ include/shared/ANetworkClientAdapter.h
+ include/shared/BasicNetworkBuffer.h
+ include/shared/INetworkClientHandler.h
+ include/shared/Network.h
+ include/shared/NetworkClient.h
+ include/shared/NetworkSocket.h
+ lib/irrKlang/include/ik_ESoundEngineOptions.h
+ lib/irrKlang/include/ik_ESoundOutputDrivers.h
+ lib/irrKlang/include/ik_EStreamModes.h
+ lib/irrKlang/include/ik_IAudioRecorder.h
+ lib/irrKlang/include/ik_IAudioStream.h
+ lib/irrKlang/include/ik_IAudioStreamLoader.h
+ lib/irrKlang/include/ik_IFileFactory.h
+ lib/irrKlang/include/ik_IFileReader.h
+ lib/irrKlang/include/ik_IRefCounted.h
+ lib/irrKlang/include/ik_ISound.h
+ lib/irrKlang/include/ik_ISoundDeviceList.h
+ lib/irrKlang/include/ik_ISoundEffectControl.h
+ lib/irrKlang/include/ik_ISoundEngine.h
+ lib/irrKlang/include/ik_ISoundMixedOutputReceiver.h
+ lib/irrKlang/include/ik_ISoundSource.h
+ lib/irrKlang/include/ik_ISoundStopEventReceiver.h
+ lib/irrKlang/include/ik_IVirtualRefCounted.h
+ lib/irrKlang/include/ik_SAudioStreamFormat.h
+ lib/irrKlang/include/ik_irrKlangTypes.h
+ lib/irrKlang/include/ik_vec3d.h
+ lib/irrKlang/include/irrKlang.h
  lib/irrlicht-1.8.4/include/CDynamicMeshBuffer.h
  lib/irrlicht-1.8.4/include/CIndexBuffer.h
  lib/irrlicht-1.8.4/include/CMeshBuffer.h

@@ -3,6 +3,7 @@
 //
 
 #include <GameUtils.hpp>
+#include <BomberWave.hpp>
 #include "Monster.hpp"
 
 const std::array<vector2df, 4> Monster::Directions = {vector2df(1, 0), vector2df(-1, 0), vector2df(0, 1), vector2df(0, -1) };
@@ -24,12 +25,11 @@ void Monster::Destroy()
 
 void Monster::Start()
 {
-    irr::IrrlichtDevice *device = _manager.getDevice();
-    irr::scene::IMesh *mesh = device->getSceneManager()->getMesh("resources/models/Jesus/Jesus.obj");
+    irr::scene::IMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Jesus/Jesus.obj");
 
-    _node = device->getSceneManager()->addMeshSceneNode(mesh);
+    _node = Device->getSceneManager()->addMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
-    _node->setMaterialTexture(0, device->getVideoDriver()->getTexture("resources/models/Jesus/Jesus.png"));
+    _node->setMaterialTexture(0, Device->getVideoDriver()->getTexture("resources/models/Jesus/Jesus.png"));
     _position = vector2df(_position.X + 0.5f, _position.Y + 0.5f);
     _node->setPosition(GameMap::mapToEngine(_position));
     _node->setScale(vector3df(0.4f, 0.4f, 0.4f));
