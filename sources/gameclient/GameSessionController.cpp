@@ -6,6 +6,7 @@
 #include <GameDataMessage.h>
 #include <RequestLobbyMessage.h>
 #include "GameSessionController.h"
+#include "GameManager.hpp"
 
 void GameSessionController::defineMessageHandlers(handlers_t &handlers) {
     handlers[HelloConnectMessage::PROTOCOL_ID] = handler(*this, &GameSessionController::onConnect);
