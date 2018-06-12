@@ -581,8 +581,6 @@ Player.hpp
 include/Player.hpp
 GameTime.hpp
 include/GameTime.hpp
-GameSessionConnector.h
-include/GameSessionConnector.h
 GameServer.h
 include/GameServer.h
 BackgroundLoader.hpp

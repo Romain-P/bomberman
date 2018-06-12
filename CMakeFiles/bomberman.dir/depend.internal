@@ -2079,23 +2079,14 @@ CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o
  include/BinaryDataWriter.h
  include/GameClient.h
  include/GameClientHandler.h
- include/GameDataMessage.h
- include/GameLobby.hpp
  include/GameManager.hpp
  include/GameMap.hpp
  include/GameObject.hpp
  include/GameRenderer.hpp
  include/GameServer.h
  include/GameServerController.h
- include/GameSession.h
- include/GameSessionConnector.h
- include/GameSessionController.h
- include/GameSessionHandler.h
  include/GameTime.hpp
- include/HelloConnectMessage.h
  include/InputMessage.h
- include/LobbyUpdateMessage.h
- include/NetworkClientAdapter.h
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
@@ -4906,14 +4897,11 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o
  include/GameServer.h
  include/GameServerController.h
  include/GameSession.h
- include/GameSessionConnector.h
  include/GameSessionController.h
- include/GameSessionHandler.h
  include/GameTime.hpp
  include/HelloConnectMessage.h
  include/InputMessage.h
  include/LobbyUpdateMessage.h
- include/NetworkClientAdapter.h
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
@@ -5129,14 +5117,12 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o
  include/GameServer.h
  include/GameServerController.h
  include/GameSession.h
- include/GameSessionConnector.h
  include/GameSessionController.h
  include/GameSessionHandler.h
  include/GameTime.hpp
  include/HelloConnectMessage.h
  include/InputMessage.h
  include/LobbyUpdateMessage.h
- include/NetworkClientAdapter.h
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp

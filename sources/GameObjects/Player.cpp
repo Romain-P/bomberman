@@ -22,7 +22,6 @@ const std::array<std::string, 4> Player::Characters = {
 Player::Player(GameManager &manager, int playerNbr, vector2df position, vector2df rotation) :
         GameObject(manager, position, rotation), _bombCount(1), _canPlaceBomb(true), _anim(PLAYERANIM::IDLE), _playerNbr(playerNbr), _score(0)
 {
-    _tags.push_back(GOTAG::DESTROYABLE);
     for (auto it = _inputs.begin(); it != _inputs.end(); it++)
         (*it) = false;
     Start();
@@ -36,7 +35,6 @@ MainPlayer::MainPlayer(GameManager &manager, int playerNbr, vector2df position, 
 void Player::Start()
 {
     GameObject::Start();
-    ;
     irr::scene::IAnimatedMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Character/Bomberman.MD3");
     _node = Device->getSceneManager()->addAnimatedMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
@@ -187,9 +185,13 @@ void Player::ApplyBuffs()
 
 void Player::Destroy()
 {
-    SoundEngine->play2D("resources/sounds/Character/CharacterDeath.wav", false);
-    _node->remove();
-    GameObject::Destroy();
+    if (_node)
+    {
+        SoundEngine->play2D("resources/sounds/Character/CharacterDeath.wav", false);
+        _node->remove();
+        _node = nullptr;
+        GameObject::Destroy();
+    }
 }
 void Player::UpdatePosition()
 {

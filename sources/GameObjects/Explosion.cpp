@@ -21,8 +21,12 @@ void Explosion::Update()
 
 void Explosion::Destroy()
 {
-    _node->remove();
-    GameObject::Destroy();
+    if (_node)
+    {
+        _node->remove();
+        _node = nullptr;
+        GameObject::Destroy();
+    }
 }
 
 void Explosion::Start()
