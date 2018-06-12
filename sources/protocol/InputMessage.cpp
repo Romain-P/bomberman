@@ -6,30 +6,32 @@
 
 void InputMessage::serialize(BinaryDataWriter &writer) const {
     writer.writeUint(_playerSessionId);
-    writer.writeUint(_type);
+    writer.writeUint((size_t)_type);
+    writer.writeBool(_status);
 }
 
 void InputMessage::deserialize(BinaryDataReader &reader) {
     _playerSessionId = reader.readUint();
-    _type = static_cast<InputType>(reader.readUint());
+    _type = static_cast<PLAYERINPUT>(reader.readUint());
+    _status = reader.readBool();
 }
 
 std::ostream &InputMessage::toString(std::ostream &o) const {
     std::string type;
     switch(_type) {
-        case RIGHT:
-            type = "right";
+        case PLAYERINPUT::UP:
+            type = "up";
             break;
-        case LEFT:
+        case PLAYERINPUT::DOWN:
+            type = "down";
+            break;
+        case PLAYERINPUT::LEFT:
             type = "left";
             break;
-        case FORWARD:
-            type = "forward";
+        case PLAYERINPUT::RIGHT:
+            type = "right";
             break;
-        case BACKWARD:
-            type = "backward";
-            break;
-        case BOMB:
+        case PLAYERINPUT::PLACEBOMB:
             type = "bomb";
             break;
         default:
@@ -39,10 +41,13 @@ std::ostream &InputMessage::toString(std::ostream &o) const {
     return o << "InputMessage(type=" << type << ")";
 }
 
-InputMessage::InputType InputMessage::getType() const {
+PLAYERINPUT InputMessage::getType() const {
     return _type;
 }
 
+bool InputMessage::getStatus() const {
+    return _status;
+}
 size_t InputMessage::getPlayerId() const {
     return _playerSessionId;
 }

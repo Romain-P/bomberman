@@ -187,6 +187,7 @@ void Player::ApplyBuffs()
 
 void Player::Destroy()
 {
+    SoundEngine->play2D("resources/sounds/Character/CharacterDeath.wav", false);
     _node->remove();
     GameObject::Destroy();
 }

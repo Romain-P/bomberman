@@ -14,6 +14,8 @@
 #pragma comment(linker, "/subsystem:windows" /ENTRY:mainCRTStartup)
 #endif
 
+irrklang::ISoundEngine *SoundEngine = irrklang::createIrrKlangDevice();
+
 void launchServer(GameServer *server) {
     server->start();
 }

@@ -14,15 +14,18 @@ void GameSessionController::defineMessageHandlers(handlers_t &handlers) {
     handlers[InputMessage::PROTOCOL_ID] = handler(*this, &GameSessionController::onInputReceived);
 }
 
-void GameSessionController::onConnect(GameSession *session, HelloConnectMessage *msg) {
+void GameSessionController::onConnect(GameSession *session, HelloConnectMessage *msg)
+{
     session->send(RequestLobbyMessage());
 }
 
-void GameSessionController::onDisconnect(GameSession *session) {
+void GameSessionController::onDisconnect(GameSession *session)
+{
 
 }
 
-void GameSessionController::onLobbyUpdated(GameSession *session, LobbyUpdateMessage *msg) {
+void GameSessionController::onLobbyUpdated(GameSession *session, LobbyUpdateMessage *msg)
+{
     msg->getMaxPlayers();
     msg->getReadyPlayers();
 }
@@ -36,4 +39,5 @@ void GameSessionController::loadGameData(GameSession *session, GameDataMessage *
 void GameSessionController::onInputReceived(GameSession *session, InputMessage *msg) {
     msg->getPlayerId(); //player who pressed/released an input
     msg->getType(); //input type @see message enum
+    msg->getStatus(); // input down / up
 }

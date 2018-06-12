@@ -11,6 +11,9 @@
 #include "GameServer.h"
 #include "GameSessionConnector.h"
 #include <irrlicht.h>
+#include <irrKlang.h>
+
+extern irrklang::ISoundEngine *SoundEngine;
 
 class BomberWave
 {

@@ -35,6 +35,7 @@ public:
     std::vector<std::unique_ptr<Player>> &getPlayers() { return _players; }
     float getDeltaTime();
     int GenerateId();
+    bool GameOver();
     void RemoveDestroyed();
     void IncreaseScore(int increment) { _players[0]->IncreaseScore(increment); }
     int getScore() { return _players[0]->getScore(); }
@@ -93,17 +94,6 @@ protected:
     void RunUpdates() {};
     void RenderGame() {};
     std::vector<std::pair<int, Player>> _enemyPlayers;
-    GameSessionConnector _connector;
-};
-
-class NetworkHostGameManager : public NetworkGameManager
-{
-public:
-    NetworkHostGameManager(irr::IrrlichtDevice * const device);
-    void LaunchServer();
-    void JoinServer();
-private:
-    GameServer _server;
 };
 
 #endif //CPP_INDIE_STUDIO_GAMEMANAGER_HPP

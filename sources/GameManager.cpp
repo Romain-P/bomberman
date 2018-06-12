@@ -52,15 +52,16 @@ NetworkHostGameManager::NetworkHostGameManager(irr::IrrlichtDevice * const devic
 
 void NetworkHostGameManager::JoinServer()
 {
-    /*GameSessionConnector connector;
-    std::thread con([&connector] { connector.tryConnect("127.0.0.1", _server.getPort()};*/
+    GameSessionConnector connector;
+    std::thread con([&connector] { connector.tryConnect("127.0.0.1", _server.getPort()); });
 }
 
 void NetworkHostGameManager::LaunchServer()
 {
-/*    std::thread thread([&_server] {_server.start()});
+    std::thread thread([&_server] {_server.start()});
 
-    while (_server.getPort() == 0);*/
+    while (_server.getPort() == 0);
+    JoinServer();
 }
 
 GameManager::~GameManager()
@@ -124,7 +125,7 @@ void GameManager::LaunchLevel()
         (*it)->setPosition(_map->getPlayerSpawns()[0]);
     SpawnMapObjects();
     _time.Reset();
-    while (_gameRunning && _device->run() && !_players[0]->shouldBeDestroyed() & !_gameWon)
+    while (_gameRunning && _device->run() && !GameOver() & !_gameWon)
     {
         RemoveDestroyed();
         uiManager.UpdateUI();
@@ -132,6 +133,16 @@ void GameManager::LaunchLevel()
         RenderGame();
     }
     Cleanup();
+}
+
+bool GameManager::GameOver()
+{
+    for (auto it = _players.begin(); it != _players.end(); it++)
+    {
+        if (!(*it)->shouldBeDestroyed())
+            return false;
+    }
+    return true;
 }
 
 void GameManager::RemoveDestroyed()
@@ -158,10 +169,14 @@ void GameManager::RunUpdates()
 {
     _time.Update();
     for (auto it = _players.begin(); it != _players.end(); it++)
-        (*it)->Update();
+    {
+        if (!(*it)->shouldBeDestroyed())
+            (*it)->Update();
+    }
     for (auto it = _objects.begin(); it != _objects.end(); it++)
     {
-        (*it)->Update();
+        if (!(*it)->shouldBeDestroyed())
+            (*it)->Update();
     }
 }
 

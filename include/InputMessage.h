@@ -6,22 +6,15 @@
 #define CPP_INDIE_STUDIO_INPUTMESSAGE_H
 
 #include "NetworkMessage.h"
+#include "Player.hpp"
 
 class InputMessage: public NetworkMessage {
 public:
 
     static constexpr int32_t PROTOCOL_ID = 6;
 
-    enum InputType {
-        RIGHT = 0,
-        LEFT,
-        FORWARD,
-        BACKWARD,
-        BOMB
-    };
-
-    InputMessage() : NetworkMessage(PROTOCOL_ID), _playerSessionId(), _type() {}
-    explicit InputMessage(InputType type, size_t playerId = 0) : NetworkMessage(PROTOCOL_ID), _playerSessionId(playerId), _type(type) {}
+    InputMessage() : NetworkMessage(PROTOCOL_ID), _playerSessionId(), _type(), _status() {}
+    explicit InputMessage(PLAYERINPUT type, bool status, size_t playerId = 0) : NetworkMessage(PROTOCOL_ID), _playerSessionId(playerId), _status(status), _type(type) {}
 
     void serialize(BinaryDataWriter &writer) const override;
     void deserialize(BinaryDataReader &reader) override;
@@ -29,11 +22,12 @@ public:
     std::ostream &toString(std::ostream &o) const override;
 
     size_t getPlayerId() const;
-    InputType getType() const;
+    PLAYERINPUT getType() const;
+    bool getStatus() const;
 private:
-
+    bool _status;
     size_t _playerSessionId;
-    InputType _type;
+    PLAYERINPUT _type;
 };
 
 
