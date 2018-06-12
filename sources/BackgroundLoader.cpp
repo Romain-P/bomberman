@@ -23,10 +23,7 @@ const std::array<std::string, 7> BackgroundLoader::Skyboxes = {
         "resources/textures/skyboxes/skybox7.jpg",
 };
 
-BackgroundLoader::BackgroundLoader() :
-{
-
-}
+BackgroundLoader::BackgroundLoader() {}
 
 void BackgroundLoader::LoadRandomBackground()
 {

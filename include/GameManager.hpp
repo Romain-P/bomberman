@@ -12,7 +12,6 @@
 #include "Player.hpp"
 #include "GameTime.hpp"
 #include "GameSessionConnector.h"
-#include "GameServer.h"
 #include "BackgroundLoader.hpp"
 
 enum class PLAYERCOLOR

@@ -11,8 +11,9 @@
 #include "LobbyUpdateMessage.h"
 #include "GameDataMessage.h"
 #include "InputMessage.h"
-#include "GameManager.hpp"
 #include "GameLobby.hpp"
+
+class GameManager;
 
 class GameSessionController: public ANetworkController {
 public:
@@ -29,8 +30,8 @@ public:
     void onInputReceived(GameSession *session, InputMessage *msg);
 
 private:
-    //GameLobby _lobby;
-    //NetworkGameManager _manager;
+    GameLobby _lobby;
+    GameManager *_manager;
 };
 
 

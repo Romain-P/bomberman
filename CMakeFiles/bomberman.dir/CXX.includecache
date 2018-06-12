@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/main.cpp
+/home/romain/projects/cpp_indie_studio/main.cpp
 iostream
 -
 BomberWave.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/BomberWave.hpp
+/home/romain/projects/cpp_indie_studio/BomberWave.hpp
 memory
 -
 GameServer.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/GameServer.h
+/home/romain/projects/cpp_indie_studio/GameServer.h
 GameSessionConnector.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/GameSessionConnector.h
+/home/romain/projects/cpp_indie_studio/GameSessionConnector.h
 sources/GameObjects/Test.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Test.h
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Test.h
 thread
 -
 GameDataSerializer.h
@@ -30,17 +30,17 @@ driverChoice.h
 Exceptions.hpp
 -
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.cpp
+/home/romain/projects/cpp_indie_studio/sources/BackgroundLoader.cpp
 iostream
 -
 BackgroundLoader.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BackgroundLoader.hpp
+/home/romain/projects/cpp_indie_studio/sources/BackgroundLoader.hpp
 BomberWave.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.hpp
+/home/romain/projects/cpp_indie_studio/sources/BomberWave.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.cpp
+/home/romain/projects/cpp_indie_studio/sources/BomberWave.cpp
 BomberWave.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.hpp
+/home/romain/projects/cpp_indie_studio/sources/BomberWave.hpp
 irrlicht.h
 -
 Exceptions.hpp
@@ -52,25 +52,25 @@ thread
 GameSessionConnector.h
 -
 GameManager.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameManager.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameManager.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/Exceptions.cpp
+/home/romain/projects/cpp_indie_studio/sources/Exceptions.cpp
 Exceptions.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/Exceptions.hpp
+/home/romain/projects/cpp_indie_studio/sources/Exceptions.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameInputManager.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameInputManager.cpp
 GameInputManager.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameInputManager.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameInputManager.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameLobby.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameLobby.cpp
 Player.hpp
 -
 GameLobby.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameLobby.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameLobby.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameManager.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameManager.cpp
 GameManager.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameManager.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameManager.hpp
 iostream
 -
 Walls.hpp
@@ -90,7 +90,7 @@ GameUIManager.hpp
 BomberWave.hpp
 -
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMap.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameMap.cpp
 sstream
 -
 fstream
@@ -100,63 +100,63 @@ iostream
 Walls.hpp
 -
 GameMap.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMap.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameMap.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMapFactory.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameMapFactory.cpp
 GameMapFactory.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameMapFactory.h
+/home/romain/projects/cpp_indie_studio/sources/GameMapFactory.h
 fstream
 -
 unistd.h
 -
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Bomb.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Bomb.cpp
 iostream
 -
 Explosion.hpp
 -
 GameManager.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameManager.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/GameManager.hpp
 BomberWave.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/BomberWave.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/BomberWave.hpp
 Bomb.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Bomb.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Bomb.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Explosion.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Explosion.cpp
 GameManager.hpp
 -
 BomberWave.hpp
 -
 Explosion.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Explosion.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Explosion.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameObject.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/GameObject.cpp
 GameManager.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameManager.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/GameManager.hpp
 GameObject.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameObject.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/GameObject.hpp
 irrlicht.h
 -
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Monster.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Monster.cpp
 GameUtils.hpp
 -
 BomberWave.hpp
 -
 Monster.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Monster.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Monster.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Player.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Player.cpp
 BomberWave.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/BomberWave.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/BomberWave.hpp
 Bomb.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Bomb.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Bomb.hpp
 Player.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Player.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Player.hpp
 GameMap.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameMap.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/GameMap.hpp
 GameManager.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameManager.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/GameManager.hpp
 iostream
 -
 Explosion.hpp
@@ -166,27 +166,27 @@ GameUtils.hpp
 PowerUps.hpp
 -
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/PowerUps.cpp
 GameMap.hpp
 -
 BomberWave.hpp
 -
 PowerUps.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/PowerUps.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/PowerUps.hpp
 GameManager.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameManager.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/GameManager.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Test.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Test.cpp
 iostream
 -
 Test.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Test.h
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Test.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Test.h
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Test.h
 Serializable.h
 -
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Walls.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Walls.cpp
 GameManager.hpp
 -
 iostream
@@ -196,35 +196,35 @@ PowerUps.hpp
 BomberWave.hpp
 -
 Walls.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/Walls.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObjects/Walls.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameRenderer.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameRenderer.cpp
 GameRenderer.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameRenderer.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameRenderer.hpp
 GameObject.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObject.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameObject.hpp
 BomberWave.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/BomberWave.hpp
+/home/romain/projects/cpp_indie_studio/sources/BomberWave.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameTime.cpp
 BomberWave.hpp
 -
 GameTime.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameTime.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameTime.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameUIManager.cpp
 BomberWave.hpp
 -
 GameUIManager.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUIManager.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameUIManager.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.cpp
+/home/romain/projects/cpp_indie_studio/sources/GameUtils.cpp
 GameUtils.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameUtils.hpp
+/home/romain/projects/cpp_indie_studio/sources/GameUtils.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/MainMenu.cpp
+/home/romain/projects/cpp_indie_studio/sources/MainMenu.cpp
 MainMenu.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/MainMenu.hpp
+/home/romain/projects/cpp_indie_studio/sources/MainMenu.hpp
 irrlicht.h
 -
 iostream
@@ -232,19 +232,19 @@ iostream
 BomberWave.hpp
 -
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.cpp
+/home/romain/projects/cpp_indie_studio/sources/PlayerBuff.cpp
 PlayerBuff.hpp
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/PlayerBuff.hpp
+/home/romain/projects/cpp_indie_studio/sources/PlayerBuff.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSession.cpp
+/home/romain/projects/cpp_indie_studio/sources/gameclient/GameSession.cpp
 GameSession.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSession.h
+/home/romain/projects/cpp_indie_studio/sources/gameclient/GameSession.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionConnector.cpp
+/home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionConnector.cpp
 GameSessionConnector.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionConnector.h
+/home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionConnector.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionController.cpp
+/home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionController.cpp
 HelloConnectMessage.h
 -
 GameDataMessage.h
@@ -252,45 +252,47 @@ GameDataMessage.h
 RequestLobbyMessage.h
 -
 GameSessionController.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionController.h
+/home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionController.h
+GameManager.hpp
+/home/romain/projects/cpp_indie_studio/sources/gameclient/GameManager.hpp
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionHandler.cpp
+/home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionHandler.cpp
 iostream
 -
 sstream
 -
 GameSessionHandler.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameclient/GameSessionHandler.h
+/home/romain/projects/cpp_indie_studio/sources/gameclient/GameSessionHandler.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClient.cpp
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameClient.cpp
 GameClient.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClient.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameClient.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClientHandler.cpp
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameClientHandler.cpp
 iostream
 -
 sstream
 -
 NetworkMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/NetworkMessage.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/NetworkMessage.h
 NetworkProtocol.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/NetworkProtocol.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/NetworkProtocol.h
 GameClientHandler.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameClientHandler.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameClientHandler.h
 shared/NetworkClient.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/shared/NetworkClient.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/shared/NetworkClient.h
 GameServer.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServer.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameServer.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServer.cpp
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameServer.cpp
 GameClientHandler.h
 -
 NetworkClientAdapter.h
 -
 GameServer.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServer.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameServer.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServerController.cpp
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameServerController.cpp
 iostream
 -
 RequestStartGameMessage.h
@@ -302,39 +304,39 @@ GameDataMessage.h
 GameMapFactory.h
 -
 HelloConnectMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/HelloConnectMessage.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/HelloConnectMessage.h
 GameServerController.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServerController.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameServerController.h
 GameServer.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/GameServer.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/GameServer.h
 InputMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/gameserver/InputMessage.h
+/home/romain/projects/cpp_indie_studio/sources/gameserver/InputMessage.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkClient.cpp
+/home/romain/projects/cpp_indie_studio/sources/network/ANetworkClient.cpp
 iostream
 -
 ANetworkClient.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkClient.h
+/home/romain/projects/cpp_indie_studio/sources/network/ANetworkClient.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkController.cpp
+/home/romain/projects/cpp_indie_studio/sources/network/ANetworkController.cpp
 iostream
 -
 ANetworkController.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/ANetworkController.h
+/home/romain/projects/cpp_indie_studio/sources/network/ANetworkController.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkClientAdapter.cpp
+/home/romain/projects/cpp_indie_studio/sources/network/NetworkClientAdapter.cpp
 NetworkProtocol.h
 -
 iostream
 -
 shared/BasicNetworkBuffer.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/shared/BasicNetworkBuffer.h
+/home/romain/projects/cpp_indie_studio/sources/network/shared/BasicNetworkBuffer.h
 NetworkClientAdapter.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkClientAdapter.h
+/home/romain/projects/cpp_indie_studio/sources/network/NetworkClientAdapter.h
 shared/NetworkClient.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/shared/NetworkClient.h
+/home/romain/projects/cpp_indie_studio/sources/network/shared/NetworkClient.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkProtocol.cpp
+/home/romain/projects/cpp_indie_studio/sources/network/NetworkProtocol.cpp
 HelloConnectMessage.h
 -
 GameDataMessage.h
@@ -344,57 +346,57 @@ LobbyUpdateMessage.h
 iostream
 -
 NetworkProtocol.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkProtocol.h
+/home/romain/projects/cpp_indie_studio/sources/network/NetworkProtocol.h
 NetworkMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/NetworkMessage.h
+/home/romain/projects/cpp_indie_studio/sources/network/NetworkMessage.h
 RequestStartGameMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/RequestStartGameMessage.h
+/home/romain/projects/cpp_indie_studio/sources/network/RequestStartGameMessage.h
 RequestLobbyMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/RequestLobbyMessage.h
+/home/romain/projects/cpp_indie_studio/sources/network/RequestLobbyMessage.h
 InputMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/network/InputMessage.h
+/home/romain/projects/cpp_indie_studio/sources/network/InputMessage.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/GameDataMessage.cpp
+/home/romain/projects/cpp_indie_studio/sources/protocol/GameDataMessage.cpp
 GameDataMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/GameDataMessage.h
+/home/romain/projects/cpp_indie_studio/sources/protocol/GameDataMessage.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/HelloConnectMessage.cpp
+/home/romain/projects/cpp_indie_studio/sources/protocol/HelloConnectMessage.cpp
 HelloConnectMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/HelloConnectMessage.h
+/home/romain/projects/cpp_indie_studio/sources/protocol/HelloConnectMessage.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/InputMessage.cpp
+/home/romain/projects/cpp_indie_studio/sources/protocol/InputMessage.cpp
 InputMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/InputMessage.h
+/home/romain/projects/cpp_indie_studio/sources/protocol/InputMessage.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/LobbyUpdateMessage.cpp
+/home/romain/projects/cpp_indie_studio/sources/protocol/LobbyUpdateMessage.cpp
 LobbyUpdateMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/LobbyUpdateMessage.h
+/home/romain/projects/cpp_indie_studio/sources/protocol/LobbyUpdateMessage.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/RequestLobbyMessage.cpp
+/home/romain/projects/cpp_indie_studio/sources/protocol/RequestLobbyMessage.cpp
 RequestLobbyMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/RequestLobbyMessage.h
+/home/romain/projects/cpp_indie_studio/sources/protocol/RequestLobbyMessage.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/RequestStartGameMessage.cpp
+/home/romain/projects/cpp_indie_studio/sources/protocol/RequestStartGameMessage.cpp
 RequestStartGameMessage.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/protocol/RequestStartGameMessage.h
+/home/romain/projects/cpp_indie_studio/sources/protocol/RequestStartGameMessage.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataReader.cpp
+/home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataReader.cpp
 cstring
 -
 BinaryDataReader.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataReader.h
+/home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataReader.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataWriter.cpp
+/home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataWriter.cpp
 BinaryDataWriter.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/BinaryDataWriter.h
+/home/romain/projects/cpp_indie_studio/sources/serializable/BinaryDataWriter.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/GameDataSerializer.cpp
+/home/romain/projects/cpp_indie_studio/sources/serializable/GameDataSerializer.cpp
 GameDataSerializer.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/serializable/GameDataSerializer.h
+/home/romain/projects/cpp_indie_studio/sources/serializable/GameDataSerializer.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkAsyncListener.cpp
+/home/romain/projects/cpp_indie_studio/sources/shared/ANetworkAsyncListener.cpp
 shared/ANetworkAsyncListener.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/shared/ANetworkAsyncListener.h
+/home/romain/projects/cpp_indie_studio/sources/shared/shared/ANetworkAsyncListener.h
 sys/epoll.h
 -
 signal.h
@@ -404,45 +406,45 @@ sys/signalfd.h
 iostream
 -
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkAsyncServer.cpp
+/home/romain/projects/cpp_indie_studio/sources/shared/ANetworkAsyncServer.cpp
 iostream
 -
 shared/ANetworkAsyncServer.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/shared/ANetworkAsyncServer.h
+/home/romain/projects/cpp_indie_studio/sources/shared/shared/ANetworkAsyncServer.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkBuffer.cpp
+/home/romain/projects/cpp_indie_studio/sources/shared/ANetworkBuffer.cpp
 shared/ANetworkBuffer.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/shared/ANetworkBuffer.h
+/home/romain/projects/cpp_indie_studio/sources/shared/shared/ANetworkBuffer.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/ANetworkClientAdapter.cpp
+/home/romain/projects/cpp_indie_studio/sources/shared/ANetworkClientAdapter.cpp
 shared/ANetworkClientAdapter.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/shared/ANetworkClientAdapter.h
+/home/romain/projects/cpp_indie_studio/sources/shared/shared/ANetworkClientAdapter.h
 shared/NetworkClient.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/shared/NetworkClient.h
+/home/romain/projects/cpp_indie_studio/sources/shared/shared/NetworkClient.h
 cstring
 -
 iostream
 -
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/NetworkClient.cpp
+/home/romain/projects/cpp_indie_studio/sources/shared/NetworkClient.cpp
 iostream
 -
 shared/NetworkClient.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/shared/NetworkClient.h
+/home/romain/projects/cpp_indie_studio/sources/shared/shared/NetworkClient.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/NetworkSocket.cpp
+/home/romain/projects/cpp_indie_studio/sources/shared/NetworkSocket.cpp
 stdexcept
 -
 arpa/inet.h
 -
 shared/NetworkSocket.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/shared/NetworkSocket.h
+/home/romain/projects/cpp_indie_studio/sources/shared/shared/NetworkSocket.h
 
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/impl/BasicNetworkBuffer.cpp
+/home/romain/projects/cpp_indie_studio/sources/shared/impl/BasicNetworkBuffer.cpp
 cstring
 -
 shared/BasicNetworkBuffer.h
-/home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/shared/impl/shared/BasicNetworkBuffer.h
+/home/romain/projects/cpp_indie_studio/sources/shared/impl/shared/BasicNetworkBuffer.h
 
 include/ANetworkClient.h
 shared/NetworkClient.h
@@ -583,8 +585,6 @@ GameTime.hpp
 include/GameTime.hpp
 GameSessionConnector.h
 include/GameSessionConnector.h
-GameServer.h
-include/GameServer.h
 BackgroundLoader.hpp
 include/BackgroundLoader.hpp
 
@@ -671,8 +671,6 @@ GameDataMessage.h
 include/GameDataMessage.h
 InputMessage.h
 include/InputMessage.h
-GameManager.hpp
-include/GameManager.hpp
 GameLobby.hpp
 include/GameLobby.hpp
 
