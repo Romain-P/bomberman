@@ -76,6 +76,8 @@ void GameServerController::onInputReceived(GameClient *client, InputMessage *msg
     for (auto &keyset: _server->getClients()) {
         auto &player = keyset.second;
 
-        client->send(InputMessage(msg->getType(), client->getId()));
+        if (player->getId() == client->getId()) continue;
+
+        player->send(InputMessage(msg->getType(), client->getId()));
     }
 }
