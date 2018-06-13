@@ -60,7 +60,11 @@ void GameServerController::onJoinAsked(GameClient *client, RequestLobbyMessage *
     if (readyPlayers >= _server->getMaxPlayers() || _server->started())
         client->kick();
     else
-        client->send(LobbyUpdateMessage(readyPlayers, maxPlayers));
+        for (auto &keyset: _server->getClients()) {
+            auto &player = keyset.second;
+
+            player->send(LobbyUpdateMessage(readyPlayers, maxPlayers));
+        }
 }
 
 void GameServerController::onInputReceived(GameClient *client, InputMessage *msg)

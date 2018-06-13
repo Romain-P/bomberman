@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall   -std=gnu++1z
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/Mardel/ModulesTek2/C++/cpp_indie_studio/include -I/home/Mardel/ModulesTek2/C++/cpp_indie_studio/lib/irrlicht-1.8.4/include -I/home/Mardel/ModulesTek2/C++/cpp_indie_studio/lib/irrKlang/include 
+CXX_INCLUDES = -I/home/romain/projects/cpp_indie_studio/include -I/home/romain/projects/cpp_indie_studio/lib/irrlicht-1.8.4/include -I/home/romain/projects/cpp_indie_studio/lib/irrKlang/include 
 

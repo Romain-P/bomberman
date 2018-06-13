@@ -10,7 +10,7 @@
 class RequestStartGameMessage: public NetworkMessage {
 public:
 
-    static constexpr int32_t PROTOCOL_ID = 5;
+    static constexpr int32_t PROTOCOL_ID = 6;
 
     RequestStartGameMessage() : NetworkMessage(PROTOCOL_ID){}
 
