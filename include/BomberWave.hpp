@@ -26,6 +26,7 @@ private:
     void LaunchSolo();
     void LaunchMultiplayerHost();
     void LaunchMultiplayerJoin();
+    void JoinMultiplayerGame(uint16_t port);
     MainMenu _mainMenu;
     bool _gameRunning = false;
 };
