@@ -2137,17 +2137,24 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o: lib/irrlicht-1.8.4
 
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: sources/GameObjects/GameObject.cpp
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/ANetworkClient.h
+CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/ANetworkController.h
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/BackgroundLoader.hpp
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/BinaryDataReader.h
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/BinaryDataWriter.h
+CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameClient.h
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameDataMessage.h
+CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameLobby.hpp
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameManager.hpp
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameMap.hpp
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameObject.hpp
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameRenderer.hpp
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameSession.h
+CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameSessionController.h
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameTime.hpp
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/GameUIManager.hpp
+CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/HelloConnectMessage.h
+CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/InputMessage.h
+CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/LobbyUpdateMessage.h
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/NetworkMessage.h
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/NetworkProtocol.h
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o: include/Player.hpp
@@ -4785,6 +4792,7 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: include/
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: include/BackgroundLoader.hpp
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: include/BinaryDataReader.h
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: include/BinaryDataWriter.h
+CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: include/GameClient.h
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: include/GameDataMessage.h
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: include/GameLobby.hpp
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o: include/GameManager.hpp
@@ -5023,6 +5031,7 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: include
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: include/BackgroundLoader.hpp
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: include/BinaryDataReader.h
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: include/BinaryDataWriter.h
+CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: include/GameClient.h
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: include/GameDataMessage.h
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: include/GameLobby.hpp
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o: include/GameManager.hpp
@@ -5258,6 +5267,7 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: include/AN
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: include/BackgroundLoader.hpp
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: include/BinaryDataReader.h
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: include/BinaryDataWriter.h
+CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: include/GameClient.h
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: include/GameDataMessage.h
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: include/GameLobby.hpp
 CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o: include/GameManager.hpp

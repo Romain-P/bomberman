@@ -2138,17 +2138,24 @@ CMakeFiles/bomberman.dir/sources/GameObjects/Explosion.cpp.o
 CMakeFiles/bomberman.dir/sources/GameObjects/GameObject.cpp.o
  /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameObjects/GameObject.cpp
  include/ANetworkClient.h
+ include/ANetworkController.h
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/GameClient.h
  include/GameDataMessage.h
+ include/GameLobby.hpp
  include/GameManager.hpp
  include/GameMap.hpp
  include/GameObject.hpp
  include/GameRenderer.hpp
  include/GameSession.h
+ include/GameSessionController.h
  include/GameTime.hpp
  include/GameUIManager.hpp
+ include/HelloConnectMessage.h
+ include/InputMessage.h
+ include/LobbyUpdateMessage.h
  include/NetworkMessage.h
  include/NetworkProtocol.h
  include/Player.hpp
@@ -4786,6 +4793,7 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionConnector.cpp.o
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/GameClient.h
  include/GameDataMessage.h
  include/GameLobby.hpp
  include/GameManager.hpp
@@ -5024,6 +5032,7 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionController.cpp.o
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/GameClient.h
  include/GameDataMessage.h
  include/GameLobby.hpp
  include/GameManager.hpp
@@ -5259,6 +5268,7 @@ CMakeFiles/bomberman.dir/sources/gameclient/GameSessionHandler.cpp.o
  include/BackgroundLoader.hpp
  include/BinaryDataReader.h
  include/BinaryDataWriter.h
+ include/GameClient.h
  include/GameDataMessage.h
  include/GameLobby.hpp
  include/GameManager.hpp

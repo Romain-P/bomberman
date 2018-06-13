@@ -74,7 +74,7 @@ void BomberWave::LaunchMultiplayerHost()
 
     while (server.getPort() == 0);
     GameSessionConnector connector;
-    std::thread con([&connector, &server] { connector.tryConnect("127.0.0.1", server.getPort()); });
+    connector.tryConnect("127.0.0.1", server.getPort());
     thread.join();
 }
 
@@ -83,7 +83,7 @@ void BomberWave::LaunchMultiplayerJoin()
     Device->getGUIEnvironment()->clear();
     GameSessionConnector connector;
     uint16_t port = 42;
-    std::thread con([&connector, &port] { connector.tryConnect("127.0.0.1", port); });
+    connector.tryConnect("127.0.0.1", port);
 }
 
 void BomberWave::Launch()
