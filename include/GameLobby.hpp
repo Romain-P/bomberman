@@ -5,10 +5,9 @@
 #ifndef CPP_INDIE_STUDIO_GAMELOBBY_HPP
 #define CPP_INDIE_STUDIO_GAMELOBBY_HPP
 
-#include "GameSession.h"
 #include <irrlicht.h>
 #include <map>
-#include <shared_mutex>
+#include "GameSessionController.h"
 
 enum class LOBBYCHOICE
 {
@@ -29,17 +28,17 @@ private:
 class GameLobby
 {
 public:
-    GameLobby(GameSession *session, int _playerId);
+    GameLobby(GameSessionController &controller, GameSession *session, int _playerId);
     void Run();
     void Draw();
     void Update(int playerCount);
     void StopLobby();
-    std::thread EnterLobby();
 private:
     void setPlayerCount(int count);
     int getPlayerCount();
     bool getUpdate();
     void setUpdate(bool update);
+    GameSessionController &_controller;
     GameSession *_session;
     LOBBYCHOICE _lobbyChoice;
     LobbyEventReceiver _eventReceiver;
@@ -47,7 +46,6 @@ private:
     int _playerId;
     bool _update;
     bool _gameStarted;
-    std::shared_mutex _mutex;
 };
 
 #endif //CPP_INDIE_STUDIO_GAMELOBBY_HPP

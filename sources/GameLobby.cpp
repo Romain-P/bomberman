@@ -7,22 +7,17 @@
 #include <shared_mutex>
 #include "GameLobby.hpp"
 
-GameLobby::GameLobby(GameSession *session, int playerId) : _session(session), _lobbyChoice(LOBBYCHOICE::NONE), _eventReceiver(_lobbyChoice), _playerId(playerId), _gameStarted(false)
+GameLobby::GameLobby(GameSessionController &controller, GameSession *session, int playerId) : _controller(controller), _session(session), _lobbyChoice(LOBBYCHOICE::NONE), _eventReceiver(_lobbyChoice), _playerId(playerId), _gameStarted(false)
 {
 }
 
-std::thread GameLobby::EnterLobby()
+void GameLobby::Run()
 {
     Device->setEventReceiver(&_eventReceiver);
     Device->getSceneManager()->addLightSceneNode(0, core::vector3df(0, 20, 0), irr::video::SColorf(1, 1, 1));
     Device->getSceneManager()->setAmbientLight(irr::video::SColor(0, 160, 160, 160));
     irr::scene::ICameraSceneNode *camera = Device->getSceneManager()->addCameraSceneNode(0, irr::core::vector3df(-50, 40, 0));
     camera->setTarget(irr::core::vector3df(0, 40, 0));
-    return std::thread([this] { this->Run();});
-}
-
-void GameLobby::Run()
-{
     _lobbyChoice = LOBBYCHOICE::NONE;
     while (Device->run() && !_gameStarted)
     {
@@ -33,13 +28,13 @@ void GameLobby::Run()
                     _session->send(RequestStartGameMessage());
                     return;
                 }
+                _controller.poll();
         }
     }
 }
 
 void GameLobby::StopLobby()
 {
-    std::unique_lock<std::shared_mutex> mutex(_mutex);
     _gameStarted = true;
 }
 
@@ -78,29 +73,21 @@ void GameLobby::Draw()
 
 void GameLobby::setPlayerCount(int count)
 {
-    std::unique_lock<std::shared_mutex> mutex(_mutex);
-
     _playerCount = count;
 }
 
 int GameLobby::getPlayerCount()
 {
-    std::shared_lock<std::shared_mutex> mutex(_mutex);
-
     return _playerCount;
 }
 
 bool GameLobby::getUpdate()
 {
-    std::shared_lock<std::shared_mutex> mutex(_mutex);
-
     return _update;
 }
 
 void GameLobby::setUpdate(bool update)
 {
-    std::unique_lock<std::shared_mutex> mutex(_mutex);
-
     _update = update;
 }
 

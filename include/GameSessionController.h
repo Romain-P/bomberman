@@ -5,6 +5,8 @@
 #ifndef CPP_INDIE_STUDIO_GAMESESSIONCONTROLLER_H
 #define CPP_INDIE_STUDIO_GAMESESSIONCONTROLLER_H
 
+class GameSessionController;
+
 #include <thread>
 #include <deque>
 #include "ANetworkController.h"
@@ -40,9 +42,7 @@ private:
 
     std::mutex _locker;
     std::deque<Waiting> _waiting;
-    std::thread _lobbyThread;
     std::unique_ptr<GameLobby> _lobby;
-    std::thread _gameThread;
     std::unique_ptr<NetworkGameManager> _manager;
 };
 

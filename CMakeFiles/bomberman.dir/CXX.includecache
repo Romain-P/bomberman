@@ -569,14 +569,12 @@ fstream
 include/GameInputManager.hpp
 
 include/GameLobby.hpp
-GameSession.h
-include/GameSession.h
 irrlicht.h
 -
 map
 -
-shared_mutex
--
+GameSessionController.h
+include/GameSessionController.h
 
 include/GameManager.hpp
 vector
@@ -597,6 +595,8 @@ GameSession.h
 include/GameSession.h
 GameUIManager.hpp
 include/GameUIManager.hpp
+GameSessionController.h
+include/GameSessionController.h
 map
 -
 thread
@@ -675,6 +675,8 @@ shared/ANetworkAsyncListener.h
 include/GameSessionController.h
 thread
 -
+deque
+-
 ANetworkController.h
 include/ANetworkController.h
 GameSession.h
@@ -691,6 +693,8 @@ GameLobby.hpp
 include/GameLobby.hpp
 GameManager.hpp
 include/GameManager.hpp
+GameClient.h
+include/GameClient.h
 
 include/GameSessionHandler.h
 shared/NetworkClient.h

@@ -30,19 +30,23 @@ void GameSessionController::onLobbyUpdated(GameSession *session, LobbyUpdateMess
 {
     if (_lobby == nullptr)
     {
-        _lobby = std::make_unique<GameLobby>(session, msg->getReadyPlayers() - 1);
-        _lobbyThread = _lobby->EnterLobby();
+        _lobby = std::make_unique<GameLobby>(*this, session, msg->getReadyPlayers() - 1);
+        _lobby->Update(msg->getReadyPlayers());
+        _lobby->Draw();
+        _lobby->Run();
     }
-    _lobby->Update(msg->getReadyPlayers());
-    _lobby->Draw();
+    else
+    {
+        _lobby->Update(msg->getReadyPlayers());
+        _lobby->Draw();
+    }
 }
 
 //start the game here
 void GameSessionController::loadGameData(GameSession *session, GameDataMessage *msg)
 {
     _lobby->StopLobby();
-    _lobbyThread.join();
-    _manager = std::make_unique<NetworkGameManager>(session);
+    _manager = std::make_unique<NetworkGameManager>(*this, session);
     _manager->setMap(msg->getMap());
     auto infos = msg->getPlayerInformations();
     for (auto it = infos.begin(); it != infos.end(); it++)
@@ -51,7 +55,7 @@ void GameSessionController::loadGameData(GameSession *session, GameDataMessage *
         if (it->clientId == session->getId())
             _manager->setLocalPlayerNbr(it->playerNbr);
     }
-    _gameThread = _manager->StartThread();
+    _manager->LaunchGame();
 }
 
 void GameSessionController::onInputReceived(GameSession *session, InputMessage *msg)

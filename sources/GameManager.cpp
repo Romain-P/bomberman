@@ -40,7 +40,7 @@ void GameManager::LoadMap()
 }
 
 
-NetworkGameManager::NetworkGameManager(GameSession *session) : GameManager(GAMETYPE::PVP), _session(session), _localPlayerNbr(0)
+NetworkGameManager::NetworkGameManager(GameSessionController &controller, GameSession *session) : GameManager(GAMETYPE::PVP), _controller(controller), _session(session), _localPlayerNbr(0)
 {
 
 }
@@ -170,6 +170,12 @@ void GameManager::RunUpdates()
         if (!(*it)->shouldBeDestroyed())
             (*it)->Update();
     }
+}
+
+void NetworkGameManager::RunUpdates()
+{
+    _controller.poll();
+    GameManager::RunUpdates();
 }
 
 float GameManager::getDeltaTime()

@@ -5,6 +5,8 @@
 #ifndef CPP_INDIE_STUDIO_GAMEMANAGER_HPP
 #define CPP_INDIE_STUDIO_GAMEMANAGER_HPP
 
+class NetworkGameManager;
+
 #include <vector>
 #include <memory>
 #include "GameRenderer.hpp"
@@ -14,6 +16,7 @@
 #include "BackgroundLoader.hpp"
 #include "GameSession.h"
 #include "GameUIManager.hpp"
+#include "GameSessionController.h"
 #include <map>
 #include <thread>
 
@@ -55,7 +58,7 @@ protected:
     void LoadMap();
     void Cleanup();
     void SpawnMapObjects();
-    void RunUpdates();
+    virtual void RunUpdates();
     void RenderGame();
     GameTime _time;
     GameRenderer _renderer;
@@ -75,11 +78,13 @@ protected:
 class NetworkGameManager : public GameManager
 {
 public:
-    explicit NetworkGameManager(GameSession *session);
+    explicit NetworkGameManager(GameSessionController &controller, GameSession *session);
     std::thread StartThread();
     void LaunchGame();
     void setLocalPlayerNbr(int nbr) { _localPlayerNbr = nbr; }
 private:
+    void RunUpdates();
+    GameSessionController &_controller;
     GameSession *_session;
     int _localPlayerNbr;
 };
