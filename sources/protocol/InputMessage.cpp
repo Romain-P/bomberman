@@ -38,7 +38,7 @@ std::ostream &InputMessage::toString(std::ostream &o) const {
             type = "undefined";
             break;
     }
-    return o << "InputMessage(type=" << type << ")";
+    return o << "InputMessage(type=" << type << ", sessionId=" << _playerSessionId << ")";
 }
 
 PLAYERINPUT InputMessage::getType() const {
