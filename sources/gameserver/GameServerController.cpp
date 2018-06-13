@@ -35,13 +35,17 @@ void GameServerController::onStartRequested(GameClient *client, RequestStartGame
     GameMapFactory factory(serializer);
 
     auto map = factory.loadByTemplate("pvp"); //TODO: generate dynamic map / factory.generate(nbPlayers)
-    std::vector<GameDataMessage::PlayerInformation> infos;
 
-    for (size_t i = 0; i < players; ++i)
-    {
+    std::vector<GameDataMessage::PlayerInformation> infos;
+    std::vector<GameClient *> clients;
+
+    for (auto &k: _server->getClients())
+        clients.push_back(k.second.get());
+
+    for (size_t i = 0; i < players; ++i) {
         auto &spawn = map->getPlayerSpawns().at(i);
 
-        infos.push_back({i, _server->getClients().at(i)->getId(), spawn.X, spawn.Y});
+        infos.push_back({i, clients.at(i)->getId(), spawn.X, spawn.Y});
     }
 
     for (auto &keyset: _server->getClients()) {
