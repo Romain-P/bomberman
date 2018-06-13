@@ -37,10 +37,11 @@ void GameServerController::onStartRequested(GameClient *client, RequestStartGame
     auto map = factory.generate(players); //TODO: generate dynamic map / factory.generate(nbPlayers)
     std::vector<GameDataMessage::PlayerInformation> infos;
 
-    for (size_t i = 0; i < players; ++i) {
+    for (size_t i = 0; i < players; ++i)
+    {
         auto &spawn = map->getPlayerSpawns().at(i);
 
-        infos.push_back({_server->getClients().at(i)->getId(), spawn.X, spawn.Y});
+        infos.push_back({i, _server->getClients().at(i)->getId(), spawn.X, spawn.Y});
     }
 
     for (auto &keyset: _server->getClients()) {
@@ -51,7 +52,8 @@ void GameServerController::onStartRequested(GameClient *client, RequestStartGame
     _server->started() = true;
 }
 
-void GameServerController::onJoinAsked(GameClient *client, RequestLobbyMessage *msg) {
+void GameServerController::onJoinAsked(GameClient *client, RequestLobbyMessage *msg)
+{
     size_t readyPlayers = _server->getClients().size();
     size_t maxPlayers = _server->getMaxPlayers();
 
@@ -61,7 +63,8 @@ void GameServerController::onJoinAsked(GameClient *client, RequestLobbyMessage *
         client->send(LobbyUpdateMessage(readyPlayers, maxPlayers));
 }
 
-void GameServerController::onInputReceived(GameClient *client, InputMessage *msg) {
+void GameServerController::onInputReceived(GameClient *client, InputMessage *msg)
+{
     for (auto &keyset: _server->getClients()) {
         auto &player = keyset.second;
 

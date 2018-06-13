@@ -12,6 +12,9 @@ class Player;
 #include <memory>
 #include "GameObject.hpp"
 #include "PlayerBuff.hpp"
+#include "GameSession.h"
+#include "GameDataMessage.h"
+#include <irrKlang.h>
 
 using namespace irr;
 using namespace core;
@@ -61,6 +64,7 @@ protected:
     void PlaceBomb();
     bool IsValidPosition(vector2df position);
     std::array<bool, 6> _inputs;
+    irrklang::ISound *_walkSound;
     float _speed;
     const float BaseSpeed = 2.0f;
     vector2df GetMovement();
@@ -75,9 +79,4 @@ protected:
     std::vector<std::unique_ptr<PlayerBuff>> _buffs;
 };
 
-class MainPlayer : public Player
-{
-public:
-    MainPlayer(GameManager &manager, int playerNbr = 0, vector2df position = vector2df(0, 0), vector2df rotation = vector2df(0, 0));
-};
 #endif //CPP_INDIE_STUDIO_PLAYER_HPP

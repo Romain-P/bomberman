@@ -18,6 +18,7 @@ void Bomb::Start()
 {
     irr::scene::IMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Bomb/Bomb.obj");
 
+//    _clockSound = SoundEngine->play2D("resources/sounds/Bomb/BombClock.wav", true);
     _node = Device->getSceneManager()->addMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
     _node->setMaterialTexture(0, Device->getVideoDriver()->getTexture("resources/models/Bomb/Bomb.png"));
@@ -34,6 +35,7 @@ void Bomb::Update()
 void Bomb::Explode()
 {
     _player.GiveBomb();
+    SoundEngine->play2D("resources/sounds/Bomb/BombExplode.wav", false);
     _manager.SpawnObject(new Explosion(_manager, vector2df(_position.X, _position.Y)));
     ExplodeLine(1, 0);
     ExplodeLine(0, 1);
@@ -71,6 +73,14 @@ void Bomb::ExplodeLine(int x, int y)
 
 void Bomb::Destroy()
 {
+    /*std::cout << "wow" << std::endl;
+    if (_clockSound)
+    {
+        std::cout << "no" << std::endl;
+        _clockSound->drop();
+    }*/
+    //std::cout << "lol" << std::endl;
+    //_clockSound->drop();
     _node->remove();
     GameObject::Destroy();
 }

@@ -16,6 +16,7 @@ public:
     static constexpr int32_t PROTOCOL_ID = 2;
 
     struct PlayerInformation {
+        size_t playerNbr;
         size_t clientId;
         float x;
         float y;

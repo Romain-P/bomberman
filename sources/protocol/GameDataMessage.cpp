@@ -7,7 +7,9 @@
 void GameDataMessage::serialize(BinaryDataWriter &writer) const {
     writer.writeUint(_informations.size());
 
-    for (auto &infos: _informations) {
+    for (auto &infos: _informations)
+    {
+        writer.writeUint(infos.playerNbr);
         writer.writeUint(infos.clientId);
         writer.writeUint(infos.x);
         writer.writeUint(infos.y);
@@ -22,6 +24,7 @@ void GameDataMessage::deserialize(BinaryDataReader &reader) {
     for (size_t i = 0; i < size; ++i) {
         PlayerInformation info;
 
+        info.playerNbr = reader.readUint();
         info.clientId = reader.readUint();
         info.x = reader.readUint();
         info.y = reader.readUint();
@@ -34,7 +37,7 @@ void GameDataMessage::deserialize(BinaryDataReader &reader) {
 std::ostream &GameDataMessage::toString(std::ostream &o) const {
     o << "GameDataMessage(mapData=[...], players={ ";
     for (auto &info: _informations)
-        o << "[id: " << info.clientId << ", posx: " << info.x << ", posy: " << info.y << "] ";
+        o << "[playerNbr : " << info.playerNbr << ", id: " << info.clientId << ", posx: " << info.x << ", posy: " << info.y << "] ";
     return o << "})";
 }
 

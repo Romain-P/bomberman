@@ -7,23 +7,22 @@
 
 #include "GameManager.hpp"
 
-class SoloGameUIManager
+class GameUIManager
 {
 public:
-    SoloGameUIManager(GameManager &manager);
-    void UpdateUI();
+    GameUIManager(GameManager &manager);
+    virtual void UpdateUI();
 private:
     GameManager &_manager;
 };
 
-/*
-class MultiPlayerUIManager
+class NetworkGameUIManager : public GameUIManager
 {
 public:
-    MultiPlayerUIManager(NetworkGameManager &manager);
+    NetworkGameUIManager(GameManager &manager, int playerNbr);
     void UpdateUI();
 private:
-    NetworkGameManager &_manager;
-};*/
+    int _playerNbr;
+};
 
 #endif //CPP_INDIE_STUDIO_GAMEUIMANAGER_HPP

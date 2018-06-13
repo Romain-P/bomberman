@@ -8,7 +8,8 @@
 #include "GameSessionController.h"
 #include "GameManager.hpp"
 
-void GameSessionController::defineMessageHandlers(handlers_t &handlers) {
+void GameSessionController::defineMessageHandlers(handlers_t &handlers)
+{
     handlers[HelloConnectMessage::PROTOCOL_ID] = handler(*this, &GameSessionController::onConnect);
     handlers[LobbyUpdateMessage::PROTOCOL_ID] = handler(*this, &GameSessionController::onLobbyUpdated);
     handlers[GameDataMessage::PROTOCOL_ID] = handler(*this, &GameSessionController::loadGameData);
@@ -27,18 +28,39 @@ void GameSessionController::onDisconnect(GameSession *session)
 
 void GameSessionController::onLobbyUpdated(GameSession *session, LobbyUpdateMessage *msg)
 {
-    msg->getMaxPlayers();
-    msg->getReadyPlayers();
+    if (_lobby == nullptr)
+    {
+        _lobby = std::make_unique<GameLobby>(session, msg->getReadyPlayers() - 1);
+        _lobbyThread = _lobby->EnterLobby();
+    }
+    _lobby->Update(msg->getReadyPlayers());
+    _lobby->Draw();
 }
 
 //start the game here
-void GameSessionController::loadGameData(GameSession *session, GameDataMessage *msg) {
-    msg->getMap(); //game map
-    msg->getPlayerInformations(); //contains spawn position for each player
+void GameSessionController::loadGameData(GameSession *session, GameDataMessage *msg)
+{
+    _lobby->StopLobby();
+    _lobbyThread.join();
+    _manager = std::make_unique<NetworkGameManager>(session);
+    _manager->setMap(msg->getMap());
+    auto infos = msg->getPlayerInformations();
+    for (auto it = infos.begin(); it != infos.end(); it++)
+    {
+        _manager->getPlayers()[it->playerNbr] = std::make_unique<Player>(*_manager, it->playerNbr, vector2df(it->x, it->y));
+        if (it->clientId == session->getId())
+            _manager->setLocalPlayerNbr(it->playerNbr);
+    }
+    _gameThread = _manager->StartThread();
 }
 
-void GameSessionController::onInputReceived(GameSession *session, InputMessage *msg) {
-    msg->getPlayerId(); //player who pressed/released an input
-    msg->getType(); //input type @see message enum
-    msg->getStatus(); // input down / up
+void GameSessionController::onInputReceived(GameSession *session, InputMessage *msg)
+{
+    if (_manager != nullptr)
+    {
+        size_t playerId = msg->getPlayerId();
+        PLAYERINPUT input = msg->getType();
+        bool status = msg->getStatus();
+        _manager->getPlayers()[playerId]->getInputs()[(int)input] = status;
+    }
 }

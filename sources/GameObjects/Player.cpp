@@ -27,15 +27,11 @@ Player::Player(GameManager &manager, int playerNbr, vector2df position, vector2d
     Start();
 }
 
-MainPlayer::MainPlayer(GameManager &manager, int playerNbr, vector2df position, vector2df rotation) :
-        Player(manager, playerNbr, position, rotation)
-{
-}
-
 void Player::Start()
 {
     GameObject::Start();
     irr::scene::IAnimatedMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Character/Bomberman.MD3");
+    _walkSound = SoundEngine->play2D("resources/sounds/Character/CharacterWalk.wav", true, true);
     _node = Device->getSceneManager()->addAnimatedMeshSceneNode(mesh);
     _node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
     _node->setScale(vector3df(6, 6, 6));
@@ -65,11 +61,13 @@ void Player::Update()
                 _position = newPosition;
                 UpdatePosition();
                 PlayAnimation(PLAYERANIM::WALK);
+                _walkSound->setIsPaused(false);
             }
         }
         else
         {
             PlayAnimation(PLAYERANIM::IDLE);
+            _walkSound->setIsPaused(true);
         }
         if (_inputs[(int)PLAYERINPUT::PLACEBOMB] && _canPlaceBomb)
         {
@@ -214,3 +212,5 @@ void Player::PlayAnimation(PLAYERANIM anim)
         _anim = anim;
     }
 }
+
+

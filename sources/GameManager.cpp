@@ -13,25 +13,23 @@
 #include <GameUIManager.hpp>
 #include <BomberWave.hpp>
 
-GameManager::GameManager(bool duo) :
+GameManager::GameManager(GAMETYPE gameType) :
         _time(), _gameRunning(false), _currentId(0), _level(1), _gameWon(false)
 {
-    _players.push_back(std::unique_ptr<Player>(new Player(*this, 0)));
-    if (duo)
+    if (gameType != GAMETYPE::PVP)
     {
-        _players.push_back(std::unique_ptr<Player>(new Player(*this, 1)));
-        _eventReceiver = std::make_unique<DuoGameEventReceiver>(_players[0]->getInputs(), _players[1]->getInputs());
+        _players[0] = std::unique_ptr<Player>(new Player(*this, 0));
+        if (gameType == GAMETYPE::DUO)
+        {
+            _players[1] = std::unique_ptr<Player>(new Player(*this, 1));
+            _eventReceiver = std::make_unique<DuoGameEventReceiver>(_players[0]->getInputs(), _players[1]->getInputs());
+        }
+        else
+            _eventReceiver = std::make_unique<GameEventReceiver>(_players[0]->getInputs());
+        Device->setEventReceiver(_eventReceiver.get());
     }
-    else
-        _eventReceiver = std::make_unique<GameEventReceiver>(_players[0]->getInputs());
-    Device->setEventReceiver(_eventReceiver.get());
 }
 
-/*
-NetworkGameManager::NetworkGameManager(irr::IrrlichtDevice * const device) :
-        GameManager(device)
-{
-}*/
 
 void GameManager::LoadMap()
 {
@@ -40,33 +38,9 @@ void GameManager::LoadMap()
 
     _map = factory.loadByTemplate(std::to_string(_level));
 }
-/*
-void NetworkGameManager::JoinServer(uint16_t port)
-{
-    GameSessionConnector connector;
-    std::thread con([&connector] { connector.tryConnect("127.0.0.1", port); });
-}
 
-NetworkHostGameManager::NetworkHostGameManager(irr::IrrlichtDevice * const device) :
-        NetworkGameManager(device), _server("127.0.0.1", RANDOM_PORT)
-{
-}
 
-void NetworkHostGameManager::JoinServer()
-{
-    GameSessionConnector connector;
-    std::thread con([&connector] { connector.tryConnect("127.0.0.1", _server.getPort()); });
-}
-
-void NetworkHostGameManager::LaunchServer()
-{
-    std::thread thread([&_server] {_server.start()});
-
-    while (_server.getPort() == 0);
-    JoinServer();
-} */
-
-GameManager::~GameManager()
+NetworkGameManager::NetworkGameManager(GameSession *session) : GameManager(GAMETYPE::PVP), _session(session), _localPlayerNbr(0)
 {
 
 }
@@ -98,10 +72,25 @@ void GameManager::SpawnMapObjects()
     }
 }
 
+void NetworkGameManager::LaunchGame()
+{
+    _eventReceiver = std::make_unique<NetworkGameEventReceiver>(_players[_localPlayerNbr]->getInputs(), _session);
+    _uiManager = std::unique_ptr<GameUIManager>(new NetworkGameUIManager(*this, _localPlayerNbr));
+    LaunchLevel();
+    Device->getSceneManager()->clear();
+}
+
+std::thread NetworkGameManager::StartThread()
+{
+    return std::thread([this] { this->LaunchGame();});
+}
+
 void GameManager::LaunchGame()
 {
+    _uiManager = std::unique_ptr<GameUIManager>(new GameUIManager(*this));
     while (_level < 3)
     {
+        LoadMap();
         LaunchLevel();
         _level++;
         if (!_gameWon)
@@ -118,18 +107,16 @@ void GameManager::Win()
 
 void GameManager::LaunchLevel()
 {
-    SoloGameUIManager uiManager(*this);
     _gameRunning = true;
-    LoadMap();
     _bgLoader.LoadRandomBackground();
     _bgLoader.LoadRandomTerrain();
     for (auto it = _players.begin(); it != _players.end(); it++)
-        (*it)->setPosition(_map->getPlayerSpawns()[0]);
+        it->second->setPosition(_map->getPlayerSpawns()[0]);
     SpawnMapObjects();
     _time.Reset();
     while (_gameRunning && Device->run() && !GameOver() & !_gameWon)
     {
-        uiManager.UpdateUI();
+        _uiManager->UpdateUI();
         RunUpdates();
         RenderGame();
         RemoveDestroyed();
@@ -140,10 +127,9 @@ void GameManager::LaunchLevel()
 
 bool GameManager::GameOver()
 {
-    std::cout << "gameover" << std::endl;
     for (auto it = _players.begin(); it != _players.end(); it++)
     {
-        if (!(*it)->shouldBeDestroyed())
+        if (!it->second->shouldBeDestroyed())
             return false;
     }
     return true;
@@ -174,10 +160,9 @@ void GameManager::RunUpdates()
     _time.Update();
     for (auto it = _players.begin(); it != _players.end(); it++)
     {
-        if (!(*it)->shouldBeDestroyed())
+        if (!it->second->shouldBeDestroyed())
         {
-            std::cout << "update player" << std::endl;
-            (*it)->Update();
+            it->second->Update();
         }
     }
     for (auto it = _objects.begin(); it != _objects.end(); it++)
@@ -249,6 +234,10 @@ std::vector<GameObject *> GameManager::getCollisionsWithTags(GameObject &object,
     return objects;
 }
 
+GameManager::~GameManager() {
+
+}
+
 GameEventReceiver::GameEventReceiver(std::array<bool, 6> &inputs) : _inputs(inputs)
 {
 
@@ -281,6 +270,52 @@ bool GameEventReceiver::OnEvent(const irr::SEvent &event)
             case KEY_RIGHT:
             case KEY_KEY_D:
                 _inputs[(int)PLAYERINPUT::RIGHT] = event.KeyInput.PressedDown;
+                break;
+            default:
+                break;
+        }
+    }
+    return false;
+}
+
+NetworkGameEventReceiver::NetworkGameEventReceiver(std::array<bool, 6> &inputs, GameSession *session) : _inputs(inputs), _session(session)
+{
+
+}
+
+bool NetworkGameEventReceiver::OnEvent(const irr::SEvent &event)
+{
+    if (event.EventType == irr::EET_KEY_INPUT_EVENT)
+    {
+        switch(event.KeyInput.Key)
+        {
+            case KEY_ESCAPE:
+                _inputs[(int)PLAYERINPUT::PAUSE] = event.KeyInput.PressedDown;
+                _session->send(InputMessage(PLAYERINPUT::PAUSE, event.KeyInput.PressedDown, _session->getId()));
+                break;
+            case KEY_SPACE:
+                _inputs[(int)PLAYERINPUT::PLACEBOMB] = event.KeyInput.PressedDown;
+                _session->send(InputMessage(PLAYERINPUT::PLACEBOMB, event.KeyInput.PressedDown, _session->getId()));
+                break;
+            case KEY_UP:
+            case KEY_KEY_Z:
+                _inputs[(int)PLAYERINPUT::UP] = event.KeyInput.PressedDown;
+                _session->send(InputMessage(PLAYERINPUT::UP, event.KeyInput.PressedDown, _session->getId()));
+                break;
+            case KEY_DOWN:
+            case KEY_KEY_S:
+                _inputs[(int)PLAYERINPUT::DOWN] = event.KeyInput.PressedDown;
+                _session->send(InputMessage(PLAYERINPUT::DOWN, event.KeyInput.PressedDown, _session->getId()));
+                break;
+            case KEY_LEFT:
+            case KEY_KEY_Q:
+                _inputs[(int)PLAYERINPUT::LEFT] = event.KeyInput.PressedDown;
+                _session->send(InputMessage(PLAYERINPUT::LEFT, event.KeyInput.PressedDown, _session->getId()));
+                break;
+            case KEY_RIGHT:
+            case KEY_KEY_D:
+                _inputs[(int)PLAYERINPUT::RIGHT] = event.KeyInput.PressedDown;
+                _session->send(InputMessage(PLAYERINPUT::RIGHT, event.KeyInput.PressedDown, _session->getId()));
                 break;
             default:
                 break;

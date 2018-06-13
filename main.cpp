@@ -93,4 +93,5 @@ int main() {
         return 84;
     }
     Device->drop();
+    SoundEngine->drop();
 }

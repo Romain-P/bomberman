@@ -12,7 +12,17 @@
 #include "Player.hpp"
 #include "GameTime.hpp"
 #include "BackgroundLoader.hpp"
+#include "GameSession.h"
+#include "GameUIManager.hpp"
+#include <map>
+#include <thread>
 
+enum class GAMETYPE
+{
+    SOLO,
+    DUO,
+    PVP
+};
 enum class PLAYERCOLOR
 {
     WHITE,
@@ -24,12 +34,13 @@ enum class PLAYERCOLOR
 class GameManager
 {
 public:
-    explicit GameManager(bool duo = false);
+    explicit GameManager(GAMETYPE gameType);
     ~GameManager();
-    void LaunchGame();
+    virtual void LaunchGame();
     void SpawnObject(GameObject *object);
+    void setMap(GameMap &map) { _map = std::unique_ptr<GameMap>(new GameMap(map.getData(), map.getCompletionTime()));}
     const GameMap &getMap() { return *_map; }
-    std::vector<std::unique_ptr<Player>> &getPlayers() { return _players; }
+    std::map<int, std::unique_ptr<Player>>  &getPlayers() { return _players; }
     float getDeltaTime();
     int GenerateId();
     bool GameOver();
@@ -40,17 +51,18 @@ public:
     std::vector<GameObject *> getObjectsAtPosition(vector2df position);
     std::vector<GameObject *> getCollisionsWithTags(GameObject &object, std::vector<GOTAG> &tags);
 protected:
-    virtual void LaunchLevel();
-    virtual void LoadMap();
-    virtual void Cleanup();
-    virtual void SpawnMapObjects();
-    virtual void RunUpdates();
-    virtual void RenderGame();
+    void LaunchLevel();
+    void LoadMap();
+    void Cleanup();
+    void SpawnMapObjects();
+    void RunUpdates();
+    void RenderGame();
     GameTime _time;
     GameRenderer _renderer;
     std::unique_ptr<IEventReceiver> _eventReceiver;
-    std::vector<std::unique_ptr<Player>> _players;
+    std::map<int, std::unique_ptr<Player>> _players;
     bool _gameRunning;
+    std::unique_ptr<GameUIManager> _uiManager;
     std::unique_ptr<GameMap> _map;
     std::vector<std::unique_ptr<GameObject>> _objects;
     int _currentId;
@@ -58,6 +70,18 @@ protected:
     BackgroundLoader _bgLoader;
     int _level;
     bool _gameWon;
+};
+
+class NetworkGameManager : public GameManager
+{
+public:
+    explicit NetworkGameManager(GameSession *session);
+    std::thread StartThread();
+    void LaunchGame();
+    void setLocalPlayerNbr(int nbr) { _localPlayerNbr = nbr; }
+private:
+    GameSession *_session;
+    int _localPlayerNbr;
 };
 
 class GameEventReceiver : public irr::IEventReceiver
@@ -69,6 +93,16 @@ private:
     std::array<bool, 6> &_inputs;
 };
 
+class NetworkGameEventReceiver : public irr::IEventReceiver
+{
+public:
+    NetworkGameEventReceiver(std::array<bool, 6> &inputs, GameSession *session);
+    virtual bool OnEvent(const irr::SEvent &event);
+private:
+    std::array<bool, 6> &_inputs;
+    GameSession *_session;
+};
+
 class DuoGameEventReceiver : public irr::IEventReceiver
 {
 public:
@@ -78,18 +112,5 @@ private:
     std::array<bool, 6> &_inputs;
     std::array<bool, 6> &_inputstwo;
 };
-/*
-class NetworkGameManager : public GameManager
-{
-public:
-    NetworkGameManager(irr::IrrlichtDevice * const device);
-    void LaunchGame() {};
-    void JoinServer(uint16_t port);
-protected:
-    void Cleanup() {};
-    void RunUpdates() {};
-    void RenderGame() {};
-    std::vector<std::pair<int, Player>> _enemyPlayers;
-};*/
 
 #endif //CPP_INDIE_STUDIO_GAMEMANAGER_HPP

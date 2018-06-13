@@ -28,7 +28,6 @@ public:
     void onInputReceived(GameClient *client, InputMessage *msg);
 
 private:
-
     GameServer *_server;
 };
 

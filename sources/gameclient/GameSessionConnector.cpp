@@ -10,7 +10,6 @@ GameSession *GameSessionConnector::getSession() {
 
 bool GameSessionConnector::tryConnect(std::string const &ip, uint16_t gamePort) {
     _client = std::make_unique<NetworkClient>(ip, gamePort, &_adapter);
-
     try {
         _client->init();
     } catch(...) {

@@ -46,14 +46,14 @@ void BomberWave::LaunchSolo()
         case MAINMENUCHOICE::SOLO :
             {
             Device->getGUIEnvironment()->clear();
-            GameManager gameManager;
+            GameManager gameManager(GAMETYPE::SOLO);
             gameManager.LaunchGame();
             }
             break;
         case MAINMENUCHOICE::DUO :
             {
                 Device->getGUIEnvironment()->clear();
-                GameManager gameManagerDuo(true);
+                GameManager gameManagerDuo(GAMETYPE::DUO);
                 gameManagerDuo.LaunchGame();
             }
             break;
@@ -69,11 +69,21 @@ void BomberWave::LaunchSolo()
 void BomberWave::LaunchMultiplayerHost()
 {
     Device->getGUIEnvironment()->clear();
+    GameServer server("127.0.0.1", RANDOM_PORT);
+    std::thread thread([&server] { server.start() ;});
+
+    while (server.getPort() == 0);
+    GameSessionConnector connector;
+    std::thread con([&connector, &server] { connector.tryConnect("127.0.0.1", server.getPort()); });
+    thread.join();
 }
 
 void BomberWave::LaunchMultiplayerJoin()
 {
     Device->getGUIEnvironment()->clear();
+    GameSessionConnector connector;
+    uint16_t port = 42;
+    std::thread con([&connector, &port] { connector.tryConnect("127.0.0.1", port); });
 }
 
 void BomberWave::Launch()

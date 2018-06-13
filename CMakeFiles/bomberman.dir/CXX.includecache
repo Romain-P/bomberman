@@ -65,6 +65,10 @@ GameInputManager.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameLobby.cpp
 Player.hpp
 -
+BomberWave.hpp
+-
+shared_mutex
+-
 GameLobby.hpp
 /home/Mardel/ModulesTek2/C++/cpp_indie_studio/sources/GameLobby.hpp
 
@@ -565,9 +569,13 @@ fstream
 include/GameInputManager.hpp
 
 include/GameLobby.hpp
+GameSession.h
+include/GameSession.h
 irrlicht.h
 -
 map
+-
+shared_mutex
 -
 
 include/GameManager.hpp
@@ -585,6 +593,14 @@ GameTime.hpp
 include/GameTime.hpp
 BackgroundLoader.hpp
 include/BackgroundLoader.hpp
+GameSession.h
+include/GameSession.h
+GameUIManager.hpp
+include/GameUIManager.hpp
+map
+-
+thread
+-
 
 include/GameMap.hpp
 string
@@ -657,6 +673,8 @@ shared/ANetworkAsyncListener.h
 -
 
 include/GameSessionController.h
+thread
+-
 ANetworkController.h
 include/ANetworkController.h
 GameSession.h
@@ -671,6 +689,8 @@ InputMessage.h
 include/InputMessage.h
 GameLobby.hpp
 include/GameLobby.hpp
+GameManager.hpp
+include/GameManager.hpp
 
 include/GameSessionHandler.h
 shared/NetworkClient.h
@@ -757,6 +777,12 @@ GameObject.hpp
 include/GameObject.hpp
 PlayerBuff.hpp
 include/PlayerBuff.hpp
+GameSession.h
+include/GameSession.h
+GameDataMessage.h
+include/GameDataMessage.h
+irrKlang.h
+-
 
 include/PlayerBuff.hpp
 string

@@ -19,6 +19,7 @@ public:
 private:
     void Explode();
     irr::scene::IMeshSceneNode *_node;
+    irrklang::ISound *_clockSound;
     Player &_player;
     int _power;
     float _countDown;
