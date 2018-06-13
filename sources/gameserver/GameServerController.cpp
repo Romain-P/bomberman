@@ -34,7 +34,7 @@ void GameServerController::onStartRequested(GameClient *client, RequestStartGame
     GameDataSerializer serializer;
     GameMapFactory factory(serializer);
 
-    auto map = factory.generate(players); //TODO: generate dynamic map / factory.generate(nbPlayers)
+    auto map = factory.loadByTemplate("pvp"); //TODO: generate dynamic map / factory.generate(nbPlayers)
     std::vector<GameDataMessage::PlayerInformation> infos;
 
     for (size_t i = 0; i < players; ++i)

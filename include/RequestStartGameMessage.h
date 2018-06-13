@@ -10,9 +10,9 @@
 class RequestStartGameMessage: public NetworkMessage {
 public:
 
-    static constexpr int32_t PROTOCOL_ID = 6;
+    static constexpr int32_t PROTOCOL_ID = 4;
 
-    RequestStartGameMessage() : NetworkMessage(PROTOCOL_ID){}
+    RequestStartGameMessage() : NetworkMessage(PROTOCOL_ID) {}
 
     void serialize(BinaryDataWriter &writer) const override;
     void deserialize(BinaryDataReader &reader) override;
