@@ -45,3 +45,7 @@ void GameSessionConnector::closeConnection() {
 void GameSessionConnector::pollEvent() {
     _handler.getController().poll();
 }
+
+GameSessionConnector::State &GameSessionConnector::getState() {
+    return _state;
+}
