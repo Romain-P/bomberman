@@ -32,14 +32,13 @@ void GameSessionController::onLobbyUpdated(GameSession *session, LobbyUpdateMess
     {
         _lobby = std::make_unique<GameLobby>(*this, session, msg->getReadyPlayers() - 1);
         _lobby->Update(msg->getReadyPlayers());
-        _lobby->Draw();
-        _lobby->Run();
+        _lobby->Start();
     }
     else
     {
         _lobby->Update(msg->getReadyPlayers());
-        _lobby->Draw();
     }
+    _state = ON_LOBBY;
 }
 
 //start the game here
@@ -56,6 +55,7 @@ void GameSessionController::loadGameData(GameSession *session, GameDataMessage *
             _manager->setLocalPlayerNbr(it->playerNbr);
     }
     _manager->LaunchGame();
+    _state = ON_GAME;
 }
 
 void GameSessionController::onInputReceived(GameSession *session, InputMessage *msg)
@@ -84,4 +84,9 @@ void GameSessionController::add(GameSession *client, std::unique_ptr<NetworkMess
     lock_t lock(_locker);
 
     _waiting.push_back({client, std::move(msg)});
+}
+
+GameSessionController::State &GameSessionController::getState()
+{
+    return _state;
 }

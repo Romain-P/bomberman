@@ -33,6 +33,7 @@ public:
     void Draw();
     void Update(int playerCount);
     void StopLobby();
+    void Start();
 private:
     void setPlayerCount(int count);
     int getPlayerCount();

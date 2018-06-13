@@ -79,8 +79,9 @@ class NetworkGameManager : public GameManager
 {
 public:
     explicit NetworkGameManager(GameSessionController &controller, GameSession *session);
-    std::thread StartThread();
     void LaunchGame();
+    void Run();
+    bool Update();
     void setLocalPlayerNbr(int nbr) { _localPlayerNbr = nbr; }
 private:
     void RunUpdates();

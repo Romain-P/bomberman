@@ -78,11 +78,13 @@ void NetworkGameManager::LaunchGame()
     _uiManager = std::unique_ptr<GameUIManager>(new NetworkGameUIManager(*this, _localPlayerNbr));
     LaunchLevel();
     Device->getSceneManager()->clear();
-}
-
-std::thread NetworkGameManager::StartThread()
-{
-    return std::thread([this] { this->LaunchGame();});
+    _gameRunning = true;
+    _bgLoader.LoadRandomBackground();
+    _bgLoader.LoadRandomTerrain();
+    for (auto it = _players.begin(); it != _players.end(); it++)
+        it->second->setPosition(_map->getPlayerSpawns()[0]);
+    SpawnMapObjects();
+    _time.Reset();
 }
 
 void GameManager::LaunchGame()
@@ -103,6 +105,19 @@ void GameManager::LaunchGame()
 void GameManager::Win()
 {
     _gameWon = true;
+}
+
+void NetworkGameManager::Run()
+{
+    while (_gameRunning && Device->run() && !GameOver() & !_gameWon)
+    {
+        _uiManager->UpdateUI();
+        RunUpdates();
+        RenderGame();
+        RemoveDestroyed();
+    }
+    Cleanup();
+    RemoveDestroyed();
 }
 
 void GameManager::LaunchLevel()
@@ -176,6 +191,21 @@ void NetworkGameManager::RunUpdates()
 {
     _controller.poll();
     GameManager::RunUpdates();
+}
+
+bool NetworkGameManager::Update()
+{
+    if (_gameRunning && Device->run() && !GameOver() & !_gameWon)
+    {
+        _uiManager->UpdateUI();
+        RunUpdates();
+        RenderGame();
+        RemoveDestroyed();
+        return true;
+    }
+    Cleanup();
+    RemoveDestroyed();
+    return false;
 }
 
 float GameManager::getDeltaTime()

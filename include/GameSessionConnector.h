@@ -19,10 +19,7 @@ public:
                              _adapter(1024, &_handler)
     {}
 
-    enum State {
-        ON_LOBBY,
-        ON_GAME
-    };
+
 
     /**
      * Try to create a new game session instance
@@ -31,15 +28,15 @@ public:
      */
     bool tryConnect(std::string const &ip, uint16_t gamePort);
     void pollEvent();
+    GameSessionController &getController();
     void closeConnection();
-    State &getState();
+    GameSessionController::State &getState();
 protected:
     void onSocketNotified(socket_fd_t socket_id) override;
     void onListenerClosed(bool interrupted) override;
     socket_fd_t defineServerFd() override;
     GameSession *getSession();
 private:
-    State _state;
     std::unique_ptr<NetworkClient> _client;
     std::unique_ptr<GameSession> _session;
     GameSessionHandler _handler;

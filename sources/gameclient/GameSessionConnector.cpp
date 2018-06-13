@@ -46,6 +46,11 @@ void GameSessionConnector::pollEvent() {
     _handler.getController().poll();
 }
 
-GameSessionConnector::State &GameSessionConnector::getState() {
-    return _state;
+GameSessionController &GameSessionConnector::getController()
+{
+    return _handler.getController();
+}
+
+GameSessionController::State &GameSessionConnector::getState() {
+    return _handler.getController().getState();
 }
