@@ -25,6 +25,7 @@ public:
      * @Return  true if the host exists
      */
     bool tryConnect(std::string const &ip, uint16_t gamePort);
+    void pollEvent();
     void closeConnection();
 protected:
     void onSocketNotified(socket_fd_t socket_id) override;

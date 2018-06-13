@@ -23,6 +23,8 @@ public:
 
     void setSession(GameSession *session);
 
+    GameSessionController &getController();
+
 private:
     GameSession *_session;
     GameSessionController _controller;

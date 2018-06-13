@@ -41,3 +41,7 @@ socket_fd_t GameSessionConnector::defineServerFd() {
 void GameSessionConnector::closeConnection() {
     NetworkAsyncListener::close();
 }
+
+void GameSessionConnector::pollEvent() {
+    _handler.getController().poll();
+}

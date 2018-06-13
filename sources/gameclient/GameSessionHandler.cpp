@@ -19,7 +19,7 @@ void GameSessionHandler::onReceive(NetworkClient *client, char const *buffer, si
     s << *msg;
     log("[Session] recv\t\t\t<--\t\t[Server]:\t\t%s\n", s.str().c_str());
 
-    _controller.parseMessage(_session, msg.get());
+    _controller.add(_session, msg);
 }
 
 void GameSessionHandler::onSent(NetworkClient *client, char const *buffer, size_t length) {
@@ -41,4 +41,8 @@ void GameSessionHandler::onDisconnect(NetworkClient *client) {
 
 void GameSessionHandler::setSession(GameSession *session) {
     _session = session;
+}
+
+GameSessionController &GameSessionHandler::getController() {
+    return _controller;
 }

@@ -64,3 +64,20 @@ void GameSessionController::onInputReceived(GameSession *session, InputMessage *
         _manager->getPlayers()[playerId]->getInputs()[(int)input] = status;
     }
 }
+
+void GameSessionController::poll() {
+    lock_t lock(_locker);
+
+    if (_waiting.empty()) return;
+
+    Waiting &waiting = _waiting.at(0);
+
+    parseMessage(waiting.client, waiting.msg.get());
+    _waiting.pop_front();
+}
+
+void GameSessionController::add(GameSession *client, std::unique_ptr<NetworkMessage> &msg) {
+    lock_t lock(_locker);
+
+    _waiting.push_back({client, std::move(msg)});
+}
