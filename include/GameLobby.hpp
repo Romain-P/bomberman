@@ -29,7 +29,7 @@ class GameLobby
 {
 public:
     GameLobby(GameSessionController &controller, GameSession *session, int _playerId);
-    void Run();
+    bool Run();
     void Draw();
     void Update(int playerCount);
     void StopLobby();

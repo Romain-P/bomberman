@@ -21,18 +21,21 @@ void GameLobby::Start()
     _lobbyChoice = LOBBYCHOICE::NONE;
 }
 
-void GameLobby::Run()
+bool GameLobby::Run()
 {
         if (Device->isWindowActive())
         {
             Device->getVideoDriver()->beginScene(true, true, irr::video::SColor(0, 200, 200, 200));
+            Draw();
             if (_lobbyChoice == LOBBYCHOICE::PLAY)
-                {
-                    _session->send(RequestStartGameMessage());
-                }
-                Draw();
+            {
+                _session->send(RequestStartGameMessage());
+            }
             Device->getVideoDriver()->endScene();
+            if (_lobbyChoice == LOBBYCHOICE::LEAVE)
+                return false;
         }
+        return true;
 }
 
 void GameLobby::StopLobby()
@@ -43,6 +46,7 @@ void GameLobby::StopLobby()
 
 void GameLobby::Update(int playerCount)
 {
+    std::cout << "Update Lobby with : " << playerCount << " players" << std::endl;
     setPlayerCount(playerCount);
     setUpdate(true);
     Device->getSceneManager()->clear();
@@ -51,18 +55,19 @@ void GameLobby::Update(int playerCount)
     {
         irr::scene::IMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Pillar/Pillar.obj");
         irr::scene::IMeshSceneNode *node = Device->getSceneManager()->addMeshSceneNode(mesh);
-        node->setPosition(irr::core::vector3df(0, 20, -80 + (80 * i)));
+        node->setPosition(irr::core::vector3df(0, 20, 40 - (20 * i)));
         node->setMaterialTexture(0, Device->getVideoDriver()->getTexture("resources/models/Pillar/Pillar.jpg"));
     }
     for (int i = 0; i < _playerCount; i++)
     {
         irr::scene::IAnimatedMesh *mesh = Device->getSceneManager()->getMesh("resources/models/Character/Bomberman.MD3");
         irr::scene::IAnimatedMeshSceneNode *node = Device->getSceneManager()->addAnimatedMeshSceneNode(mesh);
-        node->setPosition(irr::core::vector3df(0, 40, -80 + (80 * i)));
+        node->setPosition(irr::core::vector3df(0, 40, 40 - (20 * i)));
         node->setMaterialFlag(irr::video::EMF_LIGHTING, false);
         node->setScale(irr::core::vector3df(6, 6, 6));
-        node->setRotation(irr::core::vector3df(0, 0, 0));
+        node->setRotation(irr::core::vector3df(0, 90, 0));
         node->setAnimationSpeed(30);
+        node->setFrameLoop(27, 76);
         node->setLoopMode(true);
         node->setMaterialTexture(0, Device->getVideoDriver()->getTexture(("resources/models/Character/" + Player::Characters[i] + "BombermanTextures.png").c_str()));
     }
@@ -71,6 +76,8 @@ void GameLobby::Update(int playerCount)
         Device->getGUIEnvironment()->addButton(rect<s32>(1920 / 2 - 100, 800, 1920 / 2 + 100,  1000), nullptr, (int)LOBBYCHOICE::PLAY,
                                                L"Launch Game", L"Launch The Game");
     }
+    Device->getGUIEnvironment()->addButton(rect<s32>(1920 / 2 + 200, 800, 1920 / 2 + 400,  1000), nullptr, (int)LOBBYCHOICE::LEAVE,
+                                           L"Leave", L"Leave lobby");
 }
 
 void GameLobby::Draw()
@@ -106,18 +113,15 @@ LobbyEventReceiver::LobbyEventReceiver(LOBBYCHOICE &lobbyChoice) : _lobbyChoice(
 
 bool LobbyEventReceiver::OnEvent(const irr::SEvent &event)
 {
-    std::cout << "ON EVENT" << std::endl;
     if (event.EventType == EET_GUI_EVENT)
     {
         s32 id = event.GUIEvent.Caller->getID();
-        std::cout << "ID : " << id << std::endl;
         switch(event.GUIEvent.EventType)
         {
             case EGET_BUTTON_CLICKED:
                 switch((LOBBYCHOICE)id)
                 {
                     case LOBBYCHOICE::PLAY :
-                        std::cout << "PLAY" << std::endl;
                         _lobbyChoice = LOBBYCHOICE::PLAY;
                         break;
                     case LOBBYCHOICE::LEAVE :
